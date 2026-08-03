@@ -1,194 +1,207 @@
 "use client";
 
-import Link from "next/link";
+import { Playfair_Display, Cormorant_Garamond } from "next/font/google";
+import Image from "next/image";
 import { useState } from "react";
+import AboutSection from "../sections/AboutSection";
+import ProductsSection from "@/sections/ProductsSection";
+import InfrastructureSection from "@/sections/InfrastructureSection";
+import CertificationSection from "@/sections/CertificationSection";
+import ExportSection from "@/sections/ExportSection";
+import ContactSection from "@/sections/ContactSection";
+import FooterSection from "@/sections/FooterSection";
+import WhatsAppButton from "@/app/components/WhatsAppButton";
+import Navbar from "@/app/components/Navbar";
+import PremiumCursor from "@/app/components/PremiumCursor";
+import AnimatedStats from "@/app/components/AnimatedStats";
+import HeroParallax from "@/app/components/HeroParallax";
+import LuxuryPageLoader from "@/app/components/LuxuryPageLoader";
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  weight: ["400", "500", "600", "700"],
+});
 
-const menuItems = [
-  { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
-  { label: "Products", href: "/products" },
-  { label: "Infrastructure", href: "/infrastructure" },
-  { label: "Certifications", href: "/certifications" },
-  { label: "Export", href: "/export" },
-  { label: "Contact Us", href: "/contact" },
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  variable: "--font-cormorant",
+  weight: ["300", "400", "500", "600"],
+});
+
+const navLinks = [
+  { label: "Home", href: "#home" },
+  { label: "About Us", href: "#about" },
+  { label: "Products", href: "#products" },
+  { label: "Infrastructure", href: "#infrastructure" },
+  { label: "Certifications", href: "#certifications" },
+  { label: "Export", href: "#export" },
+  { label: "Contact", href: "#contact" },
 ];
+
+const stats = [
+  { value: "30+", label: "Years" },
+  { value: "800+", label: "Farmers" },
+  { value: "50+", label: "Countries" },
+  { value: "100%", label: "Natural" },
+];
+
+function BotanicalLeaf({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      aria-hidden="true"
+    >
+      <path
+        d="M12 3C8 7 5 10 5 14c0 2.5 1.5 4.5 3.5 5.5-.5-2 .5-4 2-5.5 1 1.5 2.5 2.5 4.5 2.5 1.5 0 3-.5 4-1.5-1.5 1-3.5 1.5-5.5 0-4-3-7-7-11z"
+        fill="currentColor"
+        opacity="0.85"
+      />
+      <path
+        d="M12 20v-8"
+        stroke="currentColor"
+        strokeWidth="0.75"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+function SILogo() {
+  return (
+    <a
+  href="#home"
+  className="group flex shrink-0 items-center gap-5 whitespace-nowrap"
+>
+      <div className="relative shrink-0">
+        <div className="flex h-14 w-14 items-center justify-center rounded-full-[#C9A962]/60 bg-[#1B3D2F]/80 shadow-[0_0_20px_rgba(27,61,47,0.4)] backdrop-blur-sm transition-all duration-500 group-hover:border-[#C9A962] group-hover:shadow-[0_0_28px_rgba(201,169,98,0.2)] sm:h-12 sm:w-12">
+          <span className="font-[family-name:var(--font-playfair)] text-sm font-semibold tracking-[0.06em] text-[#F5F0E6] sm:text-[15px]">
+            SI
+          </span>
+        </div>
+        <BotanicalLeaf className="absolute -right-1 -top-1 h-3.5 w-3.5 text-[#C9A962]/90 sm:h-4 sm:w-4" />
+      </div>
+      <div className="leading-none">
+        <p className="font-[family-name:var(--font-playfair)] text-[15px] font-medium uppercase tracking-[0.18em] text-[#F5F0E6] sm:text-[13px]">
+          SHIVESH
+        </p>
+        <p className="mt-1.5 font-[family-name:var(--font-playfair)] text-[10px] font-light uppercase tracking-[0.42em] text-[#C9A962] sm:text-[9px]">
+          INTERNATIONAL
+        </p>
+      </div>
+    </a>
+  );
+}
 
 export default function HomePage() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <main className="min-h-screen bg-[#10291d]">
-      <section className="relative min-h-screen overflow-hidden text-white">
-        {/* Full-screen factory background */}
-<div
-  className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-  style={{
-    backgroundImage: "url('/Factory hero.png')",
-  }}
-/>
+    <main
+      className={`${playfair.variable} ${cormorant.variable} relative min-h-screen overflow-x-hidden font-[family-name:var(--font-cormorant)]`}
+    >
+      <LuxuryPageLoader />
+      <div className="absolute inset-x-0 top-0 h-screen">
+        <Image
+          src="/Factory hero.png"
+          alt="Shivesh International manufacturing facility"
+          fill
+          priority
+          className="object-cover object-[45%_center] lg:object-[65%_center]"
+          sizes="100vw"
+        />
+        <div className="absolute inset-x-0 top-0 h-screen bg-linear-to-r from-black/65 via-black/20 to-transparent" />
+        <div className="absolute inset-x-0 top-0 h-screen bg-linear-to-t from-black/40 via-transparent to-black/15" />
+        <div className="absolute inset-x-0 top-0 h-screen bg-[radial-gradient(ellipse_at_80%_40%,transparent_0%,transparent_55%,rgba(0,0,0,0.08)_100%)]" />
+      </div>
 
-{/* Dark overlay for text readability */}
-<div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-black/10" />
-        {/* Navbar */}
-        <header className="absolute left-0 top-0 z-50 w-full">
-          <nav className="mx-auto flex h-24 max-w-[1600px] items-center justify-between px-5 sm:px-8 lg:px-12">
-            <Link
-              href="/"
-              className="flex items-center gap-3"
-              aria-label="Shivesh International Home"
-            >
-              <div className="flex h-14 w-14 items-center justify-center rounded-full border border-white/50 bg-black/15 font-serif text-2xl font-semibold backdrop-blur-md">
-                SI
+      <Navbar />
+
+      <section
+        id="home"
+        className="relative z-10 flex min-h-screen flex-col justify-center px-6 pb-44 pt-24 sm:px-8 sm:pb-48 sm:pt-28 lg:px-12 lg:pb-52"
+      >
+        <HeroParallax />
+        <div className="mx-auto w-full max-w-7xl">
+          <div className="relative max-w-[320px] sm:max-w-[360px] lg:max-w-[400px]">
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute -inset-x-6 -inset-y-8 bg-linear-to-r from-black/50 via-black/25 to-transparent sm:-inset-x-8 sm:-inset-y-10"
+            />
+
+            <div className="relative">
+              <div className="mb-8 inline-flex items-center gap-3">
+                <span className="h-px w-8 bg-[#C9A962]/70" />
+                <span className="font-[family-name:var(--font-cormorant)] text-[10px] font-medium uppercase tracking-[0.35em] text-[#F5F0E6]/55">
+                  Global Export Excellence
+                </span>
               </div>
 
-              <div className="leading-none">
-                <p className="font-serif text-xl tracking-[0.12em] sm:text-2xl">
-                  SHIVESH
-                </p>
+              <h1 className="font-[family-name:var(--font-playfair)] text-[clamp(1.85rem,4.5vw,2.75rem)] font-medium leading-[1.14] tracking-[-0.01em] text-[#F5F0E6] drop-shadow-[0_2px_12px_rgba(0,0,0,0.5)]">
+                Rooted in Purity.
+                <br />
+                <span className="mt-1 inline-block bg-linear-to-r from-[#F5F0E6] via-[#C9A962] to-[#C9A962] bg-clip-text text-transparent">
+                  Delivered Globally.
+                </span>
+              </h1>
 
-                <p className="mt-1 text-[9px] tracking-[0.38em] text-white/75 sm:text-[10px]">
-                  INTERNATIONAL
-                </p>
-              </div>
-            </Link>
+              <div className="my-7 h-px w-10 bg-[#C9A962]/50" />
 
-            <div className="hidden items-center gap-7 xl:flex">
-              {menuItems.map((item) => (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  className="text-[12px] font-medium uppercase tracking-[0.1em] text-white/90 transition hover:text-[#e8c66d]"
+              <p className="text-[15px] font-light leading-[1.8] tracking-[0.02em] text-[#F5F0E6]/75 drop-shadow-[0_1px_8px_rgba(0,0,0,0.45)] sm:text-base">
+                Premium Natural Henna, Henna Hair Colors, Indigo Powder,
+                Ayurvedic Herbs and Indian Spices exported worldwide.
+              </p>
+
+              <div className="mt-10 flex flex-col gap-3.5 sm:flex-row sm:items-center sm:gap-4">
+                <a
+                  href="#products"
+                  className="group inline-flex items-center justify-center gap-3 border border-[#C9A962]/80 bg-[#C9A962] px-7 py-3 font-[family-name:var(--font-cormorant)] text-[11px] font-medium uppercase tracking-[0.26em] text-[#1B3D2F] transition-all duration-500 hover:bg-[#D4B872] hover:shadow-[0_8px_32px_rgba(201,169,98,0.35)]"
                 >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
-
-            <Link
-              href="/contact"
-              className="hidden rounded-md border border-[#d7b45a]/80 bg-[#294c2d]/90 px-6 py-3 text-xs font-semibold uppercase tracking-[0.12em] shadow-lg backdrop-blur-md transition hover:bg-[#d7b45a] hover:text-[#173b2a] lg:inline-flex"
-            >
-              Get In Touch
-            </Link>
-
-            <button
-              type="button"
-              onClick={() => setMenuOpen((current) => !current)}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-md border border-white/40 bg-black/20 backdrop-blur-md xl:hidden"
-              aria-label="Toggle navigation menu"
-              aria-expanded={menuOpen}
-            >
-              {menuOpen ? (
-                <svg
-                  viewBox="0 0 24 24"
-                  className="h-6 w-6"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                >
-                  <path d="M6 6l12 12M18 6L6 18" />
-                </svg>
-              ) : (
-                <svg
-                  viewBox="0 0 24 24"
-                  className="h-6 w-6"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                >
-                  <path d="M4 7h16M4 12h16M4 17h16" />
-                </svg>
-              )}
-            </button>
-          </nav>
-
-          {menuOpen && (
-            <div className="mx-4 rounded-xl border border-white/15 bg-[#10291d]/95 p-5 shadow-2xl backdrop-blur-xl xl:hidden">
-              <div className="flex flex-col">
-                {menuItems.map((item) => (
-                  <Link
-                    key={item.label}
-                    href={item.href}
-                    onClick={() => setMenuOpen(false)}
-                    className="border-b border-white/10 px-2 py-4 text-sm font-medium uppercase tracking-[0.1em] text-white/90 last:border-b-0 hover:text-[#e8c66d]"
+                  Explore Products
+                  <svg
+                    className="h-3.5 w-3.5 transition-transform duration-500 group-hover:translate-x-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={1.25}
+                    aria-hidden="true"
                   >
-                    {item.label}
-                  </Link>
-                ))}
-
-                <Link
-                  href="/contact"
-                  onClick={() => setMenuOpen(false)}
-                  className="mt-5 rounded-md bg-[#d7b45a] px-5 py-4 text-center text-xs font-bold uppercase tracking-[0.14em] text-[#173b2a]"
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="#about"
+                  className="inline-flex items-center justify-center border border-[#F5F0E6]/25 bg-[#1B3D2F]/30 px-7 py-3 font-[family-name:var(--font-cormorant)] text-[11px] font-medium uppercase tracking-[0.26em] text-[#F5F0E6]/85 backdrop-blur-sm transition-all duration-500 hover:border-[#C9A962]/50 hover:text-[#C9A962]"
                 >
-                  Get In Touch
-                </Link>
+                  Our Heritage
+                </a>
               </div>
             </div>
-          )}
-        </header>
-
-        {/* Hero content */}
-<div className="relative z-10 mx-auto flex min-h-screen max-w-[1600px] items-center px-6 pb-16 pt-28 sm:px-10 lg:px-14">
-  <div className="max-w-3xl rounded-2xl border border-white/15 bg-black/25 p-6 shadow-2xl backdrop-blur-[2px] sm:p-8 lg:p-10">
-    <p className="mb-5 text-xs font-semibold uppercase tracking-[0.35em] text-[#e8c66d] sm:text-sm">
-      Manufacturer & Global Exporter from India
-    </p>
-
-    <h1 className="font-serif text-4xl leading-[1.06] sm:text-5xl md:text-7xl lg:text-[72px]">
-  SHIVESH INTERNATIONAL
-</h1>
-
-    <p className="mt-7 max-w-2xl text-base leading-8 text-white/80 md:text-lg">
-      Premium natural henna, indigo, henna-based hair colors, Ayurvedic
-      Indian herbs and authentic Indian spices for global private-label and
-      bulk buyers.
-    </p>
-
-    <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-      <Link
-        href="/products"
-        className="inline-flex min-h-14 items-center justify-center rounded-md bg-[#d7b45a] px-7 text-sm font-bold uppercase tracking-[0.12em] text-[#173b2a] transition hover:-translate-y-0.5 hover:bg-[#ebca72]"
-      >
-        Explore Products
-      </Link>
-
-      <Link
-        href="/contact"
-        className="inline-flex min-h-14 items-center justify-center rounded-md border border-white/45 bg-white/5 px-7 text-sm font-semibold uppercase tracking-[0.12em] backdrop-blur-md transition hover:bg-white hover:text-[#173b2a]"
-      >
-        Contact Export Team
-      </Link>
-    </div>
-
-    <div className="mt-11 grid grid-cols-2 gap-5 border-t border-white/20 pt-7 md:grid-cols-4">
-      <div>
-        <p className="text-2xl font-semibold text-[#e8c66d]">30+</p>
-        <p className="mt-1 text-xs uppercase tracking-[0.12em] text-white/65">
-          Years Experience
-        </p>
+          </div>
+        </div>
+            <div className="absolute inset-x-0 bottom-0 z-20 px-6 pb-8 sm:px-8 lg:px-12 lg:pb-12">
+        <div className="mx-auto max-w-7xl">
+          <AnimatedStats />
+                
+        </div>
       </div>
+      </section>
+      <AboutSection /> 
+      <ProductsSection />
+      <InfrastructureSection />
+      <CertificationSection />
+      <ExportSection />
+      <ContactSection />
+      <FooterSection />
+      <WhatsAppButton />
+      <PremiumCursor />
 
-      <div>
-        <p className="text-2xl font-semibold text-[#e8c66d]">800+</p>
-        <p className="mt-1 text-xs uppercase tracking-[0.12em] text-white/65">
-          Farmer Network
-        </p>
-      </div>
-
-      <div>
-        <p className="text-2xl font-semibold text-[#e8c66d]">50+</p>
-        <p className="mt-1 text-xs uppercase tracking-[0.12em] text-white/65">
-          Export Markets
-        </p>
-      </div>
-
-      <div>
-        <p className="text-2xl font-semibold text-[#e8c66d]">100%</p>
-        <p className="mt-1 text-xs uppercase tracking-[0.12em] text-white/65">
-          Natural Focus
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
+    </main>
+  );
+}
