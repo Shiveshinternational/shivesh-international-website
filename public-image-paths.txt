@@ -1,0 +1,311 @@
+/about-office-fullscreen.png
+/Factory hero.png
+/file.svg
+/globe.svg
+/next.svg
+/vercel.svg
+/window.svg
+/images/about-office-fullscreen.png
+/images/about/about-founders-message-shallabh-kushik-final-v2.png
+/images/about/about-hero-global-buyers-meeting-2300x1000-v3.png
+/images/about/about-hero-global-buyers-meeting-final-v4.png
+/images/about/about-hero-global-buyers-meeting-v2.png
+/images/about/about-our-mission-natural-sustainable-final-v2.png
+/images/about/about-our-story-journey-final-v2.png
+/images/about/about-our-values-trust-quality-final-v2.png
+/images/about/about-our-vision-global-markets-final-v2.png
+/images/about/about-why-buyers-choose-us-global-partnership-final-v2.png
+/images/certifications/certifications-hero-quality-assurance-final-v3.png
+/images/certifications/certifications-premium-office-v2.png.png
+/images/certifications/logos/ce-final-v1.png
+/images/certifications/logos/ce.png
+/images/certifications/logos/fssai.png
+/images/certifications/logos/gmp-final-v1.png
+/images/certifications/logos/haccp-final-v1.png
+/images/certifications/logos/haccp.png
+/images/certifications/logos/halal-final-v1.png
+/images/certifications/logos/halal.png
+/images/certifications/logos/india-organic.png
+/images/certifications/logos/indian-organic-final-v1.png
+/images/certifications/logos/iso-9001-final-v1.png
+/images/certifications/logos/iso-9001.png
+/images/certifications/logos/kosher-final-v1.png
+/images/certifications/logos/kosher.png
+/images/certifications/logos/msme-final-v1.png
+/images/certifications/logos/udyam-msme.png
+/images/certifications/logos/usda-organic-final-v1.png
+/images/certifications/logos/usda-organic.png
+/images/contact/contact-hero-global-business-support-final-v1.png
+/images/export/export-global-network-premium-v2.png
+/images/export/export-hero-global-network-final-v2.png
+/images/export/export-hero-global-network-final-v3.png
+/images/export/export-packaging-options-final-v1.png
+/images/export/export-private-label-packaging-final-v1.png
+/images/export/export-shipment-coordination-final-v1.png
+/images/homepage/hero/hero-slide-01-natural-henna-powder-2300x1000.png
+/images/homepage/hero/hero-slide-01-natural-henna-powder-branded-box-final-v1.png
+/images/homepage/hero/hero-slide-01-natural-henna-powder-final.png
+/images/homepage/hero/hero-slide-01-natural-henna-powder-master.png
+/images/homepage/hero/hero-slide-01-natural-henna-powder-v2.png
+/images/homepage/hero/hero-slide-01-natural-henna-powder-v3.png
+/images/homepage/hero/hero-slide-01-natural-henna-powder-v4.png
+/images/homepage/hero/hero-slide-01-natural-henna-powder-v5.png
+/images/homepage/hero/hero-slide-02-natural-henna-hair-colors-2300x1000.png
+/images/homepage/hero/hero-slide-02-natural-henna-hair-colors-branded-boxes-final-v1.png
+/images/homepage/hero/hero-slide-02-natural-henna-hair-colors-final-v2.png
+/images/homepage/hero/hero-slide-02-natural-henna-hair-colors-four-models-forest-final-v3.png
+/images/homepage/hero/hero-slide-02-natural-henna-hair-colors.png
+/images/homepage/hero/hero-slide-03-natural-indigo-powder-branded-box-final-v1.png
+/images/homepage/hero/hero-slide-03-natural-indigo-powder-final-v2.png
+/images/homepage/hero/hero-slide-03-natural-indigo-powder.png
+/images/homepage/hero/hero-slide-04-henna-based-hair-colors-crop-safe-2300x1000-final-v3.png
+/images/homepage/hero/hero-slide-04-henna-based-hair-colors-eight-branded-boxes-final-v1.png
+/images/homepage/hero/hero-slide-04-henna-based-hair-colors-final-v2.png
+/images/homepage/hero/hero-slide-04-henna-based-hair-colors-five-models-forest-final-v5.png
+/images/homepage/hero/hero-slide-04-henna-based-hair-colors-five-models-leafy-final-v4.png
+/images/homepage/hero/hero-slide-04-henna-based-hair-colors.png
+/images/homepage/hero/hero-slide-05-ayurvedic-indian-herbs-20-branded-boxes-final-v1.png
+/images/homepage/hero/hero-slide-05-ayurvedic-indian-herbs-branded-boxes-crop-safe-final-v2.png
+/images/homepage/hero/hero-slide-05-ayurvedic-indian-herbs-final.png
+/images/homepage/infrastructure/infrastructure-factory-front-elevation-final.png
+/images/homepage/infrastructure/infrastructure-factory-front-elevation-v2.png
+/images/homepage/infrastructure/infrastructure-preview.png
+/images/infrastructure/infrastructure-factory-front-elevation-v2.png
+/images/infrastructure/infrastructure-hero-factory-front-final-v2.png
+/images/infrastructure/infrastructure-manufacturing-overview-final-v2.png
+/images/infrastructure/infrastructure-precision-processing-final-v2.png
+/images/infrastructure/infrastructure-quality-control-packing-final-v2.png
+/images/infrastructure/infrastructure-quality-control-packing-final-v3.png
+/images/infrastructure/infrastructure-warehouse-dispatch-final-v2.png
+/images/prodcuts_old/ayurvedic-herbs/ayurvedic-indian-herbs.png
+/images/prodcuts_old/henna-based-hair-colors/henna-based-hair-colors.png
+/images/prodcuts_old/henna-hair-colors/natural-henna-hair-colors.png
+/images/prodcuts_old/henna-powder/natural-henna-powder.png
+/images/prodcuts_old/indian-spices/indian-spices.png
+/images/prodcuts_old/natural-indigo-powder/natural-indigo-powder.png
+/images/products/ayurvedic-herbs/Adusa Powder.png
+/images/products/ayurvedic-herbs/Aloe Vera Powder.png
+/images/products/ayurvedic-herbs/Amba Haldi Powder.png
+/images/products/ayurvedic-herbs/Amla Powder.png
+/images/products/ayurvedic-herbs/Arjuna Bark Powder.png
+/images/products/ayurvedic-herbs/AshoKa Bark Powder.png
+/images/products/ayurvedic-herbs/Ashwagandha Powder.png
+/images/products/ayurvedic-herbs/ayurvedic-herbs-quality-inspection-final-v1.png
+/images/products/ayurvedic-herbs/ayurvedic-indian-herbs-about-final-v1.png
+/images/products/ayurvedic-herbs/ayurvedic-indian-herbs-hero-final-v1.png
+/images/products/ayurvedic-herbs/ayurvedic-indian-herbs-premium-boxes-v2.png
+/images/products/ayurvedic-herbs/ayurvedic-indian-herbs.png
+/images/products/ayurvedic-herbs/Babool Seed Powder.png
+/images/products/ayurvedic-herbs/Baheda Powder.png
+/images/products/ayurvedic-herbs/Barley Grass Powder.png
+/images/products/ayurvedic-herbs/Basil Seeds Powder.png
+/images/products/ayurvedic-herbs/Bay Leaf Powder.png
+/images/products/ayurvedic-herbs/Beetroot Powder.png
+/images/products/ayurvedic-herbs/Belgiri Powder.png
+/images/products/ayurvedic-herbs/Bhringraj Powder.png
+/images/products/ayurvedic-herbs/Bhumi Amla Powder.png
+/images/products/ayurvedic-herbs/Bitter Gourd Powder.png
+/images/products/ayurvedic-herbs/Bottle Gourd Powder.png
+/images/products/ayurvedic-herbs/Brahmi Powder.png
+/images/products/ayurvedic-herbs/Chia Seeds Powder.png
+/images/products/ayurvedic-herbs/Cinnamon Powder.png
+/images/products/ayurvedic-herbs/Curry Leaf Powder.png
+/images/products/ayurvedic-herbs/f88fecd5-0366-4ea7-98fe-4d7a958683e5.png
+/images/products/ayurvedic-herbs/Fenugreek Seed Powder.png
+/images/products/ayurvedic-herbs/Flaxseeds Powder.png
+/images/products/ayurvedic-herbs/Ginger Powder.png
+/images/products/ayurvedic-herbs/Ginseng Powder.png
+/images/products/ayurvedic-herbs/Gokhru Powder.png
+/images/products/ayurvedic-herbs/Gond Katira Powder.png
+/images/products/ayurvedic-herbs/Guava Leaf Powder.png
+/images/products/ayurvedic-herbs/Gudmar Powder.png
+/images/products/ayurvedic-herbs/Harad Powder.png
+/images/products/ayurvedic-herbs/Hibiscus Powder.png
+/images/products/ayurvedic-herbs/Indian.zip
+/images/products/ayurvedic-herbs/Jamun Powder.png
+/images/products/ayurvedic-herbs/Jatamansi Powder.png
+/images/products/ayurvedic-herbs/Kalmegh Powder.png
+/images/products/ayurvedic-herbs/Kalonji Powder.png
+/images/products/ayurvedic-herbs/Kapur Kachri Powder.png
+/images/products/ayurvedic-herbs/Kapur Sugandhi Powder.png
+/images/products/ayurvedic-herbs/Kasturi Munjal Powder.png
+/images/products/ayurvedic-herbs/katha powder.png
+/images/products/ayurvedic-herbs/Khas Powder.png
+/images/products/ayurvedic-herbs/Lemon Peel Powder.png
+/images/products/ayurvedic-herbs/lemon Powder.png
+/images/products/ayurvedic-herbs/Licorice Powder.png
+/images/products/ayurvedic-herbs/Lodhra Powder.png
+/images/products/ayurvedic-herbs/Lotus Powder.png
+/images/products/ayurvedic-herbs/Mangi Kernel Powder.png
+/images/products/ayurvedic-herbs/Manjistha Powder.png
+/images/products/ayurvedic-herbs/Methi Seeds Powder.png
+/images/products/ayurvedic-herbs/Mint Leaf Powder.png
+/images/products/ayurvedic-herbs/Moringa Powder.png
+/images/products/ayurvedic-herbs/Multani Mitti Powder.png
+/images/products/ayurvedic-herbs/Nagarmotha Powder.png
+/images/products/ayurvedic-herbs/Neem Giloy Powder.png
+/images/products/ayurvedic-herbs/Neem Leaves Powder.png
+/images/products/ayurvedic-herbs/Orange Peel Powder.png
+/images/products/ayurvedic-herbs/Papaya Leaf Powder.png
+/images/products/ayurvedic-herbs/Pomegranate Plee Powder.png
+/images/products/ayurvedic-herbs/Pomegrante Powder.png
+/images/products/ayurvedic-herbs/Punarnava Powder.png
+/images/products/ayurvedic-herbs/Ratanjot Powder.png
+/images/products/ayurvedic-herbs/Rose Petal Powder.png
+/images/products/ayurvedic-herbs/Shankpushpi Powder.png
+/images/products/ayurvedic-herbs/Shatavari Powder.png
+/images/products/ayurvedic-herbs/Shikakai Powder.png
+/images/products/ayurvedic-herbs/Soapnut Powder.png
+/images/products/ayurvedic-herbs/Soapnut Shell Powder.png
+/images/products/ayurvedic-herbs/Spirulina Powder.png
+/images/products/ayurvedic-herbs/Stevia Powder.png
+/images/products/ayurvedic-herbs/Triphala Powder.png
+/images/products/ayurvedic-herbs/Tulsi Leaf Powder.png
+/images/products/ayurvedic-herbs/Turmeric Powder.png
+/images/products/ayurvedic-herbs/Wheat grass Powder.png
+/images/products/certifications/certifications-overview.png
+/images/products/certifications/certifications-premium-office-final.png
+/images/products/certifications/certifications-premium-office-v2.png
+/images/products/contact/contact-information-panel.png
+/images/products/export/export-global-network-premium-v2.png
+/images/products/export/export-world-map.png
+/images/products/henna-based-hair-colors/auburn-henna-final-v1.png
+/images/products/henna-based-hair-colors/auburn-henna-shade-final-v1.png
+/images/products/henna-based-hair-colors/black-henna-final-v1.png
+/images/products/henna-based-hair-colors/black-henna-shade-final-v1.png
+/images/products/henna-based-hair-colors/blonde-henna-final-v1.png
+/images/products/henna-based-hair-colors/blonde-henna-shade-final-v1.png
+/images/products/henna-based-hair-colors/brown-henna-final-v1.png
+/images/products/henna-based-hair-colors/brown-henna-shade-final-v1.png
+/images/products/henna-based-hair-colors/burgundy-henna-final-v1.png
+/images/products/henna-based-hair-colors/burgundy-henna-shade-final-v1.png
+/images/products/henna-based-hair-colors/chestnut-henna-final-v1.png
+/images/products/henna-based-hair-colors/chestnut-henna-shade-final-v1.png
+/images/products/henna-based-hair-colors/copper-brown-henna-final-v1.png
+/images/products/henna-based-hair-colors/copper-brown-henna-shade-final-v1.png
+/images/products/henna-based-hair-colors/dark-brown-henna-final-v1.png
+/images/products/henna-based-hair-colors/dark-brown-henna-shade-final-v1.png
+/images/products/henna-based-hair-colors/ginger-blonde-henna-final-v1.png
+/images/products/henna-based-hair-colors/ginger-blonde-henna-shade-final-v1.png
+/images/products/henna-based-hair-colors/golden-brown-henna-final-v1.png
+/images/products/henna-based-hair-colors/golden-brown-henna-shade-final-v1.png
+/images/products/henna-based-hair-colors/henna-based-hair-colors-about-final-v1.png
+/images/products/henna-based-hair-colors/henna-based-hair-colors-about-final-v2.png
+/images/products/henna-based-hair-colors/henna-based-hair-colors-advanced-performance-final-v1.png
+/images/products/henna-based-hair-colors/henna-based-hair-colors-hero-final-v1.png
+/images/products/henna-based-hair-colors/henna-based-hair-colors-hero-final-v2.png
+/images/products/henna-based-hair-colors/henna-based-hair-colors-premium-boxes-v2.png
+/images/products/henna-based-hair-colors/henna-based-hair-colors.png
+/images/products/henna-based-hair-colors/light-brown-henna-final-v1.png
+/images/products/henna-based-hair-colors/light-brown-henna-shade-final-v1.png
+/images/products/henna-based-hair-colors/mahogany-henna-final-v1.png
+/images/products/henna-based-hair-colors/mahogany-henna-shade-final-v1.png
+/images/products/henna-based-hair-colors/medium-brown-henna-final-v1.png
+/images/products/henna-based-hair-colors/medium-brown-henna-shade-final-v1.png
+/images/products/henna-based-hair-colors/orange-henna-final-v1.png
+/images/products/henna-based-hair-colors/orange-henna-shade-final-v1.png
+/images/products/henna-based-hair-colors/red-henna-final-v1.png
+/images/products/henna-based-hair-colors/red-henna-shade-final-v1.png
+/images/products/henna-based-hair-colors/wine-red-henna-final-v1.png
+/images/products/henna-based-hair-colors/wine-red-henna-shade-final-v1.png
+/images/products/henna-hair-colors/01-natural-black-henna-hair-color-final.png
+/images/products/henna-hair-colors/02-natural-dark-brown-henna-hair-color-final.png
+/images/products/henna-hair-colors/03-natural-medium-brown-henna-hair-color-final.png
+/images/products/henna-hair-colors/04-natural-brown-henna-hair-color-final.png
+/images/products/henna-hair-colors/05-natural-light-brown-henna-hair-color-final.png
+/images/products/henna-hair-colors/06-natural-golden-brown-henna-hair-color-final.png
+/images/products/henna-hair-colors/07-natural-copper-brown-henna-hair-color-final.png
+/images/products/henna-hair-colors/08-natural-chestnut-henna-hair-color-final.png
+/images/products/henna-hair-colors/09-natural-mahogany-henna-hair-color-final.png
+/images/products/henna-hair-colors/10-natural-burgundy-henna-hair-color-final.png
+/images/products/henna-hair-colors/11-natural-wine-red-henna-hair-color-final.png
+/images/products/henna-hair-colors/12-natural-red-henna-hair-color-final.png
+/images/products/henna-hair-colors/13-natural-auburn-henna-hair-color-final.png
+/images/products/henna-hair-colors/14-natural-orange-henna-hair-color-final.png
+/images/products/henna-hair-colors/15-natural-blonde-henna-hair-color-final.png
+/images/products/henna-hair-colors/16-natural-ginger-blonde-henna-hair-color-final.png
+/images/products/henna-hair-colors/17-natural-strawberry-blonde-henna-hair-color-final.png
+/images/products/henna-hair-colors/18-natural-henna-hair-treatment-final.png
+/images/products/henna-hair-colors/natural-henna-hair-colors-about-final-v1.png
+/images/products/henna-hair-colors/natural-henna-hair-colors-hero-final-v1.png
+/images/products/henna-hair-colors/natural-henna-hair-colors-hero-final-v2.png
+/images/products/henna-hair-colors/natural-henna-hair-colors-packaging-private-label-final-v1.png
+/images/products/henna-hair-colors/natural-henna-hair-colors-premium-boxes-v2.png
+/images/products/henna-hair-colors/natural-henna-hair-colors-why-choose-collection-final-v1.png
+/images/products/henna-hair-colors/natural-henna-hair-colors.png
+/images/products/henna-hair-colors/botanical-ingredients/01-raw-henna-ingredient-final.png
+/images/products/henna-hair-colors/botanical-ingredients/02-raw-indigo-ingredient-final.png
+/images/products/henna-hair-colors/botanical-ingredients/03-raw-amla-ingredient-final.png
+/images/products/henna-hair-colors/botanical-ingredients/04-raw-shikakai-ingredient-final.png
+/images/products/henna-hair-colors/botanical-ingredients/05-raw-brahmi-ingredient-final.png
+/images/products/henna-hair-colors/botanical-ingredients/06-raw-bhringraj-ingredient-final.png
+/images/products/henna-hair-colors/botanical-ingredients/07-raw-soapnut-ingredient-final.png
+/images/products/henna-hair-colors/botanical-ingredients/08-raw-manjistha-ingredient-final.png
+/images/products/henna-hair-colors/botanical-ingredients/09-raw-harad-ingredient-final.png
+/images/products/henna-hair-colors/botanical-ingredients/10-raw-baheda-ingredient-final.png
+/images/products/henna-hair-colors/botanical-ingredients/11-raw-kamala-ingredient-final.png
+/images/products/henna-hair-colors/botanical-ingredients/12-raw-hibiscus-ingredient-final.png
+/images/products/henna-hair-colors/shade-guide/01-natural-black-hair-shade-closeup-final.png
+/images/products/henna-hair-colors/shade-guide/02-natural-dark-brown-hair-shade-closeup-final.png
+/images/products/henna-hair-colors/shade-guide/03-natural-medium-brown-hair-shade-closeup-final.png
+/images/products/henna-hair-colors/shade-guide/04-natural-brown-hair-shade-closeup-final.png
+/images/products/henna-hair-colors/shade-guide/05-natural-light-brown-hair-shade-closeup-final.png
+/images/products/henna-hair-colors/shade-guide/06-natural-golden-brown-hair-shade-closeup-final.png
+/images/products/henna-hair-colors/shade-guide/07-natural-copper-brown-hair-shade-closeup-final.png
+/images/products/henna-hair-colors/shade-guide/08-natural-chestnut-hair-shade-closeup-final.png
+/images/products/henna-hair-colors/shade-guide/09-natural-mahogany-hair-shade-closeup-final.png
+/images/products/henna-hair-colors/shade-guide/10-natural-burgundy-hair-shade-closeup-final.png
+/images/products/henna-hair-colors/shade-guide/11-natural-wine-red-hair-shade-closeup-final.png
+/images/products/henna-hair-colors/shade-guide/12-natural-red-hair-shade-closeup-final.png
+/images/products/henna-hair-colors/shade-guide/13-natural-auburn-hair-shade-closeup-final.png
+/images/products/henna-hair-colors/shade-guide/14-natural-orange-hair-shade-closeup-final.png
+/images/products/henna-hair-colors/shade-guide/15-natural-blonde-hair-shade-closeup-final.png
+/images/products/henna-hair-colors/shade-guide/16-natural-ginger-blonde-hair-shade-closeup-final.png
+/images/products/henna-hair-colors/shade-guide/17-natural-strawberry-blonde-hair-shade-closeup-final.png
+/images/products/henna-hair-colors/shade-guide/18-natural-henna-hair-treatment-glossy-black-final.png
+/images/products/henna-powder/natural-henna-about-model-holding-box-final-v1.png
+/images/products/henna-powder/natural-henna-benefits-healthy-hair-final-v1.png
+/images/products/henna-powder/natural-henna-how-to-use-seven-steps-final-v1.png
+/images/products/henna-powder/natural-henna-origin-sojat-rajasthan-final-v1.png
+/images/products/henna-powder/natural-henna-packaging-options-international-final-v3.png
+/images/products/henna-powder/natural-henna-powder-hero-final-v2.png
+/images/products/henna-powder/natural-henna-powder-premium-box-v2.png
+/images/products/henna-powder/natural-henna-powder.png
+/images/products/indian-spices/Black Pepper Powder.png
+/images/products/indian-spices/Cardamom Powder.png
+/images/products/indian-spices/Cinnamon Powder.png
+/images/products/indian-spices/Cinnamon Stick.png
+/images/products/indian-spices/Clove Powder.png
+/images/products/indian-spices/Coriander Seeds Powder.png
+/images/products/indian-spices/Cumin Seeds Powder.png
+/images/products/indian-spices/Dry Garlic Powder.png
+/images/products/indian-spices/Dry Ginger Powder.png
+/images/products/indian-spices/Fennel Seeds Powder.png
+/images/products/indian-spices/Fenugreek Seeds Powder.png
+/images/products/indian-spices/indian-spices-about-final-v1.png
+/images/products/indian-spices/indian-spices-about-final-v2.png
+/images/products/indian-spices/indian-spices-hero-final-v1.png
+/images/products/indian-spices/indian-spices-premium-boxes-v2.png
+/images/products/indian-spices/indian-spices-quality-inspection-final-v1.png
+/images/products/indian-spices/indian-spices.png
+/images/products/indian-spices/Red Chilli Powder.png
+/images/products/indian-spices/Turmeric Finger.png
+/images/products/indian-spices/Turmeric Powder.png
+/images/products/indian-spices/Whole Black Pepper.png
+/images/products/indian-spices/Whole Cardamon.png
+/images/products/indian-spices/Whole Clove.png
+/images/products/indian-spices/Whole Coriander Seeds.png
+/images/products/indian-spices/Whole Cumin Seeds.png
+/images/products/indian-spices/Whole Dry Garlic.png
+/images/products/indian-spices/Whole Dry Ginger.png
+/images/products/indian-spices/Whole Fennel Seeds.png
+/images/products/indian-spices/Whole Fenugreek Seeds.png
+/images/products/indian-spices/Whole Red Chilli.png
+/images/products/natural-indigo-powder/natural-indigo-about-two-models-holding-box-final-v1.png
+/images/products/natural-indigo-powder/natural-indigo-benefits-dark-shiny-hair-final-v1.png
+/images/products/natural-indigo-powder/natural-indigo-origin-south-india-farm-final-v1.png
+/images/products/natural-indigo-powder/natural-indigo-packaging-private-label-final-v1.png
+/images/products/natural-indigo-powder/natural-indigo-powder-hero-final-v1.png
+/images/products/natural-indigo-powder/natural-indigo-powder-hero-ultrawide-4k-final-v2.png
+/images/products/natural-indigo-powder/natural-indigo-powder-premium-box-v2.png
+/images/products/natural-indigo-powder/natural-indigo-powder.png

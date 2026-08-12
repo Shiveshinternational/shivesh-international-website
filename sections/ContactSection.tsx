@@ -27,7 +27,7 @@ export default function ContactSection() {
 
             <StaggerItem delay={120}>
               <h2 className="font-[family-name:var(--font-playfair)] text-5xl font-semibold leading-tight md:text-6xl">
-                Let's Build Long-Term
+                Let&apos;s Build Long-Term
                 <br />
                 Business Partnerships
               </h2>

@@ -11,14 +11,16 @@ export default function LuxuryPageLoader() {
 
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
+      "(prefers-reduced-motion: reduce)",
     ).matches;
 
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
 
     if (prefersReducedMotion) {
-      setProgress(100);
+      const progressTimer = window.setTimeout(() => {
+        setProgress(100);
+      }, 0);
 
       const reducedMotionTimer = window.setTimeout(() => {
         setIsVisible(false);
@@ -26,6 +28,7 @@ export default function LuxuryPageLoader() {
       }, 250);
 
       return () => {
+        window.clearTimeout(progressTimer);
         window.clearTimeout(reducedMotionTimer);
         document.body.style.overflow = previousOverflow;
       };
@@ -33,6 +36,8 @@ export default function LuxuryPageLoader() {
 
     const duration = 1900;
     const startTime = performance.now();
+    let exitTimer: number | null = null;
+    let hideTimer: number | null = null;
 
     const animateProgress = (currentTime: number) => {
       const elapsedTime = currentTime - startTime;
@@ -49,10 +54,10 @@ export default function LuxuryPageLoader() {
         return;
       }
 
-      window.setTimeout(() => {
+      exitTimer = window.setTimeout(() => {
         setIsExiting(true);
 
-        window.setTimeout(() => {
+        hideTimer = window.setTimeout(() => {
           setIsVisible(false);
           document.body.style.overflow = previousOverflow;
         }, 800);
@@ -65,6 +70,14 @@ export default function LuxuryPageLoader() {
     return () => {
       if (animationFrameRef.current !== null) {
         window.cancelAnimationFrame(animationFrameRef.current);
+      }
+
+      if (exitTimer !== null) {
+        window.clearTimeout(exitTimer);
+      }
+
+      if (hideTimer !== null) {
+        window.clearTimeout(hideTimer);
       }
 
       document.body.style.overflow = previousOverflow;
