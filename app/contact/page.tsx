@@ -12,9 +12,30 @@ import MagneticButtons from "@/app/components/MagneticButtons";
 import FooterSection from "@/sections/FooterSection";
 
 export const metadata: Metadata = {
-  title: "Contact Shivesh International | Export & Business Enquiries",
+  title: "Contact Natural Products Exporter | Shivesh International",
   description:
-    "Contact Shivesh International for natural henna, indigo powder, botanical hair colors, Ayurvedic herbs, Indian spices, bulk orders, private-label manufacturing and export enquiries.",
+    "Contact Shivesh International for bulk natural henna powder, indigo powder, botanical hair colors, Ayurvedic herbs, Indian spices, private-label and export enquiries.",
+  keywords: [
+    "contact henna exporter India",
+    "natural henna supplier contact",
+    "indigo powder exporter enquiry",
+    "botanical hair color manufacturer contact",
+    "Ayurvedic herbs exporter enquiry",
+    "Indian spices exporter contact",
+    "private label henna enquiry",
+    "bulk natural products supplier India",
+    "Shivesh International contact",
+  ],
+  alternates: {
+    canonical: "/contact",
+  },
+  openGraph: {
+    title: "Contact Natural Products Exporter | Shivesh International",
+    description:
+      "Send bulk export and private-label enquiries for natural henna, indigo, botanical hair colors, Ayurvedic herbs and Indian spices.",
+    url: "/contact",
+    type: "website",
+  },
 };
 
 const directContacts = [
