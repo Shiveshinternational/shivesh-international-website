@@ -328,12 +328,32 @@ export default function FooterSection() {
                         Email
                       </p>
 
-                      <a
-                        href="mailto:shiveshinternational@gmail.com"
-                        className="mt-2 block break-all transition hover:text-[#E4C878]"
-                      >
-                        shiveshinternational@gmail.com
-                      </a>
+                      <div className="mt-2 space-y-1">
+  <a
+    href="https://mail.google.com/mail/?view=cm&fs=1&to=export@shiveshinternational.com"
+target="_blank"
+rel="noopener noreferrer"
+    className="block break-all transition hover:text-[#E4C878]"
+  >
+    export@shiveshinternational.com
+  </a>
+  <a
+    href="https://mail.google.com/mail/?view=cm&fs=1&to=sales@shiveshinternational.com"
+target="_blank"
+rel="noopener noreferrer"
+    className="block break-all transition hover:text-[#E4C878]"
+  >
+    sales@shiveshinternational.com
+  </a>
+  <a
+    href="https://mail.google.com/mail/?view=cm&fs=1&to=info@shiveshinternational.com"
+target="_blank"
+rel="noopener noreferrer"
+    className="block break-all transition hover:text-[#E4C878]"
+  >
+    info@shiveshinternational.com
+  </a>
+</div>
                     </div>
 
                     <div className="h-px bg-[#C9A962]/10" />
@@ -344,12 +364,12 @@ export default function FooterSection() {
                       </p>
 
                       <a
-                        href="https://www.henna-manufacturer.com"
+                        href="https://shiveshinternational.com"
                         target="_blank"
                         rel="noreferrer"
                         className="mt-2 block break-all transition hover:text-[#E4C878]"
                       >
-                        www.henna-manufacturer.com
+                        www.shiveshinternational.com
                       </a>
                     </div>
                   </div>

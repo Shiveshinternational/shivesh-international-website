@@ -37,7 +37,10 @@ export default function ContactEnquiryForm() {
   const [formData, setFormData] =
     useState<EnquiryFormData>(initialFormData);
 
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
 
   const handleChange = (
     event:
@@ -52,61 +55,44 @@ export default function ContactEnquiryForm() {
       [name]: value,
     }));
 
-    setIsSubmitted(false);
+    setSubmitStatus("idle");
   };
 
-  const createMessage = () => {
-    return [
-      "Hello Shivesh International,",
-      "",
-      "I would like to submit a business enquiry.",
-      "",
-      `Name: ${formData.name}`,
-      `Company: ${formData.company || "Not provided"}`,
-      `Country: ${formData.country}`,
-      `Email: ${formData.email}`,
-      `Phone: ${formData.phone || "Not provided"}`,
-      `WhatsApp: ${formData.whatsapp || "Not provided"}`,
-      `Enquiry Type: ${formData.enquiryType}`,
-      `Product Interested In: ${formData.product}`,
-      `Packaging Requirement: ${
-        formData.packaging || "Not specified"
-      }`,
-      `Expected Quantity: ${formData.quantity || "Not specified"}`,
-      "",
-      "Message:",
-      formData.message,
-    ].join("\n");
-  };
-
-  const handleWhatsAppSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const message = encodeURIComponent(createMessage());
+    if (isSubmitting) {
+      return;
+    }
 
-    window.open(
-      `https://wa.me/919999774950?text=${message}`,
-      "_blank",
-      "noopener,noreferrer",
-    );
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
 
-    setIsSubmitted(true);
-  };
+    try {
+      const response = await fetch("/api/enquiry", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-  const handleEmailClick = () => {
-    const subject = encodeURIComponent(
-      `Business Enquiry from ${formData.name || "Website Visitor"}`,
-    );
+      if (!response.ok) {
+        throw new Error("Unable to submit enquiry");
+      }
 
-    const body = encodeURIComponent(createMessage());
-
-    window.location.href =
-      `mailto:shiveshinternational@gmail.com?subject=${subject}&body=${body}`;
+      setSubmitStatus("success");
+      setFormData(initialFormData);
+    } catch {
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <form
-      onSubmit={handleWhatsAppSubmit}
+      onSubmit={handleSubmit}
       className="rounded-[30px] border border-[#C9A962]/35 bg-[#f5f0e6] p-6 shadow-[0_30px_85px_rgba(0,0,0,0.13)] sm:p-9 lg:p-11"
     >
       <div className="mb-9">
@@ -138,6 +124,7 @@ export default function ContactEnquiryForm() {
             name="name"
             type="text"
             required
+            maxLength={100}
             value={formData.name}
             onChange={handleChange}
             placeholder="Your full name"
@@ -157,6 +144,7 @@ export default function ContactEnquiryForm() {
             id="company"
             name="company"
             type="text"
+            maxLength={150}
             value={formData.company}
             onChange={handleChange}
             placeholder="Your company or brand"
@@ -177,6 +165,7 @@ export default function ContactEnquiryForm() {
             name="country"
             type="text"
             required
+            maxLength={100}
             value={formData.country}
             onChange={handleChange}
             placeholder="Destination country"
@@ -197,6 +186,7 @@ export default function ContactEnquiryForm() {
             name="email"
             type="email"
             required
+            maxLength={200}
             value={formData.email}
             onChange={handleChange}
             placeholder="name@company.com"
@@ -216,6 +206,7 @@ export default function ContactEnquiryForm() {
             id="phone"
             name="phone"
             type="tel"
+            maxLength={50}
             value={formData.phone}
             onChange={handleChange}
             placeholder="Include country code"
@@ -235,6 +226,7 @@ export default function ContactEnquiryForm() {
             id="whatsapp"
             name="whatsapp"
             type="tel"
+            maxLength={50}
             value={formData.whatsapp}
             onChange={handleChange}
             placeholder="Include country code"
@@ -326,6 +318,7 @@ export default function ContactEnquiryForm() {
             id="packaging"
             name="packaging"
             type="text"
+            maxLength={200}
             value={formData.packaging}
             onChange={handleChange}
             placeholder="Example: 100 g metallic pouch"
@@ -345,6 +338,7 @@ export default function ContactEnquiryForm() {
             id="quantity"
             name="quantity"
             type="text"
+            maxLength={100}
             value={formData.quantity}
             onChange={handleChange}
             placeholder="Example: 5,000 units or 500 kg"
@@ -365,6 +359,7 @@ export default function ContactEnquiryForm() {
           id="message"
           name="message"
           required
+          maxLength={5000}
           rows={6}
           value={formData.message}
           onChange={handleChange}
@@ -373,38 +368,40 @@ export default function ContactEnquiryForm() {
         />
       </div>
 
-      <div className="mt-7 flex flex-col gap-4 sm:flex-row">
+      <div className="mt-7">
         <button
           type="submit"
-          className="inline-flex flex-1 items-center justify-center gap-3 border border-[#C9A962] bg-[#C9A962] px-7 py-4 text-xs font-bold uppercase tracking-[0.2em] text-[#102f23] transition-all duration-500 hover:-translate-y-1 hover:bg-[#E4C878] hover:shadow-[0_18px_45px_rgba(201,169,98,0.28)]"
+          disabled={isSubmitting}
+          className="inline-flex w-full items-center justify-center gap-3 border border-[#C9A962] bg-[#C9A962] px-7 py-4 text-xs font-bold uppercase tracking-[0.2em] text-[#102f23] transition-all duration-500 hover:-translate-y-1 hover:bg-[#E4C878] hover:shadow-[0_18px_45px_rgba(201,169,98,0.28)] disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0"
         >
-          Send through WhatsApp
-          <span className="text-lg">→</span>
-        </button>
-
-        <button
-          type="button"
-          onClick={handleEmailClick}
-          className="inline-flex flex-1 items-center justify-center gap-3 border border-[#173b2a]/25 bg-transparent px-7 py-4 text-xs font-bold uppercase tracking-[0.2em] text-[#173b2a] transition-all duration-500 hover:-translate-y-1 hover:border-[#C9A962] hover:bg-[#173b2a] hover:text-[#F5F0E6]"
-        >
-          Send through Email
-          <span className="text-lg">→</span>
+          {isSubmitting ? "Submitting Enquiry..." : "Submit Enquiry"}
+          {!isSubmitting && <span className="text-lg">→</span>}
         </button>
       </div>
 
-      {isSubmitted && (
+      {submitStatus === "success" && (
         <p
           role="status"
-          className="mt-5 border-l-2 border-[#C9A962] bg-[#ede5d7] px-5 py-4 leading-7 text-[#4c5f54]"
+          className="mt-5 border-l-2 border-[#C9A962] bg-[#ede5d7] px-5 py-4 leading-7 text-[#173b2a]"
         >
-          Your enquiry has been prepared in WhatsApp. Please review the message
-          and press Send to deliver it to our team.
+          Thank you. Your enquiry has been submitted successfully. Our export
+          team will contact you shortly.
+        </p>
+      )}
+
+      {submitStatus === "error" && (
+        <p
+          role="alert"
+          className="mt-5 border-l-2 border-red-700 bg-red-50 px-5 py-4 leading-7 text-red-800"
+        >
+          We could not submit your enquiry. Please try again or email us at
+          export@shiveshinternational.com.
         </p>
       )}
 
       <p className="mt-5 text-sm leading-7 text-[#4c5f54]/70">
-        This form opens WhatsApp or your email application. Information is not
-        automatically stored on the website.
+        Your information will be sent securely to our export team and used only
+        to respond to your business enquiry.
       </p>
     </form>
   );

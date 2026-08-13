@@ -35,19 +35,19 @@ const directContacts = [
     external: true,
   },
   {
-    shortName: "MAIL",
-    label: "Email",
-    value: "shiveshinternational@gmail.com",
-    secondaryValue: "Export & General Enquiries",
-    href: "mailto:shiveshinternational@gmail.com",
-    external: false,
-  },
+  shortName: "MAIL",
+  label: "Email",
+  value: "export@shiveshinternational.com",
+  secondaryValue: "sales@shiveshinternational.com • info@shiveshinternational.com",
+  href: "https://mail.google.com/mail/?view=cm&fs=1&to=export@shiveshinternational.com",
+  external: true,
+},
   {
     shortName: "WEB",
     label: "Website",
-    value: "www.henna-manufacturer.com",
+    value: "www.shiveshinternational.com",
     secondaryValue: "Official Website",
-    href: "https://www.henna-manufacturer.com",
+    href: "https://shiveshinternational.com",
     external: true,
   },
 ];
@@ -300,41 +300,85 @@ export default function ContactPage() {
                     <div className="mt-7 h-px bg-[#C9A962]/25" />
 
                     <div className="mt-5 divide-y divide-[#C9A962]/15">
-                      {directContacts.map((contact) => (
-                        <a
-                          key={contact.label}
-                          href={contact.href}
-                          target={contact.external ? "_blank" : undefined}
-                          rel={
-                            contact.external
-                              ? "noopener noreferrer"
-                              : undefined
-                          }
-                          className="group/contact grid gap-4 py-4 transition-all duration-300 sm:grid-cols-[58px_1fr_auto] sm:items-center"
-                        >
-                          <div className="flex h-11 w-11 items-center justify-center rounded-full border border-[#C9A962]/40 bg-white/[0.04] px-2 text-center text-[10px] font-bold text-[#E4C878] transition-all duration-300 group-hover/contact:border-[#E4C878] group-hover/contact:bg-[#C9A962]/10">
-                            {contact.shortName}
-                          </div>
+                      {directContacts.map((contact) => {
+  const cardContent = (
+    <>
+      <div className="flex h-11 w-11 items-center justify-center rounded-full border border-[#C9A962]/40 bg-white/[0.04] px-2 text-center text-[10px] font-bold text-[#C9A962]">
+        {contact.shortName}
+      </div>
 
-                          <div className="min-w-0">
-                            <p className="text-[9px] font-bold uppercase tracking-[0.28em] text-[#C9A962]">
-                              {contact.label}
-                            </p>
+      <div className="min-w-0">
+        <p className="text-[9px] font-bold uppercase tracking-[0.28em] text-[#C9A962]">
+          {contact.label}
+        </p>
 
-                            <p className="mt-1 break-words font-[family-name:var(--font-playfair)] text-lg font-semibold text-[#F5F0E6]">
-                              {contact.value}
-                            </p>
+        {contact.shortName === "MAIL" ? (
+          <div className="mt-1 space-y-1">
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=export@shiveshinternational.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block break-words font-[family-name:var(--font-playfair)] text-lg font-semibold text-[#F5F0E6] transition hover:text-[#C9A962]"
+            >
+              export@shiveshinternational.com
+            </a>
 
-                            <p className="mt-1 text-sm text-[#F5F0E6]/45">
-                              {contact.secondaryValue}
-                            </p>
-                          </div>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=sales@shiveshinternational.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block break-words text-sm text-[#F5F0E6]/45 transition hover:text-[#C9A962]"
+            >
+              sales@shiveshinternational.com
+            </a>
 
-                          <span className="text-lg text-[#C9A962] transition-transform duration-300 group-hover/contact:translate-x-2">
-                            →
-                          </span>
-                        </a>
-                      ))}
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=info@shiveshinternational.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block break-words text-sm text-[#F5F0E6]/45 transition hover:text-[#C9A962]"
+            >
+              info@shiveshinternational.com
+            </a>
+          </div>
+        ) : (
+          <>
+            <p className="mt-1 break-words font-[family-name:var(--font-playfair)] text-lg font-semibold text-[#F5F0E6]">
+              {contact.value}
+            </p>
+
+            <p className="mt-1 text-sm text-[#F5F0E6]/45">
+              {contact.secondaryValue}
+            </p>
+          </>
+        )}
+      </div>
+
+      <span className="text-lg text-[#C9A962] transition-transform duration-300 group-hover/contact:translate-x-2">
+        →
+      </span>
+    </>
+  );
+
+  return contact.shortName === "MAIL" ? (
+    <div
+      key={contact.label}
+      className="group/contact grid gap-4 py-4 transition-all duration-300 sm:grid-cols-[58px_1fr_auto] sm:items-center"
+    >
+      {cardContent}
+    </div>
+  ) : (
+    <a
+      key={contact.label}
+      href={contact.href}
+      target={contact.external ? "_blank" : undefined}
+      rel={contact.external ? "noopener noreferrer" : undefined}
+      className="group/contact grid gap-4 py-4 transition-all duration-300 sm:grid-cols-[58px_1fr_auto] sm:items-center"
+    >
+      {cardContent}
+    </a>
+  );
+})}
                     </div>
 
                 
