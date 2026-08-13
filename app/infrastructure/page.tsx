@@ -12,10 +12,31 @@ import MagneticButtons from "@/app/components/MagneticButtons";
 import FooterSection from "@/sections/FooterSection";
 
 export const metadata: Metadata = {
-  title:
-    "Manufacturing Infrastructure | Shivesh International Natural Products",
+  title: "Natural Products Manufacturing Infrastructure",
   description:
-    "Explore the manufacturing infrastructure of Shivesh International in Faridabad, Haryana, India — from raw-material preparation and precision processing to quality control, packing, warehousing and dispatch.",
+    "Explore Shivesh International's manufacturing infrastructure in Faridabad, India for natural henna powder, indigo powder, botanical hair colors, herbs and spices.",
+  keywords: [
+    "henna manufacturing facility India",
+    "natural henna powder manufacturer",
+    "indigo powder processing facility",
+    "botanical hair color manufacturer",
+    "Ayurvedic herbs processing India",
+    "natural products manufacturing India",
+    "private label packing facility",
+    "henna exporter infrastructure",
+    "quality control natural products",
+    "Shivesh International infrastructure",
+  ],
+  alternates: {
+    canonical: "/infrastructure",
+  },
+  openGraph: {
+    title: "Natural Products Manufacturing Infrastructure | Shivesh International",
+    description:
+      "Explore our natural-products processing, quality-control, packing, warehousing and export-dispatch infrastructure in Faridabad, India.",
+    url: "/infrastructure",
+    type: "website",
+  },
 };
 
 const overviewPoints = [
