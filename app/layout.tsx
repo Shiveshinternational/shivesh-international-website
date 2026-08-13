@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.henna-manufacturer.com"),
+  metadataBase: new URL("https://shiveshinternational.com"),
   title: {
     default:
       "Shivesh International | Natural Henna, Indigo, Herbs & Spices Exporter",
@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   },
   description:
     "Shivesh International supplies Natural Henna Powder, Natural Indigo Powder, Natural Henna Hair Colors, Henna-Based Hair Colors, Ayurvedic Indian Herbs and Indian Spices for global buyers.",
+    alternates: {
+  canonical: "/",
+},
   applicationName: "Shivesh International",
   authors: [{ name: "Shivesh International" }],
   creator: "Shivesh International",
@@ -35,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://www.henna-manufacturer.com",
+    url: "https://shiveshinternational.com",
     siteName: "Shivesh International",
     title:
       "Shivesh International | Natural Henna, Indigo, Herbs & Spices Exporter",

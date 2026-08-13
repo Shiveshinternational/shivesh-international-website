@@ -3,10 +3,28 @@ import type { Metadata } from "next";
 import InnerPageTemplate from "@/app/components/InnerPageTemplate";
 
 export const metadata: Metadata = {
-  title:
-    "About Shivesh International | Natural Products Company Since 1999",
+  title: "Indian Natural Products Exporter Since 1999",
   description:
-    "Discover the story, purpose, values and business philosophy of Shivesh International, an Indian natural products company established in 1999.",
+    "Learn about Shivesh International, an Indian exporter of natural henna powder, indigo powder, botanical hair colors, Ayurvedic herbs and Indian spices for global buyers.",
+  keywords: [
+    "Indian natural products exporter",
+    "henna powder exporter India",
+    "indigo powder supplier India",
+    "botanical hair color manufacturer",
+    "Ayurvedic herbs exporter",
+    "Indian spices exporter",
+    "Shivesh International",
+  ],
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About Shivesh International | Indian Natural Products Exporter",
+    description:
+      "Discover our experience, values, product expertise and commitment to serving international buyers of Indian natural products.",
+    url: "/about",
+    type: "website",
+  },
 };
 
 export default function AboutPage() {
