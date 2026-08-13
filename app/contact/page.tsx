@@ -12,7 +12,7 @@ import MagneticButtons from "@/app/components/MagneticButtons";
 import FooterSection from "@/sections/FooterSection";
 
 export const metadata: Metadata = {
-  title: "Contact Natural Products Exporter | Shivesh International",
+  title: "Contact Natural Products Exporter",
   description:
     "Contact Shivesh International for bulk natural henna powder, indigo powder, botanical hair colors, Ayurvedic herbs, Indian spices, private-label and export enquiries.",
   keywords: [
