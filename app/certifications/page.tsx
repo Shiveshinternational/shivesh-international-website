@@ -12,10 +12,33 @@ import MagneticButtons from "@/app/components/MagneticButtons";
 import FooterSection from "@/sections/FooterSection";
 
 export const metadata: Metadata = {
-  title:
-    "Certifications & Quality Documents | Shivesh International",
+  title: "Quality Certifications & Export Documents",
   description:
-    "Explore the certifications, registrations and technical quality documents available with Shivesh International, including ISO 9001:2015, GMP, USDA Organic, India Organic, CE, HACCP, Halal, Kosher, FSSAI, Udyam/MSME, MSDS, COA, laboratory test reports and technical data sheets.",
+    "Review Shivesh International’s quality certifications, registrations and export documents for natural henna, indigo powder, botanical hair colors, herbs and spices.",
+  keywords: [
+    "henna exporter certifications",
+    "natural henna quality certificate",
+    "indigo powder exporter documents",
+    "botanical hair color certifications",
+    "ISO 9001 certified exporter India",
+    "GMP certified henna supplier",
+    "USDA organic henna supplier",
+    "India organic henna exporter",
+    "Halal certified natural products",
+    "Kosher certified natural products",
+    "export documentation India",
+    "Shivesh International certifications",
+  ],
+  alternates: {
+    canonical: "/certifications",
+  },
+  openGraph: {
+    title: "Quality Certifications & Export Documents | Shivesh International",
+    description:
+      "Explore quality certifications, registrations and export documents supporting Shivesh International’s natural-product exports.",
+    url: "/certifications",
+    type: "website",
+  },
 };
 
 type CertificationItem = {
