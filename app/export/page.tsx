@@ -12,10 +12,31 @@ import MagneticButtons from "@/app/components/MagneticButtons";
 import FooterSection from "@/sections/FooterSection";
 
 export const metadata: Metadata = {
-  title:
-    "Export Worldwide | Shivesh International Natural Products Exporter",
+  title: "Natural Henna & Indigo Exporter India | Shivesh International",
   description:
-    "Explore international export support, private-label solutions and packaging options from Shivesh International for natural henna, indigo powder, botanical hair colors, Ayurvedic herbs and Indian spices.",
+    "Source natural henna powder, indigo powder, botanical hair colors, Ayurvedic herbs and Indian spices from India with bulk export and private-label support.",
+  keywords: [
+    "natural henna exporter India",
+    "henna powder exporter India",
+    "indigo powder exporter India",
+    "botanical hair color exporter",
+    "Ayurvedic herbs exporter India",
+    "Indian spices exporter India",
+    "private label henna manufacturer",
+    "bulk natural products supplier India",
+    "natural products export company India",
+    "Shivesh International exporter",
+  ],
+  alternates: {
+    canonical: "/export",
+  },
+  openGraph: {
+    title: "Natural Henna & Indigo Exporter India | Shivesh International",
+    description:
+      "Bulk export, private-label packaging and buyer support for Indian henna, indigo, botanical hair colors, Ayurvedic herbs and spices.",
+    url: "/export",
+    type: "website",
+  },
 };
 
 const buyerCategories = [
