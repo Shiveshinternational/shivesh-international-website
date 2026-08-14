@@ -81,9 +81,7 @@ export default function ContactEnquiryForm() {
         throw new Error("Unable to submit enquiry");
       }
 
-            if (!response.ok) {
-        throw new Error("Unable to submit enquiry");
-      }
+            
 
       setSubmitStatus("success");
 
