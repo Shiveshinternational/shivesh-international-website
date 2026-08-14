@@ -396,26 +396,52 @@ rel="noopener noreferrer"
               BOTTOM BAR
           ================================================= */}
           <StaggerItem delay={460}>
-            <div className="mt-16 border-t border-[#C9A962]/16 pt-7">
-              <div className="flex flex-col items-center justify-between gap-4 text-center md:flex-row md:text-left">
-                <p className="text-xs text-[#F5F0E6]/38">
-                  © 2026 Shivesh International. All Rights Reserved.
-                </p>
+  <div className="mt-16 border-t border-[#C9A962]/16 pt-7">
+    <div className="flex flex-col items-center justify-between gap-5 text-center md:flex-row md:text-left">
+      <div className="flex flex-col items-center gap-3 md:items-start">
+        <p className="text-xs text-[#F5F0E6]/38">
+          © 2026 Shivesh International. All Rights Reserved.
+        </p>
 
-                <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[9px] font-bold uppercase tracking-[0.18em] text-[#C9A962]">
-                  <span>Designed for Global Trade</span>
+        <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#C9A962] md:justify-start">
+          <Link
+            href="/privacy-policy"
+            className="transition-colors duration-300 hover:text-[#E4C878]"
+          >
+            Privacy Policy
+          </Link>
 
-                  <span className="hidden h-1 w-1 rotate-45 bg-[#C9A962]/50 sm:block" />
+          <Link
+            href="/cookie-policy"
+            className="transition-colors duration-300 hover:text-[#E4C878]"
+          >
+            Cookie Policy
+          </Link>
 
-                  <span>India Origin</span>
+          <button
+            type="button"
+            onClick={openCookieSettings}
+            className="cursor-pointer transition-colors duration-300 hover:text-[#E4C878]"
+          >
+            Cookie Settings
+          </button>
+        </div>
+      </div>
 
-                  <span className="hidden h-1 w-1 rotate-45 bg-[#C9A962]/50 sm:block" />
+      <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[9px] font-bold uppercase tracking-[0.18em] text-[#C9A962]">
+        <span>Designed for Global Trade</span>
 
-                  <span>Premium Export Products</span>
-                </div>
-              </div>
-            </div>
-          </StaggerItem>
+        <span className="hidden h-1 w-1 rotate-45 bg-[#C9A962]/50 sm:block" />
+
+        <span>India Origin</span>
+
+        <span className="hidden h-1 w-1 rotate-45 bg-[#C9A962]/50 sm:block" />
+
+        <span>Premium Export Products</span>
+      </div>
+    </div>
+  </div>
+</StaggerItem>
         </div>
       </RevealOnScroll>
     </footer>
