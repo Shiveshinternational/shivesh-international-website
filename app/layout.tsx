@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 
 import BrandProtection from "@/app/components/BrandProtection";
+import CookieConsent from "@/app/components/CookieConsent";
 
 import "./globals.css";
 
@@ -120,6 +122,34 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
+        <Script id="google-consent-default" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+
+            var savedConsent = null;
+
+            try {
+              savedConsent = localStorage.getItem(
+                'shivesh-cookie-consent'
+              );
+            } catch (error) {
+              savedConsent = null;
+            }
+
+            var consentValue =
+              savedConsent === 'granted' ? 'granted' : 'denied';
+
+            gtag('consent', 'default', {
+              analytics_storage: consentValue,
+              ad_storage: consentValue,
+              ad_user_data: consentValue,
+              ad_personalization: consentValue,
+              wait_for_update: 500
+            });
+          `}
+        </Script>
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -127,8 +157,23 @@ export default function RootLayout({
           }}
         />
 
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-2B6CDF6BRB"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-2B6CDF6BRB');
+          `}
+        </Script>
+
         {children}
         <BrandProtection />
+        <CookieConsent />
       </body>
     </html>
   );
