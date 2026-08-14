@@ -81,8 +81,24 @@ export default function ContactEnquiryForm() {
         throw new Error("Unable to submit enquiry");
       }
 
+            if (!response.ok) {
+        throw new Error("Unable to submit enquiry");
+      }
+
       setSubmitStatus("success");
+
+      const analyticsWindow = window as Window & {
+        gtag?: (...args: unknown[]) => void;
+      };
+
+      analyticsWindow.gtag?.("event", "generate_lead", {
+        lead_source: "website_contact_form",
+        product_category: formData.product,
+        enquiry_type: formData.enquiryType,
+      });
+
       setFormData(initialFormData);
+    
     } catch {
       setSubmitStatus("error");
     } finally {
