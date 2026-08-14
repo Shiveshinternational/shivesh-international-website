@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 type ConsentChoice = "granted" | "denied";
 
@@ -28,9 +29,9 @@ export default function CookieConsent() {
 
     window.gtag?.("consent", "update", {
       analytics_storage: choice,
-      ad_storage: choice,
-      ad_user_data: choice,
-      ad_personalization: choice,
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied",
     });
 
     setVisible(false);
@@ -49,9 +50,23 @@ export default function CookieConsent() {
           </p>
 
           <p className="mt-1 text-sm leading-6 text-white/90">
-            We use analytics cookies to understand website traffic and improve
-            the experience of international buyers. You can accept or reject
-            optional analytics cookies.
+            We use optional analytics cookies to understand website traffic and
+            improve the experience of international buyers. You can accept or
+            reject analytics cookies. Read our{" "}
+            <Link
+              href="/privacy-policy"
+              className="font-semibold text-[#e3c56d] underline underline-offset-4"
+            >
+              Privacy Policy
+            </Link>{" "}
+            and{" "}
+            <Link
+              href="/cookie-policy"
+              className="font-semibold text-[#e3c56d] underline underline-offset-4"
+            >
+              Cookie Policy
+            </Link>
+            .
           </p>
         </div>
 

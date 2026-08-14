@@ -61,6 +61,10 @@ function FooterLink({
 }
 
 export default function FooterSection() {
+  const openCookieSettings = () => {
+    localStorage.removeItem("shivesh-cookie-consent");
+    window.location.reload();
+  };
   return (
     <footer className="relative overflow-hidden bg-[#061811] text-[#F5F0E6]">
       {/* =====================================================

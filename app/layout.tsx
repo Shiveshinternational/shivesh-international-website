@@ -142,9 +142,9 @@ export default function RootLayout({
 
             gtag('consent', 'default', {
               analytics_storage: consentValue,
-              ad_storage: consentValue,
-              ad_user_data: consentValue,
-              ad_personalization: consentValue,
+              ad_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
               wait_for_update: 500
             });
           `}
