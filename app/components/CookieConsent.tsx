@@ -15,14 +15,30 @@ export default function CookieConsent() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const savedChoice = localStorage.getItem(
-      "shivesh-cookie-consent",
-    ) as ConsentChoice | null;
+  const savedChoice = localStorage.getItem(
+    "shivesh-cookie-consent",
+  ) as ConsentChoice | null;
 
-    if (!savedChoice) {
-      setVisible(true);
-    }
-  }, []);
+  if (!savedChoice) {
+    setVisible(true);
+  }
+
+  const openCookieSettings = () => {
+    setVisible(true);
+  };
+
+  window.addEventListener(
+    "shivesh-open-cookie-settings",
+    openCookieSettings,
+  );
+
+  return () => {
+    window.removeEventListener(
+      "shivesh-open-cookie-settings",
+      openCookieSettings,
+    );
+  };
+}, []);
 
   function saveConsent(choice: ConsentChoice) {
     localStorage.setItem("shivesh-cookie-consent", choice);
