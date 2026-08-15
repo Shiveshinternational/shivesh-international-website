@@ -5,10 +5,10 @@ import RevealOnScroll from "@/app/components/RevealOnScroll";
 import StaggerItem from "@/app/components/StaggerItem";
 
 const exportHighlights = [
-  "Serving Buyers Across 50+ Countries",
-  "Retail, Bulk & Private-Label Supply",
-  "Export Documentation Support",
-  "Reliable Global Logistics Coordination",
+  "Serving Professional Buyers Across 50+ Countries",
+  "Minimum Order Quantity: 200 kg Per Item",
+  "Bulk, Wholesale & Private-Label Export Supply",
+  "Documentation & Global Logistics Coordination",
 ];
 
 export default function ExportSection() {
@@ -45,7 +45,7 @@ export default function ExportSection() {
               <div className="group relative min-h-[560px] overflow-hidden rounded-[26px] border border-[#C9A962]/28 bg-[#173B2A] shadow-[0_28px_70px_rgba(0,0,0,0.24)] lg:min-h-[620px]">
                 <Image
                   src="/images/products/export/export-global-network-premium-v2.png"
-                  alt="Shivesh International global export network"
+                  alt="Shivesh International natural henna and indigo export network from India"
                   fill
                   sizes="(min-width: 1024px) 55vw, 100vw"
                   className="object-cover object-right transition-transform duration-[1200ms] ease-out group-hover:scale-[1.035]"
@@ -105,17 +105,19 @@ export default function ExportSection() {
 
             <StaggerItem delay={320}>
               <p className="mt-6 max-w-[620px] font-[family-name:var(--font-playfair)] text-xl italic leading-relaxed text-[#E4C878] sm:text-2xl">
-                Reliable export support for global brands, distributors and
-                private-label partners.
-              </p>
+  Reliable Indian export partner for importers, distributors,
+  wholesalers and private-label product brands.
+</p>
             </StaggerItem>
 
             <StaggerItem delay={420}>
               <p className="mt-7 max-w-[650px] text-[16px] font-light leading-[1.9] text-[#F5F0E6]/62 sm:text-[17px]">
-                We supply premium natural products to international buyers with
-                export-oriented packaging, documentation support, quality
-                consistency and dependable logistics coordination.
-              </p>
+  We export Natural Henna Powder, Natural Indigo Powder, botanical
+  hair colours, Ayurvedic Herbs and Indian Spices to buyers across
+  the USA, UK, UAE, Europe, Asia and Australia with export-ready
+  packaging, consistent quality, documentation support and
+  dependable logistics coordination.
+</p>
             </StaggerItem>
 
             {/* =================================================
@@ -148,7 +150,7 @@ export default function ExportSection() {
                   href="/export"
                   className="group inline-flex items-center justify-center gap-4 border border-[#C9A962] bg-[#C9A962] px-8 py-4 text-[11px] font-bold uppercase tracking-[0.22em] text-[#12382A] shadow-[0_14px_35px_rgba(201,169,98,0.20)] transition-all duration-500 hover:-translate-y-1 hover:bg-[#D8BB68]"
                 >
-                  Explore Export
+                  Explore Export Services
                   <span className="text-base transition-transform duration-300 group-hover:translate-x-1">
                     →
                   </span>
@@ -158,7 +160,7 @@ export default function ExportSection() {
                   href="/contact"
                   className="group inline-flex items-center justify-center gap-3 border border-[#F5F0E6]/20 bg-transparent px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em] text-[#F5F0E6] transition-all duration-500 hover:-translate-y-1 hover:border-[#C9A962] hover:bg-[#F5F0E6] hover:text-[#12382A]"
                 >
-                  Become Our Partner
+                  Send Export Enquiry
                   <span className="transition-transform duration-300 group-hover:translate-x-1">
                     →
                   </span>
@@ -172,7 +174,7 @@ export default function ExportSection() {
                 <span className="h-px w-12 bg-[#C9A962]/30" />
 
                 <span className="text-[9px] font-semibold uppercase tracking-[0.28em] text-[#F5F0E6]/38">
-                  Global Reach · Export Support · Private Label · Logistics
+                  Bulk Export · MOQ 200 kg · OEM Private Label · Worldwide Logistics
                 </span>
               </div>
             </StaggerItem>

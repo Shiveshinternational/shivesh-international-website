@@ -5,10 +5,10 @@ import RevealOnScroll from "@/app/components/RevealOnScroll";
 import StaggerItem from "@/app/components/StaggerItem";
 
 const infrastructureHighlights = [
-  "Modern Processing & Grinding Equipment",
-  "Controlled Sieving and Blending",
-  "Dedicated Quality Control Procedures",
-  "Export-Ready Packing and Dispatch",
+  "Henna and Botanical Powder Processing Equipment",
+  "Controlled Grinding, Sieving and Blending",
+  "Dedicated Quality Control and Product Inspection",
+  "Private-Label Packing and Export Dispatch",
 ];
 
 export default function InfrastructureSection() {
@@ -40,7 +40,7 @@ export default function InfrastructureSection() {
               <div className="group relative min-h-[560px] overflow-hidden rounded-[26px] border border-[#C9A962]/28 bg-[#DED4C3] shadow-[0_28px_70px_rgba(20,50,38,0.16)] lg:min-h-[620px]">
                 <Image
                   src="/images/infrastructure/infrastructure-factory-front-elevation-v2.png"
-                  alt="Shivesh International manufacturing infrastructure"
+                  alt="Shivesh International henna powder processing and export packing infrastructure in India"
                   fill
                   sizes="(min-width: 1024px) 55vw, 100vw"
                   className="object-cover object-center transition-transform duration-[1200ms] ease-out group-hover:scale-[1.035]"
@@ -101,19 +101,19 @@ export default function InfrastructureSection() {
 
             <StaggerItem delay={320}>
               <p className="mt-6 max-w-[620px] font-[family-name:var(--font-playfair)] text-xl italic leading-relaxed text-[#8B6A1E] sm:text-2xl">
-                Structured processing, controlled quality and professional
-                export presentation.
-              </p>
+  Structured botanical powder processing, controlled quality and
+  professional export-ready packaging.
+</p>
             </StaggerItem>
 
             <StaggerItem delay={420}>
               <p className="mt-7 max-w-[650px] text-[16px] font-light leading-[1.9] text-[#4C5F54] sm:text-[17px]">
-                Our infrastructure supports the complete production journey,
-                from raw-material handling and processing to grinding, sieving,
-                blending, quality checks, packing and final dispatch. Each stage
-                is coordinated to support consistency, cleanliness and
-                buyer-specific commercial requirements.
-              </p>
+  Our infrastructure supports Natural Henna Powder, Natural Indigo
+  Powder, botanical hair colours, Ayurvedic Herbs and other natural
+  products from raw-material handling through grinding, sieving,
+  blending and quality inspection to bulk packing, private-label
+  packaging and final export dispatch.
+</p>
             </StaggerItem>
 
             {/* =================================================
@@ -146,7 +146,7 @@ export default function InfrastructureSection() {
                   href="/infrastructure"
                   className="group inline-flex items-center justify-center gap-4 border border-[#C9A962] bg-[#C9A962] px-8 py-4 text-[11px] font-bold uppercase tracking-[0.22em] text-[#12382A] shadow-[0_14px_35px_rgba(201,169,98,0.20)] transition-all duration-500 hover:-translate-y-1 hover:bg-[#D8BB68]"
                 >
-                  Explore Infrastructure
+                  View Manufacturing Infrastructure
                   <span className="text-base transition-transform duration-300 group-hover:translate-x-1">
                     →
                   </span>
@@ -156,7 +156,7 @@ export default function InfrastructureSection() {
                   href="/contact"
                   className="group inline-flex items-center justify-center gap-3 border border-[#173B2A]/20 bg-transparent px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em] text-[#173B2A] transition-all duration-500 hover:-translate-y-1 hover:border-[#173B2A] hover:bg-[#173B2A] hover:text-[#F7F1E7]"
                 >
-                  Discuss Requirement
+                  Discuss Bulk Requirement
                   <span className="transition-transform duration-300 group-hover:translate-x-1">
                     →
                   </span>
@@ -170,7 +170,7 @@ export default function InfrastructureSection() {
                 <span className="h-px w-12 bg-[#173B2A]/20" />
 
                 <span className="text-[9px] font-semibold uppercase tracking-[0.28em] text-[#173B2A]/42">
-                  Processing · Quality · Packing · Export
+                  Botanical Processing · Quality Control · Private Label · Export Packing
                 </span>
               </div>
             </StaggerItem>

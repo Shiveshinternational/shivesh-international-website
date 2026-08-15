@@ -37,11 +37,26 @@ const cormorant = Cormorant_Garamond({
 });
 
 const heroSlides = [
-  "/images/homepage/hero/hero-slide-01-natural-henna-powder-branded-box-final-v1.png",
-  "/images/homepage/hero/hero-slide-02-natural-henna-hair-colors-four-models-forest-final-v3.png",
-  "/images/homepage/hero/hero-slide-03-natural-indigo-powder-branded-box-final-v1.png",
-  "/images/homepage/hero/hero-slide-04-henna-based-hair-colors-five-models-forest-final-v5.png",
-  "/images/homepage/hero/hero-slide-05-ayurvedic-indian-herbs-branded-boxes-crop-safe-final-v2.png",
+  {
+    src: "/images/homepage/hero/hero-slide-01-natural-henna-powder-branded-box-final-v1.png",
+    alt: "Natural henna powder for international wholesale and private-label buyers",
+  },
+  {
+    src: "/images/homepage/hero/hero-slide-02-natural-henna-hair-colors-four-models-forest-final-v3.png",
+    alt: "Natural henna hair colors supplied to salons, distributors and beauty brands worldwide",
+  },
+  {
+    src: "/images/homepage/hero/hero-slide-03-natural-indigo-powder-branded-box-final-v1.png",
+    alt: "Natural indigo powder for bulk export and private-label packaging",
+  },
+  {
+    src: "/images/homepage/hero/hero-slide-04-henna-based-hair-colors-five-models-forest-final-v5.png",
+    alt: "Henna-based botanical hair colors for professional international buyers",
+  },
+  {
+    src: "/images/homepage/hero/hero-slide-05-ayurvedic-indian-herbs-branded-boxes-crop-safe-final-v2.png",
+    alt: "Ayurvedic Indian herbs in export and private-label packaging",
+  },
 ];
 
 export default function HomePage() {
@@ -81,27 +96,26 @@ export default function HomePage() {
   =================================================== */}
   <div className="absolute inset-x-0 bottom-0 top-[68px] -z-30 overflow-hidden">
     {heroSlides.map((slide, index) => (
-      <div
-        key={slide}
-        className={`absolute inset-0 transition-opacity duration-[1600ms] ease-in-out ${
-          index === currentSlide
-            ? "opacity-100"
-            : "pointer-events-none opacity-0"
-        }`}
-      >
-        <Image
-          src={slide}
-          alt={`Shivesh International premium natural products slide ${
-            index + 1
-          }`}
-          fill
-          priority={index === 0}
-          sizes="100vw"
-          className="object-cover object-top"
-        />
-      </div>
-    ))}
+  <div
+    key={slide.src}
+    className={`absolute inset-0 transition-opacity duration-[1600ms] ease-in-out ${
+      index === currentSlide
+        ? "opacity-100"
+        : "pointer-events-none opacity-0"
+    }`}
+  >
+    <Image
+      src={slide.src}
+      alt={slide.alt}
+      fill
+      priority={index === 0}
+      sizes="100vw"
+      className="object-cover object-top"
+    />
   </div>
+))}
+      </div>
+   
 
   {/* Readability overlays — also below navbar */}
   <div className="pointer-events-none absolute inset-x-0 bottom-0 top-[68px] -z-20 bg-gradient-to-r from-black/32 via-black/8 to-transparent" />

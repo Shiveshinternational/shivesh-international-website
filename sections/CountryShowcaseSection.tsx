@@ -61,19 +61,21 @@ export default function CountryShowcaseSection() {
 
               <StaggerItem delay={100}>
                 <h2 className="mt-7 max-w-[900px] font-[family-name:var(--font-playfair)] text-[clamp(2.7rem,4.8vw,4.9rem)] font-medium leading-[1.02] tracking-[-0.035em] text-[#12382A]">
-                  Serving Buyers Across
-                  <span className="mt-1 block text-[#A97B22]">
-                    International Markets.
-                  </span>
+                  Natural Products for
+<span className="mt-1 block text-[#A97B22]">
+  International Export Markets.
+</span>
                 </h2>
               </StaggerItem>
 
               <StaggerItem delay={200}>
                 <p className="mt-6 max-w-[780px] text-[16px] font-light leading-[1.9] text-[#4C5F54] sm:text-[17px]">
-                  Our export-oriented product portfolio supports importers,
-                  distributors, retailers, salons, wellness brands and
-                  private-label buyers across multiple international regions.
-                </p>
+  We connect Natural Henna Powder, Natural Indigo Powder,
+  botanical hair colours, Ayurvedic Indian Herbs and Indian
+  Spices with importers, distributors, wholesalers, salons and
+  private-label buyers across North America, Europe, the Middle
+  East and Asia Pacific.
+</p>
               </StaggerItem>
 
               <StaggerItem delay={250}>
@@ -106,7 +108,7 @@ export default function CountryShowcaseSection() {
                 href="/export"
                 className="group inline-flex shrink-0 items-center justify-center gap-4 border border-[#C9A962] bg-[#C9A962] px-8 py-4 text-[11px] font-bold uppercase tracking-[0.22em] text-[#12382A] shadow-[0_14px_35px_rgba(201,169,98,0.18)] transition-all duration-500 hover:-translate-y-1 hover:bg-[#D8BB68]"
               >
-                Explore Global Export
+                Explore Export Markets
 
                 <span className="transition-transform duration-300 group-hover:translate-x-1">
                   →
@@ -172,18 +174,18 @@ export default function CountryShowcaseSection() {
                 </p>
 
                 <p className="mt-3 max-w-[900px] text-[13px] font-light leading-7 text-[#4C5F54]/70">
-                  Markets shown represent key international business regions
-                  and buyer destinations. Actual supply destinations may vary
-                  according to product category, buyer arrangements and
-                  commercial requirements.
-                </p>
+  The countries shown represent key export markets and buyer
+  destinations for our natural product portfolio. Actual supply
+  destinations may vary according to product category, buyer
+  arrangements and commercial requirements.
+</p>
               </div>
 
               <div className="flex items-center gap-4">
                 <span className="hidden h-px w-12 bg-[#C9A962]/35 md:block" />
 
                 <span className="whitespace-nowrap text-[9px] font-semibold uppercase tracking-[0.28em] text-[#173B2A]/40">
-                  India to the World
+                  Natural Products from India
                 </span>
               </div>
             </div>

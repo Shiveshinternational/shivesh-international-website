@@ -12,22 +12,169 @@ import MagneticButtons from "@/app/components/MagneticButtons";
 import FooterSection from "@/sections/FooterSection";
 
 export const metadata: Metadata = {
-  title:
-    "Natural Henna Powder | Premium Export Grade | Shivesh International",
-  description:
-    "Premium export-grade natural henna powder from India for hair coloring, herbal cosmetics, salons, private label and bulk supply.",
-};
+  title: {
+    absolute:
+      "Natural Henna Powder Manufacturer & Exporter India | Shivesh International",
+  },
 
+  description:
+    "Natural henna powder manufacturer, exporter and supplier in India offering bulk, wholesale and private-label Lawsonia inermis powder for global buyers.",
+
+  alternates: {
+    canonical: "/products/natural-henna-powder",
+  },
+
+  category: "Natural Henna Powder",
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "/products/natural-henna-powder",
+    siteName: "Shivesh International",
+    title:
+      "Natural Henna Powder Manufacturer & Exporter from India",
+    description:
+      "Export-grade natural henna powder for bulk importers, wholesalers, salons, cosmetic manufacturers and private-label brands worldwide.",
+    images: [
+      {
+        url: "/images/products/henna-powder/natural-henna-powder-hero-final-v2.png",
+        alt: "Natural henna powder manufactured and exported from India by Shivesh International",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Natural Henna Powder Manufacturer & Exporter India",
+    description:
+      "Bulk, wholesale and private-label natural henna powder supplied from India to professional buyers worldwide.",
+    images: [
+      "/images/products/henna-powder/natural-henna-powder-hero-final-v2.png",
+    ],
+  },
+};
+const naturalHennaPowderStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "@id":
+        "https://shiveshinternational.com/products/natural-henna-powder#product",
+      name: "Natural Henna Powder",
+      alternateName: [
+        "Sojat Henna Powder",
+        "Lawsonia inermis Powder",
+        "Natural Mehndi Powder",
+        "Export-Grade Henna Powder",
+      ],
+      url:
+        "https://shiveshinternational.com/products/natural-henna-powder",
+      image:
+        "https://shiveshinternational.com/images/products/henna-powder/natural-henna-powder-hero-final-v2.png",
+      description:
+        "Export-grade Natural Henna Powder manufactured, supplied and exported from India for bulk, wholesale, salon, cosmetic and private-label buyers worldwide.",
+      category: "Natural Botanical Hair Colouring Powder",
+      material: "Selected Lawsonia inermis Leaves",
+      brand: {
+        "@type": "Brand",
+        name: "Shivesh International",
+      },
+      manufacturer: {
+        "@id": "https://shiveshinternational.com/#organization",
+      },
+      countryOfOrigin: {
+        "@type": "Country",
+        name: "India",
+      },
+      audience: {
+        "@type": "BusinessAudience",
+        audienceType:
+          "Importers, distributors, wholesalers, salons, cosmetic manufacturers and private-label buyers",
+      },
+      additionalProperty: [
+        {
+          "@type": "PropertyValue",
+          name: "Raw Material Origin",
+          value: "Sojat, Rajasthan, India",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Botanical Name",
+          value: "Lawsonia inermis",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Minimum Order Quantity",
+          value: "200 kg per item",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Packaging",
+          value:
+            "Retail, professional, bulk, OEM and private-label packaging",
+        },
+      ],
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id":
+        "https://shiveshinternational.com/products/natural-henna-powder#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://shiveshinternational.com/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Products",
+          item: "https://shiveshinternational.com/#products",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Natural Henna Powder",
+          item:
+            "https://shiveshinternational.com/products/natural-henna-powder",
+        },
+      ],
+    },
+  ],
+};
 export default function NaturalHennaPowderPage() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-[#f5f0e6] text-[#173b2a]">
-      <Navbar />
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify(
+        naturalHennaPowderStructuredData
+      ).replace(/</g, "\\u003c"),
+    }}
+  />
+
+  <Navbar />
 
       {/* PRODUCT HERO */}
       <section className="relative isolate min-h-[72vh] overflow-hidden border-b border-[#C9A962]/25 bg-[#071b14]">
         <Image
           src="/images/products/henna-powder/natural-henna-powder-hero-final-v2.png"
-          alt="Premium export-grade natural henna powder"
+          alt="Export-grade natural henna powder manufacturer and supplier from India"
           fill
           priority
           sizes="100vw"
@@ -46,7 +193,7 @@ export default function NaturalHennaPowderPage() {
                 <span className="h-px w-14 bg-[#C9A962]" />
 
                 <span className="text-[10px] font-bold uppercase tracking-[0.42em] text-[#E4C878] sm:text-xs">
-                  Premium Export Grade
+                  Manufacturer · Exporter · Supplier
                 </span>
               </div>
             </StaggerItem>
@@ -62,18 +209,15 @@ export default function NaturalHennaPowderPage() {
             </StaggerItem>
 
             <StaggerItem delay={240}>
-              <p className="mt-5 font-[family-name:var(--font-playfair)] text-xl italic text-[#E4C878] sm:text-2xl">
-                Pure by Nature. Trusted Worldwide.
-              </p>
+              <p className="mt-5 max-w-[600px] text-[16px] leading-8 text-[#F5F0E6]/78">
+  Shivesh International is a Natural Henna Powder manufacturer,
+  exporter and supplier from India, offering Sojat-origin,
+  export-grade henna powder for bulk importers, wholesalers,
+  salons, cosmetic brands and private-label buyers worldwide.
+</p>
             </StaggerItem>
 
-            <StaggerItem delay={320}>
-              <p className="mt-5 max-w-[600px] text-[16px] leading-8 text-[#F5F0E6]/78">
-                Premium-quality natural henna powder prepared from carefully
-                selected henna leaves for international buyers, private-label
-                brands, salons and professional herbal-product businesses.
-              </p>
-            </StaggerItem>
+            
 
             <StaggerItem delay={400}>
               <div className="mt-7 flex flex-wrap gap-4">
@@ -81,7 +225,7 @@ export default function NaturalHennaPowderPage() {
                   href="#product-overview"
                   className="inline-flex items-center gap-4 border border-[#C9A962] bg-[#C9A962] px-7 py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-[#102f23] transition-all duration-500 hover:-translate-y-1 hover:bg-[#E4C878] hover:shadow-[0_18px_45px_rgba(201,169,98,0.28)]"
                 >
-                  Explore Product
+                  View Henna Details
                   <span className="text-lg">↓</span>
                 </a>
 
@@ -89,7 +233,7 @@ export default function NaturalHennaPowderPage() {
                   href="/contact"
                   className="inline-flex items-center border border-[#F5F0E6]/30 bg-[#102f23]/32 px-7 py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-[#F5F0E6] backdrop-blur-lg transition-all duration-500 hover:border-[#C9A962] hover:text-[#C9A962]"
                 >
-                  Request Quotation
+                  Request Bulk Quote
                 </Link>
               </div>
             </StaggerItem>
@@ -97,10 +241,10 @@ export default function NaturalHennaPowderPage() {
             <StaggerItem delay={480}>
               <div className="mt-7 grid max-w-[680px] grid-cols-2 gap-3 sm:grid-cols-4">
                 {[
-                  ["100%", "Natural"],
-                  ["Fine", "Mesh"],
-                  ["Export", "Grade"],
-                  ["OEM", "Private Label"],
+                   ["100%", "Natural Henna"],
+  ["Sojat", "Rajasthan Origin"],
+  ["Bulk", "Export Supply"],
+  ["OEM", "Private Label"],
                 ].map(([value, label]) => (
                   <div
                     key={label}
@@ -137,11 +281,12 @@ export default function NaturalHennaPowderPage() {
         <div className="group relative min-h-[560px] overflow-hidden rounded-[30px] border border-[#C9A962]/30 bg-[#e8dfcf] shadow-[0_30px_85px_rgba(0,0,0,0.16)]">
 
           <Image
-            src="/images/products/henna-powder/natural-henna-about-model-holding-box-final-v1.png"
-            alt="Premium Natural Henna Powder"
-            fill
-            className="object-cover transition-transform duration-[1400ms] group-hover:scale-105"
-          />
+  src="/images/products/henna-powder/natural-henna-about-model-holding-box-final-v1.png"
+  alt="Natural henna powder supplier from India with private-label retail packaging"
+  fill
+  sizes="(min-width: 1024px) 50vw, 100vw"
+  className="object-cover transition-transform duration-[1400ms] group-hover:scale-105"
+/>
 
           <div className="absolute inset-0 bg-gradient-to-t from-[#071b14]/70 via-transparent to-black/10" />
 
@@ -158,7 +303,7 @@ export default function NaturalHennaPowderPage() {
             <span className="h-[3px] w-16 bg-[#C9A962]" />
 
             <span className="text-xs font-bold uppercase tracking-[0.42em] text-[#9f7f36]">
-              About Natural Henna Powder
+              Natural Henna Powder from India
             </span>
 
           </div>
@@ -166,44 +311,45 @@ export default function NaturalHennaPowderPage() {
 
         <StaggerItem delay={240}>
           <h2 className="font-[family-name:var(--font-playfair)] text-5xl font-semibold leading-tight">
-            A Premium Botanical Powder
-            <br />
-            Prepared from
-            <span className="text-[#9f7f36]">
-              {" "}Lawsonia Inermis
-            </span>
-          </h2>
+  Natural Henna Powder
+  <br />
+  Prepared from
+  <span className="text-[#9f7f36]">
+    {" "}Lawsonia inermis Leaves
+  </span>
+</h2>
         </StaggerItem>
 
         <StaggerItem delay={360}>
           <p className="mt-8 text-xl font-medium leading-9 text-[#8B6A1E]">
-            Carefully processed for professional buyers,
-            private-label brands, salons and international markets.
-          </p>
+  Export-quality henna powder for importers, wholesalers,
+  cosmetic manufacturers, salons and private-label brands.
+</p>
         </StaggerItem>
 
         <StaggerItem delay={480}>
           <div className="mt-8 space-y-6">
+  <p className="text-lg leading-9 text-[#4c5f54]">
+    Natural Henna Powder is produced from carefully selected,
+    dried and finely ground leaves of the henna plant,
+    botanically known as
+    <strong> Lawsonia inermis.</strong>
+  </p>
 
-            <p className="text-lg leading-9 text-[#4c5f54]">
-              Natural Henna Powder is obtained from the dried leaves
-              of the henna plant, botanically known as
-              <strong> Lawsonia inermis.</strong>
-            </p>
+  <p className="text-lg leading-9 text-[#4c5f54]">
+    This traditional botanical powder is widely used for natural
+    hair colouring, herbal hair care, salon applications, mehndi
+    preparations and cosmetic product formulations.
+  </p>
 
-            <p className="text-lg leading-9 text-[#4c5f54]">
-              It has been traditionally valued for botanical hair
-              colouring, herbal hair care and cosmetic preparations.
-            </p>
-
-            <p className="text-lg leading-9 text-[#4c5f54]">
-              Shivesh International supplies export-grade Natural
-              Henna Powder for wholesalers, distributors,
-              cosmetic manufacturers, private-label businesses
-              and professional salon markets.
-            </p>
-
-          </div>
+  <p className="text-lg leading-9 text-[#4c5f54]">
+    As a Natural Henna Powder manufacturer, exporter and bulk
+    supplier from India, Shivesh International supports
+    distributors, wholesalers, cosmetic manufacturers, salon
+    brands and OEM private-label buyers with multiple product
+    grades and export packaging options.
+  </p>
+</div>
         </StaggerItem>
 
       </div>
@@ -228,60 +374,60 @@ export default function NaturalHennaPowderPage() {
                   <span className="h-[3px] w-16 bg-[#C9A962]" />
 
                   <span className="text-xs font-bold uppercase tracking-[0.42em] text-[#9f7f36]">
-                    The Origin of Our Henna
+                    Sojat Henna Powder Origin
                   </span>
                 </div>
               </StaggerItem>
 
               <StaggerItem delay={120}>
                 <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
-                  Sourced from the Henna-Growing Region of
-                  <span className="text-[#9f7f36]">
-                    {" "}Sojat, Rajasthan
-                  </span>
-                </h2>
+  Sojat Henna Powder from
+  <span className="text-[#9f7f36]">
+    {" "}Rajasthan, India
+  </span>
+</h2>
               </StaggerItem>
 
               <StaggerItem delay={240}>
                 <p className="mt-7 text-xl font-medium leading-9 text-[#8B6A1E]">
-                  Our raw henna leaves are sourced from Sojat City and its
-                  surrounding henna-growing region in Pali district, Rajasthan,
-                  India.
-                </p>
+  Selected natural henna leaves sourced from Sojat City and its
+  surrounding henna-growing areas in Pali district, Rajasthan,
+  India.
+</p>
               </StaggerItem>
 
               <StaggerItem delay={360}>
                 <div className="mt-8 space-y-5">
-                  <p className="text-lg leading-9 text-[#4c5f54]">
-                    Sojat is widely associated with henna cultivation and the
-                    traditional production of mehndi. The region has developed
-                    a strong identity around the farming, collection and
-                    commercial handling of henna leaves.
-                  </p>
+  <p className="text-lg leading-9 text-[#4c5f54]">
+    Sojat in Rajasthan is internationally associated with henna
+    cultivation, mehndi production and the commercial sourcing of
+    natural henna leaves.
+  </p>
 
-                  <p className="text-lg leading-9 text-[#4c5f54]">
-                    We source selected raw henna leaves from this recognised
-                    growing region and coordinate their movement for further
-                    cleaning, drying preparation, grinding, sieving and packing.
-                  </p>
+  <p className="text-lg leading-9 text-[#4c5f54]">
+    We source selected henna leaves from the Sojat growing region
+    and coordinate their cleaning, drying preparation, grinding,
+    sieving and packing to produce fine Natural Henna Powder for
+    export markets.
+  </p>
 
-                  <p className="text-lg leading-9 text-[#4c5f54]">
-                    Highlighting the origin helps buyers understand where the
-                    botanical raw material begins its journey before becoming
-                    finished natural henna powder.
-                  </p>
-                </div>
+  <p className="text-lg leading-9 text-[#4c5f54]">
+    This traceable regional sourcing supports buyers looking for
+    Sojat Henna Powder, Rajasthan Henna Powder, farm-origin raw
+    material and dependable bulk henna supply from India.
+  </p>
+</div>
               </StaggerItem>
 
               <StaggerItem delay={480}>
                 <div className="mt-9 grid gap-3 sm:grid-cols-2">
                   {[
                     "Sojat City, Pali District",
-                    "Rajasthan, India",
-                    "Recognised henna-growing region",
-                    "Selected raw henna leaves",
-                    "Farm-origin sourcing",
-                    "Organised onward processing",
+  "Rajasthan Henna Origin",
+  "Recognised Henna-Growing Region",
+  "Selected Natural Henna Leaves",
+  "Farm-Origin Raw Material",
+  "Processing for Export Supply",
                   ].map((point) => (
                     <div
                       key={point}
@@ -302,7 +448,7 @@ export default function NaturalHennaPowderPage() {
               <div className="group relative min-h-[560px] overflow-hidden rounded-[30px] border border-[#C9A962]/30 bg-[#d8d0bf] shadow-[0_30px_85px_rgba(0,0,0,0.16)]">
                 <Image
                   src="/images/products/henna-powder/natural-henna-origin-sojat-rajasthan-final-v1.png"
-                  alt="Henna farming and raw henna leaves sourced from Sojat Rajasthan"
+                  alt="Natural henna leaves for Sojat henna powder sourced from Rajasthan India"
                   fill
                   sizes="(min-width: 1024px) 50vw, 100vw"
                   className="object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-105"
@@ -312,7 +458,7 @@ export default function NaturalHennaPowderPage() {
 
                 <div className="absolute bottom-7 left-7 right-7">
                   <p className="text-[10px] font-bold uppercase tracking-[0.36em] text-[#E4C878]">
-                    Raw Material Origin
+                    Natural Henna Leaf Origin
                   </p>
 
                   <p className="mt-3 font-[family-name:var(--font-playfair)] text-3xl font-semibold text-white">
@@ -333,7 +479,7 @@ export default function NaturalHennaPowderPage() {
               <div className="group relative min-h-[430px] overflow-hidden rounded-[26px] border border-[#C9A962]/30 bg-[#173b2a] shadow-[0_26px_70px_rgba(0,0,0,0.24)]">
                 <Image
                   src="/images/products/henna-powder/natural-henna-benefits-healthy-hair-final-v1.png"
-                  alt="Fresh vibrant green natural henna powder in a bowl"
+                  alt="Fresh green natural henna powder for hair colouring salon and cosmetic applications"
                   fill
                   sizes="(min-width: 1024px) 42vw, 100vw"
                   className="object-cover transition-transform duration-[1300ms] group-hover:scale-105"
@@ -343,11 +489,11 @@ export default function NaturalHennaPowderPage() {
 
                 <div className="absolute bottom-6 left-6 right-6">
                   <p className="text-[10px] font-bold uppercase tracking-[0.34em] text-[#E4C878]">
-                    Fresh Powder Presentation
+                    Export-Quality Henna Powder
                   </p>
 
                   <p className="mt-2 font-[family-name:var(--font-playfair)] text-2xl font-semibold text-white">
-                    Vibrant Green Natural Henna Powder
+                    Fine Green Henna Powder for Professional Buyers
                   </p>
                 </div>
               </div>
@@ -360,35 +506,36 @@ export default function NaturalHennaPowderPage() {
                   <span className="h-[3px] w-14 bg-[#C9A962]" />
 
                   <span className="text-xs font-bold uppercase tracking-[0.4em] text-[#C9A962]">
-                    Benefits
+                    Benefits & Applications
                   </span>
                 </div>
               </StaggerItem>
 
               <StaggerItem delay={240}>
                 <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">
-                  Traditional Botanical Care for Hair and Cosmetic Applications
+                  Natural Henna Powder for Hair, Salons and Cosmetic Products
                 </h2>
               </StaggerItem>
 
               <StaggerItem delay={360}>
                 <p className="mt-6 text-lg leading-8 text-[#F5F0E6]/65">
-                  Natural henna is traditionally used across hair-care,
-                  professional beauty and herbal cosmetic preparations.
-                </p>
+  Natural Henna Powder is traditionally used for botanical hair
+  colouring, herbal hair care, professional salon services,
+  mehndi preparations and private-label cosmetic formulations.
+</p>
               </StaggerItem>
 
               <StaggerItem delay={480}>
                 <div className="mt-8 grid gap-3 sm:grid-cols-2">
                   {[
-                    "Supports natural hair colouring",
-                    "Traditionally used for hair conditioning",
-                    "Suitable for botanical hair-care formulations",
-                    "Used in professional salon applications",
-                    "Suitable for herbal cosmetic products",
-                    "Supports retail and private-label ranges",
-                    "Can be used in mehndi preparations",
-                    "Available for bulk commercial supply",
+                     "Natural botanical hair-colouring applications",
+  "Traditional herbal hair-care preparations",
+  "Professional salon and beauty applications",
+  "Henna powder for cosmetic formulations",
+  "Suitable for retail henna product ranges",
+  "OEM and private-label henna products",
+  "Traditional mehndi paste preparations",
+  "Available for wholesale and bulk export supply",
                   ].map((benefit) => (
                     <div
                       key={benefit}
@@ -413,17 +560,19 @@ export default function NaturalHennaPowderPage() {
           <div className="mx-auto max-w-[1180px]">
             <div className="mx-auto max-w-4xl text-center">
               <p className="text-xs font-bold uppercase tracking-[0.45em] text-[#9f7f36]">
-                Product Specification
+                Natural Henna Powder Specification
               </p>
 
               <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">
-                Technical Information
+                Export-Grade Henna Powder Technical Details
               </h2>
 
               <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#4c5f54]">
-                A concise overview of our Natural Henna Powder for commercial,
-                technical and product-evaluation requirements.
-              </p>
+  Technical and commercial information for importers,
+  distributors, cosmetic manufacturers and bulk Natural Henna
+  Powder buyers evaluating product grade, origin, packaging and
+  private-label requirements.
+</p>
             </div>
 
             <StaggerItem delay={120}>
@@ -439,20 +588,24 @@ export default function NaturalHennaPowderPage() {
                 </div>
 
                 {[
-                  ["Product Name", "Natural Henna Powder"],
-                  ["Botanical Name", "Lawsonia inermis"],
-                  ["Country of Origin", "India"],
-                  ["Raw Material Origin", "Sojat, Rajasthan, India"],
-                  ["Plant Part Used", "Leaves"],
-                  ["Form", "Fine Natural Powder"],
-                  ["Appearance", "Fresh Vibrant Green Powder"],
-                  ["Colour", "Natural Green"],
-                  ["Odour", "Characteristic Herbal"],
-                  ["Mesh Size", "As per Agreed Product Grade"],
-                  ["Moisture", "As per Agreed Specification"],
-                  ["Shelf Life", "24 Months under Recommended Storage"],
-                  ["Storage", "Store in a Cool, Dry Place"],
-                  ["Packaging", "Retail, Professional, Bulk & Private Label"],
+                   ["Product Name", "Export-Grade Natural Henna Powder"],
+  ["Common Name", "Henna Powder / Mehndi Powder"],
+  ["Botanical Name", "Lawsonia inermis"],
+  ["Product Category", "Botanical Hair Colouring Powder"],
+  ["Country of Origin", "India"],
+  ["Raw Material Origin", "Sojat, Rajasthan, India"],
+  ["Plant Part Used", "Selected Henna Leaves"],
+  ["Form", "Fine Natural Botanical Powder"],
+  ["Appearance", "Fresh Vibrant Green Powder"],
+  ["Colour", "Natural Green"],
+  ["Odour", "Characteristic Herbal"],
+  ["Primary Applications", "Hair Colouring, Hair Care, Salon, Mehndi & Cosmetics"],
+  ["Mesh Size", "As per Agreed Product Grade"],
+  ["Moisture", "As per Agreed Buyer Specification"],
+  ["Minimum Order Quantity", "200 kg per Item"],
+  ["Shelf Life", "24 Months under Recommended Storage"],
+  ["Storage", "Store Sealed in a Cool, Dry Place"],
+  ["Packaging", "Retail, Professional, Bulk, OEM & Private Label"],
                 ].map(([parameter, value], index) => (
                   <div
                     key={parameter}
@@ -471,9 +624,11 @@ export default function NaturalHennaPowderPage() {
             </StaggerItem>
 
             <p className="mx-auto mt-7 max-w-4xl text-center text-sm leading-7 text-[#4c5f54]/72">
-              Exact values may vary according to the agreed product grade,
-              buyer specification and batch-specific Certificate of Analysis.
-            </p>
+  Technical values, mesh size and other parameters may vary
+  according to the agreed henna powder grade, buyer specification
+  and batch-specific Certificate of Analysis. Final commercial
+  specifications are confirmed before order processing.
+</p>
           </div>
         </RevealOnScroll>
       </section>
@@ -483,72 +638,74 @@ export default function NaturalHennaPowderPage() {
           <div className="mx-auto max-w-[1500px]">
             <div className="mx-auto max-w-4xl text-center">
               <p className="text-xs font-bold uppercase tracking-[0.45em] text-[#9f7f36]">
-                How to Use
+                How to Mix Natural Henna Powder
               </p>
 
               <h2 className="mt-6 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
-                A Simple Step-by-Step Henna Application Guide
+                How to Prepare and Apply Natural Henna Powder to Hair
               </h2>
 
               <p className="mx-auto mt-7 max-w-3xl text-lg leading-8 text-[#4c5f54]">
-                The exact preparation and application method may vary according
-                to hair type, product grade, desired result and professional
-                formulation requirements.
+                This general guide explains how Natural Henna Powder may be
+  mixed into a smooth henna paste and applied for traditional
+  hair-colouring and professional salon use. Preparation,
+  resting and application time may vary by hair type, product
+  grade and desired result.
               </p>
             </div>
 
             <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7">
               {[
-                {
-                  step: "01",
-                  icon: "🌿",
-                  title: "Take Powder",
-                  description:
-                    "Place the required quantity of fresh green henna powder in a clean, non-metallic bowl.",
-                },
-                {
-                  step: "02",
-                  icon: "💧",
-                  title: "Add Liquid",
-                  description:
-                    "Gradually add water or the preferred mixing liquid while stirring continuously.",
-                },
-                {
-                  step: "03",
-                  icon: "🥣",
-                  title: "Make a Paste",
-                  description:
-                    "Mix until a smooth, lump-free and easily spreadable paste is formed.",
-                },
-                {
-                  step: "04",
-                  icon: "⏳",
-                  title: "Allow to Rest",
-                  description:
-                    "Resting time may be selected according to the product and preferred application method.",
-                },
-                {
-                  step: "05",
-                  icon: "💇",
-                  title: "Apply Evenly",
-                  description:
-                    "Apply the prepared paste evenly to clean hair using gloves and suitable application tools.",
-                },
-                {
-                  step: "06",
-                  icon: "⌛",
-                  title: "Leave on Hair",
-                  description:
-                    "Keep the paste on the hair for the time appropriate to the desired result and hair condition.",
-                },
-                {
-                  step: "07",
-                  icon: "🚿",
-                  title: "Rinse Thoroughly",
-                  description:
-                    "Rinse thoroughly with water and follow the preferred post-application hair-care routine.",
-                },
-              ].map((item, index) => (
+  {
+    step: "01",
+    icon: "🌿",
+    title: "Measure Henna Powder",
+    description:
+      "Place the required quantity of Natural Henna Powder in a clean, non-metallic mixing bowl.",
+  },
+  {
+    step: "02",
+    icon: "💧",
+    title: "Add Mixing Liquid",
+    description:
+      "Gradually add water or the preferred mixing liquid while stirring the henna powder continuously.",
+  },
+  {
+    step: "03",
+    icon: "🥣",
+    title: "Prepare Henna Paste",
+    description:
+      "Mix thoroughly until a smooth, lump-free and easily spreadable natural henna paste is formed.",
+  },
+  {
+    step: "04",
+    icon: "⏳",
+    title: "Allow Paste to Rest",
+    description:
+      "Select the resting time according to the henna product grade and preferred application method.",
+  },
+  {
+    step: "05",
+    icon: "💇",
+    title: "Apply to Hair",
+    description:
+      "Using gloves and suitable tools, apply the prepared henna paste evenly to clean hair.",
+  },
+  {
+    step: "06",
+    icon: "⌛",
+    title: "Allow Colour Development",
+    description:
+      "Leave the natural henna paste on the hair for the time appropriate to the desired result.",
+  },
+  {
+    step: "07",
+    icon: "🚿",
+    title: "Rinse Thoroughly",
+    description:
+      "Rinse the hair thoroughly with water and follow the preferred post-application hair-care routine.",
+  },
+].map((item, index) => (
                 <StaggerItem key={item.step} delay={(index % 4) * 80}>
                   <article className="group relative h-full overflow-hidden rounded-[24px] border border-[#C9A962]/28 bg-[#ede5d7] p-5 text-center transition-all duration-700 hover:-translate-y-3 hover:border-[#C9A962] hover:bg-[#f8f4eb] hover:shadow-[0_25px_65px_rgba(0,0,0,0.13)]">
                     <div className="pointer-events-none absolute -left-[120%] top-0 h-full w-[60%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/65 to-transparent transition-all duration-[1100ms] group-hover:left-[150%]" />
@@ -589,17 +746,18 @@ export default function NaturalHennaPowderPage() {
           <div className="mx-auto max-w-[1320px]">
             <div className="mx-auto max-w-4xl text-center">
               <p className="text-xs font-bold uppercase tracking-[0.45em] text-[#9f7f36]">
-                Packaging & Private Label
+                Henna Powder Packaging & Bulk Supply
               </p>
 
               <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">
-                Flexible Packaging for Retail, Bulk and Buyer Brands
+                Retail, Wholesale and Bulk Henna Powder Packaging
               </h2>
 
               <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#4c5f54]">
-                Packaging formats can be discussed according to product size,
-                order quantity, branding requirements and commercial
-                feasibility.
+                Flexible Natural Henna Powder packaging for retail,
+  professional, wholesale, bulk export and private-label orders,
+  subject to pack size, order quantity, branding requirements and
+  commercial feasibility.
               </p>
             </div>
 
@@ -608,18 +766,19 @@ export default function NaturalHennaPowderPage() {
               <StaggerItem delay={0}>
                 <article className="h-full rounded-[24px] border border-[#C9A962]/30 bg-[#f5f0e6] p-7 shadow-[0_18px_50px_rgba(0,0,0,0.09)] transition-all duration-500 hover:-translate-y-2 hover:border-[#C9A962]">
                   <p className="text-[10px] font-bold uppercase tracking-[0.32em] text-[#9f7f36]">
-                    Available Pack Sizes
+                    Retail & Bulk Pack Sizes
                   </p>
 
                   <h3 className="mt-4 font-[family-name:var(--font-playfair)] text-2xl font-semibold">
-                    Retail and Bulk Packing
+                    Henna Powder Retail and Bulk Packaging
                   </h3>
 
                   <p className="mt-5 leading-8 text-[#4c5f54]">
-                    100 g, 200 g, 500 g and 1 kg high-class
-                    silver, golden and coloured pouches. For bulk supply, 20 kg
-                    and 25 kg double-layer vacuum-sealed packing can be offered
-                    to help maintain freshness.
+                    Retail Natural Henna Powder can be offered in 100 g, 200 g,
+  500 g and 1 kg silver, golden or coloured pouches. Wholesale
+  and bulk Henna Powder can be supplied in 20 kg and 25 kg
+  double-layer vacuum-sealed export packing to help protect
+  product freshness during storage and shipment.
                   </p>
                 </article>
               </StaggerItem>
@@ -627,17 +786,18 @@ export default function NaturalHennaPowderPage() {
               <StaggerItem delay={120}>
                 <article className="h-full rounded-[24px] border border-[#C9A962]/25 bg-[#102f23] p-7 text-[#F5F0E6] shadow-[0_18px_50px_rgba(0,0,0,0.16)] transition-all duration-500 hover:-translate-y-2 hover:border-[#C9A962]">
                   <p className="text-[10px] font-bold uppercase tracking-[0.32em] text-[#C9A962]">
-                    Packaging Formats
+                    Export Packaging Options
                   </p>
 
                   <h3 className="mt-4 font-[family-name:var(--font-playfair)] text-2xl font-semibold">
-                    Multiple Buyer-Oriented Options
+                    Custom Packaging for International Buyers
                   </h3>
 
                   <p className="mt-5 leading-8 text-[#F5F0E6]/68">
-                    Available in metallic pouches, coloured pouches, printed
-                    pouches, printed paper boxes, cartons, jars and
-                    private-label packaging according to buyer requirements.
+                    Packaging options include metallic pouches, coloured pouches,
+  printed pouches, printed paper boxes, jars, master cartons and
+  bulk export cartons. Custom packaging can be coordinated for
+  importers, distributors, wholesalers and buyer-owned brands.
                   </p>
                 </article>
               </StaggerItem>
@@ -648,7 +808,7 @@ export default function NaturalHennaPowderPage() {
               <div className="group relative mt-5 aspect-[1983/793] w-full overflow-hidden rounded-[24px] border border-[#C9A962]/30 bg-[#071b14] shadow-[0_20px_55px_rgba(0,0,0,0.11)]">
                 <Image
                   src="/images/products/henna-powder/natural-henna-packaging-options-international-final-v3.png"
-                  alt="Natural henna powder packaging in pouches, boxes, jars and export cartons"
+                  alt="Natural henna powder retail private-label and bulk export packaging options"
                   fill
                   sizes="100vw"
                   className="object-contain object-center"
@@ -659,11 +819,11 @@ export default function NaturalHennaPowderPage() {
                 <div className="absolute inset-y-0 left-0 flex max-w-xl items-center p-7">
                   <div>
                     <p className="text-[10px] font-bold uppercase tracking-[0.34em] text-[#E4C878]">
-                      Complete Packaging Range
+                      Henna Powder Packaging Range
                     </p>
 
                     <p className="mt-3 font-[family-name:var(--font-playfair)] text-3xl font-semibold text-white">
-                      Retail, Bulk and Private-Label Presentation
+                      Retail Packs, Bulk Supply and Export Cartons
                     </p>
                   </div>
                 </div>
@@ -673,38 +833,45 @@ export default function NaturalHennaPowderPage() {
             {/* PRIVATE LABEL SERVICES */}
             <div className="mt-10">
               <div className="text-center">
-                <p className="text-xs font-bold uppercase tracking-[0.4em] text-[#9f7f36]">
-                  Private Label Services
-                </p>
-              </div>
+  <p className="text-xs font-bold uppercase tracking-[0.4em] text-[#9f7f36]">
+    OEM & Private Label Henna Powder Services
+  </p>
+
+  <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-[#4c5f54]">
+    Private-label Natural Henna Powder solutions for importers,
+    distributors, salon brands and cosmetic businesses requiring
+    custom branding, retail packaging, bulk packing and
+    buyer-specific product presentation.
+  </p>
+</div>
 
               <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {[
-                  {
-                    code: "OEM",
-                    title: "OEM Manufacturing",
-                  },
-                  {
-                    code: "ODM",
-                    title: "ODM Support",
-                  },
-                  {
-                    code: "BR",
-                    title: "Custom Branding",
-                  },
-                  {
-                    code: "BX",
-                    title: "Designer Boxes",
-                  },
-                  {
-                    code: "MP",
-                    title: "Metallic Pouches",
-                  },
-                  {
-                    code: "CT",
-                    title: "Bulk Export Cartons",
-                  },
-                ].map((service, index) => (
+  {
+    code: "OEM",
+    title: "OEM Henna Powder Manufacturing",
+  },
+  {
+    code: "ODM",
+    title: "ODM Henna Product Support",
+  },
+  {
+    code: "BR",
+    title: "Custom Henna Brand Packaging",
+  },
+  {
+    code: "BX",
+    title: "Private Label Henna Boxes",
+  },
+  {
+    code: "MP",
+    title: "Printed Metallic Henna Pouches",
+  },
+  {
+    code: "CT",
+    title: "Bulk Henna Export Cartons",
+  },
+].map((service, index) => (
                   <StaggerItem key={service.title} delay={(index % 3) * 80}>
                     <article className="flex items-center gap-4 rounded-[20px] border border-[#C9A962]/28 bg-[#f5f0e6] p-5 transition-all duration-500 hover:-translate-y-2 hover:border-[#C9A962] hover:shadow-[0_16px_45px_rgba(0,0,0,0.09)]">
                       <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#C9A962]/45 bg-[#102f23] text-[10px] font-bold tracking-[0.08em] text-[#E4C878]">
@@ -730,17 +897,19 @@ export default function NaturalHennaPowderPage() {
         <RevealOnScroll>
           <div className="relative mx-auto max-w-4xl">
             <p className="text-xs font-bold uppercase tracking-[0.45em] text-[#C9A962]">
-              Natural Henna Powder Enquiries
+              Bulk & Private Label Henna Powder Enquiries
             </p>
 
             <h2 className="mt-6 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
-              Ready to Source Natural Henna Powder from India?
+              Looking for a Natural Henna Powder Manufacturer in India?
             </h2>
 
             <p className="mx-auto mt-7 max-w-3xl text-lg leading-9 text-[#F5F0E6]/65">
-              Share your required quantity, mesh, packaging format, destination
-              country and private-label needs. Our team will review your enquiry
-              and guide you with the next practical step.
+              Contact Shivesh International for bulk, wholesale, OEM and
+  private-label Natural Henna Powder supply from India. Share your
+  required grade, mesh size, quantity, packaging format,
+  destination country and branding needs. Minimum order quantity
+  is 200 kg per item.
             </p>
 
             <div className="mt-10 flex flex-wrap justify-center gap-4">
@@ -748,7 +917,7 @@ export default function NaturalHennaPowderPage() {
                 href="/contact"
                 className="inline-flex items-center gap-4 border border-[#C9A962] bg-[#C9A962] px-9 py-4 text-sm font-bold uppercase tracking-[0.2em] text-[#102f23] transition-all duration-500 hover:-translate-y-1 hover:bg-[#E4C878]"
               >
-                Request Quotation
+                Request Henna Powder Quote
                 <span>→</span>
               </Link>
 
@@ -758,10 +927,36 @@ export default function NaturalHennaPowderPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-4 border border-[#F5F0E6]/30 px-9 py-4 text-sm font-bold uppercase tracking-[0.2em] text-[#F5F0E6] transition-all duration-500 hover:border-[#C9A962] hover:text-[#C9A962]"
               >
-                WhatsApp Our Team
+                WhatsApp Export Team
                 <span>→</span>
               </a>
             </div>
+            <div className="mt-9 flex flex-wrap items-center justify-center gap-x-7 gap-y-4 text-[10px] font-bold uppercase tracking-[0.18em]">
+  <Link
+    href="/export"
+    className="text-[#F5F0E6]/55 transition-colors duration-300 hover:text-[#C9A962]"
+  >
+    View Export Services
+  </Link>
+
+  <span className="hidden h-1 w-1 rotate-45 bg-[#C9A962]/55 sm:block" />
+
+  <Link
+    href="/infrastructure"
+    className="text-[#F5F0E6]/55 transition-colors duration-300 hover:text-[#C9A962]"
+  >
+    View Manufacturing Infrastructure
+  </Link>
+
+  <span className="hidden h-1 w-1 rotate-45 bg-[#C9A962]/55 sm:block" />
+
+  <Link
+    href="/products/natural-indigo-powder"
+    className="text-[#F5F0E6]/55 transition-colors duration-300 hover:text-[#C9A962]"
+  >
+    Explore Natural Indigo Powder
+  </Link>
+</div>
           </div>
         </RevealOnScroll>
       </section>

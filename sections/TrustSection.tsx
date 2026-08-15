@@ -6,37 +6,37 @@ const trustItems = [
     value: "30+",
     eyebrow: "Legacy",
     title: "Years of Experience",
-    text: "Long-standing expertise in natural products, sourcing and international trade.",
+    text: "Long-standing expertise in henna powder manufacturing, botanical sourcing and international exports.",
   },
   {
     value: "800+",
     eyebrow: "Sourcing",
     title: "Farmer Network",
-    text: "A broad network of growers and sourcing partners supporting dependable supply.",
+    text: "A broad network of growers and sourcing partners supporting dependable bulk raw-material supply.",
   },
   {
     value: "50+",
     eyebrow: "Global",
     title: "Export Countries",
-    text: "Serving professional buyers and business partners across international markets.",
+    text: "Serving importers, distributors, wholesalers and professional buyers across international markets.",
   },
   {
     value: "OEM",
     eyebrow: "Private Label",
     title: "Buyer-Focused Support",
-    text: "Flexible branding, packaging and private-label coordination for global buyers.",
+    text: "OEM branding, custom packaging and private-label manufacturing support for global product brands.",
   },
   {
     value: "QC",
     eyebrow: "Quality",
     title: "Quality Assurance",
-    text: "Controlled processing, inspection and documentation focused on product consistency.",
+    text: "Controlled processing, inspection and documentation focused on consistent export-quality products.",
   },
   {
     value: "EX",
     eyebrow: "Export",
     title: "Documentation Support",
-    text: "Professional assistance for export documentation, shipments and buyer requirements.",
+    text: "Professional support for export documentation, international shipments and buyer-specific requirements.",
   },
 ];
 
@@ -86,9 +86,9 @@ export default function TrustSection() {
 
             <StaggerItem delay={150}>
               <p className="mx-auto mt-5 max-w-2xl text-sm font-light leading-7 text-[#F5F0E6]/58 sm:text-[15px]">
-                Built around dependable sourcing, consistent quality and
-                professional support for international buyers.
-              </p>
+  Dependable sourcing, export-quality processing and professional
+  support for bulk, wholesale and private-label buyers worldwide.
+</p>
             </StaggerItem>
           </div>
 
@@ -150,7 +150,7 @@ export default function TrustSection() {
               <span className="hidden h-px w-16 bg-[#C9A962]/25 sm:block" />
 
               <p className="text-[9px] font-semibold uppercase tracking-[0.3em] text-[#F5F0E6]/38">
-                Natural Products · Private Label · Global Export Support
+                Bulk Supply · OEM Private Label · Worldwide Export Support
               </p>
 
               <span className="hidden h-px w-16 bg-[#C9A962]/25 sm:block" />

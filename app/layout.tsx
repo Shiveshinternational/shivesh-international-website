@@ -19,33 +19,72 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://shiveshinternational.com"),
+
   title: {
     default:
-      "Shivesh International | Natural Henna, Indigo, Herbs & Spices Exporter",
+      "Henna Powder & Indigo Exporter from India | Shivesh International",
     template: "%s | Shivesh International",
   },
+
   description:
-    "Shivesh International supplies Natural Henna Powder, Natural Indigo Powder, Natural Henna Hair Colors, Henna-Based Hair Colors, Ayurvedic Indian Herbs and Indian Spices for global buyers.",
+    "Indian exporter and supplier of natural henna powder, indigo powder, botanical hair colors, Ayurvedic herbs and Indian spices for bulk, wholesale and private-label buyers worldwide.",
+
+  applicationName: "Shivesh International",
+
+  authors: [
+    {
+      name: "Shivesh International",
+      url: "https://shiveshinternational.com/",
+    },
+  ],
+
+  creator: "Shivesh International",
+  publisher: "Shivesh International",
+
   alternates: {
     canonical: "/",
   },
-  applicationName: "Shivesh International",
-  authors: [{ name: "Shivesh International" }],
-  creator: "Shivesh International",
-  publisher: "Shivesh International",
+
+  category: "Natural Products Export",
+
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
+
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://shiveshinternational.com",
+    url: "https://shiveshinternational.com/",
     siteName: "Shivesh International",
     title:
-      "Shivesh International | Natural Henna, Indigo, Herbs & Spices Exporter",
+      "Henna Powder & Indigo Exporter from India | Shivesh International",
     description:
-      "Premium Indian natural products supplied to importers, distributors, salons, wellness brands and private-label buyers worldwide.",
+      "Natural henna powder, indigo powder, botanical hair colors, Ayurvedic herbs and Indian spices for global wholesale and private-label buyers.",
+    images: [
+      {
+        url: "/images/homepage/hero/hero-slide-01-natural-henna-powder-branded-box-final-v1.png",
+        alt: "Shivesh International natural henna powder for global buyers",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Henna Powder & Indigo Exporter from India | Shivesh International",
+    description:
+      "Natural henna, indigo, botanical hair colors, Ayurvedic herbs and Indian spices supplied to professional buyers worldwide.",
+    images: [
+      "/images/homepage/hero/hero-slide-01-natural-henna-powder-branded-box-final-v1.png",
+    ],
   },
 };
 

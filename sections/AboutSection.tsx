@@ -6,7 +6,7 @@ const aboutPoints = [
   "Certified Manufacturing Unit",
   "30+ Years of Industry Experience",
   "Empowered by 800+ Farmers",
-  "Private Label Manufacturing",
+  "OEM & Private Label Manufacturing",
 ];
 
 export default function AboutSection() {
@@ -53,20 +53,21 @@ export default function AboutSection() {
 
             <StaggerItem delay={220}>
               <p className="mt-6 font-[family-name:var(--font-playfair)] text-xl italic leading-relaxed text-[#8B6A1E] sm:text-2xl">
-                Premium natural products from India, created for buyers
-                worldwide.
-              </p>
+  Premium henna, indigo and botanical products from India for
+  professional buyers worldwide.
+</p>
             </StaggerItem>
 
             <StaggerItem delay={320}>
               <p className="mt-7 max-w-[650px] text-[16px] font-light leading-[1.9] text-[#4C5F54] sm:text-[17px]">
-                Shivesh International is an Indian manufacturer and global
-                exporter of Natural Henna Powder, Natural Henna Hair Colors,
-                Indigo Powder, Ayurvedic Indian Herbs and Indian Spices.
-                We work with international buyers through dependable sourcing,
-                controlled processing, consistent quality and private-label
-                support.
-              </p>
+  Shivesh International is a natural henna powder manufacturer
+  and exporter from India, supplying Natural Henna Powder,
+  Natural Indigo Powder, Henna Hair Colors, Ayurvedic Indian
+  Herbs and Indian Spices. We support importers, distributors,
+  wholesalers, salons and private-label brands through dependable
+  sourcing, controlled processing, consistent quality and
+  export-ready packaging.
+</p>
             </StaggerItem>
 
             {/* =================================================
@@ -95,7 +96,7 @@ export default function AboutSection() {
                   href="/about"
                   className="group inline-flex items-center justify-center gap-4 border border-[#C9A962] bg-[#C9A962] px-8 py-4 text-[11px] font-bold uppercase tracking-[0.22em] text-[#12382A] shadow-[0_14px_35px_rgba(201,169,98,0.20)] transition-all duration-500 hover:-translate-y-1 hover:bg-[#D8BB68]"
                 >
-                  Explore Our Company
+                  About Shivesh International
                   <span className="text-base transition-transform duration-300 group-hover:translate-x-1">
                     →
                   </span>
@@ -123,7 +124,7 @@ export default function AboutSection() {
               <div className="group relative min-h-[560px] overflow-hidden rounded-[26px] border border-[#C9A962]/28 bg-[#E8DFCF] shadow-[0_28px_70px_rgba(20,50,38,0.16)] lg:min-h-[610px]">
                 <Image
                   src="/images/about-office-fullscreen.png"
-                  alt="Shivesh International Corporate Office"
+                  alt="Shivesh International natural products export company office in New Delhi India"
                   fill
                   sizes="(min-width: 1024px) 55vw, 100vw"
                   className="object-cover object-center transition-transform duration-[1200ms] ease-out group-hover:scale-[1.035]"

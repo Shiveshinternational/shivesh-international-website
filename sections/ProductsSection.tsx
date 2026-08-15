@@ -7,8 +7,9 @@ const products = [
     title: "Natural Henna Powder",
     subtitle: "Pure & Natural",
     description:
-      "Premium-quality Natural Henna Powder carefully processed for international brands, salons and private-label requirements.",
-    image: "/images/products/henna-powder/natural-henna-powder-premium-box-v2.png",
+      "Natural Henna Powder manufactured and exported from India for bulk importers, salons, cosmetic brands and private-label henna powder buyers.",
+    image:
+      "/images/products/henna-powder/natural-henna-powder-premium-box-v2.png",
     href: "/products/natural-henna-powder",
     code: "01",
   },
@@ -16,9 +17,9 @@ const products = [
     title: "Natural Indigo Powder",
     subtitle: "Premium Botanical Powder",
     description:
-      "Premium-quality Natural Indigo Powder for professional black and dark-brown hair-colour applications.",
+      "Natural Indigo Powder supplied for bulk export, professional hair-colour applications, wholesale buyers and private-label packaging.",
     image:
-  "/images/products/natural-indigo-powder/natural-indigo-powder-premium-box-v2.png",
+      "/images/products/natural-indigo-powder/natural-indigo-powder-premium-box-v2.png",
     href: "/products/natural-indigo-powder",
     code: "02",
   },
@@ -26,9 +27,9 @@ const products = [
     title: "Natural Henna Hair Colors",
     subtitle: "18 Botanical Shades",
     description:
-      "A premium collection of Natural Henna Hair Colors developed for salons, brands and private-label markets.",
+      "Natural Henna Hair Colors in 18 botanical shades for salons, distributors, beauty brands and private-label hair-colour markets.",
     image:
-  "/images/products/henna-hair-colors/natural-henna-hair-colors-premium-boxes-v2.png",
+      "/images/products/henna-hair-colors/natural-henna-hair-colors-premium-boxes-v2.png",
     href: "/products/natural-henna-hair-colors",
     code: "03",
   },
@@ -36,9 +37,9 @@ const products = [
     title: "Henna-Based Hair Colors",
     subtitle: "16 Professional Shades",
     description:
-      "A performance-focused range of Henna-Based Hair Colors developed for professional and international markets.",
+      "Henna-Based Hair Colors in 16 professional shades supplied to importers, salon distributors and international private-label brands.",
     image:
-  "/images/products/henna-based-hair-colors/henna-based-hair-colors-premium-boxes-v2.png",
+      "/images/products/henna-based-hair-colors/henna-based-hair-colors-premium-boxes-v2.png",
     href: "/products/henna-based-hair-colors",
     code: "04",
   },
@@ -46,9 +47,9 @@ const products = [
     title: "Ayurvedic Indian Herbs",
     subtitle: "Traditional Herbal Range",
     description:
-      "Authentic Ayurvedic Indian Herbs and herbal powders supplied for wellness, cosmetic and private-label markets.",
+      "Ayurvedic Indian Herbs and herbal powders supplied from India for cosmetic, wellness, bulk wholesale and private-label requirements.",
     image:
-  "/images/products/ayurvedic-herbs/ayurvedic-indian-herbs-premium-boxes-v2.png",
+      "/images/products/ayurvedic-herbs/ayurvedic-indian-herbs-premium-boxes-v2.png",
     href: "/products/ayurvedic-indian-herbs",
     code: "05",
   },
@@ -56,9 +57,9 @@ const products = [
     title: "Indian Spices",
     subtitle: "Whole & Powder Spices",
     description:
-      "Premium Indian Spices selected for quality, aroma and international retail, bulk and private-label requirements.",
+      "Whole and powdered Indian Spices selected for aroma and quality for importers, food distributors, bulk buyers and private-label brands.",
     image:
-  "/images/products/indian-spices/indian-spices-premium-boxes-v2.png",
+      "/images/products/indian-spices/indian-spices-premium-boxes-v2.png",
     href: "/products/indian-spices",
     code: "06",
   },
@@ -118,29 +119,29 @@ export default function ProductsSection() {
 
             <StaggerItem delay={240}>
               <p className="mx-auto mt-7 max-w-3xl text-base leading-8 text-[#F5F0E6]/68 sm:text-lg lg:text-xl lg:leading-9">
-                Carefully selected natural products, professional hair-colour
-                ranges, Ayurvedic Indian Herbs and Indian Spices prepared for
-                global buyers.
-              </p>
+  Bulk Natural Henna Powder, Natural Indigo Powder, botanical
+  hair colours, Ayurvedic Indian Herbs and Indian Spices prepared
+  for importers, distributors and private-label buyers worldwide.
+</p>
             </StaggerItem>
 
             <StaggerItem delay={300}>
               <div className="mx-auto mt-8 flex max-w-3xl flex-wrap items-center justify-center gap-x-7 gap-y-3 text-[10px] font-bold uppercase tracking-[0.2em] text-[#F5F0E6]/42">
-                <span className="inline-flex items-center gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#C9A962]" />
-                  Export-Oriented Supply
-                </span>
+  <span className="inline-flex items-center gap-2">
+    <span className="h-1.5 w-1.5 rounded-full bg-[#C9A962]" />
+    Export from India
+  </span>
 
-                <span className="inline-flex items-center gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#C9A962]" />
-                  Retail & Bulk
-                </span>
+  <span className="inline-flex items-center gap-2">
+    <span className="h-1.5 w-1.5 rounded-full bg-[#C9A962]" />
+    Wholesale & Bulk Supply
+  </span>
 
-                <span className="inline-flex items-center gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#C9A962]" />
-                  Private Label
-                </span>
-              </div>
+  <span className="inline-flex items-center gap-2">
+    <span className="h-1.5 w-1.5 rounded-full bg-[#C9A962]" />
+    OEM Private Label
+  </span>
+</div>
             </StaggerItem>
           </div>
 
@@ -203,7 +204,7 @@ export default function ProductsSection() {
                 href="/contact"
                 className="inline-flex shrink-0 items-center gap-3 rounded-full border border-[#C9A962]/55 px-6 py-3 text-[10px] font-bold uppercase tracking-[0.18em] text-[#E4C878] transition-all duration-500 hover:-translate-y-1 hover:border-[#C9A962] hover:bg-[#C9A962] hover:text-[#102F23]"
               >
-                Discuss Your Requirement
+                Send Product Enquiry
                 <span>→</span>
               </a>
             </div>
