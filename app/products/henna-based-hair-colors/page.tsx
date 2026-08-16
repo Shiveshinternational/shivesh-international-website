@@ -13,22 +13,168 @@ import MagneticButtons from "@/app/components/MagneticButtons";
 import FooterSection from "@/sections/FooterSection";
 
 export const metadata: Metadata = {
-  title:
-    "Henna-Based Hair Colors | 16 Professional Shades | Shivesh International",
+  title: {
+    absolute:
+      "Henna-Based Hair Colors Manufacturer & Exporter India | Shivesh International",
+  },
   description:
-    "Explore 16 professional Henna-Based Hair Colors developed for grey coverage, salon use, retail brands, distributors and private-label markets.",
+    "Henna-Based Hair Colors manufacturer, exporter and supplier in India offering 16 professional powder shades for salons, bulk buyers, OEM and private label.",
+  alternates: {
+    canonical: "/products/henna-based-hair-colors",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://shiveshinternational.com/products/henna-based-hair-colors",
+    siteName: "Shivesh International",
+    title: "Henna-Based Hair Colors Manufacturer & Exporter India",
+    description:
+      "Explore 16 professional Henna-Based Hair Color powder shades for salons, distributors, bulk importers and private-label brands.",
+    images: [
+      {
+        url: "/images/products/henna-based-hair-colors/henna-based-hair-colors-hero-final-v2.png",
+        alt: "Shivesh International Henna-Based Hair Colors professional shade range",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Henna-Based Hair Colors Manufacturer & Exporter India",
+    description:
+      "16 professional Henna-Based Hair Color shades for bulk, salon, OEM and private-label buyers.",
+    images: [
+      "/images/products/henna-based-hair-colors/henna-based-hair-colors-hero-final-v2.png",
+    ],
+  },
+};
+
+const hennaBasedHairColorsStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "@id":
+        "https://shiveshinternational.com/products/henna-based-hair-colors#product",
+      name: "Henna-Based Hair Colors",
+      alternateName: [
+        "Professional Henna Hair Dye Powder",
+        "Henna-Based Powder Hair Colors",
+        "Private Label Henna Hair Colors",
+        "Bulk Henna-Based Hair Dye",
+      ],
+      url: "https://shiveshinternational.com/products/henna-based-hair-colors",
+      image: [
+        "https://shiveshinternational.com/images/products/henna-based-hair-colors/henna-based-hair-colors-hero-final-v2.png",
+      ],
+      description:
+        "Professional Henna-Based Hair Colors manufactured, supplied and exported from India in 16 powder shades for salons, retailers, distributors, bulk importers and private-label buyers.",
+      category: "Henna-Based Powder Hair Colors",
+      brand: {
+        "@type": "Brand",
+        name: "Shivesh International",
+      },
+      manufacturer: {
+        "@id": "https://shiveshinternational.com/#organization",
+      },
+      countryOfOrigin: {
+        "@type": "Country",
+        name: "India",
+      },
+      audience: {
+        "@type": "BusinessAudience",
+        audienceType:
+          "Importers, distributors, wholesalers, salon brands, cosmetic businesses and private-label buyers",
+      },
+      additionalProperty: [
+        {
+          "@type": "PropertyValue",
+          name: "Available Shades",
+          value: "16 Professional Shades",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Product Form",
+          value: "Fine Powder",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Primary Application",
+          value: "Grey Coverage and Professional Hair Colouring",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Minimum Order Quantity",
+          value: "200 kg per item",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Packaging",
+          value: "Retail, professional, bulk, OEM and private-label packaging",
+        },
+      ],
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id":
+        "https://shiveshinternational.com/products/henna-based-hair-colors#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://shiveshinternational.com/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Products",
+          item: "https://shiveshinternational.com/#products",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Henna-Based Hair Colors",
+          item: "https://shiveshinternational.com/products/henna-based-hair-colors",
+        },
+      ],
+    },
+  ],
 };
 
 export default function HennaBasedHairColorsPage() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-[#f5f0e6] text-[#173b2a]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(hennaBasedHairColorsStructuredData).replace(
+            /</g,
+            "\\u003c"
+          ),
+        }}
+      />
+
       <Navbar />
 
       {/* PRODUCT HERO */}
-      <section className="relative isolate min-h-[72vh] overflow-hidden border-b border-[#C9A962]/25 bg-[#071b14]">
+      <section
+        id="henna-based-hair-colors"
+        className="relative isolate min-h-[72vh] overflow-hidden border-b border-[#C9A962]/25 bg-[#071b14]"
+      >
         <Image
     src="/images/products/henna-based-hair-colors/henna-based-hair-colors-hero-final-v2.png"
-    alt="Six female models displaying different Henna-Based Hair Colors"
+    alt="Henna-Based Hair Colors manufacturer and exporter displaying 16 professional powder shades"
     fill
     priority
     sizes="100vw"
@@ -46,7 +192,7 @@ export default function HennaBasedHairColorsPage() {
               <div className="mb-5 flex items-center gap-4">
                 <span className="h-px w-14 bg-[#C9A962]" />
                 <span className="text-[10px] font-bold uppercase tracking-[0.42em] text-[#E4C878] sm:text-xs">
-                  Professional Henna Hair Dye Collection
+                  Manufacturer · Exporter · Supplier
                 </span>
               </div>
             </StaggerItem>
@@ -69,10 +215,10 @@ export default function HennaBasedHairColorsPage() {
 
             <StaggerItem delay={320}>
               <p className="mt-5 max-w-[620px] text-[16px] leading-8 text-[#F5F0E6]/78">
-                A performance-focused collection of Henna-Based Hair Colors
-                developed for salons, retailers, distributors and private-label
-                brands seeking practical shade options, smooth application and
-                professional colour results.
+                Shivesh International is a Henna-Based Hair Colors manufacturer,
+                exporter and supplier from India offering 16 professional powder
+                shades for bulk importers, wholesalers, salons, cosmetic brands
+                and private-label buyers worldwide.
               </p>
             </StaggerItem>
 
@@ -428,7 +574,10 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
         </RevealOnScroll>
       </section>
       {/* PROFESSIONAL SHADE GUIDE */}
-      <section className="relative overflow-hidden bg-[#ede5d7] px-5 py-16 sm:px-8 lg:px-12 lg:py-20">
+      <section
+        id="professional-shade-guide"
+        className="relative overflow-hidden bg-[#ede5d7] px-5 py-16 sm:px-8 lg:px-12 lg:py-20"
+      >
         <div
           aria-hidden="true"
           className="absolute -left-40 top-10 h-[420px] w-[420px] rounded-full bg-[#C9A962]/10 blur-[140px]"
@@ -446,8 +595,9 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
               </h2>
 
               <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#4c5f54]">
-                A compact professional shade reference for salons, distributors,
-                retailers and private-label buyers.
+                Compare Black, Brown, Burgundy, Red, Auburn, Orange and Blonde
+                Henna-Based Hair Color shades for salon, wholesale, distributor,
+                OEM and private-label product planning.
               </p>
             </div>
 
@@ -647,7 +797,10 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
         </RevealOnScroll>
       </section>
       {/* ADVANCED HAIR COLOR PERFORMANCE */}
-      <section className="bg-[#102f23] px-6 py-20 text-[#F5F0E6] sm:px-8 lg:px-12 lg:py-24">
+      <section
+        id="professional-hair-color-performance"
+        className="bg-[#102f23] px-6 py-20 text-[#F5F0E6] sm:px-8 lg:px-12 lg:py-24"
+      >
         <RevealOnScroll>
           <div className="mx-auto grid max-w-[1350px] items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
             {/* IMAGE */}
@@ -655,7 +808,7 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
               <div className="group relative min-h-[450px] overflow-hidden rounded-[28px] border border-[#C9A962]/30 bg-[#173b2a] shadow-[0_28px_75px_rgba(0,0,0,0.26)]">
                 <Image
                   src="/images/products/henna-based-hair-colors/henna-based-hair-colors-advanced-performance-final-v1.png"
-                  alt="Professional Henna-Based Hair Colors collection"
+                  alt="Professional Henna-Based Hair Colors for grey coverage and commercial salon use"
                   fill
                   sizes="(min-width: 1024px) 42vw, 100vw"
                   className="object-cover transition-transform duration-[1400ms] group-hover:scale-105"
@@ -759,7 +912,10 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
         </RevealOnScroll>
       </section>
       {/* PRODUCT SPECIFICATIONS */}
-      <section className="bg-[#ede5d7] px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+      <section
+        id="product-specifications"
+        className="bg-[#ede5d7] px-6 py-20 sm:px-8 lg:px-12 lg:py-24"
+      >
         <RevealOnScroll>
           <div className="mx-auto max-w-[1180px]">
             <div className="mx-auto max-w-4xl text-center">
@@ -809,6 +965,7 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
                   ["Appearance", "Shade-Specific Fine Powder"],
                   ["Odour", "Characteristic"],
                   ["Country of Origin", "India"],
+                  ["Minimum Order Quantity", "200 kg per item"],
                   ["Shelf Life", "24 Months under Recommended Storage"],
                   [
                     "Storage",
@@ -847,7 +1004,10 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
         </RevealOnScroll>
       </section>
       {/* SENSITIVITY TEST */}
-      <section className="bg-[#102f23] px-6 py-16 text-[#F5F0E6] sm:px-8 lg:px-12 lg:py-20">
+      <section
+        id="sensitivity-test"
+        className="bg-[#102f23] px-6 py-16 text-[#F5F0E6] sm:px-8 lg:px-12 lg:py-20"
+      >
         <RevealOnScroll>
           <div className="mx-auto max-w-[1180px]">
             <div className="mx-auto max-w-4xl text-center">
@@ -924,7 +1084,10 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
         </RevealOnScroll>
       </section>
       {/* HOW TO USE */}
-      <section className="bg-[#f5f0e6] px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+      <section
+        id="how-to-use"
+        className="bg-[#f5f0e6] px-6 py-20 sm:px-8 lg:px-12 lg:py-24"
+      >
         <RevealOnScroll>
           <div className="mx-auto max-w-[1450px]">
             <div className="mx-auto max-w-4xl text-center">
@@ -1002,7 +1165,10 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
         </RevealOnScroll>
       </section>
       {/* PACKAGING & PRIVATE LABEL */}
-      <section className="bg-[#ede5d7] px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+      <section
+        id="packaging-oem-private-label"
+        className="bg-[#ede5d7] px-6 py-20 sm:px-8 lg:px-12 lg:py-24"
+      >
         <RevealOnScroll>
           <div className="mx-auto max-w-[1320px]">
             <div className="mx-auto max-w-4xl text-center">
@@ -1015,9 +1181,9 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
               </h2>
 
               <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#4c5f54]">
-                Henna-Based Hair Colors are supplied in multiple packaging
-                formats for distributors, retailers, salon chains and
-                private-label brands.
+                Bulk Henna-Based Hair Colors are supplied from India in retail,
+                professional and export packaging for importers, distributors,
+                wholesalers, salon chains, OEM clients and private-label brands.
               </p>
             </div>
 
@@ -1075,7 +1241,10 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
       </section>
       {/* FINAL CTA */}
 
-      <section className="relative overflow-hidden bg-[#071b14] px-6 py-24 text-center text-[#F5F0E6]">
+      <section
+        id="buyer-enquiry"
+        className="relative overflow-hidden bg-[#071b14] px-6 py-24 text-center text-[#F5F0E6]"
+      >
         <div className="absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#C9A962]/10 blur-[150px]" />
 
         <RevealOnScroll>
@@ -1089,10 +1258,9 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
             </h2>
 
             <p className="mx-auto mt-8 max-w-4xl text-lg leading-9 text-[#F5F0E6]/68">
-              Whether you are developing a retail brand, professional salon
-              collection or private-label hair dye range, our team is ready to
-              support your business with international-quality manufacturing and
-              export solutions.
+              Contact Shivesh International for bulk Henna-Based Hair Colors,
+              export pricing, 16-shade selection, OEM manufacturing and
+              private-label packaging. Minimum order quantity is 200 kg per item.
             </p>
 
             <div className="mt-12 flex flex-wrap justify-center gap-5">
@@ -1106,10 +1274,38 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
               <a
                 href="https://wa.me/919999774950"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-full border border-[#F5F0E6]/30 px-10 py-5 text-sm font-bold uppercase tracking-[0.22em]"
               >
                 WhatsApp Our Team →
               </a>
+            </div>
+
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-x-7 gap-y-4 text-[10px] font-bold uppercase tracking-[0.18em]">
+              <Link
+                href="/export"
+                className="text-[#F5F0E6]/55 transition-colors duration-300 hover:text-[#C9A962]"
+              >
+                View Export Services
+              </Link>
+
+              <span className="hidden h-1 w-1 rotate-45 bg-[#C9A962]/55 sm:block" />
+
+              <Link
+                href="/infrastructure"
+                className="text-[#F5F0E6]/55 transition-colors duration-300 hover:text-[#C9A962]"
+              >
+                View Manufacturing Infrastructure
+              </Link>
+
+              <span className="hidden h-1 w-1 rotate-45 bg-[#C9A962]/55 sm:block" />
+
+              <Link
+                href="/products/natural-henna-hair-colors"
+                className="text-[#F5F0E6]/55 transition-colors duration-300 hover:text-[#C9A962]"
+              >
+                Explore Natural Henna Hair Colors
+              </Link>
             </div>
           </div>
         </RevealOnScroll>
