@@ -13,10 +13,43 @@ import MagneticButtons from "@/app/components/MagneticButtons";
 import FooterSection from "@/sections/FooterSection";
 
 export const metadata: Metadata = {
-  title:
-    "Indian Spices | Whole & Powder Spices Exporter | Shivesh International",
+  title: {
+    absolute:
+      "Indian Spices Manufacturer & Exporter India | Shivesh International",
+  },
   description:
-    "Explore premium Indian Spices available in whole and powder forms for importers, distributors, wholesalers, food brands, retail markets and private-label buyers.",
+    "Indian Spices manufacturer, exporter and supplier from India offering whole spices, spice powders, bulk wholesale and private-label supply worldwide.",
+  alternates: {
+    canonical: "/products/indian-spices",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    type: "website",
+    url: "/products/indian-spices",
+    title:
+      "Indian Spices Manufacturer & Exporter India | Shivesh International",
+    description:
+      "Bulk whole Indian spices and spice powders supplied to importers, wholesalers, food brands and private-label buyers worldwide.",
+    images: [
+      {
+        url: "/images/products/indian-spices/indian-spices-hero-final-v1.png",
+        alt: "Indian Spices manufacturer exporter and bulk supplier from India",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Indian Spices Manufacturer & Exporter India | Shivesh International",
+    description:
+      "Bulk whole spices, spice powders and private-label supply from India.",
+    images: [
+      "/images/products/indian-spices/indian-spices-hero-final-v1.png",
+    ],
+  },
 };
 
 const powderSpices = [
@@ -49,6 +82,88 @@ const wholeSpices = [
   { name: "Cinnamon Stick", image: "Cinnamon Stick.png" },
 ];
 
+const indianSpicesStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "@id":
+        "https://shiveshinternational.com/products/indian-spices#product",
+      name: "Indian Spices",
+      alternateName: [
+        "Whole Indian Spices",
+        "Indian Spice Powders",
+        "Bulk Indian Spices",
+        "Private Label Spices",
+      ],
+      url: "https://shiveshinternational.com/products/indian-spices",
+      image:
+        "https://shiveshinternational.com/images/products/indian-spices/indian-spices-hero-final-v1.png",
+      description:
+        "Whole Indian spices and spice powders manufactured, supplied and exported from India for bulk, wholesale, OEM and private-label buyers.",
+      category: "Whole Spices and Spice Powders",
+      brand: {
+        "@type": "Brand",
+        name: "Shivesh International",
+      },
+      manufacturer: {
+        "@id": "https://shiveshinternational.com/#organization",
+      },
+      countryOfOrigin: {
+        "@type": "Country",
+        name: "India",
+      },
+      audience: {
+        "@type": "BusinessAudience",
+        audienceType:
+          "Importers, distributors, wholesalers, food companies, retailers and private-label buyers",
+      },
+      additionalProperty: [
+        {
+          "@type": "PropertyValue",
+          name: "Available Forms",
+          value: "Whole and powder spices",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Minimum Order Quantity",
+          value: "200 kg per item",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Packaging",
+          value: "Retail, professional, bulk, OEM and private label",
+        },
+      ],
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id":
+        "https://shiveshinternational.com/products/indian-spices#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://shiveshinternational.com/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Products",
+          item: "https://shiveshinternational.com/#products",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Indian Spices",
+          item: "https://shiveshinternational.com/products/indian-spices",
+        },
+      ],
+    },
+  ],
+};
+
 type SpiceCardProps = {
   name: string;
   image: string;
@@ -63,15 +178,15 @@ function SpiceCard({ name, image, index, category }: SpiceCardProps) {
     <StaggerItem delay={(index % 6) * 40}>
       <ProductCardModal
         src={imagePath}
-        alt={name}
+        alt={`${name} manufacturer exporter and bulk supplier from India`}
         category={category}
-        description="A premium Indian spice product available in commercial, bulk export and selected private-label formats."
+        description={`${name} available for bulk export, wholesale supply and selected OEM private-label requirements from India.`}
       >
         <article className="group relative h-full overflow-hidden rounded-[20px] border border-[#C9A962]/22 bg-[#F5F0E6] text-[#173b2a] shadow-[0_12px_34px_rgba(0,0,0,0.15)] transition-all duration-500 hover:-translate-y-2 hover:border-[#C9A962] hover:shadow-[0_22px_52px_rgba(0,0,0,0.25)]">
           <div className="relative flex h-[155px] items-center justify-center overflow-hidden bg-[#f3ecdf] p-4">
             <Image
               src={imagePath}
-              alt={name}
+              alt={`${name} bulk wholesale and private-label Indian spice product`}
               width={240}
               height={240}
               className="max-h-[125px] w-auto rounded-[14px] bg-white/90 p-2 object-contain shadow-[0_8px_24px_rgba(0,0,0,0.08)] transition-transform duration-700 group-hover:scale-105"
@@ -96,11 +211,11 @@ function SpiceCard({ name, image, index, category }: SpiceCardProps) {
             <div className="mt-3 h-px w-9 bg-[#C9A962]" />
 
             <p className="mt-3 text-[11px] leading-5 text-[#4c5f54]">
-              Available in commercial, bulk and selected private-label formats.
+              Available for bulk export, wholesale supply and private-label requirements.
             </p>
 
             <span className="mt-4 inline-flex items-center gap-2 text-[9px] font-bold uppercase tracking-[0.14em] text-[#8B6A1E] transition-all duration-300 group-hover:gap-3 group-hover:text-[#173b2a]">
-              Click to View
+              View Spice Details
               <span>→</span>
             </span>
           </div>
@@ -113,20 +228,30 @@ function SpiceCard({ name, image, index, category }: SpiceCardProps) {
 export default function IndianSpicesPage() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-[#f5f0e6] text-[#173b2a]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(indianSpicesStructuredData).replace(
+            /</g,
+            "\\u003c"
+          ),
+        }}
+      />
+
       <Navbar />
 
       {/* HERO */}
       <ProductHero
-      compact
-        eyebrow="Premium Indian Spice Collection"
+        compact
+        eyebrow="Manufacturer · Exporter · Supplier"
         title="Indian Spices"
-        subtitle="Authentic Indian Spice Products. Prepared for Global Markets."
-        description="Explore our premium collection of Indian Spices available in whole and powder forms for importers, distributors, wholesalers, food brands, retail markets and private-label buyers."
+        subtitle="Whole & Powder Spices for Global Buyers"
+        description="Shivesh International is an Indian Spices manufacturer, exporter and supplier from India, offering whole spices, spice powders, bulk wholesale and private-label solutions for importers, distributors, food brands and retailers worldwide."
         heroImage="/images/products/indian-spices/indian-spices-hero-final-v1.png"
-        heroImageAlt="Premium Indian Spices collection"
-        primaryButtonLabel="Explore Spice Collection"
+        heroImageAlt="Indian Spices manufacturer exporter and bulk spice supplier from India"
+        primaryButtonLabel="Explore Indian Spices"
         primaryButtonHref="#spices-collection"
-        secondaryButtonLabel="Request Quotation"
+        secondaryButtonLabel="Request Bulk Quote"
         secondaryButtonHref="/contact"
         highlights={[
           { value: "24", label: "Spice Products" },
@@ -138,7 +263,7 @@ export default function IndianSpicesPage() {
 
       {/* ABOUT INDIAN SPICES */}
       <section
-        id="product-overview"
+        id="about-indian-spices"
         className="relative overflow-hidden bg-[#f5f0e6] px-6 py-20 sm:px-8 lg:px-12 lg:py-24"
       >
         <div
@@ -152,7 +277,7 @@ export default function IndianSpicesPage() {
               <div className="group relative min-h-[520px] overflow-hidden rounded-[30px] border border-[#C9A962]/30 bg-[#e8dfcf] shadow-[0_30px_85px_rgba(0,0,0,0.15)]">
                 <Image
                   src="/images/products/indian-spices/indian-spices-about-final-v2.png"
-                  alt="Indian Spices in whole and powder forms"
+                  alt="Whole Indian spices and spice powders manufacturer supplier from India"
                   fill
                   sizes="(min-width: 1024px) 46vw, 100vw"
                   className="object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-105"
@@ -186,27 +311,26 @@ export default function IndianSpicesPage() {
 
               <StaggerItem delay={240}>
                 <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl lg:text-[58px]">
-                  Premium Indian Spice Products
+                  Indian Spices Manufacturer
                   <span className="block text-[#9f7f36]">
-                    for Professional Markets
+                    Exporter and Bulk Supplier from India
                   </span>
                 </h2>
               </StaggerItem>
 
               <StaggerItem delay={340}>
                 <p className="mt-8 text-xl font-medium leading-9 text-[#8B6A1E]">
-                  A focused range of whole and powder spices selected for
-                  commercial, retail, food-service and export-oriented markets.
+                  Authentic whole Indian spices and spice powders prepared for
+                  commercial, wholesale, food-service and export markets.
                 </p>
               </StaggerItem>
 
               <StaggerItem delay={460}>
                 <div className="mt-7 space-y-5">
                   <p className="text-lg leading-8 text-[#4c5f54]">
-                    Shivesh International supplies premium Indian Spices in
-                    whole and powder forms for importers, distributors,
-                    wholesalers, retail brands, food companies and qualified
-                    private-label buyers.
+                    Shivesh International is an Indian Spices manufacturer,
+                    exporter, supplier and wholesaler serving professional
+                    buyers across international food and retail markets.
                   </p>
 
                   <p className="text-lg leading-8 text-[#4c5f54]">
@@ -217,16 +341,15 @@ export default function IndianSpicesPage() {
                   </p>
 
                   <p className="text-lg leading-8 text-[#4c5f54]">
-                    Products may be supplied as whole spices, spice powders or
-                    selected buyer-specific formats according to product
-                    suitability, target market, order quantity and agreed
-                    specification.
+                    Products are supplied as whole spices, spice powders and
+                    selected buyer-specific formats according to product,
+                    destination market and agreed commercial specification.
                   </p>
 
                   <p className="text-lg leading-8 text-[#4c5f54]">
-                    We support commercial buyers with export-oriented supply,
-                    flexible packaging, bulk coordination and private-label
-                    presentation for international spice markets.
+                    We support importers and food brands with bulk spice supply,
+                    export packaging, OEM manufacturing, custom branding and
+                    private-label presentation for global markets.
                   </p>
                 </div>
               </StaggerItem>
@@ -269,16 +392,17 @@ export default function IndianSpicesPage() {
           <div className="relative mx-auto max-w-[1500px]">
             <div className="mx-auto max-w-4xl text-center">
               <p className="text-xs font-bold uppercase tracking-[0.45em] text-[#C9A962]">
-                Complete Spices Collection
+                Bulk Spice Products from India
               </p>
 
               <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
-                Explore Our Indian Spices
+                Complete Whole & Powder Indian Spices Collection
               </h2>
 
               <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#F5F0E6]/65">
-                A focused export-oriented portfolio of Indian spice powders and
-                whole spices for commercial, retail and private-label markets.
+                Explore whole Indian spices and spice powders manufactured,
+                exported and supplied for importers, wholesalers, food brands,
+                retailers and private-label buyers worldwide.
               </p>
             </div>
 
@@ -297,7 +421,7 @@ export default function IndianSpicesPage() {
                     key={spice.name}
                     {...spice}
                     index={index}
-                    category="Indian Spice Powder"
+                    category="Indian Spice Powder Manufacturer & Exporter"
                   />
                 ))}
               </div>
@@ -318,7 +442,7 @@ export default function IndianSpicesPage() {
                     key={spice.name}
                     {...spice}
                     index={index}
-                    category="Whole Indian Spice"
+                    category="Whole Indian Spice Manufacturer & Exporter"
                   />
                 ))}
               </div>
@@ -336,14 +460,17 @@ export default function IndianSpicesPage() {
       </section>
 
       {/* WHY CHOOSE OUR INDIAN SPICES */}
-      <section className="bg-[#f5f0e6] px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+      <section
+        id="why-choose-our-indian-spices"
+        className="bg-[#f5f0e6] px-6 py-20 sm:px-8 lg:px-12 lg:py-24"
+      >
         <RevealOnScroll>
           <div className="mx-auto grid max-w-[1350px] items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
             <StaggerItem delay={0}>
               <div className="group relative min-h-[440px] overflow-hidden rounded-[28px] border border-[#C9A962]/30 bg-[#e8dfcf] shadow-[0_28px_75px_rgba(0,0,0,0.15)]">
                 <Image
                   src="/images/products/indian-spices/indian-spices-quality-inspection-final-v1.png"
-                  alt="Premium Indian Spices collection"
+                  alt="Quality inspection of Indian spices for bulk export supply"
                   fill
                   sizes="(min-width: 1024px) 42vw, 100vw"
                   className="object-cover transition-transform duration-[1400ms] group-hover:scale-105"
@@ -351,7 +478,7 @@ export default function IndianSpicesPage() {
 
                 <div className="absolute inset-0 bg-gradient-to-t from-[#061711]/80 via-transparent to-black/10" />
 
-                <div className="absolute bottom-7 left-6 right-6">
+                <div className="absolute bottom-7 left-7 right-7">
                   <p className="text-[10px] font-bold uppercase tracking-[0.34em] text-[#E4C878]">
                     Premium Indian Spice Range
                   </p>
@@ -375,15 +502,15 @@ export default function IndianSpicesPage() {
 
               <StaggerItem delay={240}>
                 <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">
-                  Reliable Indian Spice Products for Professional and Export Markets
+                  Why Global Buyers Choose Our Indian Spices
                 </h2>
               </StaggerItem>
 
               <StaggerItem delay={360}>
                 <p className="mt-6 text-lg leading-8 text-[#4c5f54]">
-                  Our Indian Spices are supplied with a strong focus on product
-                  quality, commercial consistency, flexible packaging and
-                  buyer-oriented export support.
+                  Our whole spices and spice powders are prepared for importers,
+                  wholesalers, food manufacturers, retail companies and
+                  private-label brands requiring bulk export supply from India.
                 </p>
               </StaggerItem>
 
@@ -444,7 +571,10 @@ export default function IndianSpicesPage() {
       </section>
 
       {/* PRODUCT SPECIFICATIONS */}
-      <section className="bg-[#ede5d7] px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+      <section
+        id="indian-spices-product-specifications"
+        className="bg-[#ede5d7] px-6 py-20 sm:px-8 lg:px-12 lg:py-24"
+      >
         <RevealOnScroll>
           <div className="mx-auto max-w-[1180px]">
             <div className="mx-auto max-w-4xl text-center">
@@ -453,13 +583,13 @@ export default function IndianSpicesPage() {
               </p>
 
               <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">
-                General Product Information
+                Indian Spices Product Specifications
               </h2>
 
               <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#4c5f54]">
-                A general commercial overview of our Indian Spices. Exact
-                values may differ according to the selected product, grade,
-                form and buyer specification.
+                Review general commercial specifications for our bulk whole
+                Indian spices and spice powders. Final parameters depend on
+                the selected spice, form, grade and buyer requirements.
               </p>
             </div>
 
@@ -476,6 +606,7 @@ export default function IndianSpicesPage() {
 
                 {[
                   ["Product Category", "Indian Spices"],
+                  ["Minimum Order Quantity", "200 kg per Spice / Item"],
                   ["Available Forms", "Whole and Powder Forms"],
                   ["Product Appearance", "Characteristic to the Selected Spice"],
                   ["Colour", "Natural and Characteristic to the Selected Product"],
@@ -517,7 +648,10 @@ export default function IndianSpicesPage() {
       </section>
 
       {/* PACKAGING & PRIVATE LABEL */}
-      <section className="bg-[#102f23] px-6 py-20 text-[#F5F0E6] sm:px-8 lg:px-12 lg:py-24">
+      <section
+        id="indian-spices-packaging-private-label"
+        className="bg-[#102f23] px-6 py-20 text-[#F5F0E6] sm:px-8 lg:px-12 lg:py-24"
+      >
         <RevealOnScroll>
           <div className="mx-auto max-w-[1320px]">
             <div className="mx-auto max-w-4xl text-center">
@@ -526,13 +660,13 @@ export default function IndianSpicesPage() {
               </p>
 
               <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold sm:text-5xl">
-                Flexible Packaging for Global Spice Markets
+                Indian Spices Bulk Packaging & Private Label
               </h2>
 
               <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#F5F0E6]/65">
-                Our Indian Spices are available in multiple commercial packing
-                formats for wholesalers, importers, food brands, retailers and
-                private-label buyers.
+                Our whole Indian spices and spice powders are available in
+                retail, professional and bulk export packaging for importers,
+                wholesalers, food brands and OEM private-label buyers.
               </p>
             </div>
 
@@ -572,12 +706,12 @@ export default function IndianSpicesPage() {
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {[
-                "OEM Manufacturing",
-                "Private Label",
-                "Custom Branding",
-                "Printed Pouches",
-                "Designer Boxes",
-                "Bulk Export Cartons",
+                "OEM Indian Spices Manufacturing",
+                "Private Label Spice Products",
+                "Custom Spice Brand Packaging",
+                "Printed Spice Pouches",
+                "Designer Retail Spice Boxes",
+                "Bulk Spice Export Cartons",
               ].map((item) => (
                 <div
                   key={item}
@@ -592,7 +726,10 @@ export default function IndianSpicesPage() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="relative overflow-hidden bg-[#071b14] px-6 py-24 text-center text-[#F5F0E6]">
+      <section
+        id="indian-spices-buyer-enquiry"
+        className="relative overflow-hidden bg-[#071b14] px-6 py-24 text-center text-[#F5F0E6]"
+      >
         <div className="absolute left-1/2 top-1/2 h-[620px] w-[620px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#C9A962]/10 blur-[160px]" />
 
         <RevealOnScroll>
@@ -602,13 +739,13 @@ export default function IndianSpicesPage() {
             </p>
 
             <h2 className="mt-6 font-[family-name:var(--font-playfair)] text-4xl font-semibold sm:text-5xl lg:text-6xl">
-              Ready to Source Premium Indian Spices?
+              Looking for an Indian Spices Manufacturer, Exporter and Supplier?
             </h2>
 
             <p className="mx-auto mt-8 max-w-4xl text-lg leading-9 text-[#F5F0E6]/68">
-              Whether you require whole spices, spice powders, bulk supply or
-              complete private-label solutions, our team is ready to support
-              your business with export-oriented Indian spice products.
+              Contact Shivesh International for bulk whole spices, spice
+              powders, wholesale export supply, OEM manufacturing and
+              private-label packaging. Minimum order quantity is 200 kg per item.
             </p>
 
             <div className="mt-12 flex flex-wrap justify-center gap-5">
@@ -616,7 +753,7 @@ export default function IndianSpicesPage() {
                 href="/contact"
                 className="rounded-full bg-[#C9A962] px-10 py-5 text-sm font-bold uppercase tracking-[0.22em] text-[#102f23]"
               >
-                Request Quotation →
+                Request Bulk Spices Quote →
               </Link>
 
               <a
@@ -625,8 +762,31 @@ export default function IndianSpicesPage() {
                 rel="noopener noreferrer"
                 className="rounded-full border border-[#F5F0E6]/30 px-10 py-5 text-sm font-bold uppercase tracking-[0.22em]"
               >
-                WhatsApp Our Team →
+                WhatsApp Export Team →
               </a>
+            </div>
+
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-[10px] font-bold uppercase tracking-[0.18em]">
+              <Link
+                href="/export"
+                className="text-[#F5F0E6]/55 transition-colors hover:text-[#C9A962]"
+              >
+                View Export Services
+              </Link>
+
+              <Link
+                href="/infrastructure"
+                className="text-[#F5F0E6]/55 transition-colors hover:text-[#C9A962]"
+              >
+                View Manufacturing Infrastructure
+              </Link>
+
+              <Link
+                href="/products/ayurvedic-indian-herbs"
+                className="text-[#F5F0E6]/55 transition-colors hover:text-[#C9A962]"
+              >
+                Explore Ayurvedic Indian Herbs
+              </Link>
             </div>
           </div>
         </RevealOnScroll>

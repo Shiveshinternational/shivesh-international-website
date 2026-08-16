@@ -13,10 +13,43 @@ import MagneticButtons from "@/app/components/MagneticButtons";
 import FooterSection from "@/sections/FooterSection";
 
 export const metadata: Metadata = {
-  title:
-    "Ayurvedic Indian Herbs | Premium Herbal Products | Shivesh International",
+  title: {
+    absolute:
+      "Ayurvedic Herbs Manufacturer & Exporter India | Shivesh International",
+  },
   description:
-    "Explore premium Ayurvedic Indian Herbs and herbal powders supplied in raw, whole, cut, dried and powder forms for international buyers, wholesalers, wellness brands and private-label markets.",
+    "Ayurvedic Indian Herbs manufacturer, exporter and supplier in India offering herbal powders, bulk supply, wholesale and private-label solutions worldwide.",
+  alternates: {
+    canonical: "/products/ayurvedic-indian-herbs",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    type: "website",
+    url: "/products/ayurvedic-indian-herbs",
+    title:
+      "Ayurvedic Herbs Manufacturer & Exporter India | Shivesh International",
+    description:
+      "Bulk Ayurvedic Indian Herbs and herbal powders supplied to importers, wholesalers, wellness brands and private-label buyers worldwide.",
+    images: [
+      {
+        url: "/images/products/ayurvedic-herbs/ayurvedic-indian-herbs-hero-final-v1.png",
+        alt: "Ayurvedic Indian Herbs manufacturer exporter and supplier from India",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Ayurvedic Herbs Manufacturer & Exporter India | Shivesh International",
+    description:
+      "Bulk Ayurvedic herbs, herbal powders and private-label supply from India.",
+    images: [
+      "/images/products/ayurvedic-herbs/ayurvedic-indian-herbs-hero-final-v1.png",
+    ],
+  },
 };
 
 const herbs = [
@@ -94,24 +127,114 @@ const herbs = [
   { name: 'Katha Powder', image: 'katha powder.png' },
   
 ];
-
+const ayurvedicHerbsStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "@id":
+        "https://shiveshinternational.com/products/ayurvedic-indian-herbs#product",
+      name: "Ayurvedic Indian Herbs",
+      alternateName: [
+        "Ayurvedic Herbal Powders",
+        "Bulk Indian Herbs",
+        "Private Label Herbal Products",
+      ],
+      url:
+        "https://shiveshinternational.com/products/ayurvedic-indian-herbs",
+      image:
+        "https://shiveshinternational.com/images/products/ayurvedic-herbs/ayurvedic-indian-herbs-hero-final-v1.png",
+      description:
+        "Ayurvedic Indian Herbs and herbal powders manufactured, supplied and exported from India for bulk, wholesale, OEM and private-label buyers.",
+      category: "Ayurvedic Indian Herbs and Herbal Powders",
+      brand: {
+        "@type": "Brand",
+        name: "Shivesh International",
+      },
+      manufacturer: {
+        "@id": "https://shiveshinternational.com/#organization",
+      },
+      countryOfOrigin: {
+        "@type": "Country",
+        name: "India",
+      },
+      audience: {
+        "@type": "BusinessAudience",
+        audienceType:
+          "Importers, distributors, wholesalers, cosmetic companies, wellness brands and private-label buyers",
+      },
+      additionalProperty: [
+        {
+          "@type": "PropertyValue",
+          name: "Available Forms",
+          value: "Raw, whole, cut, dried and powder",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Minimum Order Quantity",
+          value: "200 kg per item",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Packaging",
+          value: "Retail, professional, bulk, OEM and private label",
+        },
+      ],
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id":
+        "https://shiveshinternational.com/products/ayurvedic-indian-herbs#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://shiveshinternational.com/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Products",
+          item: "https://shiveshinternational.com/#products",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Ayurvedic Indian Herbs",
+          item:
+            "https://shiveshinternational.com/products/ayurvedic-indian-herbs",
+        },
+      ],
+    },
+  ],
+};
 export default function AyurvedicIndianHerbsPage() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-[#f5f0e6] text-[#173b2a]">
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify(ayurvedicHerbsStructuredData).replace(
+        /</g,
+        "\\u003c"
+      ),
+    }}
+  />
       <Navbar />
 
       <ProductHero
        compact
-        eyebrow="Premium Ayurvedic Herbal Collection"
-        title="Ayurvedic Indian Herbs"
-        subtitle="Traditional Herbal Products. Prepared for Global Markets."
-        description="Explore our premium collection of Ayurvedic Indian Herbs available in raw, whole, cut, dried and powder forms for importers, distributors, wholesalers, wellness brands, cosmetic companies and private-label buyers."
-        heroImage="/images/products/ayurvedic-herbs/ayurvedic-indian-herbs-hero-final-v1.png"
-        heroImageAlt="Premium Ayurvedic Indian Herbs collection"
-        primaryButtonLabel="Explore Herb Collection"
-        primaryButtonHref="#herbs-collection"
-        secondaryButtonLabel="Request Quotation"
-        secondaryButtonHref="/contact"
+        eyebrow="Manufacturer · Exporter · Supplier"
+title="Ayurvedic Indian Herbs"
+subtitle="Premium Herbal Powders for Global Buyers"
+description="Shivesh International is an Ayurvedic Indian Herbs manufacturer, exporter and supplier from India, offering bulk herbal powders, dried herbs and private-label solutions for importers, wholesalers, wellness brands and cosmetic companies worldwide."
+heroImage="/images/products/ayurvedic-herbs/ayurvedic-indian-herbs-hero-final-v1.png"
+heroImageAlt="Ayurvedic Indian Herbs manufacturer exporter and bulk herbal powder supplier from India"
+primaryButtonLabel="Explore Herbal Products"
+primaryButtonHref="#herbs-collection"
+secondaryButtonLabel="Request Bulk Quote"
+secondaryButtonHref="/contact"
         highlights={[
           { value: "Wide", label: "Herb Range" },
           { value: "Multiple", label: "Product Grades" },
@@ -121,7 +244,7 @@ export default function AyurvedicIndianHerbsPage() {
       />
 
       <section
-        id="product-overview"
+        id="about-ayurvedic-indian-herbs"
         className="relative overflow-hidden bg-[#f5f0e6] px-6 py-20 sm:px-8 lg:px-12 lg:py-24"
       >
         <div
@@ -135,7 +258,7 @@ export default function AyurvedicIndianHerbsPage() {
               <div className="group relative aspect-[3/2] overflow-hidden rounded-[30px] border border-[#C9A962]/30 bg-[#e8dfcf] shadow-[0_30px_85px_rgba(0,0,0,0.15)]">
                 <Image
                   src="/images/products/ayurvedic-herbs/ayurvedic-indian-herbs-about-final-v1.png"
-                  alt="Ayurvedic Indian Herbs and herbal powders"
+                  alt="Bulk Ayurvedic Indian Herbs and herbal powders manufacturer supplier from India"
                   fill
                   sizes="(min-width: 1024px) 46vw, 100vw"
                   className="object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-105"
@@ -165,23 +288,42 @@ export default function AyurvedicIndianHerbsPage() {
 
               <StaggerItem delay={240}>
                 <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl lg:text-[58px]">
-                  Premium Ayurvedic Herbal Products
-                  <span className="block text-[#9f7f36]">for Professional Markets</span>
+                  Ayurvedic Indian Herbs Manufacturer
+<span className="block text-[#9f7f36]">Exporter and Bulk Supplier from India</span>
                 </h2>
               </StaggerItem>
 
               <StaggerItem delay={340}>
                 <p className="mt-8 text-xl font-medium leading-9 text-[#8B6A1E]">
-                  A broad portfolio of traditional herbs and herbal powders supplied as standalone commercial products for multiple international market segments.
+                  Bulk Ayurvedic Indian Herbs and herbal powders manufactured and supplied for international wholesale, cosmetic, wellness and private-label markets.
                 </p>
               </StaggerItem>
 
               <StaggerItem delay={460}>
                 <div className="mt-7 space-y-5">
-                  <p className="text-lg leading-8 text-[#4c5f54]">Shivesh International supplies a broad range of Ayurvedic Indian Herbs and herbal powders prepared for commercial, professional and export-oriented requirements.</p>
-                  <p className="text-lg leading-8 text-[#4c5f54]">Our portfolio includes widely traded herbal products such as Amla, Shikakai, Reetha, Brahmi, Bhringraj, Neem, Ashwagandha, Hibiscus, Tulsi, Multani Mitti and many other traditional Ayurvedic herbs.</p>
-                  <p className="text-lg leading-8 text-[#4c5f54]">Depending on the selected product, herbs may be supplied in raw, whole, cut, dried or powder form. Food-grade, health-grade, cosmetic-grade and other buyer-specific product grades may be discussed according to the herb, intended market and agreed specification.</p>
-                  <p className="text-lg leading-8 text-[#4c5f54]">We serve importers, distributors, wholesalers, herbal-product companies, wellness brands, cosmetic businesses and qualified private-label buyers across international markets.</p>
+                  <p className="text-lg leading-8 text-[#4c5f54]">
+  Shivesh International is an Ayurvedic Indian Herbs manufacturer,
+  exporter, supplier and wholesaler from India serving professional
+  buyers across global markets.
+</p>
+
+<p className="text-lg leading-8 text-[#4c5f54]">
+  Our herbal product range includes Amla, Shikakai, Reetha, Brahmi,
+  Bhringraj, Neem, Ashwagandha, Hibiscus, Tulsi, Moringa, Shatavari,
+  Triphala, Multani Mitti and many other traditional Indian herbs.
+</p>
+
+<p className="text-lg leading-8 text-[#4c5f54]">
+  Depending on the selected herb, products are available in raw, whole,
+  cut, dried and powder forms for bulk orders, wholesale supply and
+  buyer-specific commercial requirements.
+</p>
+
+<p className="text-lg leading-8 text-[#4c5f54]">
+  We support importers, distributors, herbal-product companies,
+  cosmetic manufacturers, wellness brands and OEM private-label buyers
+  with export packaging and international supply coordination.
+</p>
                 </div>
               </StaggerItem>
 
@@ -201,9 +343,19 @@ export default function AyurvedicIndianHerbsPage() {
         <RevealOnScroll>
           <div className="relative mx-auto max-w-[1500px]">
             <div className="mx-auto max-w-4xl text-center">
-              <p className="text-xs font-bold uppercase tracking-[0.45em] text-[#C9A962]">Complete Herbs Collection</p>
-              <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">Explore Our Ayurvedic Indian Herbs</h2>
-              <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#F5F0E6]/65">Discover our extensive herbal product range supplied in powder and selected raw forms for importers, distributors, wholesalers, wellness brands, cosmetic businesses and private-label buyers.</p>
+              <p className="text-xs font-bold uppercase tracking-[0.45em] text-[#C9A962]">
+  Bulk Herbal Products from India
+</p>
+
+<h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
+  Complete Ayurvedic Indian Herbs Collection
+</h2>
+
+<p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#F5F0E6]/65">
+  Explore Ayurvedic herbs and herbal powders manufactured, exported and
+  supplied from India for importers, distributors, wholesalers, cosmetic
+  companies, wellness brands and private-label buyers worldwide.
+</p>
             </div>
 
             <div className="mt-14 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
@@ -211,15 +363,15 @@ export default function AyurvedicIndianHerbsPage() {
                 <StaggerItem key={herb.name} delay={(index % 6) * 35}>
                   <ProductCardModal
                     src={`/images/products/ayurvedic-herbs/${herb.image}`}
-                    alt={herb.name}
-                    category="Ayurvedic Herbal Product"
-                    description="A premium Ayurvedic herbal product available in commercial, bulk export and selected private-label formats according to buyer requirements."
+                    alt={`${herb.name} manufacturer exporter supplier from India`}
+                    category="Ayurvedic Herb Manufacturer & Exporter"
+description={`${herb.name} available for bulk supply, wholesale export and selected OEM private-label requirements from India.`}
                   >
                     <article className="group relative h-full overflow-hidden rounded-[20px] border border-[#C9A962]/22 bg-[#F5F0E6] text-[#173b2a] shadow-[0_12px_34px_rgba(0,0,0,0.15)] transition-all duration-500 hover:-translate-y-2 hover:border-[#C9A962] hover:shadow-[0_22px_52px_rgba(0,0,0,0.25)]">
                       <div className="relative flex h-[155px] items-center justify-center overflow-hidden bg-[#f3ecdf] p-4">
                         <Image
                           src={`/images/products/ayurvedic-herbs/${herb.image}`}
-                          alt={herb.name}
+                          alt={`${herb.name} bulk wholesale and private-label herbal powder`}
                           width={240}
                           height={240}
                           className="max-h-[125px] w-auto rounded-[14px] bg-white/90 p-2 object-contain shadow-[0_8px_24px_rgba(0,0,0,0.08)] transition-transform duration-700 group-hover:scale-105"
@@ -238,7 +390,7 @@ export default function AyurvedicIndianHerbsPage() {
 
                       <div className="p-4">
                         <p className="text-[8px] font-bold uppercase tracking-[0.18em] text-[#9f7f36]">
-                          Ayurvedic Herbal Product
+                          Bulk Herbal Powder
                         </p>
 
                         <h3 className="mt-2 min-h-[48px] font-[family-name:var(--font-playfair)] text-[16px] font-semibold leading-[1.35] text-[#173b2a]">
@@ -248,11 +400,11 @@ export default function AyurvedicIndianHerbsPage() {
                         <div className="mt-3 h-px w-9 bg-[#C9A962]" />
 
                         <p className="mt-3 text-[11px] leading-5 text-[#4c5f54]">
-                          Available in commercial, bulk and selected private-label formats.
+                          Available for bulk export, wholesale supply and private-label requirements.
                         </p>
 
                         <span className="mt-4 inline-flex items-center gap-2 text-[9px] font-bold uppercase tracking-[0.14em] text-[#8B6A1E] transition-all duration-300 group-hover:gap-3 group-hover:text-[#173b2a]">
-                          Click to View
+                          View Herb Details
                           <span>→</span>
                         </span>
                       </div>
@@ -269,7 +421,10 @@ export default function AyurvedicIndianHerbsPage() {
         </RevealOnScroll>
       </section>
             {/* WHY CHOOSE OUR AYURVEDIC INDIAN HERBS */}
-      <section className="bg-[#f5f0e6] px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+      <section
+  id="why-choose-our-ayurvedic-herbs"
+  className="bg-[#f5f0e6] px-6 py-20 sm:px-8 lg:px-12 lg:py-24"
+>
         <RevealOnScroll>
           <div className="mx-auto grid max-w-[1350px] items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
             {/* IMAGE */}
@@ -277,7 +432,7 @@ export default function AyurvedicIndianHerbsPage() {
               <div className="group relative aspect-[3/2] overflow-hidden rounded-[28px] border border-[#C9A962]/30 bg-[#e8dfcf] shadow-[0_28px_75px_rgba(0,0,0,0.15)]">
                 <Image
                   src="/images/products/ayurvedic-herbs/ayurvedic-herbs-quality-inspection-final-v1.png"
-                  alt="Premium Ayurvedic Indian Herbs collection"
+                  alt="Quality inspection of Ayurvedic Indian Herbs for bulk export supply"
                   fill
                   sizes="(min-width: 1024px) 42vw, 100vw"
                   className="object-cover transition-transform duration-[1400ms] group-hover:scale-105"
@@ -311,15 +466,15 @@ export default function AyurvedicIndianHerbsPage() {
 
               <StaggerItem delay={240}>
                 <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">
-                  Reliable Herbal Products for Professional and Export Markets
+                  Why Global Buyers Choose Our Ayurvedic Indian Herbs
                 </h2>
               </StaggerItem>
 
               <StaggerItem delay={360}>
                 <p className="mt-6 text-lg leading-8 text-[#4c5f54]">
-                  Our Ayurvedic Indian Herbs are supplied with a strong focus on
-                  product quality, processing consistency, commercial
-                  flexibility and buyer-oriented packaging.
+                  Our Ayurvedic herbs and herbal powders are prepared for importers,
+wholesalers, cosmetic manufacturers, wellness companies and
+private-label brands requiring reliable bulk export supply from India.
                 </p>
               </StaggerItem>
 
@@ -379,7 +534,10 @@ export default function AyurvedicIndianHerbsPage() {
         </RevealOnScroll>
       </section>
             {/* PRODUCT SPECIFICATIONS */}
-      <section className="bg-[#ede5d7] px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+      <section
+  id="ayurvedic-herbs-product-specifications"
+  className="bg-[#ede5d7] px-6 py-20 sm:px-8 lg:px-12 lg:py-24"
+>
         <RevealOnScroll>
           <div className="mx-auto max-w-[1180px]">
             <div className="mx-auto max-w-4xl text-center">
@@ -388,13 +546,13 @@ export default function AyurvedicIndianHerbsPage() {
               </p>
 
               <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">
-                General Product Information
+                Ayurvedic Indian Herbs Product Specifications
               </h2>
 
               <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#4c5f54]">
-                A general commercial overview of our Ayurvedic Indian Herbs and
-                herbal powders. Exact values may differ according to the
-                selected product, grade, form and buyer specification.
+                Review general commercial specifications for our bulk Ayurvedic
+Indian Herbs and herbal powders. Final parameters depend on the
+selected herb, product form, grade and buyer requirements.
               </p>
             </div>
 
@@ -411,7 +569,7 @@ export default function AyurvedicIndianHerbsPage() {
                 </div>
 
                 {[
-                  ["Product Category", "Ayurvedic Indian Herbs"],
+                  ["Minimum Order Quantity", "200 kg per Herb / Item"],
                   [
                     "Available Forms",
                     "Raw, Whole, Cut, Dried and Powder Forms",
@@ -500,7 +658,10 @@ export default function AyurvedicIndianHerbsPage() {
         </RevealOnScroll>
       </section>
       {/* PACKAGING & PRIVATE LABEL */}
-<section className="bg-[#102f23] px-6 py-20 text-[#F5F0E6] sm:px-8 lg:px-12 lg:py-24">
+<section
+  id="ayurvedic-herbs-packaging-private-label"
+  className="bg-[#102f23] px-6 py-20 text-[#F5F0E6] sm:px-8 lg:px-12 lg:py-24"
+>
 
 <RevealOnScroll>
 
@@ -516,15 +677,15 @@ Packaging & Private Label
 
 <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold sm:text-5xl">
 
-Flexible Packaging for Global Herbal Markets
+Ayurvedic Herbs Bulk Packaging & Private Label
 
 </h2>
 
 <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#F5F0E6]/65">
 
-Our Ayurvedic Indian Herbs are available in multiple commercial
-packing formats for wholesalers, importers, herbal brands,
-manufacturers and private-label buyers.
+Our Ayurvedic Indian Herbs and herbal powders are available in
+retail, professional and bulk export packaging for importers,
+wholesalers, manufacturers, wellness brands and OEM private-label buyers.
 
 </p>
 
@@ -609,12 +770,12 @@ Private Label Packaging
 <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
 
 {[
-"OEM Manufacturing",
-"Private Label",
-"Custom Branding",
-"Printed Pouches",
-"Designer Boxes",
-"Bulk Export Cartons",
+"OEM Ayurvedic Herbs Manufacturing",
+"Private Label Herbal Products",
+"Custom Herbal Brand Packaging",
+"Printed Herbal Powder Pouches",
+"Designer Retail Boxes",
+"Bulk Herbal Export Cartons",
 ].map((item)=>(
 
 <div
@@ -636,7 +797,10 @@ className="rounded-[20px] border border-[#C9A962]/25 bg-white/[0.05] p-5 text-ce
 </section>
 {/* FINAL CTA */}
 
-<section className="relative overflow-hidden bg-[#071b14] px-6 py-24 text-center text-[#F5F0E6]">
+<section
+  id="ayurvedic-herbs-buyer-enquiry"
+  className="relative overflow-hidden bg-[#071b14] px-6 py-24 text-center text-[#F5F0E6]"
+>
 
 <div className="absolute left-1/2 top-1/2 h-[620px] w-[620px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#C9A962]/10 blur-[160px]" />
 
@@ -652,20 +816,19 @@ Premium Herbal Products
 
 <h2 className="mt-6 font-[family-name:var(--font-playfair)] text-4xl font-semibold sm:text-5xl lg:text-6xl">
 
-Ready to Source
+Looking for an Ayurvedic Herbs
 
-Premium Ayurvedic
+Manufacturer, Exporter
 
-Indian Herbs?
+and Supplier from India?
 
 </h2>
 
 <p className="mx-auto mt-8 max-w-4xl text-lg leading-9 text-[#F5F0E6]/68">
 
-Whether you require raw herbs, herbal powders,
-bulk supply or complete private-label solutions,
-our team is ready to support your business with
-international-quality herbal products.
+Contact Shivesh International for bulk Ayurvedic Indian Herbs,
+herbal powders, wholesale export supply, OEM manufacturing and
+private-label packaging. Minimum order quantity is 200 kg per item.
 
 </p>
 
@@ -677,7 +840,7 @@ href="/contact"
 
 className="rounded-full bg-[#C9A962] px-10 py-5 text-sm font-bold uppercase tracking-[0.22em] text-[#102f23]">
 
-Request Quotation →
+Request Bulk Herbs Quote →
 
 </Link>
 
@@ -691,12 +854,33 @@ rel="noopener noreferrer"
 
 className="rounded-full border border-[#F5F0E6]/30 px-10 py-5 text-sm font-bold uppercase tracking-[0.22em]">
 
-WhatsApp Our Team →
+WhatsApp Export Team →
 
 </a>
 
 </div>
+<div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-[10px] font-bold uppercase tracking-[0.18em]">
+  <Link
+    href="/export"
+    className="text-[#F5F0E6]/55 transition-colors hover:text-[#C9A962]"
+  >
+    View Export Services
+  </Link>
 
+  <Link
+    href="/infrastructure"
+    className="text-[#F5F0E6]/55 transition-colors hover:text-[#C9A962]"
+  >
+    View Manufacturing Infrastructure
+  </Link>
+
+  <Link
+    href="/products/indian-spices"
+    className="text-[#F5F0E6]/55 transition-colors hover:text-[#C9A962]"
+  >
+    Explore Indian Spices
+  </Link>
+</div>
 </div>
 
 </RevealOnScroll>
