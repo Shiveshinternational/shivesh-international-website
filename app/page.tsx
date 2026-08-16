@@ -141,17 +141,17 @@ export default function HomePage() {
             <span className="h-px w-8 bg-[#C9A962]/85" />
 
             <span className="text-[10px] font-semibold uppercase tracking-[0.34em] text-[#F5F0E6]/75">
-              Global Export Excellence
+              Manufacturer · Exporter · Supplier
             </span>
           </div>
 
           <h1 className="font-[family-name:var(--font-playfair)] text-[clamp(2.6rem,4.4vw,4.35rem)] font-medium leading-[1.01] tracking-[-0.03em] text-[#F7F1E7] drop-shadow-[0_3px_18px_rgba(0,0,0,0.55)]">
-            Rooted in Purity.
+  Natural Henna & Indigo
 
-            <span className="mt-2 block bg-gradient-to-r from-[#F7F1E7] via-[#E7CE84] to-[#C9A962] bg-clip-text text-transparent">
-              Delivered Globally.
-            </span>
-          </h1>
+  <span className="mt-2 block bg-gradient-to-r from-[#F7F1E7] via-[#E7CE84] to-[#C9A962] bg-clip-text text-transparent">
+    Exporter from India
+  </span>
+</h1>
 
           <div className="my-6 flex items-center gap-4">
             <span className="h-px w-14 bg-[#C9A962]/80" />
@@ -159,9 +159,10 @@ export default function HomePage() {
           </div>
 
           <p className="max-w-[535px] text-[16px] font-light leading-[1.75] tracking-[0.01em] text-[#F5F0E6]/88 drop-shadow-[0_1px_8px_rgba(0,0,0,0.55)] sm:text-[17px]">
-            Premium Natural Henna, Henna Hair Colors, Indigo Powder,
-            Ayurvedic Indian Herbs and Indian Spices supplied to
-            professional buyers worldwide.
+            Indian manufacturer, exporter and supplier of Natural Henna
+  Powder, Indigo Powder, botanical hair colors, Ayurvedic Herbs
+  and Indian Spices for importers, distributors, salons and
+  private-label buyers worldwide.
           </p>
 
           <div className="mt-8 flex flex-col gap-3.5 sm:flex-row sm:items-center sm:gap-4">

@@ -12,32 +12,104 @@ import MagneticButtons from "@/app/components/MagneticButtons";
 import FooterSection from "@/sections/FooterSection";
 
 export const metadata: Metadata = {
-  title: "Quality Certifications & Export Documents",
+  title: "Quality Certifications & Export Documents India",
   description:
-    "Review Shivesh International’s quality certifications, registrations and export documents for natural henna, indigo powder, botanical hair colors, herbs and spices.",
+    "Review Shivesh International's applicable quality certifications, registrations and technical export documents for natural henna, indigo, botanical hair colors, Ayurvedic herbs and Indian spices.",
   keywords: [
+    "natural products certifications India",
     "henna exporter certifications",
     "natural henna quality certificate",
+    "henna powder manufacturer certification",
+    "henna powder supplier documents",
+    "henna powder COA",
+    "henna powder MSDS",
     "indigo powder exporter documents",
+    "indigo powder COA",
+    "indigo powder MSDS",
     "botanical hair color certifications",
+    "natural hair color manufacturer documents",
+    "Ayurvedic herbs exporter certifications",
+    "Ayurvedic herbs COA India",
+    "herbal powder technical documents",
+    "Indian spices exporter certifications",
+    "spices Certificate of Analysis",
+    "spices laboratory test report",
     "ISO 9001 certified exporter India",
     "GMP certified henna supplier",
     "USDA organic henna supplier",
     "India organic henna exporter",
+    "HACCP certified spices exporter",
     "Halal certified natural products",
     "Kosher certified natural products",
+    "FSSAI registered spices supplier",
+    "MSME registered exporter India",
+    "quality certified natural products manufacturer",
+    "certified natural products exporter India",
+    "certified botanical powder supplier",
+    "certified herbal powder manufacturer India",
+    "organic product certification documents",
+    "private label product documentation",
+    "OEM natural products documentation",
+    "bulk natural products export documents",
+    "material safety data sheet natural products",
+    "certificate of analysis botanical powders",
+    "laboratory test report herbal products",
+    "technical data sheet natural powders",
+    "natural products product specification sheet",
+    "export quality assurance documents",
     "export documentation India",
+    "international buyer compliance documents",
+    "supplier verification documents India",
+    "quality management certification India",
+    "good manufacturing practices natural products",
+    "food safety certification herbs spices",
+    "organic henna certification India",
+    "organic indigo powder certification",
+    "Halal certified herbs supplier",
+    "Kosher certified spices supplier",
+    "natural products test report India",
+    "batch wise COA supplier India",
+    "export product safety documentation",
+    "natural products compliance India",
     "Shivesh International certifications",
   ],
   alternates: {
     canonical: "/certifications",
   },
   openGraph: {
-    title: "Quality Certifications & Export Documents | Shivesh International",
+    title: "Quality Certifications & Export Documents India",
     description:
-      "Explore quality certifications, registrations and export documents supporting Shivesh International’s natural-product exports.",
-    url: "/certifications",
+      "Explore applicable certifications, registrations, MSDS, COA, laboratory reports and technical documents supporting natural-product exports.",
+    url: "https://shiveshinternational.com/certifications",
+    siteName: "Shivesh International",
     type: "website",
+    locale: "en_IN",
+    images: [
+      {
+        url: "/images/certifications/certifications-hero-quality-assurance-final-v3.png",
+        alt: "Quality certifications and export documentation for Shivesh International natural products",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Quality Certifications & Export Documents India",
+    description:
+      "Applicable quality credentials and technical documentation for natural henna, indigo, hair colors, herbs and spices.",
+    images: [
+      "/images/certifications/certifications-hero-quality-assurance-final-v3.png",
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 };
 
@@ -238,16 +310,75 @@ const technicalDocuments: DocumentItem[] = [
   },
 ];
 
+const certificationsStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://shiveshinternational.com/certifications#webpage",
+      url: "https://shiveshinternational.com/certifications",
+      name: "Quality Certifications & Export Documents India",
+      description:
+        "Applicable quality certifications, registrations and technical documents for natural henna, indigo, botanical hair colors, Ayurvedic herbs and Indian spices.",
+      isPartOf: { "@id": "https://shiveshinternational.com/#website" },
+      about: { "@id": "https://shiveshinternational.com/#organization" },
+      inLanguage: "en",
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://shiveshinternational.com/certifications#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://shiveshinternational.com/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Certifications & Export Documents",
+          item: "https://shiveshinternational.com/certifications",
+        },
+      ],
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://shiveshinternational.com/certifications#credentials",
+      name: "Quality Certifications and Registrations",
+      itemListElement: certifications.map((item, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: item.name,
+        description: item.description,
+      })),
+    },
+  ],
+};
+
 export default function CertificationsPage() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-[#f5f0e6] text-[#173b2a]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(certificationsStructuredData).replace(
+            /</g,
+            "\\u003c",
+          ),
+        }}
+      />
+
       <Navbar />
 
       {/* HERO */}
-      <section className="relative isolate min-h-[72vh] overflow-hidden bg-[#0a251b]">
+      <section
+        id="quality-certifications-export-documents"
+        className="relative isolate min-h-[72vh] overflow-hidden bg-[#0a251b]"
+      >
         <Image
   src="/images/certifications/certifications-hero-quality-assurance-final-v3.png"
-  alt="Certification review and quality assurance at Shivesh International"
+  alt="Quality certifications registrations and export documents for natural henna indigo herbs spices and botanical hair colors"
   fill
   priority
   sizes="100vw"
@@ -268,28 +399,28 @@ export default function CertificationsPage() {
                 <span className="h-px w-14 bg-[#C9A962]" />
 
                 <span className="text-[10px] font-bold uppercase tracking-[0.42em] text-[#E4C878] sm:text-xs">
-                  Certifications & Quality Documents
+                  Quality Assurance · Export Documentation
                 </span>
               </div>
             </StaggerItem>
 
             <StaggerItem delay={120}>
               <h1 className="max-w-[680px] text-[clamp(3rem,4vw,4.6rem)] font-medium leading-[1.08] tracking-[-0.035em] text-[#F5F0E6]">
-                Documented Quality.
+                Quality Certifications
                 <br />
 
                 <span className="bg-gradient-to-r from-[#F5F0E6] via-[#E4C878] to-[#C9A962] bg-clip-text text-transparent">
-                  Professional Assurance.
+                  & Export Documents.
                 </span>
               </h1>
             </StaggerItem>
 
             <StaggerItem delay={240}>
               <p className="mt-6 max-w-[600px] text-[16px] leading-8 text-[#F5F0E6]/80">
-                Explore the certifications, registrations and technical
-                documents maintained by Shivesh International for their
-                respective applicable products, operations and business
-                activities.
+                Review applicable certifications, registrations, MSDS, COA,
+                laboratory reports and technical data supporting our natural
+                henna, indigo, botanical hair colors, Ayurvedic herbs and
+                Indian spices for professional buyers worldwide.
               </p>
             </StaggerItem>
 
@@ -318,7 +449,10 @@ export default function CertificationsPage() {
       </section>
 
       {/* INTRODUCTION */}
-      <section className="px-6 py-24 sm:px-8 lg:px-12 lg:py-32">
+      <section
+        id="quality-credentials-buyer-assurance"
+        className="px-6 py-24 sm:px-8 lg:px-12 lg:py-32"
+      >
         <RevealOnScroll>
           <div className="mx-auto grid max-w-[1500px] gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
             <div>
@@ -332,22 +466,24 @@ export default function CertificationsPage() {
                 </div>
 
                 <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">
-                  Supporting Buyer Confidence through Verifiable Documentation
+                  Verified Quality Credentials for International Buyers
                 </h2>
               </div>
             </div>
 
             <div className="space-y-7">
               <p className="text-lg leading-9 text-[#4c5f54]">
-                Certifications, registrations and technical records help buyers
-                evaluate suppliers according to their product category,
-                destination market and internal procurement requirements.
+                Quality certifications, registrations and technical records
+                help importers, distributors, wholesalers, salons, cosmetic
+                brands, wellness businesses and private-label buyers evaluate
+                suppliers according to product, destination market and
+                procurement requirements.
               </p>
 
               <p className="text-lg leading-9 text-[#4c5f54]">
                 Shivesh International maintains original documentation covering
                 applicable quality-management systems, manufacturing practices,
-                organic scopes, food-safety systems, religious-market
+                organic scopes, food-safety systems, Halal and Kosher market
                 requirements, business registrations and product-related
                 technical information.
               </p>
@@ -376,12 +512,14 @@ export default function CertificationsPage() {
               </p>
 
               <h2 className="mt-6 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
-                Credentials Supporting Buyer Confidence
+                Certifications Supporting Global Buyer Confidence
               </h2>
 
               <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#F5F0E6]/65">
                 Original copies are maintained for their respective applicable
-                products, operations, scopes and validity periods.
+                products, operations, certified scopes and validity periods.
+                Product-wise applicability can be confirmed during a serious
+                commercial enquiry.
               </p>
             </div>
 
@@ -395,7 +533,7 @@ export default function CertificationsPage() {
                       <div className="relative flex h-24 w-24 items-center justify-center overflow-hidden rounded-full border border-[#C9A962]/50 bg-white p-2 shadow-[0_12px_30px_rgba(0,0,0,0.24)] transition-transform duration-500 group-hover:scale-105">
                         <Image
                           src={item.logoSrc}
-                          alt={`${item.name} logo`}
+                          alt={`${item.name} certification logo for Shivesh International natural products`}
                           fill
                           sizes="96px"
                           className="object-contain p-2"
@@ -441,7 +579,10 @@ export default function CertificationsPage() {
       </section>
 
             {/* TECHNICAL DOCUMENTS */}
-      <section className="bg-[#ede5d7] px-6 py-24 sm:px-8 lg:px-12 lg:py-28">
+      <section
+        id="technical-quality-export-documents"
+        className="bg-[#ede5d7] px-6 py-24 sm:px-8 lg:px-12 lg:py-28"
+      >
         <RevealOnScroll>
           <div className="mx-auto max-w-[1500px]">
             <div className="mx-auto max-w-4xl text-center">
@@ -456,12 +597,13 @@ export default function CertificationsPage() {
               </div>
 
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">
-                Technical & Quality Documents
+                MSDS, COA, Laboratory Reports & Technical Data
               </h2>
 
               <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#4c5f54]">
-                Clear technical information supporting product review, quality
-                evaluation and commercial decision-making.
+                Technical and quality documents support product review, safety
+                evaluation, specification verification and commercial
+                decision-making for international buyers.
               </p>
             </div>
 
@@ -508,6 +650,69 @@ export default function CertificationsPage() {
                   </article>
                 </StaggerItem>
               ))}
+            </div>
+          </div>
+        </RevealOnScroll>
+      </section>
+
+      <section
+        id="request-certification-documents"
+        className="relative overflow-hidden bg-[#071b14] px-6 py-24 text-center text-[#F5F0E6] sm:px-8 lg:px-12"
+      >
+        <div className="pointer-events-none absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#C9A962]/10 blur-[150px]" />
+
+        <RevealOnScroll>
+          <div className="relative mx-auto max-w-4xl">
+            <p className="text-[10px] font-bold uppercase tracking-[0.42em] text-[#C9A962]">
+              Documentation for Serious Buyer Enquiries
+            </p>
+
+            <h2 className="mt-6 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
+              Request Applicable Certifications
+              <span className="block text-[#E4C878]">
+                & Technical Product Documents
+              </span>
+            </h2>
+
+            <p className="mx-auto mt-7 max-w-3xl text-lg leading-8 text-[#F5F0E6]/65">
+              Share your required product, destination country and document
+              requirements with our export team. Applicable certificates,
+              MSDS, COA, test reports, specifications and packaging details can
+              be discussed for qualified commercial enquiries.
+            </p>
+
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+              <Link
+                href="/contact"
+                className="group inline-flex items-center gap-4 bg-[#C9A962] px-9 py-4 text-[11px] font-bold uppercase tracking-[0.2em] text-[#102f23] transition-all duration-300 hover:-translate-y-1 hover:bg-[#E4C878]"
+              >
+                Request Documents
+                <span className="transition-transform group-hover:translate-x-2">
+                  →
+                </span>
+              </Link>
+
+              <Link
+                href="/export"
+                className="inline-flex items-center border border-white/30 px-9 py-4 text-[11px] font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 hover:-translate-y-1 hover:border-[#C9A962] hover:text-[#E4C878]"
+              >
+                View Export Services
+              </Link>
+            </div>
+
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#F5F0E6]/50">
+              <Link href="/products/natural-henna-powder" className="transition-colors hover:text-[#E4C878]">
+                Natural Henna Powder
+              </Link>
+              <Link href="/products/natural-indigo-powder" className="transition-colors hover:text-[#E4C878]">
+                Natural Indigo Powder
+              </Link>
+              <Link href="/products/ayurvedic-indian-herbs" className="transition-colors hover:text-[#E4C878]">
+                Ayurvedic Herbs
+              </Link>
+              <Link href="/products/indian-spices" className="transition-colors hover:text-[#E4C878]">
+                Indian Spices
+              </Link>
             </div>
           </div>
         </RevealOnScroll>

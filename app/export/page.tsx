@@ -12,31 +12,168 @@ import MagneticButtons from "@/app/components/MagneticButtons";
 import FooterSection from "@/sections/FooterSection";
 
 export const metadata: Metadata = {
-  title: "Natural Henna & Indigo Exporter India | Shivesh International",
+  title: "Natural Products Exporter India | Henna, Indigo, Herbs & Spices",
   description:
-    "Source natural henna powder, indigo powder, botanical hair colors, Ayurvedic herbs and Indian spices from India with bulk export and private-label support.",
+    "Indian exporter and supplier of natural henna, indigo powder, botanical hair colors, Ayurvedic herbs and spices for bulk, wholesale, OEM and private-label buyers.",
   keywords: [
+    "natural products exporter India",
+    "natural products manufacturer India",
+    "natural products supplier India",
+    "Indian natural products exporter",
+    "Indian botanical products exporter",
+    "bulk natural products supplier",
+    "wholesale natural products exporter",
+    "private label natural products India",
+    "OEM natural products manufacturer India",
+    "natural products export company India",
     "natural henna exporter India",
     "henna powder exporter India",
+    "natural henna powder manufacturer India",
+    "natural henna powder supplier India",
+    "Sojat henna exporter",
+    "bulk henna powder supplier",
+    "wholesale henna powder exporter",
+    "private label henna powder manufacturer",
     "indigo powder exporter India",
+    "natural indigo powder manufacturer India",
+    "natural indigo powder supplier India",
+    "bulk indigo powder exporter",
+    "private label indigo powder India",
     "botanical hair color exporter",
+    "natural henna hair colors exporter",
+    "henna hair color manufacturer India",
+    "private label botanical hair colors",
+    "professional henna hair colors supplier",
     "Ayurvedic herbs exporter India",
+    "Ayurvedic herbs manufacturer India",
+    "Ayurvedic herbs supplier India",
+    "bulk herbal powders exporter India",
+    "private label Ayurvedic herbs",
     "Indian spices exporter India",
-    "private label henna manufacturer",
-    "bulk natural products supplier India",
-    "natural products export company India",
+    "Indian spices manufacturer India",
+    "Indian spices supplier India",
+    "bulk spices exporter India",
+    "wholesale Indian spices supplier",
+    "private label spices India",
+    "exporter for importers and distributors",
+    "natural products wholesale supplier",
+    "natural products private label manufacturer",
+    "retail packaging natural products",
+    "bulk packaging natural products",
+    "export documentation support India",
+    "international shipment coordination India",
+    "FCL natural products exporter",
+    "LCL natural products exporter",
+    "natural products exporter USA",
+    "natural products exporter Canada",
+    "natural products exporter UK",
+    "natural products exporter Europe",
+    "natural products exporter UAE",
+    "natural products exporter Middle East",
+    "natural products exporter Asia Pacific",
+    "natural products exporter Australia",
+    "Indian exporter for cosmetic brands",
+    "Indian exporter for salon brands",
+    "Indian exporter for wellness brands",
+    "natural product contract manufacturing India",
+    "custom branded natural products India",
+    "buyer brand packaging exporter India",
+    "herbal products exporter India",
+    "botanical powders exporter India",
+    "international natural products supplier",
+    "India export supplier for distributors",
+    "India export supplier for wholesalers",
     "Shivesh International exporter",
   ],
   alternates: {
     canonical: "/export",
   },
   openGraph: {
-    title: "Natural Henna & Indigo Exporter India | Shivesh International",
+    title: "Natural Products Exporter India | Shivesh International",
     description:
-      "Bulk export, private-label packaging and buyer support for Indian henna, indigo, botanical hair colors, Ayurvedic herbs and spices.",
-    url: "/export",
+      "Bulk, wholesale, OEM and private-label export support for Indian henna, indigo, botanical hair colors, Ayurvedic herbs and spices.",
+    url: "https://shiveshinternational.com/export",
     type: "website",
+    locale: "en_IN",
+    siteName: "Shivesh International",
+    images: [
+      {
+        url: "/images/export/export-hero-global-network-final-v3.png",
+        width: 1536,
+        height: 1024,
+        alt: "Shivesh International natural products exporter from India",
+      },
+    ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Natural Products Exporter India | Shivesh International",
+    description:
+      "Indian supplier of henna, indigo, botanical hair colors, Ayurvedic herbs and spices for global B2B buyers.",
+    images: ["/images/export/export-hero-global-network-final-v3.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+};
+
+const exportPageStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://shiveshinternational.com/export#webpage",
+      url: "https://shiveshinternational.com/export",
+      name: "Natural Products Exporter India",
+      description:
+        "Export services for natural henna, indigo powder, botanical hair colors, Ayurvedic herbs and Indian spices for international B2B buyers.",
+      isPartOf: { "@id": "https://shiveshinternational.com/#website" },
+      about: { "@id": "https://shiveshinternational.com/#organization" },
+      inLanguage: "en",
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://shiveshinternational.com/export#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://shiveshinternational.com/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Export",
+          item: "https://shiveshinternational.com/export",
+        },
+      ],
+    },
+    {
+      "@type": "ItemList",
+      name: "Natural Products Export Portfolio",
+      itemListElement: [
+        ["Natural Henna Powder", "/products/natural-henna-powder"],
+        ["Natural Indigo Powder", "/products/natural-indigo-powder"],
+        ["Natural Henna Hair Colors", "/products/natural-henna-hair-colors"],
+        ["Ayurvedic Indian Herbs", "/products/ayurvedic-indian-herbs"],
+        ["Indian Spices", "/products/indian-spices"],
+      ].map(([name, path], index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name,
+        url: `https://shiveshinternational.com${path}`,
+      })),
+    },
+  ],
 };
 
 const buyerCategories = [
@@ -249,13 +386,19 @@ function ExportSectionImage({
 export default function ExportPage() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-[#f5f0e6] text-[#173b2a]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(exportPageStructuredData).replace(/</g, "\\u003c"),
+        }}
+      />
       <Navbar />
 
       {/* HERO */}
-      <section className="relative isolate min-h-[72vh] overflow-hidden bg-[#071b14]">
+      <section id="natural-products-exporter-india" className="relative isolate min-h-[72vh] overflow-hidden bg-[#071b14]">
         <Image
           src="/images/export/export-hero-global-network-final-v3.png"
-          alt="Shivesh International worldwide natural product export network"
+          alt="Natural products exporter from India supplying henna indigo herbs and spices worldwide"
           fill
           priority
           sizes="100vw"
@@ -281,28 +424,28 @@ export default function ExportPage() {
                 <span className="h-px w-14 bg-[#C9A962]" />
 
                 <span className="text-[10px] font-bold uppercase tracking-[0.42em] text-[#E4C878] sm:text-xs">
-                  Global Export Partnerships
+                  Manufacturer · Exporter · Supplier from India
                 </span>
               </div>
             </StaggerItem>
 
             <StaggerItem delay={120}>
               <h1 className="max-w-[680px] font-[family-name:var(--font-playfair)] text-[clamp(3rem,4vw,4.6rem)] font-medium leading-[1.08] tracking-[-0.035em] text-[#F5F0E6]">
-                Taking India&apos;s
+                Natural Products Exporter
                 <br />
 
                 <span className="bg-gradient-to-r from-[#F5F0E6] via-[#E4C878] to-[#C9A962] bg-clip-text text-transparent">
-                  Natural Heritage to the World
+                  from India to the World
                 </span>
               </h1>
             </StaggerItem>
 
             <StaggerItem delay={240}>
               <p className="mt-6 max-w-[600px] text-[16px] leading-8 text-[#F5F0E6]/78">
-                Shivesh International supports importers, distributors,
-                wholesalers, salon brands, cosmetic companies, wellness
-                businesses and private-label buyers seeking premium Indian
-                natural products.
+                Shivesh International manufactures, supplies and exports
+                natural henna powder, indigo powder, botanical hair colors,
+                Ayurvedic herbs and Indian spices for importers, distributors,
+                wholesalers and private-label buyers worldwide.
               </p>
             </StaggerItem>
 
@@ -398,7 +541,7 @@ export default function ExportPage() {
       </section>
 
       {/* EXPORT PRINCIPLES */}
-      <section className="bg-[#ede5d7] px-6 py-20 sm:px-8 lg:px-12">
+      <section id="export-business-process" className="bg-[#ede5d7] px-6 py-20 sm:px-8 lg:px-12">
         <RevealOnScroll>
           <div className="mx-auto grid max-w-[1500px] gap-5 sm:grid-cols-2 xl:grid-cols-4">
             {[
@@ -450,7 +593,7 @@ export default function ExportPage() {
       </section>
 
       {/* BUYER CATEGORIES */}
-      <section className="bg-[#102f23] px-6 py-24 text-[#F5F0E6] sm:px-8 lg:px-12 lg:py-32">
+      <section id="export-buyers" className="bg-[#102f23] px-6 py-24 text-[#F5F0E6] sm:px-8 lg:px-12 lg:py-32">
         <RevealOnScroll>
           <div className="mx-auto max-w-[1500px]">
             <div className="mx-auto max-w-4xl text-center">
@@ -489,7 +632,7 @@ export default function ExportPage() {
       </section>
 
       {/* GLOBAL MARKET REGIONS */}
-      <section className="relative overflow-hidden bg-[#f5f0e6] px-6 py-24 sm:px-8 lg:px-12 lg:py-32">
+      <section id="global-export-markets" className="relative overflow-hidden bg-[#f5f0e6] px-6 py-24 sm:px-8 lg:px-12 lg:py-32">
         <div className="absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-[#C9A962]/10 blur-[140px]" />
 
         <RevealOnScroll>
@@ -546,7 +689,7 @@ export default function ExportPage() {
       </section>
 
       {/* PRIVATE LABEL EXPORT */}
-      <section className="bg-[#102f23] px-6 py-24 text-[#F5F0E6] sm:px-8 lg:px-12 lg:py-32">
+      <section id="private-label-export" className="bg-[#102f23] px-6 py-24 text-[#F5F0E6] sm:px-8 lg:px-12 lg:py-32">
         <RevealOnScroll>
           <div className="mx-auto max-w-[1500px]">
             <div className="mx-auto max-w-4xl text-center">
@@ -567,7 +710,7 @@ export default function ExportPage() {
 
             <ExportSectionImage
               src="/images/export/export-private-label-packaging-final-v1.png"
-              alt="International buyers reviewing private-label natural product packaging options"
+              alt="Private label natural products packaging for international importers and distributors"
               dark
             />
 
@@ -597,7 +740,7 @@ export default function ExportPage() {
       </section>
 
       {/* PACKAGING OPTIONS */}
-      <section className="bg-[#ede5d7] px-6 py-24 sm:px-8 lg:px-12 lg:py-32">
+      <section id="export-packaging" className="bg-[#ede5d7] px-6 py-24 sm:px-8 lg:px-12 lg:py-32">
         <RevealOnScroll>
           <div className="mx-auto max-w-[1500px]">
             <div className="mx-auto max-w-4xl text-center">
@@ -617,7 +760,7 @@ export default function ExportPage() {
 
             <ExportSectionImage
               src="/images/export/export-packaging-options-final-v1.png"
-              alt="Retail professional and bulk export packaging formats for natural products"
+              alt="Retail wholesale and bulk packaging formats for natural products export from India"
             />
 
             <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -646,7 +789,7 @@ export default function ExportPage() {
       </section>
 
             {/* EXPORT DOCUMENTATION */}
-      <section className="bg-[#102f23] px-6 py-24 text-[#F5F0E6] sm:px-8 lg:px-12 lg:py-32">
+      <section id="export-documentation" className="bg-[#102f23] px-6 py-24 text-[#F5F0E6] sm:px-8 lg:px-12 lg:py-32">
         <RevealOnScroll>
           <div className="mx-auto max-w-[1500px]">
             <div className="mx-auto max-w-4xl text-center">
@@ -759,7 +902,7 @@ export default function ExportPage() {
       </section>
 
       {/* SHIPPING OPTIONS */}
-      <section className="bg-[#ede5d7] px-6 py-24 sm:px-8 lg:px-12 lg:py-32">
+      <section id="international-shipping" className="bg-[#ede5d7] px-6 py-24 sm:px-8 lg:px-12 lg:py-32">
         <RevealOnScroll>
           <div className="mx-auto max-w-[1500px]">
             <div className="mx-auto max-w-4xl text-center">
@@ -780,7 +923,7 @@ export default function ExportPage() {
 
             <ExportSectionImage
               src="/images/export/export-shipment-coordination-final-v1.png"
-              alt="Shivesh International export cartons being coordinated for international shipment"
+              alt="Natural product export cartons coordinated for FCL LCL air freight and international shipment"
             />
 
             <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -846,7 +989,7 @@ export default function ExportPage() {
       </section>
 
       {/* EXPORT ENQUIRY WORKFLOW */}
-      <section className="bg-[#f5f0e6] px-6 py-24 sm:px-8 lg:px-12 lg:py-32">
+      <section id="export-enquiry-process" className="bg-[#f5f0e6] px-6 py-24 sm:px-8 lg:px-12 lg:py-32">
         <RevealOnScroll>
           <div className="mx-auto max-w-[1500px]">
             <div className="grid gap-16 lg:grid-cols-[0.7fr_1.3fr] lg:gap-24">
@@ -938,7 +1081,7 @@ export default function ExportPage() {
       </section>
 
       {/* EXPORT SUPPORT */}
-      <section className="bg-[#102f23] px-6 py-24 text-[#F5F0E6] sm:px-8 lg:px-12">
+      <section id="export-buyer-support" className="bg-[#102f23] px-6 py-24 text-[#F5F0E6] sm:px-8 lg:px-12">
         <RevealOnScroll>
           <div className="mx-auto max-w-[1500px]">
             <div className="mx-auto max-w-4xl text-center">
@@ -996,7 +1139,7 @@ export default function ExportPage() {
       </section>
 
       {/* FINAL EXPORT CTA */}
-      <section className="relative overflow-hidden bg-[#071b14] px-6 py-28 text-center text-[#F5F0E6] sm:px-8 lg:px-12">
+      <section id="export-enquiry" className="relative overflow-hidden bg-[#071b14] px-6 py-28 text-center text-[#F5F0E6] sm:px-8 lg:px-12">
         <div className="absolute left-1/2 top-1/2 h-[620px] w-[620px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#C9A962]/10 blur-[150px]" />
 
         <RevealOnScroll>
@@ -1011,9 +1154,9 @@ export default function ExportPage() {
 
             <p className="mx-auto mt-7 max-w-3xl text-lg leading-9 text-[#F5F0E6]/65">
               Share your required products, destination country, pack sizes,
-              branding requirements, expected quantity and document needs. Our
-              team will review your enquiry and respond with the next practical
-              steps.
+              branding requirements, expected quantity and document needs.
+              Minimum order quantity is generally 200 kg per item. Our export
+              team will review your enquiry and advise the next practical steps.
             </p>
 
             <Link
@@ -1023,6 +1166,15 @@ export default function ExportPage() {
               Send Your Export Enquiry
               <span className="text-lg">→</span>
             </Link>
+
+            <div className="mt-7 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-[10px] font-bold uppercase tracking-[0.16em] text-[#F5F0E6]/55">
+              <Link href="/products/natural-henna-powder" className="transition-colors hover:text-[#C9A962]">Natural Henna Powder</Link>
+              <Link href="/products/natural-indigo-powder" className="transition-colors hover:text-[#C9A962]">Natural Indigo Powder</Link>
+              <Link href="/products/ayurvedic-indian-herbs" className="transition-colors hover:text-[#C9A962]">Ayurvedic Herbs</Link>
+              <Link href="/products/indian-spices" className="transition-colors hover:text-[#C9A962]">Indian Spices</Link>
+              <Link href="/infrastructure" className="transition-colors hover:text-[#C9A962]">Infrastructure</Link>
+              <Link href="/certifications" className="transition-colors hover:text-[#C9A962]">Certifications</Link>
+            </div>
           </div>
         </RevealOnScroll>
       </section>
