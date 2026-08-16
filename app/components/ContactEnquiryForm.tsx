@@ -81,7 +81,7 @@ export default function ContactEnquiryForm() {
         throw new Error("Unable to submit enquiry");
       }
 
-            
+         
 
       setSubmitStatus("success");
 
@@ -89,11 +89,18 @@ export default function ContactEnquiryForm() {
         gtag?: (...args: unknown[]) => void;
       };
 
-      analyticsWindow.gtag?.("event", "generate_lead", {
-        lead_source: "website_contact_form",
-        product_category: formData.product,
-        enquiry_type: formData.enquiryType,
-      });
+      if (typeof analyticsWindow.gtag === "function") {
+  analyticsWindow.gtag("event", "generate_lead", {
+    form_name: "business_enquiry_form",
+    lead_source: "website_contact_form",
+    product_category: formData.product || "not_selected",
+    enquiry_type: formData.enquiryType || "not_selected",
+    destination_market: formData.country || "not_provided",
+    debug_mode: true,
+  });
+} else {
+  console.warn("GA4 gtag is not available.");
+}
 
       setFormData(initialFormData);
     
