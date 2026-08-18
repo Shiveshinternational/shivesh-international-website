@@ -133,6 +133,7 @@ const buyerResources = [
     cta: "View Catalogue",
     external: true,
   },
+  
   {
     code: "07",
     category: "Buyer Support",
@@ -342,18 +343,31 @@ export default function ResourcesPage() {
                 {resource.description}
               </p>
 
-              {/* CARD LINK */}
-              <a
-                href={resource.href}
-                target={resource.external ? "_blank" : undefined}
-                rel={resource.external ? "noopener noreferrer" : undefined}
-                className="mt-8 inline-flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.2em] text-[#A97B22] transition-colors duration-300 group-hover:text-[#173B2A]"
-              >
-                {resource.cta}
-                <span className="transition-transform duration-300 group-hover:translate-x-2">
-                  →
-                </span>
-              </a>
+              {/* CARD LINKS */}
+<div className="mt-8 flex flex-wrap items-center gap-5">
+  <a
+    href={resource.href}
+    target={resource.external ? "_blank" : undefined}
+    rel={resource.external ? "noopener noreferrer" : undefined}
+    className="inline-flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.2em] text-[#A97B22] transition-colors duration-300 group-hover:text-[#173B2A]"
+  >
+    {resource.cta}
+    <span className="transition-transform duration-300 group-hover:translate-x-2">
+      →
+    </span>
+  </a>
+
+  {resource.code === "CAT" && (
+    <a
+      href="/catalogues/Shivesh-International-Product-Catalogue.pdf"
+      download
+      className="inline-flex items-center gap-2 border-l border-[#C9A962]/40 pl-5 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#A87416] transition-colors duration-300 hover:text-[#173B2A]"
+    >
+      Download PDF
+      <span aria-hidden="true">↓</span>
+    </a>
+  )}
+</div>
 
               <div className="mt-5 h-px w-full origin-left scale-x-0 bg-gradient-to-r from-[#C9A962] to-transparent transition-transform duration-500 group-hover:scale-x-100" />
             </article>
