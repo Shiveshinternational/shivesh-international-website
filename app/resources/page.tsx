@@ -144,6 +144,16 @@ const buyerResources = [
     cta: "Request Buyer Support",
     external: false,
   },
+  {
+    code: "UK",
+    category: "Export Market Guide",
+    title: "Export Supply to the United Kingdom",
+    description:
+      "Review UK-focused bulk, wholesale, OEM, private-label, packaging and export coordination information for professional buyers.",
+    href: "/export/uk",
+    cta: "View UK Export Guide",
+    external: false,
+  },
 ];
 export default function ResourcesPage() {
   return (
