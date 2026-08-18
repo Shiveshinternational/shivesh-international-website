@@ -659,6 +659,13 @@ export default function ExportPage() {
                   export enquiries may be supported; they should not be
                   interpreted as a claim that every country is currently served.
                 </p>
+                <Link
+                  href="/export/usa"
+                  className="mt-8 inline-flex items-center gap-4 border border-[#C9A962] bg-[#C9A962] px-7 py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-[#102F23] transition-all duration-500 hover:-translate-y-1 hover:bg-[#D8BB68]"
+                >
+                  Explore Export to USA
+                  <span>→</span>
+                </Link>
               </div>
 
               <div className="grid gap-5 sm:grid-cols-2">

@@ -12,6 +12,7 @@ const quickLinks = [
   { label: "Infrastructure", href: "/infrastructure" },
   { label: "Certifications", href: "/certifications" },
   { label: "Export", href: "/export" },
+  { label: "Buyer Resources", href: "/resources" },
   { label: "Contact", href: "/contact" },
 ];
 
