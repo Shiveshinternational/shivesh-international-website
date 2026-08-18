@@ -151,23 +151,33 @@ const supplyServices = [
 const process = [
   {
     step: "01",
-    title: "Share the UK Requirement",
-    text: "Tell us the product, grade, quantity, pack size, intended use, delivery destination and whether buyer branding is required.",
+    title: "Product & Quantity Review",
+    text: "We review the required product, grade, intended application, commercial quantity and minimum order requirement.",
   },
   {
     step: "02",
-    title: "Product & Pack Review",
-    text: "We review availability, MOQ, specifications, packaging, artwork and private-label feasibility for the proposed programme.",
+    title: "Specification & Sample Discussion",
+    text: "Available specifications, samples, packing formats and buyer-specific requirements are discussed before commercial confirmation.",
   },
   {
     step: "03",
-    title: "Commercial Confirmation",
-    text: "Product scope, price, Incoterms, payment terms, lead time and applicable documentation are confirmed before the order proceeds.",
+    title: "Quotation & Commercial Terms",
+    text: "Pricing, production scope, payment terms, packing details and applicable shipment terms are reviewed with the buyer.",
   },
   {
     step: "04",
-    title: "Export Coordination",
-    text: "We coordinate packing, shipment preparation and agreed export documents from India for dispatch towards the United Kingdom.",
+    title: "Packaging & Artwork Coordination",
+    text: "Bulk, wholesale, professional or private-label presentation is coordinated according to feasibility and the buyer’s supplied artwork.",
+  },
+  {
+    step: "05",
+    title: "Production & Quality Review",
+    text: "Confirmed products are processed, packed and reviewed according to the agreed specification and order requirements.",
+  },
+  {
+    step: "06",
+    title: "Export Documentation & Dispatch Coordination",
+    text: "Commercial documentation, packing information and shipment coordination are prepared according to the confirmed order and agreed delivery terms.",
   },
 ];
 
@@ -486,35 +496,97 @@ export default function UKExportPage() {
         </RevealOnScroll>
       </section>
 
-      <section className="bg-[#EDE5D7] px-6 py-24 sm:px-8 lg:px-12 lg:py-32">
+      <section className="relative overflow-hidden bg-[#09271D] px-6 py-24 text-[#F5F0E6] sm:px-8 lg:px-12 lg:py-32">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -left-40 top-12 h-[460px] w-[460px] rounded-full bg-[#C9A962]/10 blur-[150px]"
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -right-48 bottom-10 h-[520px] w-[520px] rounded-full bg-[#C9A962]/[0.07] blur-[170px]"
+        />
         <RevealOnScroll>
-          <div className="mx-auto max-w-[1500px]">
-            <div className="mx-auto max-w-[900px] text-center">
-              <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#9F7F36]">India to United Kingdom</p>
-              <h2 className="mt-6 font-[family-name:var(--font-playfair)] text-[clamp(2.5rem,4.8vw,4.8rem)] font-semibold leading-[1.04]">A Clear Export Enquiry Process</h2>
-              <p className="mx-auto mt-7 max-w-[780px] text-[16px] font-light leading-8 text-[#4C5F54]">
-                A practical sequence for aligning the product, commercial terms,
-                packaging and shipment responsibilities before dispatch.
+          <div className="relative mx-auto max-w-[1500px]">
+            <div className="mx-auto max-w-[980px] text-center">
+              <div className="flex items-center justify-center gap-4">
+                <span className="h-px w-12 bg-[#C9A962]" />
+                <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#E4C878]">
+                  India to the United Kingdom
+                </p>
+                <span className="h-px w-12 bg-[#C9A962]" />
+              </div>
+              <h2 className="mt-6 font-[family-name:var(--font-playfair)] text-[clamp(2.5rem,4.8vw,4.8rem)] font-semibold leading-[1.04]">
+                Structured Export Coordination
+                <span className="mt-1 block text-[#E4C878]">for UK Buyers</span>
+              </h2>
+              <p className="mx-auto mt-7 max-w-[900px] text-[16px] font-light leading-8 text-[#F5F0E6]/68 sm:text-[17px]">
+                Each UK export enquiry is reviewed according to the selected
+                product, commercial quantity, specification, packaging format,
+                destination and buyer documentation requirements before order
+                confirmation and shipment planning.
               </p>
             </div>
-            <div className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-              {process.map((item) => (
-                <article key={item.step} className="border border-[#173B2A]/12 bg-[#F9F5EC] p-7">
-                  <span className="font-[family-name:var(--font-playfair)] text-4xl font-semibold text-[#C9A962]">{item.step}</span>
-                  <h3 className="mt-6 font-[family-name:var(--font-playfair)] text-2xl font-semibold">{item.title}</h3>
-                  <p className="mt-4 text-[14px] font-light leading-7 text-[#4C5F54]">{item.text}</p>
+
+            <div className="relative mt-16 grid gap-6 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute bottom-6 left-1/2 top-6 hidden w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-[#C9A962]/45 to-transparent md:block"
+              />
+              {process.map((item, index) => (
+                <article
+                  key={item.step}
+                  className={`group relative border border-[#C9A962]/22 bg-[#071B14]/65 p-7 shadow-[0_22px_55px_rgba(0,0,0,0.16)] backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#C9A962]/55 sm:p-8 ${
+                    index % 2 === 1 ? "md:translate-y-10" : ""
+                  }`}
+                >
+                  <div className="flex items-start gap-5">
+                    <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-[#C9A962]/45 bg-[#C9A962]/10 font-[family-name:var(--font-playfair)] text-xl font-semibold text-[#E4C878]">
+                      {item.step}
+                    </span>
+                    <div>
+                      <h3 className="font-[family-name:var(--font-playfair)] text-[23px] font-semibold leading-tight text-[#F5F0E6] sm:text-[26px]">
+                        {item.title}
+                      </h3>
+                      <p className="mt-4 text-[14px] font-light leading-7 text-[#F5F0E6]/62">
+                        {item.text}
+                      </p>
+                    </div>
+                  </div>
+                  <span className="mt-7 block h-px w-full origin-left scale-x-0 bg-gradient-to-r from-[#C9A962] to-transparent transition-transform duration-500 group-hover:scale-x-100" />
                 </article>
               ))}
             </div>
-            <div className="mx-auto mt-12 max-w-[1050px] border border-[#C9A962]/35 bg-[#173B2A] p-7 text-[#F5F0E6] sm:p-9">
-              <h3 className="font-[family-name:var(--font-playfair)] text-2xl font-semibold text-[#E4C878]">Documentation and UK Market Responsibility</h3>
-              <p className="mt-4 text-[14px] font-light leading-7 text-[#F5F0E6]/68">
-                Commercial invoice, packing list, transport documents and other
-                applicable product or shipment information are discussed for the
-                agreed order. Availability is not universal. The UK importer or
-                responsible business must determine the customs, product,
-                labelling and regulatory requirements relevant to its intended
-                use and route to market.
+
+            <aside className="mx-auto mt-20 max-w-[1120px] border border-[#C9A962]/45 bg-[#F5F0E6] p-7 text-[#173B2A] shadow-[0_24px_70px_rgba(0,0,0,0.2)] sm:p-9 lg:p-10">
+              <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
+                <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#173B2A] text-lg text-[#E4C878]">
+                  i
+                </span>
+                <div>
+                  <h3 className="font-[family-name:var(--font-playfair)] text-2xl font-semibold text-[#A97B22]">
+                    UK Importer Compliance Responsibility
+                  </h3>
+                  <p className="mt-4 text-[14px] font-light leading-7 text-[#4C5F54] sm:text-[15px]">
+                    Shivesh International coordinates commercial and export
+                    documentation for the confirmed order. The UK importer or
+                    buyer remains responsible for product classification,
+                    customs clearance, labelling, claims and applicable UK
+                    regulatory compliance.
+                  </p>
+                </div>
+              </div>
+            </aside>
+
+            <div className="mt-10 text-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-4 border border-[#C9A962] bg-[#C9A962] px-8 py-4 text-[10px] font-bold uppercase tracking-[0.22em] text-[#102F23] transition-all duration-500 hover:-translate-y-1 hover:bg-[#E4C878]"
+              >
+                Request a UK Export Quote
+                <span>→</span>
+              </Link>
+              <p className="mx-auto mt-5 max-w-[720px] text-[9px] font-semibold uppercase tracking-[0.24em] text-[#F5F0E6]/38">
+                Product · Quantity · Specification · Packaging · Documentation
               </p>
             </div>
           </div>
