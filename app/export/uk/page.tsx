@@ -310,7 +310,7 @@ export default function UKExportPage() {
       />
       <Navbar />
 
-      <section className="relative isolate min-h-[720px] overflow-hidden bg-[#071B14] lg:aspect-[160/63] lg:min-h-0">
+      <section className="relative isolate overflow-hidden bg-[#071B14]">
         <Image
           src="/images/export/export-hero-global-network-final-v3.png"
           alt="Natural products export network connecting India with professional buyers"
@@ -322,7 +322,7 @@ export default function UKExportPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#061711]/90 via-[#102F23]/65 to-[#071B14]/25" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/15" />
         <GoldenParticles />
-        <div className="relative z-10 flex min-h-[78vh] items-center px-6 pb-16 pt-28 sm:px-8 lg:px-12">
+        <div className="relative z-10 flex min-h-[760px] items-center px-6 pb-24 pt-28 sm:min-h-[800px] sm:px-8 sm:pb-28 lg:min-h-[820px] lg:px-12 lg:pb-32">
           <div className="w-full max-w-[790px]">
             <StaggerItem delay={0}>
               <div className="flex items-center gap-4">
