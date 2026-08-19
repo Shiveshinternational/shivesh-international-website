@@ -145,6 +145,16 @@ const buyerResources = [
     external: false,
   },
   {
+    code: "USA",
+    category: "Export Market Guide",
+    title: "Natural Products Export Supply to the USA",
+    description:
+      "Explore USA-focused bulk, wholesale, OEM, private-label, packaging and India-to-USA export coordination information for professional buyers.",
+    href: "/export/usa",
+    cta: "View USA Export Guide",
+    external: false,
+  },
+  {
     code: "UK",
     category: "Export Market Guide",
     title: "Export Supply to the United Kingdom",
@@ -152,6 +162,16 @@ const buyerResources = [
       "Review UK-focused bulk, wholesale, OEM, private-label, packaging and export coordination information for professional buyers.",
     href: "/export/uk",
     cta: "View UK Export Guide",
+    external: false,
+  },
+  {
+    code: "UAE",
+    category: "Export Market Guide",
+    title: "Natural Products Export Supply to the UAE",
+    description:
+      "Explore UAE-focused bulk, wholesale, OEM, private-label, packaging and India-to-UAE export coordination information for professional buyers.",
+    href: "/export/uae",
+    cta: "View UAE Export Guide",
     external: false,
   },
 ];
