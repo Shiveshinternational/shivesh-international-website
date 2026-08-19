@@ -322,15 +322,15 @@ export default function UKExportPage() {
 
       <section className="relative isolate overflow-hidden bg-[#071B14]">
         <Image
-          src="/images/export/export-hero-global-network-final-v3.png"
-          alt="Natural products export network connecting India with professional buyers"
+          src="/images/export/uk/uk-export-hero-premium-v1.png"
+          alt="Natural products export supply from India to the United Kingdom"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center"
+          className="object-cover object-[62%_center] sm:object-[56%_center] lg:object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#061711]/90 via-[#102F23]/65 to-[#071B14]/25" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/15" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#061711]/38 via-[#102F23]/18 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/18 via-transparent to-black/[0.06]" />
         <GoldenParticles />
         <div className="relative z-10 flex min-h-[760px] items-center px-6 pb-24 pt-28 sm:min-h-[800px] sm:px-8 sm:pb-28 lg:min-h-[820px] lg:px-12 lg:pb-32">
           <div className="w-full max-w-[790px]">
@@ -460,14 +460,33 @@ export default function UKExportPage() {
 
       <section className="px-6 py-24 sm:px-8 lg:px-12 lg:py-32">
         <RevealOnScroll>
+          <div className="mx-auto max-w-[1120px]">
+            <div className="text-center">
+              <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#9F7F36]">UK Buyer Questions</p>
+              <h2 className="mt-6 font-[family-name:var(--font-playfair)] text-[clamp(2.4rem,4.4vw,4.4rem)] font-semibold">Export Supply FAQ</h2>
+            </div>
+            <div className="mt-12 divide-y divide-[#173B2A]/15 border-y border-[#173B2A]/15">
+              {faqs.map((faq) => (
+                <article key={faq.question} className="grid gap-4 py-7 md:grid-cols-[0.8fr_1.2fr] md:gap-10">
+                  <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold">{faq.question}</h3>
+                  <p className="text-[14px] font-light leading-7 text-[#4C5F54]">{faq.answer}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </RevealOnScroll>
+      </section>
+
+      <section className="px-6 py-24 sm:px-8 lg:px-12 lg:py-32">
+        <RevealOnScroll>
           <div className="mx-auto grid max-w-[1500px] items-center gap-14 lg:grid-cols-2 lg:gap-20">
-            <div className="relative aspect-[3/2] overflow-hidden border border-[#C9A962]/35 bg-[#102F23] shadow-[0_28px_70px_rgba(20,50,38,0.18)]">
+            <div className="relative aspect-[4/3] overflow-hidden border border-[#C9A962]/35 bg-[#102F23] shadow-[0_28px_70px_rgba(20,50,38,0.18)]">
               <Image
-                src="/images/export/export-private-label-packaging-final-v1.png"
-                alt="Private-label packaging formats for natural products export supply"
+                src="/images/export/uk/uk-private-label-packaging-premium-v1.png"
+                alt="Private-label and bulk packaging options for UK natural-product buyers"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
-                className="object-cover"
+                className="object-cover object-center"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#071B14]/60 to-transparent" />
             </div>
@@ -507,37 +526,48 @@ export default function UKExportPage() {
         />
         <RevealOnScroll>
           <div className="relative mx-auto max-w-[1500px]">
-            <div className="mx-auto max-w-[980px] text-center">
-              <div className="flex items-center justify-center gap-4">
-                <span className="h-px w-12 bg-[#C9A962]" />
-                <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#E4C878]">
-                  India to the United Kingdom
+            <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 xl:gap-20">
+              <div>
+                <div className="flex items-center gap-4">
+                  <span className="h-px w-12 bg-[#C9A962]" />
+                  <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#E4C878]">
+                    India to the United Kingdom
+                  </p>
+                </div>
+                <h2 className="mt-6 font-[family-name:var(--font-playfair)] text-[clamp(2.5rem,4.8vw,4.8rem)] font-semibold leading-[1.04]">
+                  Structured Export Coordination
+                  <span className="mt-1 block text-[#E4C878]">for UK Buyers</span>
+                </h2>
+                <p className="mt-7 max-w-[720px] text-[16px] font-light leading-8 text-[#F5F0E6]/68 sm:text-[17px]">
+                  Each UK export enquiry is reviewed according to the selected
+                  product, commercial quantity, specification, packaging format,
+                  destination and buyer documentation requirements before order
+                  confirmation and shipment planning.
                 </p>
-                <span className="h-px w-12 bg-[#C9A962]" />
               </div>
-              <h2 className="mt-6 font-[family-name:var(--font-playfair)] text-[clamp(2.5rem,4.8vw,4.8rem)] font-semibold leading-[1.04]">
-                Structured Export Coordination
-                <span className="mt-1 block text-[#E4C878]">for UK Buyers</span>
-              </h2>
-              <p className="mx-auto mt-7 max-w-[900px] text-[16px] font-light leading-8 text-[#F5F0E6]/68 sm:text-[17px]">
-                Each UK export enquiry is reviewed according to the selected
-                product, commercial quantity, specification, packaging format,
-                destination and buyer documentation requirements before order
-                confirmation and shipment planning.
-              </p>
+
+              <figure
+                className="relative aspect-[4/3] overflow-hidden border border-[#C9A962]/35 bg-[#071B14] shadow-[0_28px_75px_rgba(0,0,0,0.28)]"
+              >
+                <Image
+                  src="/images/export/uk/uk-export-coordination-premium-v1.png"
+                  alt="India-to-UK natural-products export documentation and shipment coordination"
+                  fill
+                  sizes="(min-width: 1024px) 55vw, 100vw"
+                  className="object-cover object-center"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#061711]/70 via-transparent to-transparent" />
+                <figcaption className="absolute bottom-5 left-5 border border-white/15 bg-[#071B14]/80 px-4 py-3 text-[9px] font-bold uppercase tracking-[0.24em] text-[#E4C878] backdrop-blur-md sm:bottom-6 sm:left-6">
+                  India–UK Export Coordination
+                </figcaption>
+              </figure>
             </div>
 
-            <div className="relative mt-16 grid gap-6 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
-              <div
-                aria-hidden="true"
-                className="pointer-events-none absolute bottom-6 left-1/2 top-6 hidden w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-[#C9A962]/45 to-transparent md:block"
-              />
-              {process.map((item, index) => (
+            <div className="mt-16 grid auto-rows-fr gap-6 md:grid-cols-2 md:gap-8 lg:gap-10">
+              {process.map((item) => (
                 <article
                   key={item.step}
-                  className={`group relative border border-[#C9A962]/22 bg-[#071B14]/65 p-7 shadow-[0_22px_55px_rgba(0,0,0,0.16)] backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#C9A962]/55 sm:p-8 ${
-                    index % 2 === 1 ? "md:translate-y-10" : ""
-                  }`}
+                  className="group relative h-full border border-[#C9A962]/22 bg-[#071B14]/65 p-7 shadow-[0_22px_55px_rgba(0,0,0,0.16)] backdrop-blur-sm transition-all duration-500 hover:border-[#C9A962]/55 sm:p-8"
                 >
                   <div className="flex items-start gap-5">
                     <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-[#C9A962]/45 bg-[#C9A962]/10 font-[family-name:var(--font-playfair)] text-xl font-semibold text-[#E4C878]">
@@ -588,25 +618,6 @@ export default function UKExportPage() {
               <p className="mx-auto mt-5 max-w-[720px] text-[9px] font-semibold uppercase tracking-[0.24em] text-[#F5F0E6]/38">
                 Product · Quantity · Specification · Packaging · Documentation
               </p>
-            </div>
-          </div>
-        </RevealOnScroll>
-      </section>
-
-      <section className="px-6 py-24 sm:px-8 lg:px-12 lg:py-32">
-        <RevealOnScroll>
-          <div className="mx-auto max-w-[1120px]">
-            <div className="text-center">
-              <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#9F7F36]">UK Buyer Questions</p>
-              <h2 className="mt-6 font-[family-name:var(--font-playfair)] text-[clamp(2.4rem,4.4vw,4.4rem)] font-semibold">Export Supply FAQ</h2>
-            </div>
-            <div className="mt-12 divide-y divide-[#173B2A]/15 border-y border-[#173B2A]/15">
-              {faqs.map((faq) => (
-                <article key={faq.question} className="grid gap-4 py-7 md:grid-cols-[0.8fr_1.2fr] md:gap-10">
-                  <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold">{faq.question}</h3>
-                  <p className="text-[14px] font-light leading-7 text-[#4C5F54]">{faq.answer}</p>
-                </article>
-              ))}
             </div>
           </div>
         </RevealOnScroll>
