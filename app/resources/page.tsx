@@ -184,6 +184,16 @@ const buyerResources = [
     cta: "View Germany Export Guide",
     external: false,
   },
+  {
+    code: "FRANCE",
+    category: "Export Market Guide",
+    title: "Botanical and Natural Product Supply for France",
+    description:
+      "Explore France-focused bulk and wholesale supply, OEM, private label, custom packaging and structured India-to-France export coordination for professional buyers.",
+    href: "/export/france",
+    cta: "View France Export Guide",
+    external: false,
+  },
 ];
 export default function ResourcesPage() {
   return (
@@ -352,11 +362,12 @@ export default function ResourcesPage() {
       </div>
 
       {/* RESOURCE CARDS */}
-      <div className="mt-14 grid auto-rows-fr gap-6 md:grid-cols-2 xl:grid-cols-4">
+      <div className="mt-14 grid auto-rows-fr gap-6 md:grid-cols-2 xl:grid-cols-3">
         {buyerResources.map((resource, index) => (
           <StaggerItem
             key={resource.title}
             delay={260 + (index % 3) * 90}
+            className={resource.code === "USA" ? "xl:col-start-1" : ""}
           >
             <article className="group flex h-full min-h-[330px] flex-col border border-[#173B2A]/12 bg-[#FBF8F1] p-7 shadow-[0_18px_45px_rgba(20,50,38,0.07)] transition-all duration-500 hover:-translate-y-2 hover:border-[#C9A962]/65 hover:shadow-[0_26px_60px_rgba(20,50,38,0.13)] sm:p-8">
               {/* CARD TOP */}
