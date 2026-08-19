@@ -194,6 +194,16 @@ const buyerResources = [
     cta: "View France Export Guide",
     external: false,
   },
+  {
+    code: "AUSTRALIA",
+    category: "Export Market Guide",
+    title: "Botanical and Natural Product Supply for Australia",
+    description:
+      "Explore Australia-focused bulk and wholesale supply, OEM, private label, packaging and structured India-to-Australia export coordination for professional buyers.",
+    href: "/export/australia",
+    cta: "View Australia Export Guide",
+    external: false,
+  },
 ];
 export default function ResourcesPage() {
   return (
