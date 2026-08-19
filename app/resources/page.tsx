@@ -204,6 +204,16 @@ const buyerResources = [
     cta: "View Australia Export Guide",
     external: false,
   },
+  {
+    code: "JAPAN",
+    category: "Export Market Guide",
+    title: "Botanical and Natural Product Supply for Japan",
+    description:
+      "Explore Japan-focused bulk and wholesale supply, OEM, private label, packaging and structured India-to-Japan export coordination for professional buyers.",
+    href: "/export/japan",
+    cta: "View Japan Export Guide",
+    external: false,
+  },
 ];
 export default function ResourcesPage() {
   return (
@@ -377,7 +387,7 @@ export default function ResourcesPage() {
           <StaggerItem
             key={resource.title}
             delay={260 + (index % 3) * 90}
-            className={resource.code === "USA" ? "xl:col-start-1" : ""}
+            className=""
           >
             <article className="group flex h-full min-h-[330px] flex-col border border-[#173B2A]/12 bg-[#FBF8F1] p-7 shadow-[0_18px_45px_rgba(20,50,38,0.07)] transition-all duration-500 hover:-translate-y-2 hover:border-[#C9A962]/65 hover:shadow-[0_26px_60px_rgba(20,50,38,0.13)] sm:p-8">
               {/* CARD TOP */}

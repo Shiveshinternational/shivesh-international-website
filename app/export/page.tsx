@@ -702,6 +702,13 @@ export default function ExportPage() {
                     Explore Export to Australia
                     <span>→</span>
                   </Link>
+                  <Link
+                    href="/export/japan"
+                    className="inline-flex items-center gap-4 border border-[#173B2A]/25 px-7 py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-[#173B2A] transition-all duration-500 hover:-translate-y-1 hover:border-[#C9A962] hover:text-[#A97B22]"
+                  >
+                    Explore Export to Japan
+                    <span>→</span>
+                  </Link>
                 </div>
               </div>
 
