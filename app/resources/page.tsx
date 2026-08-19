@@ -174,6 +174,16 @@ const buyerResources = [
     cta: "View UAE Export Guide",
     external: false,
   },
+  {
+    code: "GERMANY",
+    category: "Export Market Guide",
+    title: "Natural Products Export Supply to Germany",
+    description:
+      "Explore Germany-focused bulk, wholesale, OEM, private-label, packaging and India-to-Germany export coordination information for professional buyers.",
+    href: "/export/germany",
+    cta: "View Germany Export Guide",
+    external: false,
+  },
 ];
 export default function ResourcesPage() {
   return (
@@ -342,7 +352,7 @@ export default function ResourcesPage() {
       </div>
 
       {/* RESOURCE CARDS */}
-      <div className="mt-14 grid auto-rows-fr gap-6 md:grid-cols-2 xl:grid-cols-3">
+      <div className="mt-14 grid auto-rows-fr gap-6 md:grid-cols-2 xl:grid-cols-4">
         {buyerResources.map((resource, index) => (
           <StaggerItem
             key={resource.title}
