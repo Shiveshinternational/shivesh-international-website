@@ -185,6 +185,16 @@ const buyerResources = [
     external: false,
   },
   {
+    code: "AUSTRIA",
+    category: "Export Market Guide",
+    title: "Natural Products Export Supply to Austria",
+    description:
+      "Explore Austria-focused bulk, wholesale, OEM, private-label, packaging and India-to-Austria export coordination information for professional buyers.",
+    href: "/export/austria",
+    cta: "View Austria Export Guide",
+    external: false,
+  },
+  {
     code: "UK",
     category: "Export Market Guide",
     title: "Export Supply to the United Kingdom",
