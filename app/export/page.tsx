@@ -675,6 +675,13 @@ export default function ExportPage() {
                     <span>→</span>
                   </Link>
                   <Link
+                    href="/export/spain"
+                    className="inline-flex items-center gap-4 border border-[#173B2A]/25 px-7 py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-[#173B2A] transition-all duration-500 hover:-translate-y-1 hover:border-[#C9A962] hover:text-[#A97B22]"
+                  >
+                    Explore Export to Spain
+                    <span>→</span>
+                  </Link>
+                  <Link
                     href="/export/usa"
                     className="inline-flex items-center gap-4 border border-[#C9A962] bg-[#C9A962] px-7 py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-[#102F23] transition-all duration-500 hover:-translate-y-1 hover:bg-[#D8BB68]"
                   >

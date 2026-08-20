@@ -175,6 +175,16 @@ const buyerResources = [
     external: false,
   },
   {
+    code: "SPAIN",
+    category: "Export Market Guide",
+    title: "Natural Products Export Supply to Spain",
+    description:
+      "Explore Spain-focused bulk, wholesale, OEM, private-label packaging and India-to-Spain export coordination for professional buyers sourcing henna, indigo, botanical hair colors, Ayurvedic herbs and Indian spices.",
+    href: "/export/spain",
+    cta: "View Spain Export Guide",
+    external: false,
+  },
+  {
     code: "UK",
     category: "Export Market Guide",
     title: "Export Supply to the United Kingdom",
