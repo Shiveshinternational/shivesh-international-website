@@ -165,6 +165,16 @@ const buyerResources = [
     external: false,
   },
   {
+    code: "ITALY",
+    category: "Export Market Guide",
+    title: "Natural Products Export Supply to Italy",
+    description:
+      "Explore Italy-focused bulk, wholesale, OEM, private-label packaging and India-to-Italy export coordination for professional buyers sourcing henna, indigo, botanical hair colors, Ayurvedic herbs and Indian spices.",
+    href: "/export/italy",
+    cta: "View Italy Export Guide",
+    external: false,
+  },
+  {
     code: "UK",
     category: "Export Market Guide",
     title: "Export Supply to the United Kingdom",
