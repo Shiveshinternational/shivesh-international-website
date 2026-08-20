@@ -155,6 +155,16 @@ const buyerResources = [
     external: false,
   },
   {
+    code: "EUROPE",
+    category: "Export Regional Hub",
+    title: "Natural Products Export Supply Across Europe",
+    description:
+      "Explore Europe-focused supply information for natural henna powder, indigo powder, botanical hair colors, Ayurvedic herbs and Indian spices, including bulk, wholesale, OEM, private-label packaging and India-to-Europe export coordination for professional buyers.",
+    href: "/export/europe",
+    cta: "View Europe Export Hub",
+    external: false,
+  },
+  {
     code: "UK",
     category: "Export Market Guide",
     title: "Export Supply to the United Kingdom",
@@ -387,7 +397,12 @@ export default function ResourcesPage() {
           <StaggerItem
             key={resource.title}
             delay={260 + (index % 3) * 90}
-            className=""
+            className={
+              index === buyerResources.length - 1 &&
+              buyerResources.length % 3 === 1
+                ? "xl:col-start-2"
+                : ""
+            }
           >
             <article className="group flex h-full min-h-[330px] flex-col border border-[#173B2A]/12 bg-[#FBF8F1] p-7 shadow-[0_18px_45px_rgba(20,50,38,0.07)] transition-all duration-500 hover:-translate-y-2 hover:border-[#C9A962]/65 hover:shadow-[0_26px_60px_rgba(20,50,38,0.13)] sm:p-8">
               {/* CARD TOP */}
