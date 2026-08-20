@@ -195,6 +195,16 @@ const buyerResources = [
     external: false,
   },
   {
+    code: "FINLAND",
+    category: "Export Market Guide",
+    title: "Natural Products Export Supply to Finland",
+    description:
+      "Explore Finland-focused bulk, wholesale, OEM, private-label packaging and India-to-Finland export coordination for professional buyers sourcing henna, indigo, botanical hair colors, Ayurvedic herbs and Indian spices.",
+    href: "/export/finland",
+    cta: "View Finland Export Guide",
+    external: false,
+  },
+  {
     code: "UK",
     category: "Export Market Guide",
     title: "Export Supply to the United Kingdom",
