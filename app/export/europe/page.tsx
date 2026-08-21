@@ -195,14 +195,14 @@ const products = [
 ];
 
 const markets = [
+  { code: "DE", name: "Germany", flag: "🇩🇪", href: "/export/germany", text: "Natural henna, indigo, botanical hair colours, Ayurvedic herbs and Indian spices for German importers, distributors and private-label brands." },
   { name: "Italy", flag: "🇮🇹", href: "/export/italy", text: "Henna exporter to Italy for botanical, salon and food-ingredient businesses seeking professional supply." },
   { name: "Spain", flag: "🇪🇸", href: "/export/spain", text: "Henna supplier for Spain with flexible natural-product sourcing for importers and buyer brands." },
+  { name: "France", flag: "🇫🇷", href: "/export/france", text: "Henna powder exporter for France with botanical and private-label support for professional buyers." },
   { name: "Austria", flag: "🇦🇹", href: "/export/austria", text: "Natural products exporter for Austria supporting botanical and spice distribution channels." },
-  { name: "Finland", flag: "🇫🇮", href: "/export/finland", text: "Herbal products supplier for Finland with henna, indigo and Indian botanical options." },
   { name: "Netherlands", flag: "🇳🇱", href: "/export/netherlands", text: "Henna and indigo supplier for Netherlands importers, distributors and private-label businesses." },
   { name: "Poland", flag: "🇵🇱", href: "/export/poland", text: "Indian herbs exporter for Poland supporting natural hair-care, wellness and spice buyers." },
   { name: "Norway", flag: "🇳🇴", href: "/export/norway", text: "Natural hair color supplier for Norway with coordinated Indian botanical product supply." },
-  { name: "France", flag: "🇫🇷", href: "/export/france", text: "Henna powder exporter for France with botanical and private-label support for professional buyers." },
 ];
 
 const buyerTypes = [
