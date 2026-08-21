@@ -205,6 +205,16 @@ const buyerResources = [
     external: false,
   },
   {
+    code: "NETHERLANDS",
+    category: "Export Market Guide",
+    title: "Natural Products Export Supply to the Netherlands",
+    description:
+      "Explore Netherlands-focused bulk, wholesale, OEM, private-label packaging and India-to-Netherlands export coordination for professional buyers sourcing henna, indigo, botanical hair colors, Ayurvedic herbs and Indian spices.",
+    href: "/export/netherlands",
+    cta: "View Netherlands Export Guide",
+    external: false,
+  },
+  {
     code: "UK",
     category: "Export Market Guide",
     title: "Export Supply to the United Kingdom",
