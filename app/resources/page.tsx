@@ -235,6 +235,16 @@ const buyerResources = [
     external: false,
   },
   {
+    code: "BRAZIL",
+    category: "Export Market Guide",
+    title: "Natural Products Export Supply to Brazil",
+    description:
+      "Explore Brazil-focused bulk, wholesale, OEM, private-label packaging and India-to-Brazil export coordination for professional buyers sourcing henna, indigo, botanical hair colors, Ayurvedic herbs and Indian spices.",
+    href: "/export/brazil",
+    cta: "View Brazil Export Guide",
+    external: false,
+  },
+  {
     code: "UK",
     category: "Export Market Guide",
     title: "Export Supply to the United Kingdom",
