@@ -215,6 +215,16 @@ const buyerResources = [
     external: false,
   },
   {
+    code: "POLAND",
+    category: "Export Market Guide",
+    title: "Natural Products Export Supply to Poland",
+    description:
+      "Explore Poland-focused bulk, wholesale, OEM, private-label packaging and India-to-Poland export coordination for professional buyers sourcing henna, indigo, botanical hair colors, Ayurvedic herbs and Indian spices.",
+    href: "/export/poland",
+    cta: "View Poland Export Guide",
+    external: false,
+  },
+  {
     code: "UK",
     category: "Export Market Guide",
     title: "Export Supply to the United Kingdom",
