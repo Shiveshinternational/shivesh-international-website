@@ -225,6 +225,16 @@ const buyerResources = [
     external: false,
   },
   {
+    code: "NORWAY",
+    category: "Export Market Guide",
+    title: "Natural Products Export Supply to Norway",
+    description:
+      "Explore Norway-focused bulk, wholesale, OEM, private-label packaging and India-to-Norway export coordination for professional buyers sourcing henna, indigo, botanical hair colors, Ayurvedic herbs and Indian spices.",
+    href: "/export/norway",
+    cta: "View Norway Export Guide",
+    external: false,
+  },
+  {
     code: "UK",
     category: "Export Market Guide",
     title: "Export Supply to the United Kingdom",
