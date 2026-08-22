@@ -185,6 +185,16 @@ const buyerResources = [
     external: false,
   },
   {
+    code: "TAIWAN",
+    category: "Export Market Guide",
+    title: "Natural Products Export Supply to Taiwan",
+    description:
+      "Explore Taiwan-focused bulk, wholesale and private-label supply information for natural henna, indigo, botanical hair colors, Ayurvedic herbs and Indian spices.",
+    href: "/export/taiwan",
+    cta: "View Taiwan Export Guide",
+    external: false,
+  },
+  {
     code: "ITALY",
     category: "Export Market Guide",
     title: "Natural Products Export Supply to Italy",

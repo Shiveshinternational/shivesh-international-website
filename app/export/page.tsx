@@ -682,6 +682,13 @@ export default function ExportPage() {
                     <span>→</span>
                   </Link>
                   <Link
+                    href="/export/taiwan"
+                    className="inline-flex items-center gap-4 border border-[#173B2A]/25 px-7 py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-[#173B2A] transition-all duration-500 hover:-translate-y-1 hover:border-[#C9A962] hover:text-[#A97B22]"
+                  >
+                    Explore Export to Taiwan
+                    <span>→</span>
+                  </Link>
+                  <Link
                     href="/export/italy"
                     className="inline-flex items-center gap-4 border border-[#173B2A]/25 px-7 py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-[#173B2A] transition-all duration-500 hover:-translate-y-1 hover:border-[#C9A962] hover:text-[#A97B22]"
                   >
