@@ -175,6 +175,16 @@ const buyerResources = [
     external: false,
   },
   {
+    code: "CHINA",
+    category: "Export Market Guide",
+    title: "Natural Products Export Supply to China",
+    description:
+      "Explore China-focused bulk, wholesale and private-label supply information for natural henna, indigo, botanical hair colors, Ayurvedic herbs and Indian spices.",
+    href: "/export/china",
+    cta: "View China Export Guide",
+    external: false,
+  },
+  {
     code: "ITALY",
     category: "Export Market Guide",
     title: "Natural Products Export Supply to Italy",
