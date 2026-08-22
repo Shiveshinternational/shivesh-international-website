@@ -165,6 +165,16 @@ const buyerResources = [
     external: false,
   },
   {
+    code: "ASIA-PACIFIC",
+    category: "Export Regional Hub",
+    title: "Natural Products Export Supply Across Asia-Pacific",
+    description:
+      "Explore Asia-Pacific-focused supply information for natural henna powder, indigo powder, botanical hair colors, Ayurvedic herbs and Indian spices, including bulk and private-label export coordination from India.",
+    href: "/export/asia-pacific",
+    cta: "View Asia-Pacific Export Hub",
+    external: false,
+  },
+  {
     code: "ITALY",
     category: "Export Market Guide",
     title: "Natural Products Export Supply to Italy",
