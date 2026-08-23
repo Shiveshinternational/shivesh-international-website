@@ -202,7 +202,9 @@ export default function FooterSection() {
                 {/* Contact shortcuts */}
                 <div className="mt-7 flex flex-wrap gap-3">
                   <a
-                    href="mailto:shiveshinternational@gmail.com"
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=export@shiveshinternational.com"
+                    target="_blank"
+                    rel="noreferrer"
                     className="group inline-flex items-center gap-2 border border-[#C9A962]/22 px-4 py-3 text-[9px] font-bold uppercase tracking-[0.16em] text-[#F5F0E6]/60 transition-all duration-300 hover:-translate-y-1 hover:border-[#C9A962] hover:text-[#E4C878]"
                   >
                     <span className="text-[#C9A962]">@</span>
@@ -220,7 +222,7 @@ export default function FooterSection() {
                   </a>
 
                   <a
-                    href="https://www.henna-manufacturer.com"
+                    href="https://www.shiveshinternational.com"
                     target="_blank"
                     rel="noreferrer"
                     className="group inline-flex items-center gap-2 border border-[#C9A962]/22 px-4 py-3 text-[9px] font-bold uppercase tracking-[0.16em] text-[#F5F0E6]/60 transition-all duration-300 hover:-translate-y-1 hover:border-[#C9A962] hover:text-[#E4C878]"
