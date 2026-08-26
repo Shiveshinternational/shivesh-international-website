@@ -195,6 +195,16 @@ const buyerResources = [
     external: false,
   },
   {
+    code: "SOUTH KOREA",
+    category: "Export Market Guide",
+    title: "Natural Products Export Supply to South Korea",
+    description:
+      "Explore South Korea-focused bulk, wholesale and private-label supply information for natural henna, indigo, botanical hair colors, Ayurvedic herbs and Indian spices.",
+    href: "/export/south-korea",
+    cta: "View South Korea Export Guide",
+    external: false,
+  },
+  {
     code: "ITALY",
     category: "Export Market Guide",
     title: "Natural Products Export Supply to Italy",
