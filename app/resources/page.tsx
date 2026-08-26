@@ -215,6 +215,16 @@ const buyerResources = [
     external: false,
   },
   {
+    code: "VIETNAM",
+    category: "Export Market Guide",
+    title: "Natural Products Export Supply to Vietnam",
+    description:
+      "Explore Vietnam-focused bulk, wholesale, OEM and private-label supply for henna, indigo, botanical hair colors, Ayurvedic herbs and Indian spices.",
+    href: "/export/vietnam",
+    cta: "View Vietnam Export Guide",
+    external: false,
+  },
+  {
     code: "ITALY",
     category: "Export Market Guide",
     title: "Natural Products Export Supply to Italy",
