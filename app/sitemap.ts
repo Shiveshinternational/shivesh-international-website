@@ -72,6 +72,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/export/singapore`,
+      lastModified: new Date("2026-08-26"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/export/italy`,
       lastModified: new Date("2026-08-20"),
       changeFrequency: "monthly",
