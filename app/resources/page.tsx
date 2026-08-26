@@ -205,6 +205,16 @@ const buyerResources = [
     external: false,
   },
   {
+    code: "THAILAND",
+    category: "Export Market Guide",
+    title: "Natural Products Export Supply to Thailand",
+    description:
+      "Explore Thailand-focused bulk, wholesale, OEM and private-label supply for henna, indigo, botanical hair colors, Ayurvedic herbs and Indian spices.",
+    href: "/export/thailand",
+    cta: "View Thailand Export Guide",
+    external: false,
+  },
+  {
     code: "ITALY",
     category: "Export Market Guide",
     title: "Natural Products Export Supply to Italy",
