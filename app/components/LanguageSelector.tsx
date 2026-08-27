@@ -8,18 +8,31 @@ import { getEquivalentRoute } from "@/app/lib/i18n";
 const languages = [
   { code: "EN", label: "English", flag: "🇬🇧", locale: "en" as const },
   { code: "ES", label: "Spanish", flag: "🇪🇸", locale: null },
-  { code: "FR", label: "French", flag: "🇫🇷", locale: null },
+  { code: "FR", label: "Français", flag: "🇫🇷", locale: "fr" as const },
   { code: "DE", label: "Deutsch", flag: "🇩🇪", locale: "de" as const },
   { code: "AR", label: "Arabic", flag: "🇦🇪", locale: null },
   { code: "JA", label: "Japanese", flag: "🇯🇵", locale: null },
 ];
+
+const frenchLanguageLabels: Record<string, string> = {
+  EN: "Anglais",
+  ES: "Espagnol",
+  FR: "Français",
+  DE: "Allemand",
+  AR: "Arabe",
+  JA: "Japonais",
+};
 
 export default function LanguageSelector() {
   const [isOpen, setIsOpen] = useState(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
   const router = useRouter();
-  const selectedCode = pathname.startsWith("/de/") ? "DE" : "EN";
+  const selectedCode = pathname.startsWith("/de/")
+    ? "DE"
+    : pathname.startsWith("/fr/")
+      ? "FR"
+      : "EN";
 
   useEffect(() => {
     if (!isOpen) return;
@@ -52,7 +65,7 @@ export default function LanguageSelector() {
     languages.find((language) => language.code === selectedCode) ??
     languages[0];
 
-  const selectLanguage = (locale: "en" | "de") => {
+  const selectLanguage = (locale: "en" | "de" | "fr") => {
     const destination = getEquivalentRoute(pathname, locale);
     setIsOpen(false);
     if (destination && destination !== pathname) router.push(destination);
@@ -64,7 +77,7 @@ export default function LanguageSelector() {
         type="button"
         onClick={() => setIsOpen((current) => !current)}
         className="inline-flex h-10 items-center gap-2 rounded-full border border-[#C9A962]/35 bg-[#173b2a]/65 px-3 text-[10px] font-bold uppercase tracking-[0.12em] text-[#F5F0E6] transition-all duration-300 hover:border-[#C9A962] hover:text-[#C9A962]"
-        aria-label={selectedCode === "DE" ? "Sprache auswählen" : "Select display language"}
+        aria-label={selectedCode === "DE" ? "Sprache auswählen" : selectedCode === "FR" ? "Choisir la langue" : "Select display language"}
         aria-expanded={isOpen}
       >
         <span className="text-sm">{selectedLanguage.flag}</span>
@@ -87,7 +100,7 @@ export default function LanguageSelector() {
       >
         <div className="overflow-hidden rounded-[20px] border border-[#C9A962]/25 bg-[#0b241a]/98 p-2 shadow-[0_24px_70px_rgba(0,0,0,0.40)] backdrop-blur-2xl">
           <p className="px-3 pb-2 pt-2 text-[9px] font-bold uppercase tracking-[0.22em] text-[#C9A962]">
-            {selectedCode === "DE" ? "Sprache" : "Display Language"}
+            {selectedCode === "DE" ? "Sprache" : selectedCode === "FR" ? "Langue" : "Display Language"}
           </p>
 
           {languages.map((language) => {
@@ -114,7 +127,11 @@ export default function LanguageSelector() {
               >
                 <span className="flex items-center gap-3">
                   <span>{language.flag}</span>
-                  <span className="text-sm">{language.label}</span>
+                  <span className="text-sm">
+                    {selectedCode === "FR"
+                      ? frenchLanguageLabels[language.code]
+                      : language.label}
+                  </span>
                 </span>
 
                 <span className="text-[9px] font-bold uppercase tracking-[0.16em]">
@@ -128,7 +145,11 @@ export default function LanguageSelector() {
             <p className="text-[10px] leading-5 text-[#F5F0E6]/38">
               {selectedCode === "DE"
                 ? "Englisch und Deutsch sind für diese Seite verfügbar."
-                : "German is currently available for the Germany page."}
+                : selectedCode === "FR"
+                  ? "Le français et l’anglais sont disponibles pour cette page."
+                  : pathname === "/export/france"
+                    ? "French is available for the France page."
+                    : "German is currently available for the Germany and Austria pages."}
             </p>
           </div>
         </div>

@@ -13,7 +13,9 @@ declare global {
 }
 
 export default function CookieConsent() {
-  const isGerman = usePathname().startsWith("/de/");
+  const pathname = usePathname();
+  const isGerman = pathname.startsWith("/de/");
+  const isFrench = pathname.startsWith("/fr/");
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -65,25 +67,27 @@ export default function CookieConsent() {
       <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-4 md:flex-row md:items-center">
         <div className="max-w-4xl">
           <p className="text-base font-semibold text-[#e3c56d]">
-            {isGerman ? "Ihre Privatsphäre ist uns wichtig" : "Your Privacy Matters"}
+            {isGerman ? "Ihre Privatsphäre ist uns wichtig" : isFrench ? "Votre vie privée compte" : "Your Privacy Matters"}
           </p>
 
           <p className="mt-1 text-sm leading-6 text-white/90">
             {isGerman
               ? "Wir verwenden optionale Analyse-Cookies, um den Website-Verkehr zu verstehen und die Erfahrung internationaler Einkäufer zu verbessern. Sie können Analyse-Cookies annehmen oder ablehnen. Lesen Sie unsere "
-              : "We use optional analytics cookies to understand website traffic and improve the experience of international buyers. You can accept or reject analytics cookies. Read our "}
+              : isFrench
+                ? "Nous utilisons des cookies d’analyse facultatifs pour comprendre le trafic du site et améliorer l’expérience des acheteurs internationaux. Vous pouvez les accepter ou les refuser. Consultez notre "
+                : "We use optional analytics cookies to understand website traffic and improve the experience of international buyers. You can accept or reject analytics cookies. Read our "}
             <Link
               href="/privacy-policy"
               className="font-semibold text-[#e3c56d] underline underline-offset-4"
             >
-              {isGerman ? "Datenschutzerklärung" : "Privacy Policy"}
+              {isGerman ? "Datenschutzerklärung" : isFrench ? "politique de confidentialité" : "Privacy Policy"}
             </Link>{" "}
-            {isGerman ? " und " : " and "}
+            {isGerman ? " und " : isFrench ? " et notre " : " and "}
             <Link
               href="/cookie-policy"
               className="font-semibold text-[#e3c56d] underline underline-offset-4"
             >
-              {isGerman ? "Cookie-Richtlinie" : "Cookie Policy"}
+              {isGerman ? "Cookie-Richtlinie" : isFrench ? "politique relative aux cookies" : "Cookie Policy"}
             </Link>
             .
           </p>
@@ -95,7 +99,7 @@ export default function CookieConsent() {
             onClick={() => saveConsent("denied")}
             className="rounded-md border border-white/50 px-5 py-2 text-sm font-semibold text-white transition hover:bg-white/10"
           >
-            {isGerman ? "Ablehnen" : "Reject"}
+            {isGerman ? "Ablehnen" : isFrench ? "Refuser" : "Reject"}
           </button>
 
           <button
@@ -103,7 +107,7 @@ export default function CookieConsent() {
             onClick={() => saveConsent("granted")}
             className="rounded-md bg-[#c8a84e] px-5 py-2 text-sm font-semibold text-[#082f24] transition hover:bg-[#dfc36f]"
           >
-            {isGerman ? "Annehmen" : "Accept"}
+            {isGerman ? "Annehmen" : isFrench ? "Accepter" : "Accept"}
           </button>
         </div>
       </div>

@@ -36,12 +36,25 @@ const germanNavigationLinks = [
   { label: "Kontakt", href: "/contact", sectionId: "contact" },
 ];
 
+const frenchNavigationLinks = [
+  { label: "Accueil", href: "/", sectionId: "home" },
+  { label: "À propos", href: "/about", sectionId: "about" },
+  { label: "Produits", href: "/#products", sectionId: "products" },
+  { label: "Infrastructure", href: "/infrastructure", sectionId: "infrastructure" },
+  { label: "Certifications", href: "/certifications", sectionId: "certifications" },
+  { label: "Export", href: "/export", sectionId: "export" },
+  { label: "Contact", href: "/contact", sectionId: "contact" },
+];
+
 export default function Navbar() {
   const pathname = usePathname();
   const isGerman = pathname.startsWith("/de/");
+  const isFrench = pathname.startsWith("/fr/");
   const visibleNavigationLinks = isGerman
     ? germanNavigationLinks
-    : navigationLinks;
+    : isFrench
+      ? frenchNavigationLinks
+      : navigationLinks;
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -137,7 +150,7 @@ export default function Navbar() {
           href="/"
           onClick={closeMenu}
           className="group flex shrink-0 items-center gap-4"
-          aria-label={isGerman ? "Shivesh International Startseite" : "Shivesh International home"}
+          aria-label={isGerman ? "Shivesh International Startseite" : isFrench ? "Accueil Shivesh International" : "Shivesh International home"}
         >
           <div className="flex h-12 w-12 items-center justify-center border border-[#C9A962]/45 bg-[#173b2a] font-[family-name:var(--font-playfair)] text-xl font-semibold text-[#f5f0e6] transition duration-300 group-hover:border-[#C9A962] group-hover:text-[#C9A962]">
             SI
@@ -156,7 +169,7 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-5 xl:flex 2xl:gap-7">
           {visibleNavigationLinks.map((link) => {
-            if (!isGerman && link.label === "Products") {
+            if (!isGerman && !isFrench && link.label === "Products") {
               return <ProductMegaMenu key={link.href} />;
             }
 
@@ -194,7 +207,7 @@ export default function Navbar() {
             href="/contact"
             className="ml-1 inline-flex items-center justify-center border border-[#C9A962]/70 px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#C9A962] transition duration-300 hover:bg-[#C9A962] hover:text-[#102f23]"
           >
-            {isGerman ? "Kontakt aufnehmen" : "Get in Touch"}
+            {isGerman ? "Kontakt aufnehmen" : isFrench ? "Nous contacter" : "Get in Touch"}
           </Link>
         </div>
 
@@ -206,7 +219,7 @@ export default function Navbar() {
             type="button"
             onClick={() => setIsMenuOpen((current) => !current)}
             className="flex h-10 w-10 items-center justify-center border border-[#C9A962]/40 text-[#f5f0e6] transition hover:border-[#C9A962] hover:text-[#C9A962]"
-            aria-label={isGerman ? "Navigationsmenü umschalten" : "Toggle navigation menu"}
+            aria-label={isGerman ? "Navigationsmenü umschalten" : isFrench ? "Ouvrir ou fermer le menu de navigation" : "Toggle navigation menu"}
             aria-expanded={isMenuOpen}
           >
             <span className="relative block h-5 w-6">
@@ -267,7 +280,7 @@ export default function Navbar() {
               onClick={closeMenu}
               className="mt-5 inline-flex items-center justify-center bg-[#C9A962] px-6 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-[#102f23]"
             >
-              {isGerman ? "Kontakt aufnehmen" : "Get in Touch"}
+              {isGerman ? "Kontakt aufnehmen" : isFrench ? "Nous contacter" : "Get in Touch"}
             </Link>
           </div>
         </div>

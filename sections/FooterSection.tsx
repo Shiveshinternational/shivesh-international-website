@@ -63,6 +63,26 @@ const germanProductLinks = [
   { label: "Indische Gewürze", href: "/products/indian-spices" },
 ];
 
+const frenchQuickLinks = [
+  { label: "Accueil", href: "/#home" },
+  { label: "À propos", href: "/about" },
+  { label: "Produits", href: "/#products" },
+  { label: "Infrastructure", href: "/infrastructure" },
+  { label: "Certifications", href: "/certifications" },
+  { label: "Export", href: "/export" },
+  { label: "Ressources acheteurs", href: "/resources" },
+  { label: "Contact", href: "/contact" },
+];
+
+const frenchProductLinks = [
+  { label: "Poudre de henné naturel", href: "/products/natural-henna-powder" },
+  { label: "Poudre d’indigo naturel", href: "/products/natural-indigo-powder" },
+  { label: "Colorations capillaires naturelles au henné", href: "/products/natural-henna-hair-colors" },
+  { label: "Colorations capillaires à base de henné", href: "/products/henna-based-hair-colors" },
+  { label: "Plantes ayurvédiques indiennes", href: "/products/ayurvedic-indian-herbs" },
+  { label: "Épices indiennes", href: "/products/indian-spices" },
+];
+
 function FooterLink({
   href,
   children,
@@ -81,10 +101,13 @@ function FooterLink({
   );
 }
 
-export default function FooterSection({ locale = "en" }: { locale?: "en" | "de" }) {
+export default function FooterSection({ locale = "en" }: { locale?: "en" | "de" | "fr" }) {
   const isGerman = locale === "de";
-  const visibleQuickLinks = isGerman ? germanQuickLinks : quickLinks;
-  const visibleProductLinks = isGerman ? germanProductLinks : productLinks;
+  const isFrench = locale === "fr";
+  const localize = (english: string, german: string, french: string) =>
+    isGerman ? german : isFrench ? french : english;
+  const visibleQuickLinks = isGerman ? germanQuickLinks : isFrench ? frenchQuickLinks : quickLinks;
+  const visibleProductLinks = isGerman ? germanProductLinks : isFrench ? frenchProductLinks : productLinks;
   const openCookieSettings = () => {
   localStorage.removeItem("shivesh-cookie-consent");
 
@@ -135,21 +158,23 @@ export default function FooterSection({ locale = "en" }: { locale?: "en" | "de" 
                     <span className="h-px w-12 bg-[#C9A962]" />
 
                     <p className="text-[10px] font-bold uppercase tracking-[0.34em] text-[#C9A962]">
-                      {isGerman ? "Internationale Exportpartnerschaft" : "Global Export Partnership"}
+                      {localize("Global Export Partnership", "Internationale Exportpartnerschaft", "Partenariat d’exportation international")}
                     </p>
                   </div>
 
                   <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-[clamp(2rem,3.5vw,3.2rem)] font-medium leading-[1.05] tracking-[-0.025em] text-[#F7F1E7]">
-                    {isGerman ? "Bereit für Ihr" : "Ready to Build Your"}
+                    {localize("Ready to Build Your", "Bereit für Ihr", "Prêt à développer votre")}
                     <span className="ml-2 text-[#E4C878]">
-                      {isGerman ? "Naturproduktsortiment?" : "Natural Product Line?"}
+                      {localize("Natural Product Line?", "Naturproduktsortiment?", "gamme de produits naturels ?")}
                     </span>
                   </h2>
 
                   <p className="mt-4 max-w-3xl text-[14px] font-light leading-7 text-[#F5F0E6]/58 sm:text-[15px]">
-                    {isGerman
-                      ? "Sprechen Sie mit unserem Exportteam über Produktauswahl, Eigenmarkenentwicklung, Verpackungskoordination und internationale Belieferung."
-                      : "Connect with our export team for product selection, private-label development, packaging coordination and international supply support."}
+                    {localize(
+                      "Connect with our export team for product selection, private-label development, packaging coordination and international supply support.",
+                      "Sprechen Sie mit unserem Exportteam über Produktauswahl, Eigenmarkenentwicklung, Verpackungskoordination und internationale Belieferung.",
+                      "Contactez notre équipe export pour la sélection des produits, le développement Private Label, la coordination des emballages et l’accompagnement de votre approvisionnement international.",
+                    )}
                   </p>
                 </div>
 
@@ -158,7 +183,7 @@ export default function FooterSection({ locale = "en" }: { locale?: "en" | "de" 
                     href="/contact"
                     className="group inline-flex items-center justify-center gap-4 border border-[#C9A962] bg-[#C9A962] px-7 py-4 text-[10px] font-bold uppercase tracking-[0.22em] text-[#102F23] transition-all duration-500 hover:-translate-y-1 hover:bg-[#E4C878]"
                   >
-                    {isGerman ? "Exportteam kontaktieren" : "Contact Export Team"}
+                    {localize("Contact Export Team", "Exportteam kontaktieren", "Contacter l’équipe export")}
                     <span className="transition-transform duration-300 group-hover:translate-x-1">
                       →
                     </span>
@@ -206,13 +231,15 @@ export default function FooterSection({ locale = "en" }: { locale?: "en" | "de" 
                 </div>
 
                 <p className="mt-6 max-w-md text-[15px] font-light leading-8 text-[#F5F0E6]/58">
-                  {isGerman
-                    ? "Premium-Exporteur von natürlichem Henna-Pulver, natürlichem Indigo-Pulver, pflanzlichen Haarfarben, ayurvedischen indischen Kräutern und indischen Gewürzen."
-                    : "Premium exporter of Natural Henna Powder, Natural Indigo Powder, Natural Henna Hair Colors, Henna-Based Hair Colors, Ayurvedic Indian Herbs and Indian Spices."}
+                  {localize(
+                    "Premium exporter of Natural Henna Powder, Natural Indigo Powder, Natural Henna Hair Colors, Henna-Based Hair Colors, Ayurvedic Indian Herbs and Indian Spices.",
+                    "Premium-Exporteur von natürlichem Henna-Pulver, natürlichem Indigo-Pulver, pflanzlichen Haarfarben, ayurvedischen indischen Kräutern und indischen Gewürzen.",
+                    "Exportateur premium de poudre de henné naturel, d’indigo naturel, de colorations capillaires au henné, de plantes ayurvédiques indiennes et d’épices indiennes.",
+                  )}
                 </p>
 
                 <div className="mt-6 flex flex-wrap gap-2.5">
-                  {(isGerman ? ["Natur", "Qualität", "Vertrauen"] : ["Nature", "Quality", "Trust"]).map((item) => (
+                  {(isGerman ? ["Natur", "Qualität", "Vertrauen"] : isFrench ? ["Nature", "Qualité", "Confiance"] : ["Nature", "Quality", "Trust"]).map((item) => (
                     <span
                       key={item}
                       className="border border-[#C9A962]/22 bg-white/[0.025] px-4 py-2 text-[9px] font-bold uppercase tracking-[0.2em] text-[#E4C878]"
@@ -231,7 +258,7 @@ export default function FooterSection({ locale = "en" }: { locale?: "en" | "de" 
                     className="group inline-flex items-center gap-2 border border-[#C9A962]/22 px-4 py-3 text-[9px] font-bold uppercase tracking-[0.16em] text-[#F5F0E6]/60 transition-all duration-300 hover:-translate-y-1 hover:border-[#C9A962] hover:text-[#E4C878]"
                   >
                     <span className="text-[#C9A962]">@</span>
-                    {isGerman ? "E-Mail" : "Email"}
+                    {localize("Email", "E-Mail", "E-mail")}
                   </a>
 
                   <a
@@ -251,7 +278,7 @@ export default function FooterSection({ locale = "en" }: { locale?: "en" | "de" 
                     className="group inline-flex items-center gap-2 border border-[#C9A962]/22 px-4 py-3 text-[9px] font-bold uppercase tracking-[0.16em] text-[#F5F0E6]/60 transition-all duration-300 hover:-translate-y-1 hover:border-[#C9A962] hover:text-[#E4C878]"
                   >
                     <span className="text-[#C9A962]">↗</span>
-                    {isGerman ? "Webseite" : "Website"}
+                    {localize("Website", "Webseite", "Site web")}
                   </a>
                 </div>
               </div>
@@ -267,7 +294,7 @@ export default function FooterSection({ locale = "en" }: { locale?: "en" | "de" 
                 </p>
 
                 <h3 className="mt-3 font-[family-name:var(--font-playfair)] text-2xl font-medium text-[#F7F1E7]">
-                  {isGerman ? "Direktlinks" : "Quick Links"}
+                  {localize("Quick Links", "Direktlinks", "Liens rapides")}
                 </h3>
 
                 <div className="mt-6 flex flex-col gap-3.5">
@@ -286,11 +313,11 @@ export default function FooterSection({ locale = "en" }: { locale?: "en" | "de" 
             <StaggerItem delay={260}>
               <div>
                 <p className="text-[9px] font-bold uppercase tracking-[0.32em] text-[#C9A962]">
-                  {isGerman ? "Produktsortiment" : "Product Portfolio"}
+                  {localize("Product Portfolio", "Produktsortiment", "Gamme de produits")}
                 </p>
 
                 <h3 className="mt-3 font-[family-name:var(--font-playfair)] text-2xl font-medium text-[#F7F1E7]">
-                  {isGerman ? "Unsere Produkte" : "Our Products"}
+                  {localize("Our Products", "Unsere Produkte", "Nos produits")}
                 </h3>
 
                 <div className="mt-6 flex flex-col gap-3.5">
@@ -309,24 +336,24 @@ export default function FooterSection({ locale = "en" }: { locale?: "en" | "de" 
             <StaggerItem delay={340}>
               <div>
                 <p className="text-[9px] font-bold uppercase tracking-[0.32em] text-[#C9A962]">
-                  {isGerman ? "Kontaktdaten" : "Contact Details"}
+                  {localize("Contact Details", "Kontaktdaten", "Coordonnées")}
                 </p>
 
                 <h3 className="mt-3 font-[family-name:var(--font-playfair)] text-2xl font-medium text-[#F7F1E7]">
-                  {isGerman ? "Kontaktieren Sie uns" : "Connect With Us"}
+                  {localize("Connect With Us", "Kontaktieren Sie uns", "Contactez-nous")}
                 </h3>
 
                 <div className="mt-6 border border-[#C9A962]/18 bg-[#0D2F22]/62 p-5 shadow-[0_18px_45px_rgba(0,0,0,0.16)]">
                   <div className="space-y-5 text-sm leading-7 text-[#F5F0E6]/58">
                     <div>
                       <p className="text-[9px] font-bold uppercase tracking-[0.22em] text-[#C9A962]">
-                        {isGerman ? "Eingetragener Firmensitz" : "Registered Office"}
+                        {localize("Registered Office", "Eingetragener Firmensitz", "Siège social")}
                       </p>
 
                       <p className="mt-2">
                         361-C, BG-6, Paschim Vihar,
                         <br />
-                        {isGerman ? "Neu-Delhi – 110063, Indien" : "New Delhi – 110063, India"}
+                        {localize("New Delhi – 110063, India", "Neu-Delhi – 110063, Indien", "New Delhi – 110063, Inde")}
                       </p>
                     </div>
 
@@ -334,7 +361,7 @@ export default function FooterSection({ locale = "en" }: { locale?: "en" | "de" 
 
                     <div>
                       <p className="text-[9px] font-bold uppercase tracking-[0.22em] text-[#C9A962]">
-                        {isGerman ? "Telefon" : "Phone"}
+                        {localize("Phone", "Telefon", "Téléphone")}
                       </p>
 
                       <div className="mt-2 flex flex-col">
@@ -358,7 +385,7 @@ export default function FooterSection({ locale = "en" }: { locale?: "en" | "de" 
 
                     <div>
                       <p className="text-[9px] font-bold uppercase tracking-[0.22em] text-[#C9A962]">
-                        {isGerman ? "E-Mail" : "Email"}
+                        {localize("Email", "E-Mail", "E-mail")}
                       </p>
 
                       <div className="mt-2 space-y-1">
@@ -393,7 +420,7 @@ rel="noopener noreferrer"
 
                     <div>
                       <p className="text-[9px] font-bold uppercase tracking-[0.22em] text-[#C9A962]">
-                        {isGerman ? "Webseite" : "Website"}
+                        {localize("Website", "Webseite", "Site web")}
                       </p>
 
                       <a
@@ -413,7 +440,7 @@ rel="noopener noreferrer"
                     rel="noreferrer"
                     className="mt-6 inline-flex w-full items-center justify-center gap-3 bg-[#C9A962] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.18em] text-[#102F23] transition-all duration-300 hover:-translate-y-1 hover:bg-[#E4C878]"
                   >
-                    {isGerman ? "Unser Team per WhatsApp" : "WhatsApp Our Team"}
+                    {localize("WhatsApp Our Team", "Unser Team per WhatsApp", "Contacter notre équipe sur WhatsApp")}
                     <span>→</span>
                   </a>
                 </div>
@@ -429,7 +456,7 @@ rel="noopener noreferrer"
     <div className="flex flex-col items-center justify-between gap-5 text-center md:flex-row md:text-left">
       <div className="flex flex-col items-center gap-3 md:items-start">
         <p className="text-xs text-[#F5F0E6]/38">
-          © 2026 Shivesh International. {isGerman ? "Alle Rechte vorbehalten." : "All Rights Reserved."}
+          © 2026 Shivesh International. {localize("All Rights Reserved.", "Alle Rechte vorbehalten.", "Tous droits réservés.")}
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#C9A962] md:justify-start">
@@ -437,14 +464,14 @@ rel="noopener noreferrer"
             href="/privacy-policy"
             className="transition-colors duration-300 hover:text-[#E4C878]"
           >
-            {isGerman ? "Datenschutzerklärung" : "Privacy Policy"}
+            {localize("Privacy Policy", "Datenschutzerklärung", "Politique de confidentialité")}
           </Link>
 
           <Link
             href="/cookie-policy"
             className="transition-colors duration-300 hover:text-[#E4C878]"
           >
-            {isGerman ? "Cookie-Richtlinie" : "Cookie Policy"}
+            {localize("Cookie Policy", "Cookie-Richtlinie", "Politique relative aux cookies")}
           </Link>
 
           <button
@@ -452,21 +479,21 @@ rel="noopener noreferrer"
             onClick={openCookieSettings}
             className="cursor-pointer transition-colors duration-300 hover:text-[#E4C878]"
           >
-            {isGerman ? "Cookie-Einstellungen" : "Cookie Settings"}
+            {localize("Cookie Settings", "Cookie-Einstellungen", "Paramètres des cookies")}
           </button>
         </div>
       </div>
 
       <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[9px] font-bold uppercase tracking-[0.18em] text-[#C9A962]">
-        <span>{isGerman ? "Für den Welthandel entwickelt" : "Designed for Global Trade"}</span>
+        <span>{localize("Designed for Global Trade", "Für den Welthandel entwickelt", "Conçu pour le commerce international")}</span>
 
         <span className="hidden h-1 w-1 rotate-45 bg-[#C9A962]/50 sm:block" />
 
-        <span>{isGerman ? "Ursprung Indien" : "India Origin"}</span>
+        <span>{localize("India Origin", "Ursprung Indien", "Origine Inde")}</span>
 
         <span className="hidden h-1 w-1 rotate-45 bg-[#C9A962]/50 sm:block" />
 
-        <span>{isGerman ? "Premium-Exportprodukte" : "Premium Export Products"}</span>
+        <span>{localize("Premium Export Products", "Premium-Exportprodukte", "Produits d’exportation premium")}</span>
       </div>
     </div>
   </div>

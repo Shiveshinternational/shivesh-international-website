@@ -10,6 +10,7 @@ import PremiumCursor from "@/app/components/PremiumCursor";
 import RevealOnScroll from "@/app/components/RevealOnScroll";
 import StaggerItem from "@/app/components/StaggerItem";
 import FooterSection from "@/sections/FooterSection";
+import { franceLanguageAlternates } from "@/app/lib/i18n";
 
 const pageUrl = "https://shiveshinternational.com/export/france";
 const heroImage =
@@ -93,12 +94,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: pageUrl,
-    languages: {
-      "en-DE": pageUrl,
-      "en-GB": "https://shiveshinternational.com/export/uk",
-      "en-US": "https://shiveshinternational.com/export/usa",
-      "x-default": "https://shiveshinternational.com/export",
-    },
+    languages: franceLanguageAlternates,
   },
   openGraph: {
     title: "Natural Products Export Supply for France",
@@ -106,7 +102,7 @@ export const metadata: Metadata = {
       "Bulk, wholesale, OEM and private-label supply of Indian henna, indigo, botanical hair colours, Ayurvedic herbs and spices for professional French buyers.",
     url: pageUrl,
     type: "website",
-    locale: "en_DE",
+    locale: "en_GB",
     siteName: "Shivesh International",
     images: [
       {
@@ -626,4 +622,3 @@ export default function FranceExportPage() {
     </main>
   );
 }
-

@@ -4,7 +4,9 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
 export default function FloatingContactButtons() {
-  const isGerman = usePathname().startsWith("/de/");
+  const pathname = usePathname();
+  const isGerman = pathname.startsWith("/de/");
+  const isFrench = pathname.startsWith("/fr/");
   const [showTooltip, setShowTooltip] = useState(false);
 
   useEffect(() => {
@@ -34,15 +36,15 @@ export default function FloatingContactButtons() {
       >
         <div className="relative w-[235px] rounded-[20px] border border-white/15 bg-[#102f23]/95 p-4 text-[#F5F0E6] shadow-[0_20px_55px_rgba(0,0,0,0.30)] backdrop-blur-xl">
           <p className="text-[9px] font-bold uppercase tracking-[0.24em] text-[#C9A962]">
-            {isGerman ? "Benötigen Sie Unterstützung?" : "Need Assistance?"}
+            {isGerman ? "Benötigen Sie Unterstützung?" : isFrench ? "Besoin d’aide ?" : "Need Assistance?"}
           </p>
 
           <p className="mt-2 font-[family-name:var(--font-playfair)] text-lg font-semibold leading-tight">
-            {isGerman ? "Sprechen Sie mit unserem Exportteam" : "Chat with our Export Team"}
+            {isGerman ? "Sprechen Sie mit unserem Exportteam" : isFrench ? "Échangez avec notre équipe export" : "Chat with our Export Team"}
           </p>
 
           <p className="mt-2 text-xs leading-5 text-[#F5F0E6]/58">
-            {isGerman ? "Produktanfragen, Angebote, Großbestellungen und Unterstützung für Eigenmarken." : "Product enquiries, quotations, bulk orders and private-label support."}
+            {isGerman ? "Produktanfragen, Angebote, Großbestellungen und Unterstützung für Eigenmarken." : isFrench ? "Demandes produits, devis, commandes en gros et accompagnement Private Label." : "Product enquiries, quotations, bulk orders and private-label support."}
           </p>
 
           <span className="absolute -bottom-2 right-7 h-4 w-4 rotate-45 border-b border-r border-white/15 bg-[#102f23]" />
@@ -54,7 +56,7 @@ export default function FloatingContactButtons() {
         href="https://wa.me/919999774950"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={isGerman ? "Shivesh International über WhatsApp kontaktieren" : "Chat with Shivesh International on WhatsApp"}
+        aria-label={isGerman ? "Shivesh International über WhatsApp kontaktieren" : isFrench ? "Contacter Shivesh International sur WhatsApp" : "Chat with Shivesh International on WhatsApp"}
         onMouseEnter={() => setShowTooltip(true)}
         onMouseLeave={() => setShowTooltip(false)}
         className="group relative flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] shadow-[0_18px_45px_rgba(37,211,102,0.36)] transition-all duration-500 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_22px_60px_rgba(37,211,102,0.48)] focus:outline-none focus-visible:ring-4 focus-visible:ring-[#25D366]/35 sm:h-[68px] sm:w-[68px]"
@@ -78,7 +80,7 @@ export default function FloatingContactButtons() {
 
         {/* HOVER LABEL */}
         <span className="pointer-events-none absolute right-[78px] hidden whitespace-nowrap rounded-full border border-[#25D366]/30 bg-[#102f23]/92 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.18em] text-white opacity-0 shadow-[0_12px_30px_rgba(0,0,0,0.22)] backdrop-blur-lg transition-all duration-300 group-hover:-translate-x-1 group-hover:opacity-100 xl:block">
-          {isGerman ? "WhatsApp-Kontakt" : "WhatsApp Us"}
+          {isGerman ? "WhatsApp-Kontakt" : isFrench ? "Nous écrire sur WhatsApp" : "WhatsApp Us"}
         </span>
 
         <style jsx>{`

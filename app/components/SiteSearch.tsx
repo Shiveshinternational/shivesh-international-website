@@ -109,8 +109,83 @@ const searchItems: SearchItem[] = [
   })),
 ];
 
+const frenchSearchLabels: Record<string, string> = {
+  "Natural Henna Powder": "Poudre de henné naturel",
+  "Natural Indigo Powder": "Poudre d’indigo naturel",
+  "Natural Henna Hair Colors": "Colorations capillaires naturelles au henné",
+  "Henna-Based Hair Colors": "Colorations capillaires à base de henné",
+  "Ayurvedic Indian Herbs": "Plantes ayurvédiques indiennes",
+  "Indian Spices": "Épices indiennes",
+  Infrastructure: "Infrastructure",
+  Certifications: "Certifications",
+  Export: "Export",
+  Contact: "Contact",
+  "Amla Powder": "Poudre d’amla",
+  "Ashwagandha Powder": "Poudre d’ashwagandha",
+  "Brahmi Powder": "Poudre de brahmi",
+  "Bhringraj Powder": "Poudre de bhringraj",
+  "Hibiscus Powder": "Poudre d’hibiscus",
+  "Moringa Powder": "Poudre de moringa",
+  "Neem Leaves Powder": "Poudre de feuilles de neem",
+  "Shikakai Powder": "Poudre de shikakai",
+  "Soapnut Powder": "Poudre de noix de lavage",
+  "Tulsi Leaf Powder": "Poudre de feuilles de tulsi",
+  "Turmeric Powder": "Poudre de curcuma",
+  "Wheatgrass Powder": "Poudre d’herbe de blé",
+  "Black Pepper Powder": "Poivre noir moulu",
+  "Cardamom Powder": "Cardamome moulue",
+  "Cinnamon Powder": "Cannelle moulue",
+  "Clove Powder": "Clou de girofle moulu",
+  "Coriander Seeds Powder": "Graines de coriandre moulues",
+  "Cumin Seeds Powder": "Graines de cumin moulues",
+  "Red Chilli Powder": "Piment rouge moulu",
+  "Whole Black Pepper": "Poivre noir entier",
+  "Whole Cardamom": "Cardamome entière",
+  "Whole Red Chilli": "Piment rouge entier",
+  "Cinnamon Stick": "Bâton de cannelle",
+};
+
+const frenchShadeNames: Record<string, string> = {
+  Black: "noir", "Dark Brown": "brun foncé", "Medium Brown": "brun moyen",
+  Brown: "brun", "Light Brown": "brun clair", "Golden Brown": "brun doré",
+  "Copper Brown": "brun cuivré", Chestnut: "châtain", Mahogany: "acajou",
+  Burgundy: "bordeaux", "Wine Red": "rouge vin", Red: "rouge", Auburn: "auburn",
+  Orange: "orange", Blonde: "blond", "Ginger Blonde": "blond vénitien",
+  "Strawberry Blonde": "blond fraise",
+};
+
+const frenchCategories: Record<string, string> = {
+  Product: "Produit",
+  "Product Category": "Catégorie de produits",
+  Company: "Entreprise",
+  "Natural Henna Hair Color": "Coloration capillaire naturelle au henné",
+  "Henna-Based Hair Color": "Coloration capillaire à base de henné",
+  "Ayurvedic Indian Herb": "Plante ayurvédique indienne",
+  "Indian Spice": "Épice indienne",
+};
+
+function localizeSearchItem(item: SearchItem, isFrench: boolean): SearchItem {
+  if (!isFrench) return item;
+
+  let label = frenchSearchLabels[item.label] ?? item.label;
+  const naturalShade = item.label.match(/^Natural (.+) Henna Hair Color$/);
+  const hennaShade = item.label.match(/^(.+) Henna$/);
+
+  if (naturalShade) {
+    label = `Coloration capillaire naturelle au henné ${frenchShadeNames[naturalShade[1]] ?? naturalShade[1]}`;
+  } else if (hennaShade) {
+    label = `Henné ${frenchShadeNames[hennaShade[1]] ?? hennaShade[1]}`;
+  } else if (item.label === "Natural Henna Hair Treatment") {
+    label = "Soin capillaire naturel au henné";
+  }
+
+  return { ...item, label, category: frenchCategories[item.category] ?? item.category };
+}
+
 export default function SiteSearch() {
-  const isGerman = usePathname().startsWith("/de/");
+  const pathname = usePathname();
+  const isGerman = pathname.startsWith("/de/");
+  const isFrench = pathname.startsWith("/fr/");
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
   const panelRef = useRef<HTMLDivElement>(null);
@@ -149,19 +224,22 @@ export default function SiteSearch() {
 
   const results = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
+    const localizedItems = searchItems.map((item) =>
+      localizeSearchItem(item, isFrench),
+    );
 
     if (!normalizedQuery) {
-      return searchItems.slice(0, 8);
+      return localizedItems.slice(0, 8);
     }
 
-    return searchItems
+    return localizedItems
       .filter((item) =>
         `${item.label} ${item.category}`
           .toLowerCase()
           .includes(normalizedQuery),
       )
       .slice(0, 12);
-  }, [query]);
+  }, [isFrench, query]);
 
   return (
     <div ref={panelRef} className="relative">
@@ -169,7 +247,7 @@ export default function SiteSearch() {
         type="button"
         onClick={() => setIsOpen((current) => !current)}
         className="flex h-10 w-10 items-center justify-center rounded-full border border-[#C9A962]/35 bg-[#173b2a]/65 text-[#F5F0E6] transition-all duration-300 hover:border-[#C9A962] hover:text-[#C9A962]"
-        aria-label={isGerman ? "Website durchsuchen" : "Search website"}
+        aria-label={isGerman ? "Website durchsuchen" : isFrench ? "Rechercher sur le site" : "Search website"}
         aria-expanded={isOpen}
       >
         <svg
@@ -211,7 +289,7 @@ export default function SiteSearch() {
                 ref={inputRef}
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
-                placeholder={isGerman ? "Produkte, Farbtöne, Kräuter oder Gewürze suchen …" : "Search products, shades, herbs or spices..."}
+                placeholder={isGerman ? "Produkte, Farbtöne, Kräuter oder Gewürze suchen …" : isFrench ? "Rechercher des produits, teintes, plantes ou épices…" : "Search products, shades, herbs or spices..."}
                 className="h-12 w-full bg-transparent text-sm text-[#F5F0E6] outline-none placeholder:text-[#F5F0E6]/35"
               />
             </div>
@@ -246,10 +324,10 @@ export default function SiteSearch() {
             ) : (
               <div className="px-4 py-10 text-center">
                 <p className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[#F5F0E6]">
-                  {isGerman ? "Kein passendes Produkt gefunden" : "No matching product found"}
+                  {isGerman ? "Kein passendes Produkt gefunden" : isFrench ? "Aucun produit correspondant" : "No matching product found"}
                 </p>
                 <p className="mt-2 text-sm leading-6 text-[#F5F0E6]/50">
-                  {isGerman ? "Versuchen Sie einen anderen Produkt-, Farbton-, Kräuter- oder Gewürznamen." : "Try another product, shade, herb or spice name."}
+                  {isGerman ? "Versuchen Sie einen anderen Produkt-, Farbton-, Kräuter- oder Gewürznamen." : isFrench ? "Essayez un autre nom de produit, de teinte, de plante ou d’épice." : "Try another product, shade, herb or spice name."}
                 </p>
               </div>
             )}
