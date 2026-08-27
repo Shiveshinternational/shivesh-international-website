@@ -235,6 +235,16 @@ const buyerResources = [
     external: false,
   },
   {
+    code: "NEW ZEALAND",
+    category: "Export Market Guide",
+    title: "Natural Products Export Supply to New Zealand",
+    description:
+      "Explore New Zealand-focused bulk, wholesale, OEM and private-label supply for henna, indigo, botanical hair colors, Ayurvedic herbs and Indian spices.",
+    href: "/export/new-zealand",
+    cta: "View New Zealand Export Guide",
+    external: false,
+  },
+  {
     code: "ITALY",
     category: "Export Market Guide",
     title: "Natural Products Export Supply to Italy",
