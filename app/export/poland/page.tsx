@@ -15,7 +15,7 @@ const canonicalUrl = "https://shiveshinternational.com/export/poland";
 const heroImage = "/images/export/poland/poland-export-hero.png";
 const keywordSubjects = ["natural products", "natural henna powder", "henna powder", "natural indigo powder", "indigo powder", "botanical hair colors", "henna hair colors", "henna-based hair colors", "Ayurvedic herbs", "Indian herbs", "herbal powders", "Indian spices", "botanical ingredients", "natural cosmetic ingredients", "private-label botanicals", "OEM natural products", "bulk botanical powders", "wholesale natural products"];
 const keywordIntents = ["exporter to Poland", "supplier for Polish importers", "manufacturer India for Poland", "wholesale supplier Poland", "bulk supplier Poland", "private-label supplier Poland", "OEM supplier Poland", "supplier for Poland distributors", "supplier for Polish brands", "India-to-Poland export"];
-const metadataKeywords = keywordSubjects.flatMap((subject) => keywordIntents.map((intent) => `${subject} ${intent}`));
+const metadataKeywords = keywordSubjects.flatMap((subject) => keywordIntents.map((intent) => `${subject} ${intent}`)).filter((_, index) => index % 2 === 0);
 
 export const metadata: Metadata = {
   title: "Henna, Indigo, Herbs & Spices Exporter to Poland",

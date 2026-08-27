@@ -141,7 +141,9 @@ export const metadata: Metadata = {
     "Indian herbs exporter Poland",
     "Natural hair color supplier Norway",
     "Henna powder exporter France",
-  ],
+  ].filter((_, index) => index % 2 === 0).concat([
+    "European natural product retail supplier", "botanical hair color salon supply Europe", "cosmetic brand botanical supplier Europe", "private labeling natural products Europe", "OEM botanical products Europe", "India to Europe export documentation",
+  ]),
   alternates: { canonical: "/export/europe" },
   openGraph: {
     title: "Henna, Indigo, Herbs & Spices Exporter to Europe",
@@ -175,7 +177,7 @@ const products = [
   {
     title: "Natural Henna Hair Colors",
     text: "A broad botanical shade collection for European distributors, salons and brands seeking plant-based, powdered and private-label natural hair-color options.",
-    href: "/products/henna-hair-colors",
+    href: "/products/natural-henna-hair-colors",
   },
   {
     title: "Henna-Based Hair Colors",

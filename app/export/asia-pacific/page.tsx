@@ -16,7 +16,9 @@ const canonicalUrl = "https://shiveshinternational.com/export/asia-pacific";
 const heroImage = "/images/export/asia-pacific/asia-pacific-natural-products-export-hub-hero.png";
 const keywordSubjects = ["henna", "natural henna", "indigo powder", "botanical hair colour", "private label henna", "Ayurvedic herbs", "Indian spices", "bulk natural products", "natural cosmetic ingredients", "herbal powder", "private label botanical products"];
 const keywordIntents = ["exporter to Asia-Pacific", "supplier Asia", "exporter Asia", "supplier Asia-Pacific", "manufacturer India for Asia-Pacific", "bulk supplier Asia-Pacific"];
-const metadataKeywords = keywordSubjects.flatMap((subject) => keywordIntents.map((intent) => `${subject} ${intent}`));
+const metadataKeywords = keywordSubjects.flatMap((subject) => keywordIntents.map((intent) => `${subject} ${intent}`)).concat([
+  "OEM natural products Asia-Pacific", "OEM botanical hair colors Asia-Pacific", "buyer-brand packaging Asia-Pacific", "natural products retail supplier Asia-Pacific",
+]);
 
 export const metadata: Metadata = {
   title: { absolute: "Asia-Pacific Henna & Natural Products Export | Shivesh International" },

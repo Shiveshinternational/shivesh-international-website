@@ -30,6 +30,13 @@ const metadataKeywords = [
   "herbal powder exporter Taiwan",
   "Indian spices exporter to Taiwan",
   "private-label botanical products Taiwan",
+  "natural products exporter Taiwan", "natural products supplier Taiwan", "natural products manufacturer India for Taiwan", "bulk natural products Taiwan", "wholesale natural products Taiwan", "B2B natural products supplier Taiwan", "OEM natural products Taiwan", "natural product importer Taiwan", "natural product distributor Taiwan",
+  "wholesale henna powder Taiwan", "private label henna powder Taiwan", "OEM henna products Taiwan", "henna importer Taiwan", "henna distributor Taiwan", "henna supplier for Taiwan cosmetic brands", "henna supplier for Taiwan salons",
+  "indigo powder manufacturer India for Taiwan", "bulk indigo powder Taiwan", "wholesale indigo powder Taiwan", "private label indigo Taiwan", "OEM indigo powder Taiwan", "indigo importer Taiwan", "indigo distributor Taiwan",
+  "natural henna hair colors Taiwan", "henna-based hair colors Taiwan", "natural hair color exporter Taiwan", "botanical hair color manufacturer India for Taiwan", "private label hair colors Taiwan", "OEM botanical hair colors Taiwan", "salon hair color supplier Taiwan", "beauty supplier botanical hair color Taiwan",
+  "bulk Ayurvedic herbs Taiwan", "wholesale Indian herbs Taiwan", "private label Ayurvedic herbs Taiwan", "wellness ingredient supplier Taiwan", "herbal wholesaler Taiwan",
+  "Indian spices supplier Taiwan", "bulk Indian spices Taiwan", "wholesale spices Taiwan", "private label Indian spices Taiwan", "spice importer Taiwan", "spice distributor Taiwan", "Indian food ingredient buyer Taiwan",
+  "Taiwan cosmetic company supplier India", "Taiwan hair-care brand supplier", "Taiwan salon supplier", "Taiwan natural product retailer supplier", "Taiwan e-commerce natural products supplier", "buyer-brand packaging Taiwan", "custom packaging natural products Taiwan", "export documentation support Taiwan", "India to Taiwan natural products export", "natural products shipping India Taiwan", "Shivesh International exporter Taiwan",
 ];
 
 export const metadata: Metadata = {

@@ -15,7 +15,7 @@ const canonicalUrl = "https://shiveshinternational.com/export/argentina";
 const heroImage = "/images/export/argentina/argentina-natural-products-export-hero.png";
 const keywordSubjects = ["natural products", "natural henna powder", "henna powder", "natural indigo powder", "indigo powder", "botanical hair colours", "henna hair colours", "henna-based hair colours", "Ayurvedic herbs", "Indian herbs", "herbal powders", "Indian spices", "botanical ingredients", "natural cosmetic ingredients", "private-label botanicals", "botanical hair colour", "bulk henna", "natural hair colour"];
 const keywordIntents = ["exporter to Argentina", "supplier Argentina", "manufacturer India for Argentina", "bulk supplier Argentina", "private label Argentina", "supplier for Argentine importers", "supplier for Argentina distributors", "supplier for Argentine brands"];
-const metadataKeywords = keywordSubjects.flatMap((subject) => keywordIntents.map((intent) => `${subject} ${intent}`));
+const metadataKeywords = keywordSubjects.flatMap((subject) => keywordIntents.map((intent) => `${subject} ${intent}`)).filter((_, index) => index % 2 === 0);
 
 export const metadata: Metadata = {
   title: { absolute: "Henna & Indigo Exporter to Argentina | Shivesh International" },

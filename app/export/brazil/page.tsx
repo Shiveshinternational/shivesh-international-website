@@ -15,7 +15,7 @@ const canonicalUrl = "https://shiveshinternational.com/export/brazil";
 const heroImage = "/images/export/brazil/brazil-export-hero.png";
 const keywordSubjects = ["natural products", "natural henna powder", "henna powder", "natural indigo powder", "indigo powder", "botanical hair colours", "henna hair colours", "henna-based hair colours", "Ayurvedic herbs", "Indian herbs", "herbal powders", "Indian spices", "botanical ingredients", "natural cosmetic ingredients", "private-label botanicals", "OEM natural products", "bulk botanical powders", "wholesale natural products"];
 const keywordIntents = ["exporter to Brazil", "supplier for Brazilian importers", "manufacturer India for Brazil", "wholesale supplier Brazil", "bulk supplier Brazil", "private-label supplier Brazil", "OEM supplier Brazil", "supplier for Brazil distributors", "supplier for Brazilian brands", "India-to-Brazil export"];
-const metadataKeywords = keywordSubjects.flatMap((subject) => keywordIntents.map((intent) => `${subject} ${intent}`));
+const metadataKeywords = keywordSubjects.flatMap((subject) => keywordIntents.map((intent) => `${subject} ${intent}`)).filter((_, index) => index % 2 === 0);
 
 export const metadata: Metadata = {
   title: "Henna, Indigo, Herbs & Spices Exporter to Brazil",

@@ -16,7 +16,9 @@ const canonicalUrl = "https://shiveshinternational.com/export/china";
 const heroImage = "/images/export/china/china-natural-products-export-hero.png";
 const keywordSubjects = ["natural henna powder", "henna powder", "bulk henna", "natural indigo powder", "indigo powder", "botanical hair colour", "private label henna", "natural hair colour", "cosmetic ingredients", "Ayurvedic herbs", "Indian herbs", "herbal powder", "Indian spices", "private label botanical products"];
 const keywordIntents = ["exporter to China", "supplier China", "manufacturer India for China", "bulk supplier China", "private label China", "supplier for China importers"];
-const metadataKeywords = keywordSubjects.flatMap((subject) => keywordIntents.map((intent) => `${subject} ${intent}`));
+const metadataKeywords = keywordSubjects.flatMap((subject) => keywordIntents.map((intent) => `${subject} ${intent}`)).concat([
+  "OEM natural products China", "OEM botanical hair colors China", "buyer-brand packaging China", "natural products retailer supplier China",
+]);
 
 export const metadata: Metadata = {
   title: { absolute: "Henna & Indigo Exporter to China | Shivesh International" },

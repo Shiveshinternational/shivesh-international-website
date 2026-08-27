@@ -15,7 +15,7 @@ const canonicalUrl = "https://shiveshinternational.com/export/norway";
 const heroImage = "/images/export/norway/norway-export-hero.png";
 const keywordSubjects = ["natural products", "natural henna powder", "henna powder", "natural indigo powder", "indigo powder", "botanical hair colors", "henna hair colors", "henna-based hair colors", "Ayurvedic herbs", "Indian herbs", "herbal powders", "Indian spices", "botanical ingredients", "natural cosmetic ingredients", "private-label botanicals", "OEM natural products", "bulk botanical powders", "wholesale natural products"];
 const keywordIntents = ["exporter to Norway", "supplier for Norwegian importers", "manufacturer India for Norway", "wholesale supplier Norway", "bulk supplier Norway", "private-label supplier Norway", "OEM supplier Norway", "supplier for Norway distributors", "supplier for Norwegian brands", "India-to-Norway export"];
-const metadataKeywords = keywordSubjects.flatMap((subject) => keywordIntents.map((intent) => `${subject} ${intent}`));
+const metadataKeywords = keywordSubjects.flatMap((subject) => keywordIntents.map((intent) => `${subject} ${intent}`)).filter((_, index) => index % 2 === 0);
 
 export const metadata: Metadata = {
   title: "Henna, Indigo, Herbs & Spices Exporter to Norway",

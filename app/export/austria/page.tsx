@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     "Reetha powder supplier Austria", "Neem powder Austria", "Bhringraj powder Austria", "Brahmi powder Austria", "Hibiscus powder supplier Austria", "Ashwagandha powder supplier Austria", "Turmeric powder exporter Austria", "Cumin supplier Austria", "Coriander supplier Austria", "Black pepper exporter Austria", "Plant-based hair color supplier Austria",
     "100 g henna pouch Austria", "200 g henna pouch Austria", "500 g herbal powder Austria", "1 kg botanical powder Austria", "20 kg bulk henna Austria", "25 kg bulk henna Austria", "Vacuum packed botanical powders Austria", "German language label coordination Austria", "Austrian buyer packaging support", "Barcode packaging support Austria", "200 kg MOQ natural products Austria",
     "India to Austria export coordination", "Natural products shipping India to Austria", "Commercial invoice support Austria", "Packing list support Austria", "Certificate of origin coordination Austria", "COA document support Austria", "Product specification documents Austria", "Sea freight coordination Austria", "Air freight coordination Austria", "Road freight coordination Austria", "Multimodal shipment India Austria", "Vienna air cargo natural products", "Linz logistics natural products", "Graz freight natural products", "Austria import documentation support", "EU buyer documentation natural products", "Indian exporter for Austrian buyers",
-  ],
+  ].filter((_, index) => index % 2 === 0),
   alternates: { canonical: canonicalUrl },
   openGraph: {
     title: "Henna, Indigo, Herbs & Spices Exporter to Austria",
