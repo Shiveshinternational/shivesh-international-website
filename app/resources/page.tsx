@@ -245,6 +245,16 @@ const buyerResources = [
     external: false,
   },
   {
+    code: "RUSSIA",
+    category: "Export Market Guide",
+    title: "Natural Products Export Supply to Russia",
+    description:
+      "Explore Russia-focused bulk, wholesale, OEM and private-label enquiry information for henna, indigo, botanical hair colors, Ayurvedic herbs and Indian spices, subject to case-specific trade review.",
+    href: "/export/russia",
+    cta: "View Russia Export Guide",
+    external: false,
+  },
+  {
     code: "ITALY",
     category: "Export Market Guide",
     title: "Natural Products Export Supply to Italy",
