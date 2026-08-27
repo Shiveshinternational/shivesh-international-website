@@ -26,8 +26,22 @@ const navigationLinks = [
   { label: "Contact", href: "/contact", sectionId: "contact" },
 ];
 
+const germanNavigationLinks = [
+  { label: "Startseite", href: "/", sectionId: "home" },
+  { label: "Über uns", href: "/about", sectionId: "about" },
+  { label: "Produkte", href: "/#products", sectionId: "products" },
+  { label: "Infrastruktur", href: "/infrastructure", sectionId: "infrastructure" },
+  { label: "Zertifizierungen", href: "/certifications", sectionId: "certifications" },
+  { label: "Export", href: "/export", sectionId: "export" },
+  { label: "Kontakt", href: "/contact", sectionId: "contact" },
+];
+
 export default function Navbar() {
   const pathname = usePathname();
+  const isGerman = pathname.startsWith("/de/");
+  const visibleNavigationLinks = isGerman
+    ? germanNavigationLinks
+    : navigationLinks;
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -53,7 +67,7 @@ export default function Navbar() {
       const scrollPosition = window.scrollY + 180;
       let currentSection = "home";
 
-      navigationLinks.forEach((link) => {
+      visibleNavigationLinks.forEach((link) => {
         const section = document.getElementById(link.sectionId);
 
         if (section && section.offsetTop <= scrollPosition) {
@@ -73,7 +87,7 @@ export default function Navbar() {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleScroll);
     };
-  }, [pathname]);
+  }, [pathname, visibleNavigationLinks]);
 
   useEffect(() => {
     const closeMenuTimer = window.setTimeout(() => {
@@ -123,7 +137,7 @@ export default function Navbar() {
           href="/"
           onClick={closeMenu}
           className="group flex shrink-0 items-center gap-4"
-          aria-label="Shivesh International home"
+          aria-label={isGerman ? "Shivesh International Startseite" : "Shivesh International home"}
         >
           <div className="flex h-12 w-12 items-center justify-center border border-[#C9A962]/45 bg-[#173b2a] font-[family-name:var(--font-playfair)] text-xl font-semibold text-[#f5f0e6] transition duration-300 group-hover:border-[#C9A962] group-hover:text-[#C9A962]">
             SI
@@ -141,8 +155,8 @@ export default function Navbar() {
         </Link>
 
         <div className="hidden items-center gap-5 xl:flex 2xl:gap-7">
-          {navigationLinks.map((link) => {
-            if (link.label === "Products") {
+          {visibleNavigationLinks.map((link) => {
+            if (!isGerman && link.label === "Products") {
               return <ProductMegaMenu key={link.href} />;
             }
 
@@ -180,7 +194,7 @@ export default function Navbar() {
             href="/contact"
             className="ml-1 inline-flex items-center justify-center border border-[#C9A962]/70 px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#C9A962] transition duration-300 hover:bg-[#C9A962] hover:text-[#102f23]"
           >
-            Get in Touch
+            {isGerman ? "Kontakt aufnehmen" : "Get in Touch"}
           </Link>
         </div>
 
@@ -192,7 +206,7 @@ export default function Navbar() {
             type="button"
             onClick={() => setIsMenuOpen((current) => !current)}
             className="flex h-10 w-10 items-center justify-center border border-[#C9A962]/40 text-[#f5f0e6] transition hover:border-[#C9A962] hover:text-[#C9A962]"
-            aria-label="Toggle navigation menu"
+            aria-label={isGerman ? "Navigationsmenü umschalten" : "Toggle navigation menu"}
             aria-expanded={isMenuOpen}
           >
             <span className="relative block h-5 w-6">
@@ -225,7 +239,7 @@ export default function Navbar() {
       >
         <div className="mx-auto max-w-[1500px] px-6 py-5">
           <div className="flex flex-col">
-            {navigationLinks.map((link) => {
+            {visibleNavigationLinks.map((link) => {
               const isActive = isLinkActive(link.href, link.sectionId);
 
               return (
@@ -253,7 +267,7 @@ export default function Navbar() {
               onClick={closeMenu}
               className="mt-5 inline-flex items-center justify-center bg-[#C9A962] px-6 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-[#102f23]"
             >
-              Get in Touch
+              {isGerman ? "Kontakt aufnehmen" : "Get in Touch"}
             </Link>
           </div>
         </div>

@@ -1,34 +1,25 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
+
+import { getEquivalentRoute } from "@/app/lib/i18n";
 
 const languages = [
-  { code: "EN", label: "English", flag: "🇬🇧" },
-  { code: "ES", label: "Spanish", flag: "🇪🇸" },
-  { code: "FR", label: "French", flag: "🇫🇷" },
-  { code: "DE", label: "German", flag: "🇩🇪" },
-  { code: "AR", label: "Arabic", flag: "🇦🇪" },
-  { code: "JA", label: "Japanese", flag: "🇯🇵" },
+  { code: "EN", label: "English", flag: "🇬🇧", locale: "en" as const },
+  { code: "ES", label: "Spanish", flag: "🇪🇸", locale: null },
+  { code: "FR", label: "French", flag: "🇫🇷", locale: null },
+  { code: "DE", label: "Deutsch", flag: "🇩🇪", locale: "de" as const },
+  { code: "AR", label: "Arabic", flag: "🇦🇪", locale: null },
+  { code: "JA", label: "Japanese", flag: "🇯🇵", locale: null },
 ];
 
 export default function LanguageSelector() {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedCode, setSelectedCode] = useState("EN");
   const wrapperRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-  const timer = window.setTimeout(() => {
-    const savedLanguage = window.localStorage.getItem(
-      "shivesh-preferred-language",
-    );
-
-    if (savedLanguage) {
-      setSelectedCode(savedLanguage);
-    }
-  }, 0);
-
-  return () => window.clearTimeout(timer);
-}, []);
+  const pathname = usePathname();
+  const router = useRouter();
+  const selectedCode = pathname.startsWith("/de/") ? "DE" : "EN";
 
   useEffect(() => {
     if (!isOpen) return;
@@ -61,10 +52,10 @@ export default function LanguageSelector() {
     languages.find((language) => language.code === selectedCode) ??
     languages[0];
 
-  const selectLanguage = (code: string) => {
-    setSelectedCode(code);
+  const selectLanguage = (locale: "en" | "de") => {
+    const destination = getEquivalentRoute(pathname, locale);
     setIsOpen(false);
-    window.localStorage.setItem("shivesh-preferred-language", code);
+    if (destination && destination !== pathname) router.push(destination);
   };
 
   return (
@@ -73,7 +64,7 @@ export default function LanguageSelector() {
         type="button"
         onClick={() => setIsOpen((current) => !current)}
         className="inline-flex h-10 items-center gap-2 rounded-full border border-[#C9A962]/35 bg-[#173b2a]/65 px-3 text-[10px] font-bold uppercase tracking-[0.12em] text-[#F5F0E6] transition-all duration-300 hover:border-[#C9A962] hover:text-[#C9A962]"
-        aria-label="Select display language"
+        aria-label={selectedCode === "DE" ? "Sprache auswählen" : "Select display language"}
         aria-expanded={isOpen}
       >
         <span className="text-sm">{selectedLanguage.flag}</span>
@@ -96,21 +87,29 @@ export default function LanguageSelector() {
       >
         <div className="overflow-hidden rounded-[20px] border border-[#C9A962]/25 bg-[#0b241a]/98 p-2 shadow-[0_24px_70px_rgba(0,0,0,0.40)] backdrop-blur-2xl">
           <p className="px-3 pb-2 pt-2 text-[9px] font-bold uppercase tracking-[0.22em] text-[#C9A962]">
-            Display Language
+            {selectedCode === "DE" ? "Sprache" : "Display Language"}
           </p>
 
           {languages.map((language) => {
             const isSelected = language.code === selectedCode;
+            const destination = language.locale
+              ? getEquivalentRoute(pathname, language.locale)
+              : undefined;
+            const isAvailable = Boolean(destination);
 
             return (
               <button
                 key={language.code}
                 type="button"
-                onClick={() => selectLanguage(language.code)}
+                onClick={() => language.locale && selectLanguage(language.locale)}
+                disabled={!isAvailable}
+                aria-disabled={!isAvailable}
                 className={`flex w-full items-center justify-between rounded-[14px] px-3 py-2.5 text-left transition-all duration-300 ${
                   isSelected
                     ? "bg-[#173b2a] text-[#E4C878]"
-                    : "text-[#F5F0E6]/70 hover:bg-white/[0.04] hover:text-[#F5F0E6]"
+                    : isAvailable
+                      ? "text-[#F5F0E6]/70 hover:bg-white/[0.04] hover:text-[#F5F0E6]"
+                      : "cursor-not-allowed text-[#F5F0E6]/25"
                 }`}
               >
                 <span className="flex items-center gap-3">
@@ -127,7 +126,9 @@ export default function LanguageSelector() {
 
           <div className="mx-2 mt-2 border-t border-[#C9A962]/12 px-2 py-3">
             <p className="text-[10px] leading-5 text-[#F5F0E6]/38">
-              Visual selector only. Website content remains in English.
+              {selectedCode === "DE"
+                ? "Englisch und Deutsch sind für diese Seite verfügbar."
+                : "German is currently available for the Germany page."}
             </p>
           </div>
         </div>

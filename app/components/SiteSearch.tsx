@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 
 type SearchItem = {
   label: string;
@@ -109,6 +110,7 @@ const searchItems: SearchItem[] = [
 ];
 
 export default function SiteSearch() {
+  const isGerman = usePathname().startsWith("/de/");
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
   const panelRef = useRef<HTMLDivElement>(null);
@@ -167,7 +169,7 @@ export default function SiteSearch() {
         type="button"
         onClick={() => setIsOpen((current) => !current)}
         className="flex h-10 w-10 items-center justify-center rounded-full border border-[#C9A962]/35 bg-[#173b2a]/65 text-[#F5F0E6] transition-all duration-300 hover:border-[#C9A962] hover:text-[#C9A962]"
-        aria-label="Search website"
+        aria-label={isGerman ? "Website durchsuchen" : "Search website"}
         aria-expanded={isOpen}
       >
         <svg
@@ -209,7 +211,7 @@ export default function SiteSearch() {
                 ref={inputRef}
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
-                placeholder="Search products, shades, herbs or spices..."
+                placeholder={isGerman ? "Produkte, Farbtöne, Kräuter oder Gewürze suchen …" : "Search products, shades, herbs or spices..."}
                 className="h-12 w-full bg-transparent text-sm text-[#F5F0E6] outline-none placeholder:text-[#F5F0E6]/35"
               />
             </div>
@@ -244,10 +246,10 @@ export default function SiteSearch() {
             ) : (
               <div className="px-4 py-10 text-center">
                 <p className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[#F5F0E6]">
-                  No matching product found
+                  {isGerman ? "Kein passendes Produkt gefunden" : "No matching product found"}
                 </p>
                 <p className="mt-2 text-sm leading-6 text-[#F5F0E6]/50">
-                  Try another product, shade, herb or spice name.
+                  {isGerman ? "Versuchen Sie einen anderen Produkt-, Farbton-, Kräuter- oder Gewürznamen." : "Try another product, shade, herb or spice name."}
                 </p>
               </div>
             )}

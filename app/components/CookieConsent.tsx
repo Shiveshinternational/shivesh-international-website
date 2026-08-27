@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 type ConsentChoice = "granted" | "denied";
 
@@ -12,6 +13,7 @@ declare global {
 }
 
 export default function CookieConsent() {
+  const isGerman = usePathname().startsWith("/de/");
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -19,9 +21,9 @@ export default function CookieConsent() {
     "shivesh-cookie-consent",
   ) as ConsentChoice | null;
 
-  if (!savedChoice) {
-    setVisible(true);
-  }
+  const showBannerTimer = !savedChoice
+    ? window.setTimeout(() => setVisible(true), 0)
+    : undefined;
 
   const openCookieSettings = () => {
     setVisible(true);
@@ -33,6 +35,7 @@ export default function CookieConsent() {
   );
 
   return () => {
+    if (showBannerTimer) window.clearTimeout(showBannerTimer);
     window.removeEventListener(
       "shivesh-open-cookie-settings",
       openCookieSettings,
@@ -62,25 +65,25 @@ export default function CookieConsent() {
       <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-4 md:flex-row md:items-center">
         <div className="max-w-4xl">
           <p className="text-base font-semibold text-[#e3c56d]">
-            Your Privacy Matters
+            {isGerman ? "Ihre Privatsphäre ist uns wichtig" : "Your Privacy Matters"}
           </p>
 
           <p className="mt-1 text-sm leading-6 text-white/90">
-            We use optional analytics cookies to understand website traffic and
-            improve the experience of international buyers. You can accept or
-            reject analytics cookies. Read our{" "}
+            {isGerman
+              ? "Wir verwenden optionale Analyse-Cookies, um den Website-Verkehr zu verstehen und die Erfahrung internationaler Einkäufer zu verbessern. Sie können Analyse-Cookies annehmen oder ablehnen. Lesen Sie unsere "
+              : "We use optional analytics cookies to understand website traffic and improve the experience of international buyers. You can accept or reject analytics cookies. Read our "}
             <Link
               href="/privacy-policy"
               className="font-semibold text-[#e3c56d] underline underline-offset-4"
             >
-              Privacy Policy
+              {isGerman ? "Datenschutzerklärung" : "Privacy Policy"}
             </Link>{" "}
-            and{" "}
+            {isGerman ? " und " : " and "}
             <Link
               href="/cookie-policy"
               className="font-semibold text-[#e3c56d] underline underline-offset-4"
             >
-              Cookie Policy
+              {isGerman ? "Cookie-Richtlinie" : "Cookie Policy"}
             </Link>
             .
           </p>
@@ -92,7 +95,7 @@ export default function CookieConsent() {
             onClick={() => saveConsent("denied")}
             className="rounded-md border border-white/50 px-5 py-2 text-sm font-semibold text-white transition hover:bg-white/10"
           >
-            Reject
+            {isGerman ? "Ablehnen" : "Reject"}
           </button>
 
           <button
@@ -100,7 +103,7 @@ export default function CookieConsent() {
             onClick={() => saveConsent("granted")}
             className="rounded-md bg-[#c8a84e] px-5 py-2 text-sm font-semibold text-[#082f24] transition hover:bg-[#dfc36f]"
           >
-            Accept
+            {isGerman ? "Annehmen" : "Accept"}
           </button>
         </div>
       </div>

@@ -1,21 +1,8 @@
 import type { Metadata } from "next";
-import Script from "next/script";
-import { Geist, Geist_Mono } from "next/font/google";
 
-import BrandProtection from "@/app/components/BrandProtection";
-import CookieConsent from "@/app/components/CookieConsent";
+import SiteRoot from "@/app/components/SiteRoot";
 
-import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import "../globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://shiveshinternational.com"),
@@ -204,70 +191,14 @@ const structuredData = {
   ],
 };
 
-export default function RootLayout({
+export default function EnglishRootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="flex min-h-full flex-col">
-        <Script id="google-consent-default" strategy="beforeInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-
-            var savedConsent = null;
-
-            try {
-              savedConsent = localStorage.getItem(
-                'shivesh-cookie-consent'
-              );
-            } catch (error) {
-              savedConsent = null;
-            }
-
-            var consentValue =
-              savedConsent === 'granted' ? 'granted' : 'denied';
-
-            gtag('consent', 'default', {
-              analytics_storage: consentValue,
-              ad_storage: 'denied',
-              ad_user_data: 'denied',
-              ad_personalization: 'denied',
-              wait_for_update: 500
-            });
-          `}
-        </Script>
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
-          }}
-        />
-
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-2B6CDF6BRB"
-          strategy="afterInteractive"
-        />
-
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-2B6CDF6BRB');
-          `}
-        </Script>
-
-        {children}
-        <BrandProtection />
-        <CookieConsent />
-      </body>
-    </html>
+    <SiteRoot lang="en" structuredData={structuredData}>
+      {children}
+    </SiteRoot>
   );
 }

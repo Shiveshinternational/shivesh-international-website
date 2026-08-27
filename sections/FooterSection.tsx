@@ -43,6 +43,26 @@ const productLinks = [
   },
 ];
 
+const germanQuickLinks = [
+  { label: "Startseite", href: "/#home" },
+  { label: "Über uns", href: "/about" },
+  { label: "Produkte", href: "/#products" },
+  { label: "Infrastruktur", href: "/infrastructure" },
+  { label: "Zertifizierungen", href: "/certifications" },
+  { label: "Export", href: "/export" },
+  { label: "Informationen für Einkäufer", href: "/resources" },
+  { label: "Kontakt", href: "/contact" },
+];
+
+const germanProductLinks = [
+  { label: "Natürliches Henna-Pulver", href: "/products/natural-henna-powder" },
+  { label: "Natürliches Indigo-Pulver", href: "/products/natural-indigo-powder" },
+  { label: "Natürliche Henna-Haarfarben", href: "/products/natural-henna-hair-colors" },
+  { label: "Henna-basierte Haarfarben", href: "/products/henna-based-hair-colors" },
+  { label: "Ayurvedische indische Kräuter", href: "/products/ayurvedic-indian-herbs" },
+  { label: "Indische Gewürze", href: "/products/indian-spices" },
+];
+
 function FooterLink({
   href,
   children,
@@ -61,7 +81,10 @@ function FooterLink({
   );
 }
 
-export default function FooterSection() {
+export default function FooterSection({ locale = "en" }: { locale?: "en" | "de" }) {
+  const isGerman = locale === "de";
+  const visibleQuickLinks = isGerman ? germanQuickLinks : quickLinks;
+  const visibleProductLinks = isGerman ? germanProductLinks : productLinks;
   const openCookieSettings = () => {
   localStorage.removeItem("shivesh-cookie-consent");
 
@@ -112,21 +135,21 @@ export default function FooterSection() {
                     <span className="h-px w-12 bg-[#C9A962]" />
 
                     <p className="text-[10px] font-bold uppercase tracking-[0.34em] text-[#C9A962]">
-                      Global Export Partnership
+                      {isGerman ? "Internationale Exportpartnerschaft" : "Global Export Partnership"}
                     </p>
                   </div>
 
                   <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-[clamp(2rem,3.5vw,3.2rem)] font-medium leading-[1.05] tracking-[-0.025em] text-[#F7F1E7]">
-                    Ready to Build Your
+                    {isGerman ? "Bereit für Ihr" : "Ready to Build Your"}
                     <span className="ml-2 text-[#E4C878]">
-                      Natural Product Line?
+                      {isGerman ? "Naturproduktsortiment?" : "Natural Product Line?"}
                     </span>
                   </h2>
 
                   <p className="mt-4 max-w-3xl text-[14px] font-light leading-7 text-[#F5F0E6]/58 sm:text-[15px]">
-                    Connect with our export team for product selection,
-                    private-label development, packaging coordination and
-                    international supply support.
+                    {isGerman
+                      ? "Sprechen Sie mit unserem Exportteam über Produktauswahl, Eigenmarkenentwicklung, Verpackungskoordination und internationale Belieferung."
+                      : "Connect with our export team for product selection, private-label development, packaging coordination and international supply support."}
                   </p>
                 </div>
 
@@ -135,7 +158,7 @@ export default function FooterSection() {
                     href="/contact"
                     className="group inline-flex items-center justify-center gap-4 border border-[#C9A962] bg-[#C9A962] px-7 py-4 text-[10px] font-bold uppercase tracking-[0.22em] text-[#102F23] transition-all duration-500 hover:-translate-y-1 hover:bg-[#E4C878]"
                   >
-                    Contact Export Team
+                    {isGerman ? "Exportteam kontaktieren" : "Contact Export Team"}
                     <span className="transition-transform duration-300 group-hover:translate-x-1">
                       →
                     </span>
@@ -183,13 +206,13 @@ export default function FooterSection() {
                 </div>
 
                 <p className="mt-6 max-w-md text-[15px] font-light leading-8 text-[#F5F0E6]/58">
-                  Premium exporter of Natural Henna Powder, Natural Indigo
-                  Powder, Natural Henna Hair Colors, Henna-Based Hair Colors,
-                  Ayurvedic Indian Herbs and Indian Spices.
+                  {isGerman
+                    ? "Premium-Exporteur von natürlichem Henna-Pulver, natürlichem Indigo-Pulver, pflanzlichen Haarfarben, ayurvedischen indischen Kräutern und indischen Gewürzen."
+                    : "Premium exporter of Natural Henna Powder, Natural Indigo Powder, Natural Henna Hair Colors, Henna-Based Hair Colors, Ayurvedic Indian Herbs and Indian Spices."}
                 </p>
 
                 <div className="mt-6 flex flex-wrap gap-2.5">
-                  {["Nature", "Quality", "Trust"].map((item) => (
+                  {(isGerman ? ["Natur", "Qualität", "Vertrauen"] : ["Nature", "Quality", "Trust"]).map((item) => (
                     <span
                       key={item}
                       className="border border-[#C9A962]/22 bg-white/[0.025] px-4 py-2 text-[9px] font-bold uppercase tracking-[0.2em] text-[#E4C878]"
@@ -208,7 +231,7 @@ export default function FooterSection() {
                     className="group inline-flex items-center gap-2 border border-[#C9A962]/22 px-4 py-3 text-[9px] font-bold uppercase tracking-[0.16em] text-[#F5F0E6]/60 transition-all duration-300 hover:-translate-y-1 hover:border-[#C9A962] hover:text-[#E4C878]"
                   >
                     <span className="text-[#C9A962]">@</span>
-                    Email
+                    {isGerman ? "E-Mail" : "Email"}
                   </a>
 
                   <a
@@ -228,7 +251,7 @@ export default function FooterSection() {
                     className="group inline-flex items-center gap-2 border border-[#C9A962]/22 px-4 py-3 text-[9px] font-bold uppercase tracking-[0.16em] text-[#F5F0E6]/60 transition-all duration-300 hover:-translate-y-1 hover:border-[#C9A962] hover:text-[#E4C878]"
                   >
                     <span className="text-[#C9A962]">↗</span>
-                    Website
+                    {isGerman ? "Webseite" : "Website"}
                   </a>
                 </div>
               </div>
@@ -244,11 +267,11 @@ export default function FooterSection() {
                 </p>
 
                 <h3 className="mt-3 font-[family-name:var(--font-playfair)] text-2xl font-medium text-[#F7F1E7]">
-                  Quick Links
+                  {isGerman ? "Direktlinks" : "Quick Links"}
                 </h3>
 
                 <div className="mt-6 flex flex-col gap-3.5">
-                  {quickLinks.map((link) => (
+                  {visibleQuickLinks.map((link) => (
                     <FooterLink key={link.href} href={link.href}>
                       {link.label}
                     </FooterLink>
@@ -263,15 +286,15 @@ export default function FooterSection() {
             <StaggerItem delay={260}>
               <div>
                 <p className="text-[9px] font-bold uppercase tracking-[0.32em] text-[#C9A962]">
-                  Product Portfolio
+                  {isGerman ? "Produktsortiment" : "Product Portfolio"}
                 </p>
 
                 <h3 className="mt-3 font-[family-name:var(--font-playfair)] text-2xl font-medium text-[#F7F1E7]">
-                  Our Products
+                  {isGerman ? "Unsere Produkte" : "Our Products"}
                 </h3>
 
                 <div className="mt-6 flex flex-col gap-3.5">
-                  {productLinks.map((link) => (
+                  {visibleProductLinks.map((link) => (
                     <FooterLink key={link.href} href={link.href}>
                       {link.label}
                     </FooterLink>
@@ -286,24 +309,24 @@ export default function FooterSection() {
             <StaggerItem delay={340}>
               <div>
                 <p className="text-[9px] font-bold uppercase tracking-[0.32em] text-[#C9A962]">
-                  Contact Details
+                  {isGerman ? "Kontaktdaten" : "Contact Details"}
                 </p>
 
                 <h3 className="mt-3 font-[family-name:var(--font-playfair)] text-2xl font-medium text-[#F7F1E7]">
-                  Connect With Us
+                  {isGerman ? "Kontaktieren Sie uns" : "Connect With Us"}
                 </h3>
 
                 <div className="mt-6 border border-[#C9A962]/18 bg-[#0D2F22]/62 p-5 shadow-[0_18px_45px_rgba(0,0,0,0.16)]">
                   <div className="space-y-5 text-sm leading-7 text-[#F5F0E6]/58">
                     <div>
                       <p className="text-[9px] font-bold uppercase tracking-[0.22em] text-[#C9A962]">
-                        Registered Office
+                        {isGerman ? "Eingetragener Firmensitz" : "Registered Office"}
                       </p>
 
                       <p className="mt-2">
                         361-C, BG-6, Paschim Vihar,
                         <br />
-                        New Delhi – 110063, India
+                        {isGerman ? "Neu-Delhi – 110063, Indien" : "New Delhi – 110063, India"}
                       </p>
                     </div>
 
@@ -311,7 +334,7 @@ export default function FooterSection() {
 
                     <div>
                       <p className="text-[9px] font-bold uppercase tracking-[0.22em] text-[#C9A962]">
-                        Phone
+                        {isGerman ? "Telefon" : "Phone"}
                       </p>
 
                       <div className="mt-2 flex flex-col">
@@ -335,7 +358,7 @@ export default function FooterSection() {
 
                     <div>
                       <p className="text-[9px] font-bold uppercase tracking-[0.22em] text-[#C9A962]">
-                        Email
+                        {isGerman ? "E-Mail" : "Email"}
                       </p>
 
                       <div className="mt-2 space-y-1">
@@ -370,7 +393,7 @@ rel="noopener noreferrer"
 
                     <div>
                       <p className="text-[9px] font-bold uppercase tracking-[0.22em] text-[#C9A962]">
-                        Website
+                        {isGerman ? "Webseite" : "Website"}
                       </p>
 
                       <a
@@ -390,7 +413,7 @@ rel="noopener noreferrer"
                     rel="noreferrer"
                     className="mt-6 inline-flex w-full items-center justify-center gap-3 bg-[#C9A962] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.18em] text-[#102F23] transition-all duration-300 hover:-translate-y-1 hover:bg-[#E4C878]"
                   >
-                    WhatsApp Our Team
+                    {isGerman ? "Unser Team per WhatsApp" : "WhatsApp Our Team"}
                     <span>→</span>
                   </a>
                 </div>
@@ -406,7 +429,7 @@ rel="noopener noreferrer"
     <div className="flex flex-col items-center justify-between gap-5 text-center md:flex-row md:text-left">
       <div className="flex flex-col items-center gap-3 md:items-start">
         <p className="text-xs text-[#F5F0E6]/38">
-          © 2026 Shivesh International. All Rights Reserved.
+          © 2026 Shivesh International. {isGerman ? "Alle Rechte vorbehalten." : "All Rights Reserved."}
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#C9A962] md:justify-start">
@@ -414,14 +437,14 @@ rel="noopener noreferrer"
             href="/privacy-policy"
             className="transition-colors duration-300 hover:text-[#E4C878]"
           >
-            Privacy Policy
+            {isGerman ? "Datenschutzerklärung" : "Privacy Policy"}
           </Link>
 
           <Link
             href="/cookie-policy"
             className="transition-colors duration-300 hover:text-[#E4C878]"
           >
-            Cookie Policy
+            {isGerman ? "Cookie-Richtlinie" : "Cookie Policy"}
           </Link>
 
           <button
@@ -429,21 +452,21 @@ rel="noopener noreferrer"
             onClick={openCookieSettings}
             className="cursor-pointer transition-colors duration-300 hover:text-[#E4C878]"
           >
-            Cookie Settings
+            {isGerman ? "Cookie-Einstellungen" : "Cookie Settings"}
           </button>
         </div>
       </div>
 
       <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[9px] font-bold uppercase tracking-[0.18em] text-[#C9A962]">
-        <span>Designed for Global Trade</span>
+        <span>{isGerman ? "Für den Welthandel entwickelt" : "Designed for Global Trade"}</span>
 
         <span className="hidden h-1 w-1 rotate-45 bg-[#C9A962]/50 sm:block" />
 
-        <span>India Origin</span>
+        <span>{isGerman ? "Ursprung Indien" : "India Origin"}</span>
 
         <span className="hidden h-1 w-1 rotate-45 bg-[#C9A962]/50 sm:block" />
 
-        <span>Premium Export Products</span>
+        <span>{isGerman ? "Premium-Exportprodukte" : "Premium Export Products"}</span>
       </div>
     </div>
   </div>

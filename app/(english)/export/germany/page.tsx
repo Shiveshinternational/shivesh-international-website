@@ -10,6 +10,7 @@ import PremiumCursor from "@/app/components/PremiumCursor";
 import RevealOnScroll from "@/app/components/RevealOnScroll";
 import StaggerItem from "@/app/components/StaggerItem";
 import FooterSection from "@/sections/FooterSection";
+import { germanyLanguageAlternates } from "@/app/lib/i18n";
 
 const pageUrl = "https://shiveshinternational.com/export/germany";
 const heroImage =
@@ -99,12 +100,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: pageUrl,
-    languages: {
-      "en-DE": pageUrl,
-      "en-GB": "https://shiveshinternational.com/export/uk",
-      "en-US": "https://shiveshinternational.com/export/usa",
-      "x-default": "https://shiveshinternational.com/export",
-    },
+    languages: germanyLanguageAlternates,
   },
   openGraph: {
     title: "Natural Products Exporter to Germany",
@@ -112,7 +108,7 @@ export const metadata: Metadata = {
       "Bulk, wholesale, OEM and private-label supply of Indian henna, indigo, botanical hair colours, Ayurvedic herbs and spices for professional German buyers.",
     url: pageUrl,
     type: "website",
-    locale: "en_DE",
+    locale: "en_GB",
     siteName: "Shivesh International",
     images: [
       {
