@@ -1,6 +1,9 @@
 import type { MetadataRoute } from "next";
 
-import { germanyLanguageAlternates } from "@/app/lib/i18n";
+import {
+  austriaLanguageAlternates,
+  germanyLanguageAlternates,
+} from "@/app/lib/i18n";
 
 const baseUrl = "https://shiveshinternational.com";
 
@@ -108,6 +111,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date("2026-08-20"),
       changeFrequency: "monthly",
       priority: 0.9,
+      alternates: { languages: austriaLanguageAlternates },
+    },
+    {
+      url: `${baseUrl}/de/export/oesterreich`,
+      lastModified: new Date("2026-08-27"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+      alternates: { languages: austriaLanguageAlternates },
     },
     {
       url: `${baseUrl}/export/finland`,
