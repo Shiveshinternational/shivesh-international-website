@@ -375,6 +375,16 @@ const buyerResources = [
     external: false,
   },
   {
+    code: "BELGIUM",
+    category: "Export Market Guide",
+    title: "Natural Products Export Supply to Belgium",
+    description:
+      "Explore Belgium-focused bulk, wholesale, OEM and private-label supply of henna, indigo, botanical hair colors, Ayurvedic herbs and Indian spices.",
+    href: "/export/belgium",
+    cta: "View Belgium Export Guide",
+    external: false,
+  },
+  {
     code: "FRANCE",
     category: "Export Market Guide",
     title: "Botanical and Natural Product Supply for France",

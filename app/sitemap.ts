@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 
 import {
   austriaLanguageAlternates,
+  belgiumLanguageAlternates,
   franceLanguageAlternates,
   germanyLanguageAlternates,
 } from "@/app/lib/i18n";
@@ -132,6 +133,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date("2026-08-21"),
       changeFrequency: "monthly",
       priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/export/belgium`,
+      lastModified: new Date("2026-08-28"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+      alternates: { languages: belgiumLanguageAlternates },
     },
     {
       url: `${baseUrl}/export/poland`,

@@ -1,6 +1,10 @@
 export const siteUrl = "https://shiveshinternational.com";
 
 export const equivalentRoutes = {
+  belgium: {
+    en: "/export/belgium",
+    "x-default": "/export/belgium",
+  },
   austria: {
     en: "/export/austria",
     de: "/de/export/oesterreich",
@@ -38,6 +42,11 @@ export const franceLanguageAlternates = {
   en: `${siteUrl}${equivalentRoutes.france.en}`,
   fr: `${siteUrl}${equivalentRoutes.france.fr}`,
   "x-default": `${siteUrl}${equivalentRoutes.france["x-default"]}`,
+} as const;
+
+export const belgiumLanguageAlternates = {
+  en: `${siteUrl}${equivalentRoutes.belgium.en}`,
+  "x-default": `${siteUrl}${equivalentRoutes.belgium["x-default"]}`,
 } as const;
 
 export function getEquivalentRoute(pathname: string, locale: AvailableLocale) {
