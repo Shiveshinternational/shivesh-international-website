@@ -109,8 +109,8 @@ export default function BelgiumExportPage() {
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData).replace(/</g, "\\u003c") }} />
     <Navbar />
     <section className="relative isolate overflow-hidden bg-[#071B14]">
-      <Image src="/images/export/belgium/belgium-export-hero-natural-henna-hair-colors.png" alt="Belgian salon and hair-colour professionals discussing natural henna hair colours supplied from India" fill priority sizes="100vw" className="object-cover object-[68%_center] opacity-75 sm:object-[64%_center] lg:object-center" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#061711]/95 via-[#102F23]/75 to-[#071B14]/25" /><GoldenParticles />
+      <Image src="/images/export/belgium/belgium-export-hero-natural-henna-hair-colors.png" alt="Belgian salon and hair-colour professionals discussing natural henna hair colours supplied from India" fill priority sizes="100vw" className="object-cover object-[68%_center] sm:object-[64%_center] lg:object-center" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#061711]/80 via-[#102F23]/38 to-transparent" /><GoldenParticles />
       <div className="relative z-10 flex min-h-[760px] items-center px-6 pb-24 pt-28 sm:px-8 lg:px-12"><div className="w-full max-w-[820px]">
         <p className="text-[10px] font-bold uppercase tracking-[0.34em] text-[#E4C878] sm:text-xs">India → Belgium B2B supply</p>
         <h1 className="mt-6 font-[family-name:var(--font-playfair)] text-[clamp(2.5rem,5.2vw,5.2rem)] font-medium leading-[1.03] tracking-[-0.04em] text-[#F5F0E6]">Natural Products Exporter<span className="mt-2 block text-[#E4C878]">from India to Belgium</span></h1>
