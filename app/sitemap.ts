@@ -142,6 +142,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: { languages: belgiumLanguageAlternates },
     },
     {
+      url: `${baseUrl}/fr/export/belgique`,
+      lastModified: new Date("2026-08-28"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+      alternates: { languages: belgiumLanguageAlternates },
+    },
+    {
       url: `${baseUrl}/export/poland`,
       lastModified: new Date("2026-08-21"),
       changeFrequency: "monthly",
