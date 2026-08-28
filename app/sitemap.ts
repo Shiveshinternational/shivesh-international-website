@@ -222,6 +222,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: { languages: germanyLanguageAlternates },
     },
     {
+      url: `${baseUrl}/es/export/alemania`,
+      lastModified: new Date("2026-08-28"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+      alternates: { languages: germanyLanguageAlternates },
+    },
+    {
       url: `${baseUrl}/export/france`,
       changeFrequency: "monthly",
       priority: 0.9,

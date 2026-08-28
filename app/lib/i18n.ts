@@ -16,6 +16,7 @@ export const equivalentRoutes = {
     en: "/export/germany",
     de: "/de/export/deutschland",
     fr: "/fr/export/allemagne",
+    es: "/es/export/alemania",
     "x-default": "/export/germany",
   },
   france: {
@@ -37,6 +38,7 @@ export const germanyLanguageAlternates = {
   en: `${siteUrl}${equivalentRoutes.germany.en}`,
   de: `${siteUrl}${equivalentRoutes.germany.de}`,
   fr: `${siteUrl}${equivalentRoutes.germany.fr}`,
+  es: `${siteUrl}${equivalentRoutes.germany.es}`,
   "x-default": `${siteUrl}${equivalentRoutes.germany["x-default"]}`,
 } as const;
 
