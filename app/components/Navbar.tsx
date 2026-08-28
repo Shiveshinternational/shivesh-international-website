@@ -45,16 +45,22 @@ const frenchNavigationLinks = [
   { label: "Export", href: "/export", sectionId: "export" },
   { label: "Contact", href: "/contact", sectionId: "contact" },
 ];
+const spanishNavigationLinks = [
+  { label: "Inicio", href: "/", sectionId: "home" }, { label: "Quiénes somos", href: "/about", sectionId: "about" },
+  { label: "Productos", href: "/#products", sectionId: "products" }, { label: "Infraestructura", href: "/infrastructure", sectionId: "infrastructure" },
+  { label: "Certificaciones", href: "/certifications", sectionId: "certifications" }, { label: "Exportación", href: "/export", sectionId: "export" },
+  { label: "Contacto", href: "/contact", sectionId: "contact" },
+];
 
 export default function Navbar() {
   const pathname = usePathname();
   const isGerman = pathname.startsWith("/de/");
   const isFrench = pathname.startsWith("/fr/");
+  const isSpanish = pathname.startsWith("/es/");
   const visibleNavigationLinks = isGerman
     ? germanNavigationLinks
     : isFrench
-      ? frenchNavigationLinks
-      : navigationLinks;
+      ? frenchNavigationLinks : isSpanish ? spanishNavigationLinks : navigationLinks;
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -169,7 +175,7 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-5 xl:flex 2xl:gap-7">
           {visibleNavigationLinks.map((link) => {
-            if (!isGerman && !isFrench && link.label === "Products") {
+            if (!isGerman && !isFrench && !isSpanish && link.label === "Products") {
               return <ProductMegaMenu key={link.href} />;
             }
 
@@ -207,7 +213,7 @@ export default function Navbar() {
             href="/contact"
             className="ml-1 inline-flex items-center justify-center border border-[#C9A962]/70 px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#C9A962] transition duration-300 hover:bg-[#C9A962] hover:text-[#102f23]"
           >
-            {isGerman ? "Kontakt aufnehmen" : isFrench ? "Nous contacter" : "Get in Touch"}
+            {isGerman ? "Kontakt aufnehmen" : isFrench ? "Nous contacter" : isSpanish ? "Contactar" : "Get in Touch"}
           </Link>
         </div>
 
@@ -219,7 +225,7 @@ export default function Navbar() {
             type="button"
             onClick={() => setIsMenuOpen((current) => !current)}
             className="flex h-10 w-10 items-center justify-center border border-[#C9A962]/40 text-[#f5f0e6] transition hover:border-[#C9A962] hover:text-[#C9A962]"
-            aria-label={isGerman ? "Navigationsmenü umschalten" : isFrench ? "Ouvrir ou fermer le menu de navigation" : "Toggle navigation menu"}
+            aria-label={isGerman ? "Navigationsmenü umschalten" : isFrench ? "Ouvrir ou fermer le menu de navigation" : isSpanish ? "Abrir o cerrar la navegación" : "Toggle navigation menu"}
             aria-expanded={isMenuOpen}
           >
             <span className="relative block h-5 w-6">
@@ -280,7 +286,7 @@ export default function Navbar() {
               onClick={closeMenu}
               className="mt-5 inline-flex items-center justify-center bg-[#C9A962] px-6 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-[#102f23]"
             >
-              {isGerman ? "Kontakt aufnehmen" : isFrench ? "Nous contacter" : "Get in Touch"}
+              {isGerman ? "Kontakt aufnehmen" : isFrench ? "Nous contacter" : isSpanish ? "Contactar" : "Get in Touch"}
             </Link>
           </div>
         </div>

@@ -11,6 +11,7 @@ import PremiumCursor from "@/app/components/PremiumCursor";
 import RevealOnScroll from "@/app/components/RevealOnScroll";
 import StaggerItem from "@/app/components/StaggerItem";
 import FooterSection from "@/sections/FooterSection";
+import { spainLanguageAlternates } from "@/app/lib/i18n";
 
 const canonicalUrl = "https://shiveshinternational.com/export/spain";
 const heroImage = "/images/export/spain/spain-export-hero.png";
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
   ].filter((_, index) => index % 2 === 0).concat([
     "natural products retailer supplier Spain", "natural hair color salon supply Spain", "botanical hair color supplier for Spanish cosmetic brands", "natural product commercial buyer Spain", "Indian herbs wholesale supplier Spain", "Indian spices B2B supplier Spain", "buyer-brand botanical packaging Spain", "Shivesh International exporter Spain",
   ]),
-  alternates: { canonical: "/export/spain" },
+  alternates: { canonical: canonicalUrl, languages: spainLanguageAlternates },
   openGraph: {
     title: "Henna, Indigo, Herbs & Spices Exporter to Spain",
     description: "Bulk, wholesale and private-label supply of Indian henna, indigo, botanical hair colors, Ayurvedic herbs and spices for professional buyers in Spain.",

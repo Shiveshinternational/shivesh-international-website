@@ -7,7 +7,7 @@ import { getEquivalentRoute } from "@/app/lib/i18n";
 
 const languages = [
   { code: "EN", label: "English", flag: "🇬🇧", locale: "en" as const },
-  { code: "ES", label: "Spanish", flag: "🇪🇸", locale: null },
+  { code: "ES", label: "Spanish", flag: "🇪🇸", locale: "es" as const },
   { code: "FR", label: "Français", flag: "🇫🇷", locale: "fr" as const },
   { code: "DE", label: "Deutsch", flag: "🇩🇪", locale: "de" as const },
   { code: "AR", label: "Arabic", flag: "🇦🇪", locale: null },
@@ -22,6 +22,7 @@ const frenchLanguageLabels: Record<string, string> = {
   AR: "Arabe",
   JA: "Japonais",
 };
+const spanishLanguageLabels: Record<string, string> = { EN: "Inglés", ES: "Español", FR: "Francés", DE: "Alemán", AR: "Árabe", JA: "Japonés" };
 
 export default function LanguageSelector() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +33,7 @@ export default function LanguageSelector() {
     ? "DE"
     : pathname.startsWith("/fr/")
       ? "FR"
-      : "EN";
+      : pathname.startsWith("/es/") ? "ES" : "EN";
 
   useEffect(() => {
     if (!isOpen) return;
@@ -65,7 +66,7 @@ export default function LanguageSelector() {
     languages.find((language) => language.code === selectedCode) ??
     languages[0];
 
-  const selectLanguage = (locale: "en" | "de" | "fr") => {
+  const selectLanguage = (locale: "en" | "de" | "fr" | "es") => {
     const destination = getEquivalentRoute(pathname, locale);
     setIsOpen(false);
     if (destination && destination !== pathname) router.push(destination);
@@ -77,7 +78,7 @@ export default function LanguageSelector() {
         type="button"
         onClick={() => setIsOpen((current) => !current)}
         className="inline-flex h-10 items-center gap-2 rounded-full border border-[#C9A962]/35 bg-[#173b2a]/65 px-3 text-[10px] font-bold uppercase tracking-[0.12em] text-[#F5F0E6] transition-all duration-300 hover:border-[#C9A962] hover:text-[#C9A962]"
-        aria-label={selectedCode === "DE" ? "Sprache auswählen" : selectedCode === "FR" ? "Choisir la langue" : "Select display language"}
+        aria-label={selectedCode === "DE" ? "Sprache auswählen" : selectedCode === "FR" ? "Choisir la langue" : selectedCode === "ES" ? "Seleccionar idioma" : "Select display language"}
         aria-expanded={isOpen}
       >
         <span className="text-sm">{selectedLanguage.flag}</span>
@@ -100,7 +101,7 @@ export default function LanguageSelector() {
       >
         <div className="overflow-hidden rounded-[20px] border border-[#C9A962]/25 bg-[#0b241a]/98 p-2 shadow-[0_24px_70px_rgba(0,0,0,0.40)] backdrop-blur-2xl">
           <p className="px-3 pb-2 pt-2 text-[9px] font-bold uppercase tracking-[0.22em] text-[#C9A962]">
-            {selectedCode === "DE" ? "Sprache" : selectedCode === "FR" ? "Langue" : "Display Language"}
+            {selectedCode === "DE" ? "Sprache" : selectedCode === "FR" ? "Langue" : selectedCode === "ES" ? "Idioma" : "Display Language"}
           </p>
 
           {languages.map((language) => {
@@ -130,6 +131,7 @@ export default function LanguageSelector() {
                   <span className="text-sm">
                     {selectedCode === "FR"
                       ? frenchLanguageLabels[language.code]
+                      : selectedCode === "ES" ? spanishLanguageLabels[language.code]
                       : language.label}
                   </span>
                 </span>
@@ -147,6 +149,10 @@ export default function LanguageSelector() {
                 ? "Englisch und Deutsch sind für diese Seite verfügbar."
                 : selectedCode === "FR"
                   ? "Le français et l’anglais sont disponibles pour cette page."
+                  : selectedCode === "ES"
+                    ? "El español y el inglés están disponibles para esta página."
+                  : pathname === "/export/spain"
+                    ? "Spanish is available for the Spain page."
                   : pathname === "/export/france"
                     ? "French is available for the France page."
                     : pathname === "/export/belgium"

@@ -5,6 +5,7 @@ import {
   belgiumLanguageAlternates,
   franceLanguageAlternates,
   germanyLanguageAlternates,
+  spainLanguageAlternates,
 } from "@/app/lib/i18n";
 
 const baseUrl = "https://shiveshinternational.com";
@@ -107,6 +108,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date("2026-08-20"),
       changeFrequency: "monthly",
       priority: 0.9,
+      alternates: { languages: spainLanguageAlternates },
+    },
+    {
+      url: `${baseUrl}/es/export/espana`,
+      lastModified: new Date("2026-08-28"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+      alternates: { languages: spainLanguageAlternates },
     },
     {
       url: `${baseUrl}/export/austria`,

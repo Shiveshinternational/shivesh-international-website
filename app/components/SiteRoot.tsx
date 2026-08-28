@@ -46,7 +46,7 @@ const defaultStructuredData = {
   ],
 };
 
-export default function SiteRoot({ children, lang, structuredData = defaultStructuredData }: Readonly<{ children: React.ReactNode; lang: "en" | "de" | "fr"; structuredData?: object }>) {
+export default function SiteRoot({ children, lang, structuredData = defaultStructuredData }: Readonly<{ children: React.ReactNode; lang: "en" | "de" | "fr" | "es"; structuredData?: object }>) {
   return (
     <html lang={lang} dir="ltr" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">

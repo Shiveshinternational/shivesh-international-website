@@ -1,6 +1,7 @@
 export const siteUrl = "https://shiveshinternational.com";
 
 export const equivalentRoutes = {
+  spain: { en: "/export/spain", es: "/es/export/espana", "x-default": "/export/spain" },
   belgium: {
     en: "/export/belgium",
     fr: "/fr/export/belgique",
@@ -24,7 +25,13 @@ export const equivalentRoutes = {
   },
 } as const;
 
-export type AvailableLocale = "en" | "de" | "fr";
+export type AvailableLocale = "en" | "de" | "fr" | "es";
+
+export const spainLanguageAlternates = {
+  en: `${siteUrl}${equivalentRoutes.spain.en}`,
+  es: `${siteUrl}${equivalentRoutes.spain.es}`,
+  "x-default": `${siteUrl}${equivalentRoutes.spain["x-default"]}`,
+} as const;
 
 export const germanyLanguageAlternates = {
   en: `${siteUrl}${equivalentRoutes.germany.en}`,
@@ -59,5 +66,6 @@ export function getEquivalentRoute(pathname: string, locale: AvailableLocale) {
   if (!cluster) return undefined;
   if (locale === "en") return cluster.en;
   if (locale === "de") return "de" in cluster ? cluster.de : undefined;
-  return "fr" in cluster ? cluster.fr : undefined;
+  if (locale === "fr") return "fr" in cluster ? cluster.fr : undefined;
+  return "es" in cluster ? cluster.es : undefined;
 }

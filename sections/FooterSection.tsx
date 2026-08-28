@@ -82,6 +82,8 @@ const frenchProductLinks = [
   { label: "Plantes ayurvédiques indiennes", href: "/products/ayurvedic-indian-herbs" },
   { label: "Épices indiennes", href: "/products/indian-spices" },
 ];
+const spanishQuickLinks = [{label:"Inicio",href:"/#home"},{label:"Quiénes somos",href:"/about"},{label:"Productos",href:"/#products"},{label:"Infraestructura",href:"/infrastructure"},{label:"Certificaciones",href:"/certifications"},{label:"Exportación",href:"/export"},{label:"Recursos para compradores",href:"/resources"},{label:"Contacto",href:"/contact"}];
+const spanishProductLinks = [{label:"Henna natural",href:"/products/natural-henna-powder"},{label:"Índigo natural",href:"/products/natural-indigo-powder"},{label:"Coloraciones naturales con henna",href:"/products/natural-henna-hair-colors"},{label:"Coloraciones a base de henna",href:"/products/henna-based-hair-colors"},{label:"Plantas ayurvédicas",href:"/products/ayurvedic-indian-herbs"},{label:"Especias de la India",href:"/products/indian-spices"}];
 
 function FooterLink({
   href,
@@ -101,13 +103,15 @@ function FooterLink({
   );
 }
 
-export default function FooterSection({ locale = "en" }: { locale?: "en" | "de" | "fr" }) {
+export default function FooterSection({ locale = "en" }: { locale?: "en" | "de" | "fr" | "es" }) {
   const isGerman = locale === "de";
   const isFrench = locale === "fr";
+  const isSpanish = locale === "es";
+  const es:Record<string,string>={"Global Export Partnership":"Colaboración internacional de exportación","Ready to Build Your":"¿Listo para crear su","Natural Product Line?":"gama de productos naturales?","Connect with our export team for product selection, private-label development, packaging coordination and international supply support.":"Contacte con nuestro equipo exportador para seleccionar productos, desarrollar su marca propia y coordinar envases y suministro internacional.","Contact Export Team":"Contactar con exportación","Premium exporter of Natural Henna Powder, Natural Indigo Powder, Natural Henna Hair Colors, Henna-Based Hair Colors, Ayurvedic Indian Herbs and Indian Spices.":"Exportador de henna natural, índigo, coloraciones capilares botánicas, plantas ayurvédicas y especias de la India.","Quick Links":"Enlaces rápidos","Product Portfolio":"Cartera de productos","Our Products":"Nuestros productos","Contact Details":"Datos de contacto","Connect With Us":"Contacte con nosotros","Registered Office":"Domicilio social","New Delhi – 110063, India":"Nueva Delhi – 110063, India","Phone":"Teléfono","Website":"Sitio web","Nature":"Naturaleza","Quality":"Calidad","Trust":"Confianza","WhatsApp Our Team":"Contactar por WhatsApp","All Rights Reserved.":"Todos los derechos reservados.","Privacy Policy":"Política de privacidad","Cookie Policy":"Política de cookies","Cookie Settings":"Configurar cookies","Designed for Global Trade":"Diseñado para el comercio internacional","India Origin":"Origen India","Premium Export Products":"Productos de exportación premium"};
   const localize = (english: string, german: string, french: string) =>
-    isGerman ? german : isFrench ? french : english;
-  const visibleQuickLinks = isGerman ? germanQuickLinks : isFrench ? frenchQuickLinks : quickLinks;
-  const visibleProductLinks = isGerman ? germanProductLinks : isFrench ? frenchProductLinks : productLinks;
+    isGerman ? german : isFrench ? french : isSpanish ? (es[english] ?? english) : english;
+  const visibleQuickLinks = isGerman ? germanQuickLinks : isFrench ? frenchQuickLinks : isSpanish ? spanishQuickLinks : quickLinks;
+  const visibleProductLinks = isGerman ? germanProductLinks : isFrench ? frenchProductLinks : isSpanish ? spanishProductLinks : productLinks;
   const openCookieSettings = () => {
   localStorage.removeItem("shivesh-cookie-consent");
 
@@ -239,7 +243,7 @@ export default function FooterSection({ locale = "en" }: { locale?: "en" | "de" 
                 </p>
 
                 <div className="mt-6 flex flex-wrap gap-2.5">
-                  {(isGerman ? ["Natur", "Qualität", "Vertrauen"] : isFrench ? ["Nature", "Qualité", "Confiance"] : ["Nature", "Quality", "Trust"]).map((item) => (
+                  {(isGerman ? ["Natur", "Qualität", "Vertrauen"] : isFrench ? ["Nature", "Qualité", "Confiance"] : isSpanish ? ["Naturaleza","Calidad","Confianza"] : ["Nature", "Quality", "Trust"]).map((item) => (
                     <span
                       key={item}
                       className="border border-[#C9A962]/22 bg-white/[0.025] px-4 py-2 text-[9px] font-bold uppercase tracking-[0.2em] text-[#E4C878]"

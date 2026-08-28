@@ -186,6 +186,7 @@ export default function SiteSearch() {
   const pathname = usePathname();
   const isGerman = pathname.startsWith("/de/");
   const isFrench = pathname.startsWith("/fr/");
+  const isSpanish = pathname.startsWith("/es/");
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
   const panelRef = useRef<HTMLDivElement>(null);
@@ -247,7 +248,7 @@ export default function SiteSearch() {
         type="button"
         onClick={() => setIsOpen((current) => !current)}
         className="flex h-10 w-10 items-center justify-center rounded-full border border-[#C9A962]/35 bg-[#173b2a]/65 text-[#F5F0E6] transition-all duration-300 hover:border-[#C9A962] hover:text-[#C9A962]"
-        aria-label={isGerman ? "Website durchsuchen" : isFrench ? "Rechercher sur le site" : "Search website"}
+        aria-label={isGerman ? "Website durchsuchen" : isFrench ? "Rechercher sur le site" : isSpanish ? "Buscar en el sitio" : "Search website"}
         aria-expanded={isOpen}
       >
         <svg
@@ -289,7 +290,7 @@ export default function SiteSearch() {
                 ref={inputRef}
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
-                placeholder={isGerman ? "Produkte, Farbtöne, Kräuter oder Gewürze suchen …" : isFrench ? "Rechercher des produits, teintes, plantes ou épices…" : "Search products, shades, herbs or spices..."}
+                placeholder={isGerman ? "Produkte, Farbtöne, Kräuter oder Gewürze suchen …" : isFrench ? "Rechercher des produits, teintes, plantes ou épices…" : isSpanish ? "Buscar productos, tonos, plantas o especias…" : "Search products, shades, herbs or spices..."}
                 className="h-12 w-full bg-transparent text-sm text-[#F5F0E6] outline-none placeholder:text-[#F5F0E6]/35"
               />
             </div>
@@ -324,10 +325,10 @@ export default function SiteSearch() {
             ) : (
               <div className="px-4 py-10 text-center">
                 <p className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[#F5F0E6]">
-                  {isGerman ? "Kein passendes Produkt gefunden" : isFrench ? "Aucun produit correspondant" : "No matching product found"}
+                  {isGerman ? "Kein passendes Produkt gefunden" : isFrench ? "Aucun produit correspondant" : isSpanish ? "No se encontró ningún producto" : "No matching product found"}
                 </p>
                 <p className="mt-2 text-sm leading-6 text-[#F5F0E6]/50">
-                  {isGerman ? "Versuchen Sie einen anderen Produkt-, Farbton-, Kräuter- oder Gewürznamen." : isFrench ? "Essayez un autre nom de produit, de teinte, de plante ou d’épice." : "Try another product, shade, herb or spice name."}
+                  {isGerman ? "Versuchen Sie einen anderen Produkt-, Farbton-, Kräuter- oder Gewürznamen." : isFrench ? "Essayez un autre nom de produit, de teinte, de plante ou d’épice." : isSpanish ? "Pruebe otro nombre de producto, tono, planta o especia." : "Try another product, shade, herb or spice name."}
                 </p>
               </div>
             )}
