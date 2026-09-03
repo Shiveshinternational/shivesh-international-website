@@ -148,6 +148,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: { languages: austriaLanguageAlternates },
     },
     {
+      url: `${baseUrl}/it/export/austria`,
+      lastModified: new Date("2026-09-03"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+      alternates: { languages: austriaLanguageAlternates },
+    },
+    {
       url: `${baseUrl}/export/finland`,
       lastModified: new Date("2026-08-20"),
       changeFrequency: "monthly",
