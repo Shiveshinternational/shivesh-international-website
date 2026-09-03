@@ -6,6 +6,7 @@ import {
   franceLanguageAlternates,
   germanyLanguageAlternates,
   italyLanguageAlternates,
+  netherlandsLanguageAlternates,
   spainLanguageAlternates,
 } from "@/app/lib/i18n";
 
@@ -165,6 +166,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date("2026-08-21"),
       changeFrequency: "monthly",
       priority: 0.9,
+      alternates: { languages: netherlandsLanguageAlternates },
+    },
+    {
+      url: `${baseUrl}/it/export/paesi-bassi`,
+      lastModified: new Date("2026-09-03"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+      alternates: { languages: netherlandsLanguageAlternates },
     },
     {
       url: `${baseUrl}/export/belgium`,

@@ -10,6 +10,7 @@ import Navbar from "@/app/components/Navbar";
 import PremiumCursor from "@/app/components/PremiumCursor";
 import RevealOnScroll from "@/app/components/RevealOnScroll";
 import StaggerItem from "@/app/components/StaggerItem";
+import { netherlandsLanguageAlternates } from "@/app/lib/i18n";
 import FooterSection from "@/sections/FooterSection";
 
 const canonicalUrl = "https://shiveshinternational.com/export/netherlands";
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
   title: "Henna, Indigo, Herbs & Spices Exporter to Netherlands",
   description: "India-based supplier of henna, indigo, botanical hair colors, Ayurvedic herbs and spices for Dutch importers, wholesalers and private-label brands.",
   keywords: metadataKeywords,
-  alternates: { canonical: canonicalUrl },
+  alternates: { canonical: canonicalUrl, languages: netherlandsLanguageAlternates },
   openGraph: { title: "Henna, Indigo, Herbs & Spices Exporter to Netherlands", description: "Bulk, wholesale, OEM and private-label Indian natural-product supply for professional buyers in the Netherlands.", url: canonicalUrl, type: "website", locale: "en_NL", siteName: "Shivesh International", images: [{ url: heroImage, alt: "Dutch buyers coordinating Indian botanical and natural-product supply" }] },
   twitter: { card: "summary_large_image", title: "Natural Products Exporter to the Netherlands", description: "India-based henna, indigo, herbs, spices and private-label supply for Dutch professional buyers.", images: [heroImage] },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
