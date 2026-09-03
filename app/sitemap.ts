@@ -127,6 +127,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: { languages: spainLanguageAlternates },
     },
     {
+      url: `${baseUrl}/it/export/spagna`,
+      lastModified: new Date("2026-09-03"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+      alternates: { languages: spainLanguageAlternates },
+    },
+    {
       url: `${baseUrl}/export/austria`,
       lastModified: new Date("2026-08-20"),
       changeFrequency: "monthly",

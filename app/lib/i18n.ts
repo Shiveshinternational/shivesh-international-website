@@ -2,7 +2,7 @@ export const siteUrl = "https://shiveshinternational.com";
 
 export const equivalentRoutes = {
   italy: { en: "/export/italy", it: "/it/export/italia", "x-default": "/export/italy" },
-  spain: { en: "/export/spain", es: "/es/export/espana", "x-default": "/export/spain" },
+  spain: { en: "/export/spain", es: "/es/export/espana", it: "/it/export/spagna", "x-default": "/export/spain" },
   belgium: {
     en: "/export/belgium",
     fr: "/fr/export/belgique",
@@ -43,6 +43,7 @@ export const italyLanguageAlternates = {
 export const spainLanguageAlternates = {
   en: `${siteUrl}${equivalentRoutes.spain.en}`,
   es: `${siteUrl}${equivalentRoutes.spain.es}`,
+  it: `${siteUrl}${equivalentRoutes.spain.it}`,
   "x-default": `${siteUrl}${equivalentRoutes.spain["x-default"]}`,
 } as const;
 
