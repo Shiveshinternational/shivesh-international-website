@@ -242,6 +242,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: { languages: franceLanguageAlternates },
     },
     {
+      url: `${baseUrl}/es/export/francia`,
+      lastModified: new Date("2026-09-03"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+      alternates: { languages: franceLanguageAlternates },
+    },
+    {
       url: `${baseUrl}/export/australia`,
       changeFrequency: "monthly",
       priority: 0.9,

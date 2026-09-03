@@ -22,6 +22,7 @@ export const equivalentRoutes = {
   france: {
     en: "/export/france",
     fr: "/fr/export/france",
+    es: "/es/export/francia",
     "x-default": "/export/france",
   },
 } as const;
@@ -51,6 +52,7 @@ export const austriaLanguageAlternates = {
 export const franceLanguageAlternates = {
   en: `${siteUrl}${equivalentRoutes.france.en}`,
   fr: `${siteUrl}${equivalentRoutes.france.fr}`,
+  es: `${siteUrl}${equivalentRoutes.france.es}`,
   "x-default": `${siteUrl}${equivalentRoutes.france["x-default"]}`,
 } as const;
 
