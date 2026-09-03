@@ -84,6 +84,8 @@ const frenchProductLinks = [
 ];
 const spanishQuickLinks = [{label:"Inicio",href:"/#home"},{label:"Quiénes somos",href:"/about"},{label:"Productos",href:"/#products"},{label:"Infraestructura",href:"/infrastructure"},{label:"Certificaciones",href:"/certifications"},{label:"Exportación",href:"/export"},{label:"Recursos para compradores",href:"/resources"},{label:"Contacto",href:"/contact"}];
 const spanishProductLinks = [{label:"Henna natural",href:"/products/natural-henna-powder"},{label:"Índigo natural",href:"/products/natural-indigo-powder"},{label:"Coloraciones naturales con henna",href:"/products/natural-henna-hair-colors"},{label:"Coloraciones a base de henna",href:"/products/henna-based-hair-colors"},{label:"Plantas ayurvédicas",href:"/products/ayurvedic-indian-herbs"},{label:"Especias de la India",href:"/products/indian-spices"}];
+const italianQuickLinks = [{label:"Home",href:"/#home"},{label:"Chi siamo",href:"/about"},{label:"Prodotti",href:"/#products"},{label:"Infrastruttura",href:"/infrastructure"},{label:"Certificazioni",href:"/certifications"},{label:"Export",href:"/export"},{label:"Risorse per acquirenti",href:"/resources"},{label:"Contatti",href:"/contact"}];
+const italianProductLinks = [{label:"Henné naturale",href:"/products/natural-henna-powder"},{label:"Indigo naturale",href:"/products/natural-indigo-powder"},{label:"Colorazioni naturali all’henné",href:"/products/natural-henna-hair-colors"},{label:"Colorazioni a base di henné",href:"/products/henna-based-hair-colors"},{label:"Erbe ayurvediche",href:"/products/ayurvedic-indian-herbs"},{label:"Spezie indiane",href:"/products/indian-spices"}];
 
 function FooterLink({
   href,
@@ -103,15 +105,17 @@ function FooterLink({
   );
 }
 
-export default function FooterSection({ locale = "en" }: { locale?: "en" | "de" | "fr" | "es" }) {
+export default function FooterSection({ locale = "en" }: { locale?: "en" | "de" | "fr" | "es" | "it" }) {
   const isGerman = locale === "de";
   const isFrench = locale === "fr";
   const isSpanish = locale === "es";
+  const isItalian = locale === "it";
   const es:Record<string,string>={"Global Export Partnership":"Colaboración internacional de exportación","Ready to Build Your":"¿Listo para crear su","Natural Product Line?":"gama de productos naturales?","Connect with our export team for product selection, private-label development, packaging coordination and international supply support.":"Contacte con nuestro equipo exportador para seleccionar productos, desarrollar su marca propia y coordinar envases y suministro internacional.","Contact Export Team":"Contactar con exportación","Premium exporter of Natural Henna Powder, Natural Indigo Powder, Natural Henna Hair Colors, Henna-Based Hair Colors, Ayurvedic Indian Herbs and Indian Spices.":"Exportador de henna natural, índigo, coloraciones capilares botánicas, plantas ayurvédicas y especias de la India.","Quick Links":"Enlaces rápidos","Product Portfolio":"Cartera de productos","Our Products":"Nuestros productos","Contact Details":"Datos de contacto","Connect With Us":"Contacte con nosotros","Registered Office":"Domicilio social","New Delhi – 110063, India":"Nueva Delhi – 110063, India","Phone":"Teléfono","Website":"Sitio web","Nature":"Naturaleza","Quality":"Calidad","Trust":"Confianza","WhatsApp Our Team":"Contactar por WhatsApp","All Rights Reserved.":"Todos los derechos reservados.","Privacy Policy":"Política de privacidad","Cookie Policy":"Política de cookies","Cookie Settings":"Configurar cookies","Designed for Global Trade":"Diseñado para el comercio internacional","India Origin":"Origen India","Premium Export Products":"Productos de exportación premium"};
+  const it:Record<string,string>={"Global Export Partnership":"Partnership internazionale per l’export","Ready to Build Your":"Pronti a sviluppare la vostra","Natural Product Line?":"linea di prodotti naturali?","Connect with our export team for product selection, private-label development, packaging coordination and international supply support.":"Contattate il team export per selezione dei prodotti, sviluppo Private Label, confezionamento e supporto alla fornitura internazionale.","Contact Export Team":"Contatta il team export","Premium exporter of Natural Henna Powder, Natural Indigo Powder, Natural Henna Hair Colors, Henna-Based Hair Colors, Ayurvedic Indian Herbs and Indian Spices.":"Esportatore di henné naturale, indigo, colorazioni botaniche, erbe ayurvediche e spezie indiane.","Quick Links":"Link rapidi","Product Portfolio":"Portafoglio prodotti","Our Products":"I nostri prodotti","Contact Details":"Recapiti","Connect With Us":"Contattaci","Registered Office":"Sede legale","New Delhi – 110063, India":"Nuova Delhi – 110063, India","Phone":"Telefono","Website":"Sito web","Nature":"Natura","Quality":"Qualità","Trust":"Fiducia","WhatsApp Our Team":"Contatta il team su WhatsApp","All Rights Reserved.":"Tutti i diritti riservati.","Privacy Policy":"Informativa sulla privacy","Cookie Policy":"Informativa sui cookie","Cookie Settings":"Impostazioni cookie","Designed for Global Trade":"Pensato per il commercio globale","India Origin":"Origine India","Premium Export Products":"Prodotti premium per l’export"};
   const localize = (english: string, german: string, french: string) =>
-    isGerman ? german : isFrench ? french : isSpanish ? (es[english] ?? english) : english;
-  const visibleQuickLinks = isGerman ? germanQuickLinks : isFrench ? frenchQuickLinks : isSpanish ? spanishQuickLinks : quickLinks;
-  const visibleProductLinks = isGerman ? germanProductLinks : isFrench ? frenchProductLinks : isSpanish ? spanishProductLinks : productLinks;
+    isGerman ? german : isFrench ? french : isSpanish ? (es[english] ?? english) : isItalian ? (it[english] ?? english) : english;
+  const visibleQuickLinks = isGerman ? germanQuickLinks : isFrench ? frenchQuickLinks : isSpanish ? spanishQuickLinks : isItalian ? italianQuickLinks : quickLinks;
+  const visibleProductLinks = isGerman ? germanProductLinks : isFrench ? frenchProductLinks : isSpanish ? spanishProductLinks : isItalian ? italianProductLinks : productLinks;
   const openCookieSettings = () => {
   localStorage.removeItem("shivesh-cookie-consent");
 
@@ -243,7 +247,7 @@ export default function FooterSection({ locale = "en" }: { locale?: "en" | "de" 
                 </p>
 
                 <div className="mt-6 flex flex-wrap gap-2.5">
-                  {(isGerman ? ["Natur", "Qualität", "Vertrauen"] : isFrench ? ["Nature", "Qualité", "Confiance"] : isSpanish ? ["Naturaleza","Calidad","Confianza"] : ["Nature", "Quality", "Trust"]).map((item) => (
+                  {(isGerman ? ["Natur", "Qualität", "Vertrauen"] : isFrench ? ["Nature", "Qualité", "Confiance"] : isSpanish ? ["Naturaleza","Calidad","Confianza"] : isItalian ? ["Natura","Qualità","Fiducia"] : ["Nature", "Quality", "Trust"]).map((item) => (
                     <span
                       key={item}
                       className="border border-[#C9A962]/22 bg-white/[0.025] px-4 py-2 text-[9px] font-bold uppercase tracking-[0.2em] text-[#E4C878]"

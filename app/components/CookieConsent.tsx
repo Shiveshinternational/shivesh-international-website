@@ -17,6 +17,7 @@ export default function CookieConsent() {
   const isGerman = pathname.startsWith("/de/");
   const isFrench = pathname.startsWith("/fr/");
   const isSpanish = pathname.startsWith("/es/");
+  const isItalian = pathname.startsWith("/it/");
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -68,7 +69,7 @@ export default function CookieConsent() {
       <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-4 md:flex-row md:items-center">
         <div className="max-w-4xl">
           <p className="text-base font-semibold text-[#e3c56d]">
-            {isGerman ? "Ihre Privatsphäre ist uns wichtig" : isFrench ? "Votre vie privée compte" : isSpanish ? "Su privacidad importa" : "Your Privacy Matters"}
+            {isGerman ? "Ihre Privatsphäre ist uns wichtig" : isFrench ? "Votre vie privée compte" : isSpanish ? "Su privacidad importa" : isItalian ? "La vostra privacy è importante" : "Your Privacy Matters"}
           </p>
 
           <p className="mt-1 text-sm leading-6 text-white/90">
@@ -76,19 +77,19 @@ export default function CookieConsent() {
               ? "Wir verwenden optionale Analyse-Cookies, um den Website-Verkehr zu verstehen und die Erfahrung internationaler Einkäufer zu verbessern. Sie können Analyse-Cookies annehmen oder ablehnen. Lesen Sie unsere "
               : isFrench
                 ? "Nous utilisons des cookies d’analyse facultatifs pour comprendre le trafic du site et améliorer l’expérience des acheteurs internationaux. Vous pouvez les accepter ou les refuser. Consultez notre "
-                : isSpanish ? "Utilizamos cookies analíticas opcionales para comprender el tráfico y mejorar la experiencia de compradores internacionales. Puede aceptarlas o rechazarlas. Consulte nuestra " : "We use optional analytics cookies to understand website traffic and improve the experience of international buyers. You can accept or reject analytics cookies. Read our "}
+                : isSpanish ? "Utilizamos cookies analíticas opcionales para comprender el tráfico y mejorar la experiencia de compradores internacionales. Puede aceptarlas o rechazarlas. Consulte nuestra " : isItalian ? "Utilizziamo cookie analitici facoltativi per comprendere il traffico e migliorare l’esperienza degli acquirenti internazionali. Potete accettarli o rifiutarli. Consultate la nostra " : "We use optional analytics cookies to understand website traffic and improve the experience of international buyers. You can accept or reject analytics cookies. Read our "}
             <Link
               href="/privacy-policy"
               className="font-semibold text-[#e3c56d] underline underline-offset-4"
             >
-              {isGerman ? "Datenschutzerklärung" : isFrench ? "politique de confidentialité" : isSpanish ? "Política de privacidad" : "Privacy Policy"}
+              {isGerman ? "Datenschutzerklärung" : isFrench ? "politique de confidentialité" : isSpanish ? "Política de privacidad" : isItalian ? "Informativa sulla privacy" : "Privacy Policy"}
             </Link>{" "}
-            {isGerman ? " und " : isFrench ? " et notre " : isSpanish ? " y nuestra " : " and "}
+            {isGerman ? " und " : isFrench ? " et notre " : isSpanish ? " y nuestra " : isItalian ? " e la nostra " : " and "}
             <Link
               href="/cookie-policy"
               className="font-semibold text-[#e3c56d] underline underline-offset-4"
             >
-              {isGerman ? "Cookie-Richtlinie" : isFrench ? "politique relative aux cookies" : isSpanish ? "Política de cookies" : "Cookie Policy"}
+              {isGerman ? "Cookie-Richtlinie" : isFrench ? "politique relative aux cookies" : isSpanish ? "Política de cookies" : isItalian ? "Informativa sui cookie" : "Cookie Policy"}
             </Link>
             .
           </p>
@@ -100,7 +101,7 @@ export default function CookieConsent() {
             onClick={() => saveConsent("denied")}
             className="rounded-md border border-white/50 px-5 py-2 text-sm font-semibold text-white transition hover:bg-white/10"
           >
-            {isGerman ? "Ablehnen" : isFrench ? "Refuser" : isSpanish ? "Rechazar" : "Reject"}
+            {isGerman ? "Ablehnen" : isFrench ? "Refuser" : isSpanish ? "Rechazar" : isItalian ? "Rifiuta" : "Reject"}
           </button>
 
           <button
@@ -108,7 +109,7 @@ export default function CookieConsent() {
             onClick={() => saveConsent("granted")}
             className="rounded-md bg-[#c8a84e] px-5 py-2 text-sm font-semibold text-[#082f24] transition hover:bg-[#dfc36f]"
           >
-            {isGerman ? "Annehmen" : isFrench ? "Accepter" : isSpanish ? "Aceptar" : "Accept"}
+            {isGerman ? "Annehmen" : isFrench ? "Accepter" : isSpanish ? "Aceptar" : isItalian ? "Accetta" : "Accept"}
           </button>
         </div>
       </div>

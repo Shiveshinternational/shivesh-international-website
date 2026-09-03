@@ -10,6 +10,7 @@ const languages = [
   { code: "ES", label: "Spanish", flag: "🇪🇸", locale: "es" as const },
   { code: "FR", label: "Français", flag: "🇫🇷", locale: "fr" as const },
   { code: "DE", label: "Deutsch", flag: "🇩🇪", locale: "de" as const },
+  { code: "IT", label: "Italiano", flag: "🇮🇹", locale: "it" as const },
   { code: "AR", label: "Arabic", flag: "🇦🇪", locale: null },
   { code: "JA", label: "Japanese", flag: "🇯🇵", locale: null },
 ];
@@ -23,6 +24,7 @@ const frenchLanguageLabels: Record<string, string> = {
   JA: "Japonais",
 };
 const spanishLanguageLabels: Record<string, string> = { EN: "Inglés", ES: "Español", FR: "Francés", DE: "Alemán", AR: "Árabe", JA: "Japonés" };
+const italianLanguageLabels: Record<string, string> = { EN: "Inglese", ES: "Spagnolo", FR: "Francese", DE: "Tedesco", IT: "Italiano", AR: "Arabo", JA: "Giapponese" };
 
 export default function LanguageSelector() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +35,7 @@ export default function LanguageSelector() {
     ? "DE"
     : pathname.startsWith("/fr/")
       ? "FR"
-      : pathname.startsWith("/es/") ? "ES" : "EN";
+      : pathname.startsWith("/es/") ? "ES" : pathname.startsWith("/it/") ? "IT" : "EN";
 
   useEffect(() => {
     if (!isOpen) return;
@@ -66,7 +68,7 @@ export default function LanguageSelector() {
     languages.find((language) => language.code === selectedCode) ??
     languages[0];
 
-  const selectLanguage = (locale: "en" | "de" | "fr" | "es") => {
+  const selectLanguage = (locale: "en" | "de" | "fr" | "es" | "it") => {
     const destination = getEquivalentRoute(pathname, locale);
     setIsOpen(false);
     if (destination && destination !== pathname) router.push(destination);
@@ -78,7 +80,7 @@ export default function LanguageSelector() {
         type="button"
         onClick={() => setIsOpen((current) => !current)}
         className="inline-flex h-10 items-center gap-2 rounded-full border border-[#C9A962]/35 bg-[#173b2a]/65 px-3 text-[10px] font-bold uppercase tracking-[0.12em] text-[#F5F0E6] transition-all duration-300 hover:border-[#C9A962] hover:text-[#C9A962]"
-        aria-label={selectedCode === "DE" ? "Sprache auswählen" : selectedCode === "FR" ? "Choisir la langue" : selectedCode === "ES" ? "Seleccionar idioma" : "Select display language"}
+        aria-label={selectedCode === "DE" ? "Sprache auswählen" : selectedCode === "FR" ? "Choisir la langue" : selectedCode === "ES" ? "Seleccionar idioma" : selectedCode === "IT" ? "Seleziona la lingua" : "Select display language"}
         aria-expanded={isOpen}
       >
         <span className="text-sm">{selectedLanguage.flag}</span>
@@ -101,7 +103,7 @@ export default function LanguageSelector() {
       >
         <div className="overflow-hidden rounded-[20px] border border-[#C9A962]/25 bg-[#0b241a]/98 p-2 shadow-[0_24px_70px_rgba(0,0,0,0.40)] backdrop-blur-2xl">
           <p className="px-3 pb-2 pt-2 text-[9px] font-bold uppercase tracking-[0.22em] text-[#C9A962]">
-            {selectedCode === "DE" ? "Sprache" : selectedCode === "FR" ? "Langue" : selectedCode === "ES" ? "Idioma" : "Display Language"}
+            {selectedCode === "DE" ? "Sprache" : selectedCode === "FR" ? "Langue" : selectedCode === "ES" ? "Idioma" : selectedCode === "IT" ? "Lingua" : "Display Language"}
           </p>
 
           {languages.map((language) => {
@@ -132,6 +134,7 @@ export default function LanguageSelector() {
                     {selectedCode === "FR"
                       ? frenchLanguageLabels[language.code]
                       : selectedCode === "ES" ? spanishLanguageLabels[language.code]
+                      : selectedCode === "IT" ? italianLanguageLabels[language.code]
                       : language.label}
                   </span>
                 </span>
@@ -161,6 +164,10 @@ export default function LanguageSelector() {
                         : pathname === "/es/export/belgica"
                           ? "Español, inglés y francés están disponibles para esta página."
                       : "El español y el inglés están disponibles para esta página."
+                  : selectedCode === "IT"
+                    ? "Italiano e inglese sono disponibili per questa pagina."
+                  : pathname === "/export/italy"
+                    ? "Italian is available for the Italy page."
                   : pathname === "/export/germany"
                     ? "German, French and Spanish are available for the Germany page."
                   : pathname === "/export/spain"
