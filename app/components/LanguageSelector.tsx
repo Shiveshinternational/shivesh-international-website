@@ -150,12 +150,16 @@ export default function LanguageSelector() {
                 : selectedCode === "FR"
                   ? pathname === "/fr/export/france"
                     ? "Le français, l’anglais et l’espagnol sont disponibles pour cette page."
+                    : pathname === "/fr/export/belgique"
+                      ? "Le français, l’anglais et l’espagnol sont disponibles pour cette page."
                     : "Le français et l’anglais sont disponibles pour cette page."
                   : selectedCode === "ES"
                     ? pathname === "/es/export/alemania"
                       ? "Español, inglés, alemán y francés están disponibles para esta página."
                       : pathname === "/es/export/francia"
                         ? "Español, inglés y francés están disponibles para esta página."
+                        : pathname === "/es/export/belgica"
+                          ? "Español, inglés y francés están disponibles para esta página."
                       : "El español y el inglés están disponibles para esta página."
                   : pathname === "/export/germany"
                     ? "German, French and Spanish are available for the Germany page."
@@ -164,7 +168,7 @@ export default function LanguageSelector() {
                   : pathname === "/export/france"
                     ? "French and Spanish are available for the France page."
                     : pathname === "/export/belgium"
-                      ? "French is available for the Belgium page."
+                      ? "French and Spanish are available for the Belgium page."
                     : "German is currently available for the Germany and Austria pages."}
             </p>
           </div>
