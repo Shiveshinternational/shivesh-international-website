@@ -7,6 +7,7 @@ export const equivalentRoutes = {
     en: "/export/belgium",
     fr: "/fr/export/belgique",
     es: "/es/export/belgica",
+    it: "/it/export/belgio",
     "x-default": "/export/belgium",
   },
   austria: {
@@ -72,6 +73,7 @@ export const belgiumLanguageAlternates = {
   en: `${siteUrl}${equivalentRoutes.belgium.en}`,
   fr: `${siteUrl}${equivalentRoutes.belgium.fr}`,
   es: `${siteUrl}${equivalentRoutes.belgium.es}`,
+  it: `${siteUrl}${equivalentRoutes.belgium.it}`,
   "x-default": `${siteUrl}${equivalentRoutes.belgium["x-default"]}`,
 } as const;
 
