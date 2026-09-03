@@ -9,6 +9,7 @@ import Navbar from "@/app/components/Navbar";
 import PremiumCursor from "@/app/components/PremiumCursor";
 import RevealOnScroll from "@/app/components/RevealOnScroll";
 import StaggerItem from "@/app/components/StaggerItem";
+import { polandLanguageAlternates } from "@/app/lib/i18n";
 import FooterSection from "@/sections/FooterSection";
 
 const canonicalUrl = "https://shiveshinternational.com/export/poland";
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
   title: "Henna, Indigo, Herbs & Spices Exporter to Poland",
   description: "India-based supplier of henna, indigo, botanical hair colors, Ayurvedic herbs and spices for Polish importers, wholesalers and private-label brands.",
   keywords: metadataKeywords,
-  alternates: { canonical: canonicalUrl },
+  alternates: { canonical: canonicalUrl, languages: polandLanguageAlternates },
   openGraph: { title: "Henna, Indigo, Herbs & Spices Exporter to Poland", description: "Bulk, wholesale, OEM and private-label Indian natural-product supply for professional buyers in Poland.", url: canonicalUrl, type: "website", locale: "en_PL", siteName: "Shivesh International", images: [{ url: heroImage, alt: "Polish buyers coordinating natural-product supply from India" }] },
   twitter: { card: "summary_large_image", title: "Natural Products Exporter to Poland", description: "Indian henna, indigo, herbs, spices and private-label supply for Polish professional buyers.", images: [heroImage] },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },

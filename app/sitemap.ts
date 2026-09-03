@@ -7,6 +7,7 @@ import {
   germanyLanguageAlternates,
   italyLanguageAlternates,
   netherlandsLanguageAlternates,
+  polandLanguageAlternates,
   spainLanguageAlternates,
 } from "@/app/lib/i18n";
 
@@ -208,6 +209,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date("2026-08-21"),
       changeFrequency: "monthly",
       priority: 0.9,
+      alternates: { languages: polandLanguageAlternates },
+    },
+    {
+      url: `${baseUrl}/it/export/polonia`,
+      lastModified: new Date("2026-09-03"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+      alternates: { languages: polandLanguageAlternates },
     },
     {
       url: `${baseUrl}/export/norway`,

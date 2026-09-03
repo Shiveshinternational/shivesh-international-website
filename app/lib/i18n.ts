@@ -21,6 +21,11 @@ export const equivalentRoutes = {
     it: "/it/export/paesi-bassi",
     "x-default": "/export/netherlands",
   },
+  poland: {
+    en: "/export/poland",
+    it: "/it/export/polonia",
+    "x-default": "/export/poland",
+  },
   germany: {
     en: "/export/germany",
     de: "/de/export/deutschland",
@@ -73,6 +78,12 @@ export const netherlandsLanguageAlternates = {
   en: `${siteUrl}${equivalentRoutes.netherlands.en}`,
   it: `${siteUrl}${equivalentRoutes.netherlands.it}`,
   "x-default": `${siteUrl}${equivalentRoutes.netherlands["x-default"]}`,
+} as const;
+
+export const polandLanguageAlternates = {
+  en: `${siteUrl}${equivalentRoutes.poland.en}`,
+  it: `${siteUrl}${equivalentRoutes.poland.it}`,
+  "x-default": `${siteUrl}${equivalentRoutes.poland["x-default"]}`,
 } as const;
 
 export const franceLanguageAlternates = {
