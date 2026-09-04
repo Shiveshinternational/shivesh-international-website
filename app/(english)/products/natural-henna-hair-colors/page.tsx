@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Natural Henna Hair Colors manufacturer, exporter and supplier in India offering 18 botanical powder shades for bulk, wholesale, salon, OEM and private-label buyers.",
+    "Natural Henna Hair Colors manufacturer and exporter in India supplying 17 botanical hair-colour shades plus 1 treatment for bulk, OEM and private-label buyers.",
 
   alternates: {
     canonical: "/products/natural-henna-hair-colors",
@@ -33,13 +33,13 @@ export const metadata: Metadata = {
     title:
       "Natural Henna Hair Colors Manufacturer & Exporter India",
     description:
-      "Explore 18 Natural Henna Hair Color shades manufactured and exported from India for importers, distributors, salons, cosmetic brands and private-label buyers.",
+      "Explore 17 botanical hair-colour shades plus 1 Natural Henna Hair Treatment for importers, salons, cosmetic brands, OEM and private-label buyers.",
     images: [
       {
         url: "/images/products/henna-hair-colors/natural-henna-hair-colors-hero-final-v2.png",
         width: 1200,
         height: 630,
-        alt: "Natural Henna Hair Colors manufacturer and exporter from India offering 18 botanical shades",
+        alt: "Natural Henna Hair Colors manufacturer and exporter from India offering 17 botanical shades plus one hair treatment",
       },
     ],
   },
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     title:
       "Natural Henna Hair Colors Manufacturer & Exporter India",
     description:
-      "18 botanical powder hair-colour shades for bulk, wholesale, salon, OEM and private-label buyers worldwide.",
+      "17 botanical hair-colour shades plus 1 Natural Henna Hair Treatment for bulk, salon, OEM and private-label buyers worldwide.",
     images: [
       "/images/products/henna-hair-colors/natural-henna-hair-colors-hero-final-v2.png",
     ],
@@ -68,6 +68,87 @@ export const metadata: Metadata = {
   },
 };
 
+const procurementFaqs = [
+  {
+    question: "How many Natural Henna Hair Colors are available?",
+    answer:
+      "The displayed portfolio contains 18 products: 17 botanical hair-colour shades plus 1 Natural Henna Hair Treatment.",
+  },
+  {
+    question: "Are there 18 colour shades?",
+    answer:
+      "No. The collection contains 17 colour shades and 1 separate Natural Henna Hair Treatment, for a total of 18 displayed products.",
+  },
+  {
+    question: "Does every shade use the same formulation?",
+    answer:
+      "No. Each hair-colour shade has its own formulation. Product selection depends on the required shade and application, and exact specifications are confirmed for the selected product.",
+  },
+  {
+    question: "Are the hair colours PPD-free?",
+    answer: "Yes. All 17 approved Natural Henna Hair Color shades are PPD-free.",
+  },
+  {
+    question: "Are they ammonia-free and peroxide-free?",
+    answer:
+      "Yes. All 17 approved hair-colour shades are ammonia-free and peroxide-free.",
+  },
+  {
+    question: "Do they contain metallic salts or synthetic dyes?",
+    answer:
+      "No. All 17 approved hair-colour shades contain no metallic salts and no synthetic dye. They are 100% natural and chemical-free.",
+  },
+  {
+    question: "What is the bulk MOQ?",
+    answer:
+      "Bulk orders can start from 100 kg, subject to commercial and product confirmation.",
+  },
+  {
+    question: "What is the private-label MOQ?",
+    answer:
+      "Private-label minimums vary by pack size, packaging format, artwork, design, customization and commercial feasibility.",
+  },
+  {
+    question: "Which retail pack sizes are available?",
+    answer:
+      "Retail and private-label packs are available in 100 g, 200 g, 500 g and 1 kg sizes. Bulk packaging is available in 20 kg and 25 kg double-layer vacuum packing.",
+  },
+  {
+    question: "Are OEM, ODM and private-label services available?",
+    answer:
+      "Yes. OEM, ODM and private-label services are available, including buyer logo and artwork on finished packs, subject to technical and commercial confirmation.",
+  },
+  {
+    question: "Is a Certificate of Analysis supplied?",
+    answer:
+      "Yes. A batch-specific Certificate of Analysis is available with every commercial batch or order.",
+  },
+  {
+    question: "Are SDS/MSDS and Country of Origin documents available?",
+    answer:
+      "Yes. SDS/MSDS and a Country of Origin Certificate or Statement are available for commercial orders.",
+  },
+  {
+    question: "Can phytosanitary and fumigation certificates be arranged?",
+    answer:
+      "Yes. Phytosanitary and fumigation certificates can be arranged when required for the confirmed order or destination.",
+  },
+  {
+    question: "Are free samples available?",
+    answer: "Yes. Free samples are available for prospective buyers.",
+  },
+  {
+    question: "What is the typical lead time?",
+    answer:
+      "Typical lead time is approximately 10–15 days after commercial and order confirmation, subject to quantity, packaging, customization and complete requirements. Transit and delivery times are not guaranteed.",
+  },
+  {
+    question: "How can an importer request a quotation?",
+    answer:
+      "Send the selected shade or treatment, quantity, supply model, pack size, artwork or branding requirements, destination country or port, required documents, and company contact details through the contact page or WhatsApp export team.",
+  },
+];
+
 const naturalHennaHairColorsStructuredData = {
   "@context": "https://schema.org",
   "@graph": [
@@ -79,9 +160,8 @@ const naturalHennaHairColorsStructuredData = {
       alternateName: [
         "Botanical Henna Hair Colors",
         "Natural Henna Powder Hair Colors",
-        "18 Shade Henna Hair Color Collection",
+        "17 Shade Henna Hair Color Collection",
         "Private Label Henna Hair Colors",
-        "Export-Grade Natural Henna Hair Colors",
       ],
       url:
         "https://shiveshinternational.com/products/natural-henna-hair-colors",
@@ -91,7 +171,7 @@ const naturalHennaHairColorsStructuredData = {
         "https://shiveshinternational.com/images/products/henna-hair-colors/natural-henna-hair-colors-packaging-private-label-final-v1.png",
       ],
       description:
-        "Natural Henna Hair Colors manufactured, supplied and exported from India in 17 botanical powder hair-color shades and one Natural Henna Hair Treatment for bulk, wholesale, salon, OEM and private-label buyers.",
+        "A collection manufactured and exported from India comprising 17 botanical hair-colour shades plus 1 Natural Henna Hair Treatment for bulk, salon, OEM and private-label buyers.",
       category: "Natural Botanical Powder Hair Colors",
       material: "Henna and selected botanical ingredients",
       brand: {
@@ -130,8 +210,14 @@ const naturalHennaHairColorsStructuredData = {
         },
         {
           "@type": "PropertyValue",
-          name: "Minimum Order Quantity",
-          value: "200 kg per item",
+          name: "Bulk Minimum Order",
+          value: "Bulk Orders Can Start from 100 kg",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Private-Label MOQ",
+          value:
+            "Varies by Pack Size, Packaging, Artwork, Design, Customization and Commercial Feasibility",
         },
         {
           "@type": "PropertyValue",
@@ -143,7 +229,7 @@ const naturalHennaHairColorsStructuredData = {
           "@type": "PropertyValue",
           name: "Packaging",
           value:
-            "100 g, 200 g, 500 g and 1 kg pouches, branded boxes, professional packs and selected bulk formats",
+            "100 g, 200 g, 500 g and 1 kg retail packs; 20 kg and 25 kg double-layer vacuum bulk packing",
         },
         {
           "@type": "PropertyValue",
@@ -156,7 +242,44 @@ const naturalHennaHairColorsStructuredData = {
           name: "Country of Origin",
           value: "India",
         },
+        {
+          "@type": "PropertyValue",
+          name: "Hair-Colour Shade Qualifications",
+          value:
+            "All 17 Hair-Colour Shades Are 100% Natural, PPD-Free, Ammonia-Free, Peroxide-Free, Free from Metallic Salts, Free from Synthetic Dye and Chemical-Free",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Shelf Life",
+          value: "24 Months under Recommended Storage Conditions",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Quality Testing",
+          value: "According to Buyer Instructions or Requirements",
+        },
       ],
+    },
+    {
+      "@type": "WebPage",
+      "@id":
+        "https://shiveshinternational.com/products/natural-henna-hair-colors#webpage",
+      url: "https://shiveshinternational.com/products/natural-henna-hair-colors",
+      name: "Natural Henna Hair Colors Manufacturer & Exporter India",
+      description:
+        "Commercial product and procurement information for 17 Natural Henna Hair Color shades plus 1 Natural Henna Hair Treatment manufactured in India.",
+      isPartOf: {
+        "@id": "https://shiveshinternational.com/#website",
+      },
+      about: {
+        "@id":
+          "https://shiveshinternational.com/products/natural-henna-hair-colors#product",
+      },
+      breadcrumb: {
+        "@id":
+          "https://shiveshinternational.com/products/natural-henna-hair-colors#breadcrumb",
+      },
+      inLanguage: "en",
     },
     {
       "@type": "BreadcrumbList",
@@ -184,6 +307,19 @@ const naturalHennaHairColorsStructuredData = {
         },
       ],
     },
+    {
+      "@type": "FAQPage",
+      "@id":
+        "https://shiveshinternational.com/products/natural-henna-hair-colors#faq",
+      mainEntity: procurementFaqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
+    },
   ],
 };
 
@@ -205,9 +341,9 @@ export default function NaturalHennaHairColorsPage() {
       <section className="relative isolate min-h-[72vh] overflow-hidden border-b border-[#C9A962]/25 bg-[#071b14]">
         <Image
           src="/images/products/henna-hair-colors/natural-henna-hair-colors-hero-final-v2.png"
-          alt="Natural Henna Hair Colors manufacturer and exporter from India offering 18 botanical powder hair colour shades"
+          alt="Natural Henna Hair Colors manufacturer and exporter from India offering 17 botanical hair-colour shades plus one treatment"
           fill
-          priority
+          loading="eager"
           sizes="100vw"
           className="object-cover object-center"
         />
@@ -241,17 +377,16 @@ export default function NaturalHennaHairColorsPage() {
 
             <StaggerItem delay={240}>
               <p className="mt-5 font-[family-name:var(--font-playfair)] text-xl italic text-[#E4C878] sm:text-2xl">
-  18 Botanical Powder Hair-Colour Shades for Global Buyers.
+  17 Botanical Hair-Colour Shades Plus 1 Hair Treatment.
 </p>
             </StaggerItem>
 
             <StaggerItem delay={320}>
               <p className="mt-5 max-w-[620px] text-[16px] leading-8 text-[#F5F0E6]/78">
-                Shivesh International is a Natural Henna Hair Colors manufacturer,
-  exporter and supplier from India, offering 18 botanical powder
-  hair-colour shades for bulk importers, wholesalers, distributors,
-  salon brands, cosmetic businesses and private-label buyers
-  worldwide.
+                Shivesh International manufactures, exports and supplies 17
+                botanical hair-colour shades plus 1 Natural Henna Hair Treatment
+                from India for importers, distributors, wholesalers, salons,
+                cosmetic and hair-care brands, and OEM or private-label buyers.
               </p>
             </StaggerItem>
 
@@ -261,7 +396,7 @@ export default function NaturalHennaHairColorsPage() {
                   href="#shade-collection"
                   className="inline-flex items-center gap-4 border border-[#C9A962] bg-[#C9A962] px-7 py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-[#102f23] transition-all duration-500 hover:-translate-y-1 hover:bg-[#E4C878] hover:shadow-[0_18px_45px_rgba(201,169,98,0.28)]"
                 >
-                  View 18 Hair Colors
+                  View 18 Products
                   <span className="text-lg">↓</span>
                 </a>
 
@@ -277,7 +412,7 @@ export default function NaturalHennaHairColorsPage() {
             <StaggerItem delay={480}>
               <div className="mt-7 grid max-w-[700px] grid-cols-2 gap-3 sm:grid-cols-4">
                 {[
-                  ["18", "Hair Color Shades"],
+                  ["18", "Products in Portfolio"],
   ["Powder", "Botanical Range"],
   ["Bulk", "Export Supply"],
   ["OEM", "Private Label"],
@@ -317,7 +452,7 @@ export default function NaturalHennaHairColorsPage() {
               <div className="group relative min-h-[620px] overflow-hidden rounded-[30px] border border-[#C9A962]/30 bg-[#e8dfcf] shadow-[0_30px_85px_rgba(0,0,0,0.15)] lg:min-h-[760px]">
                 <Image
                   src="/images/products/henna-hair-colors/natural-henna-hair-colors-about-final-v1.png"
-                  alt="Natural Henna Hair Colors manufacturer and exporter collection with 18 botanical powder shades"
+                  alt="Natural Henna Hair Colors collection with 17 botanical hair-colour shades plus one treatment"
                   fill
                   sizes="(min-width: 1024px) 46vw, 100vw"
                   className="object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-105"
@@ -333,7 +468,7 @@ export default function NaturalHennaHairColorsPage() {
                   </p>
 
                   <p className="mt-3 font-[family-name:var(--font-playfair)] text-3xl font-semibold text-white">
-                    18 Natural Henna Hair Color Shades
+                    17 Hair-Colour Shades Plus 1 Treatment
                   </p>
                 </div>
               </div>
@@ -364,9 +499,9 @@ export default function NaturalHennaHairColorsPage() {
 
               <StaggerItem delay={320}>
                 <p className="mt-8 text-xl font-medium leading-9 text-[#8B6A1E]">
-    An export-oriented collection of 18 botanical powder hair-color
-    shades developed for importers, distributors, salons, cosmetic
-    brands and private-label buyers worldwide.
+    An export-oriented collection of 17 botanical hair-colour shades
+    plus 1 Natural Henna Hair Treatment for importers, distributors,
+    salons, cosmetic brands and private-label buyers worldwide.
   </p>
               </StaggerItem>
 
@@ -376,9 +511,8 @@ export default function NaturalHennaHairColorsPage() {
       Shivesh International manufactures, supplies and exports Natural
       Henna Hair Colors from India for professional and international
       botanical hair-colour markets. Our coordinated portfolio includes
-      18 powder shades developed with selected botanical ingredients and
-      presented for retail, salon, wholesale and private-label business
-      requirements.
+      17 hair-colour shades plus 1 Natural Henna Hair Treatment, presented
+      for retail, salon, wholesale and private-label business requirements.
     </p>
 
     <p className="text-lg leading-8 text-[#4c5f54]">
@@ -411,7 +545,7 @@ export default function NaturalHennaHairColorsPage() {
                     href="#shade-collection"
                     className="inline-flex items-center gap-3 border border-[#C9A962] bg-[#C9A962] px-7 py-4 text-xs font-bold uppercase tracking-[0.19em] text-[#102f23] transition-all duration-500 hover:-translate-y-1 hover:bg-[#E4C878]"
                   >
-                    View All 18 Shades
+                    View All 18 Products
                     <span>→</span>
                   </Link>
 
@@ -429,7 +563,7 @@ export default function NaturalHennaHairColorsPage() {
         </RevealOnScroll>
       </section>
 
-      {/* COMPLETE 18-SHADE COLLECTION */}
+      {/* COMPLETE 18-PRODUCT COLLECTION */}
       <section
         id="shade-collection"
         className="relative overflow-hidden bg-[#102f23] px-5 py-20 text-[#F5F0E6] sm:px-8 lg:px-12 lg:py-24"
@@ -443,11 +577,11 @@ export default function NaturalHennaHairColorsPage() {
           <div className="relative mx-auto max-w-[1500px]">
             <div className="mx-auto max-w-4xl text-center">
               <p className="text-xs font-bold uppercase tracking-[0.45em] text-[#C9A962]">
-                Export Collection · 18 Botanical Shades
+                Export Collection · 18 Products
               </p>
 
               <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
-  18 Natural Henna Hair Color Shades
+  17 Natural Henna Hair Color Shades Plus 1 Hair Treatment
   <span className="mt-2 block text-[#E4C878]">
     for Wholesale and Private Label Buyers
   </span>
@@ -621,10 +755,10 @@ export default function NaturalHennaHairColorsPage() {
 
             <div className="mx-auto mt-10 max-w-5xl rounded-[22px] border border-[#C9A962]/25 bg-white/[0.04] px-6 py-6 text-center">
   <p className="text-sm leading-7 text-[#F5F0E6]/72">
-    All 18 Natural Henna Hair Color shades are available for
-    export-oriented retail, professional, bulk, wholesale, OEM and
-    private-label requirements. Packaging, branding and shade selection
-    can be coordinated according to the buyer&apos;s market requirements.
+    All 17 Natural Henna Hair Color shades and the Natural Henna Hair
+    Treatment are available for export-oriented retail, professional,
+    bulk, OEM and private-label requirements. Packaging, branding and
+    product selection can be coordinated for the buyer&apos;s market.
   </p>
 
   <p className="mt-3 text-xs leading-6 text-[#F5F0E6]/48">
@@ -650,7 +784,7 @@ export default function NaturalHennaHairColorsPage() {
               </p>
 
               <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">
-  Compare 18 Natural Henna Hair Colors
+  Compare 17 Hair-Colour Shades Plus 1 Hair Treatment
   <span className="mt-2 block text-[#9f7f36]">
     with Our Professional Shade Guide
   </span>
@@ -1004,6 +1138,47 @@ export default function NaturalHennaHairColorsPage() {
           </div>
         </RevealOnScroll>
       </section>
+
+      {/* FORMULATION AND PRODUCT QUALIFICATION */}
+      <section className="bg-[#ede5d7] px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+        <RevealOnScroll>
+          <div className="mx-auto max-w-[1320px]">
+            <div className="mx-auto max-w-4xl text-center">
+              <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#9f7f36]">
+                Formulation & Product Qualification
+              </p>
+              <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">
+                Botanical Hair Colors Qualified by Shade and Application
+              </h2>
+              <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#4c5f54]">
+                The portfolio comprises 17 botanical hair-colour shades plus 1
+                Natural Henna Hair Treatment. Each hair-colour shade has its own
+                formulation, so selection and specifications are confirmed for
+                the required shade and application.
+              </p>
+            </div>
+
+            <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                ["100% Natural", "Approved across all 17 hair-colour shades."],
+                ["PPD-Free", "No PPD in the approved hair-colour shades."],
+                ["Ammonia & Peroxide Free", "Formulated without ammonia or peroxide."],
+                ["No Metallic Salts", "Approved hair-colour shades contain no metallic salts."],
+                ["No Synthetic Dye", "No synthetic dye in the approved hair-colour shades."],
+                ["Chemical-Free", "The 17 approved hair-colour shades are chemical-free."],
+                ["Shade-Specific Formulations", "Each shade has a different formulation."],
+                ["Microfine Powder", "Triple-sifted microfine botanical powder form."],
+              ].map(([title, text]) => (
+                <article key={title} className="h-full border border-[#C9A962]/28 bg-[#f5f0e6] p-5">
+                  <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold">{title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-[#4c5f54]">{text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </RevealOnScroll>
+      </section>
+
       {/* WHY CHOOSE OUR NATURAL HENNA HAIR COLORS */}
       <section className="bg-[#102f23] px-6 py-20 text-[#F5F0E6] sm:px-8 lg:px-12 lg:py-24">
         <RevealOnScroll>
@@ -1013,7 +1188,7 @@ export default function NaturalHennaHairColorsPage() {
               <div className="group relative min-h-[450px] overflow-hidden rounded-[28px] border border-[#C9A962]/30 bg-[#173b2a] shadow-[0_28px_75px_rgba(0,0,0,0.26)]">
                 <Image
                   src="/images/products/henna-hair-colors/natural-henna-hair-colors-why-choose-collection-final-v1.png"
-                  alt="Natural Henna Hair Colors manufacturer and exporter collection with 18 powder shades"
+                  alt="Natural Henna Hair Colors collection with 17 powder shades plus one hair treatment"
                   fill
                   sizes="(min-width: 1024px) 42vw, 100vw"
                   className="object-cover transition-transform duration-[1400ms] group-hover:scale-105"
@@ -1057,7 +1232,7 @@ export default function NaturalHennaHairColorsPage() {
               <StaggerItem delay={360}>
                 <p className="mt-6 text-lg leading-8 text-[#F5F0E6]/65">
                   Shivesh International manufactures, supplies and exports a
-    coordinated range of 18 Natural Henna Hair Colors from India,
+    coordinated range of 17 hair-colour shades plus 1 Natural Henna Hair Treatment from India,
     supported by professional processing, buyer-focused packaging
     and OEM or private-label coordination for international markets.
                 </p>
@@ -1067,8 +1242,8 @@ export default function NaturalHennaHairColorsPage() {
                 <div className="mt-9 grid gap-x-8 gap-y-5 sm:grid-cols-2">
                   {[
                      {
-    title: "18 Coordinated Hair Color Shades",
-    text: "A complete portfolio covering black, brown, red, auburn, orange, blonde and botanical hair-treatment categories.",
+    title: "17 Shades Plus 1 Hair Treatment",
+    text: "A complete 18-product portfolio covering black, brown, red, auburn, orange, blonde and botanical hair-treatment categories.",
   },
   {
     title: "Manufacturer & Exporter from India",
@@ -1118,6 +1293,43 @@ export default function NaturalHennaHairColorsPage() {
           </div>
         </RevealOnScroll>
       </section>
+
+      {/* WHO WE SUPPLY */}
+      <section className="bg-[#f5f0e6] px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+        <RevealOnScroll>
+          <div className="mx-auto max-w-[1320px]">
+            <div className="mx-auto max-w-4xl text-center">
+              <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#9f7f36]">Who We Supply</p>
+              <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">Natural Henna Hair Colors for Professional Buyers</h2>
+              <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#4c5f54]">Commercial supply for businesses sourcing botanical and herbal hair colors for professional, wholesale, retail, OEM, ODM and private-label programmes.</p>
+            </div>
+            <div className="mt-12 grid auto-rows-fr gap-4 sm:grid-cols-2 lg:grid-cols-5">
+              {[
+                ["Importers", "Product, packaging and destination-document planning."],
+                ["Distributors", "Wholesale and branded distribution programmes."],
+                ["Wholesalers", "Commercial quantities and bulk export packing."],
+                ["Retailers", "Finished retail packs for approved product ranges."],
+                ["Professional Salons", "Botanical hair-color options for professional use."],
+                ["Salon Suppliers", "Coordinated ranges for salon distribution channels."],
+                ["Cosmetic Brands", "Shade-specific products for agreed cosmetic requirements."],
+                ["Hair-Care Brands", "Natural hair-color products for branded portfolios."],
+                ["Herbal & Natural Brands", "Botanical powder hair-color and treatment ranges."],
+                ["Private-Label Buyers", "Buyer artwork, logo and finished retail packaging."],
+                ["OEM Buyers", "Manufacturing support for agreed product and branding needs."],
+                ["ODM Buyers", "Product support under mutually agreed requirements."],
+                ["Sourcing Companies", "Product and commercial requirement coordination."],
+                ["Bulk Buyers", "Orders starting from 100 kg, subject to confirmation."],
+              ].map(([title, text]) => (
+                <article key={title} className="h-full border border-[#C9A962]/28 bg-[#ede5d7] p-5">
+                  <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold">{title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-[#4c5f54]">{text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </RevealOnScroll>
+      </section>
+
       {/* PRODUCT SPECIFICATIONS */}
       <section
   id="product-specifications"
@@ -1147,7 +1359,7 @@ export default function NaturalHennaHairColorsPage() {
 
             <StaggerItem delay={120}>
               <div className="mt-12 overflow-hidden rounded-[26px] border border-[#C9A962]/35 bg-[#f5f0e6] shadow-[0_24px_65px_rgba(0,0,0,0.11)]">
-                <div className="grid grid-cols-[0.9fr_1.1fr] bg-[#102f23] px-5 py-4 text-[#F5F0E6] sm:px-7">
+                <div className="hidden grid-cols-[0.9fr_1.1fr] bg-[#102f23] px-5 py-4 text-[#F5F0E6] sm:grid sm:px-7">
                   <p className="text-[10px] font-bold uppercase tracking-[0.32em] text-[#C9A962]">
                     Parameter
                   </p>
@@ -1159,78 +1371,31 @@ export default function NaturalHennaHairColorsPage() {
 
                 {[
                   
-  ["Product Name", "Natural Henna Hair Colors"],
-  [
-    "Manufacturer & Exporter",
-    "Shivesh International, India",
-  ],
-  [
-    "Shade Portfolio",
-    "17 Hair Color Shades and 1 Natural Henna Hair Treatment",
-  ],
-  ["Product Form", "Fine Botanical Powder"],
-  ["Powder Texture", "Triple-Sifted Microfine Powder"],
-  [
-    "Botanical Base",
-    "Henna with Selected Botanical Ingredients according to Shade",
-  ],
-  [
-    "Primary Application",
-    "Professional and Retail Botanical Hair Colouring",
-  ],
-  [
-    "Preparation Method",
-    "Mix with Warm Water according to Product Instructions",
-  ],
-  [
-    "Application Time",
-    "Approximately 60 Minutes or as Directed for the Selected Shade",
-  ],
-  ["Appearance", "Shade-Specific Fine Powder"],
-  ["Odour", "Characteristic Herbal Odour"],
-  ["Country of Origin", "India"],
-  ["Minimum Order Quantity", "200 kg per Item"],
-  [
-    "Supply Options",
-    "Retail, Professional, Bulk, Wholesale, OEM and Private Label",
-  ],
-  [
-    "Buyer Categories",
-    "Importers, Distributors, Wholesalers, Salons and Cosmetic Brands",
-  ],
-  [
-    "Packaging Options",
-    "Branded Boxes, Retail Pouches, Professional Packs and Bulk Formats",
-  ],
-  [
-    "Private Label",
-    "OEM, ODM, Custom Branding and Buyer-Owned Packaging Support",
-  ],
-  [
-    "Shelf Life",
-    "Up to 24 Months under Recommended Storage Conditions",
-  ],
-  [
-    "Storage",
-    "Store Sealed in a Cool, Dry Place away from Moisture and Direct Sunlight",
-  ],
-  [
-    "Technical Documents",
-    "COA, MSDS and Technical Data Support subject to Product and Buyer Requirements",
-  ],
+                  ["Product Portfolio", "17 Natural Henna Hair Color Shades Plus 1 Natural Henna Hair Treatment"],
+                  ["Manufacturing Origin", "India"],
+                  ["Product Form", "Triple-Sifted Microfine Botanical Powder"],
+                  ["Bulk Minimum Order", "Orders Can Start from 100 kg, Subject to Commercial and Product Confirmation"],
+                  ["Private-Label MOQ", "Variable by Pack Size, Packaging, Artwork, Design, Customization and Commercial Feasibility"],
+                  ["Retail / Private-Label Packs", "100 g, 200 g, 500 g and 1 kg"],
+                  ["Bulk Packaging", "20 kg and 25 kg Double-Layer Vacuum Packing"],
+                  ["Shelf Life", "24 Months under Recommended Storage Conditions"],
+                  ["OEM", "Available"],
+                  ["ODM", "Available"],
+                  ["Private Label", "Available with Buyer Logo and Artwork on Finished Packs"],
+                  ["Quality Testing", "According to Buyer Instructions or Requirements"],
 
                 ].map(([parameter, value], index) => (
                   <div
                     key={parameter}
-                    className={`grid grid-cols-[0.9fr_1.1fr] border-t border-[#173b2a]/10 px-5 py-4 transition-colors duration-300 hover:bg-[#C9A962]/8 sm:px-7 ${
+                    className={`grid gap-2 border-t border-[#173b2a]/10 px-5 py-4 transition-colors duration-300 hover:bg-[#C9A962]/8 sm:grid-cols-[0.9fr_1.1fr] sm:gap-0 sm:px-7 ${
                       index % 2 === 0 ? "bg-[#f5f0e6]" : "bg-[#eee6d8]"
                     }`}
                   >
-                    <p className="pr-4 text-sm font-bold uppercase tracking-[0.12em] text-[#8B6A1E] sm:text-[15px]">
+                    <p className="text-sm font-bold uppercase tracking-[0.12em] text-[#8B6A1E] sm:pr-4 sm:text-[15px]">
                       {parameter}
                     </p>
 
-                    <p className="pl-4 leading-7 text-[#173b2a]">{value}</p>
+                    <p className="leading-7 text-[#173b2a] sm:pl-4">{value}</p>
                   </div>
                 ))}
               </div>
@@ -1408,11 +1573,12 @@ export default function NaturalHennaHairColorsPage() {
                   </h3>
 
                   <p className="mt-5 leading-8 text-[#F5F0E6]/68">
-                    APackaging options include metallic pouches, coloured
+                    Packaging options include metallic pouches, coloured
   pouches, custom-printed pouches, printed paper boxes,
-  professional packs, jars and export cartons. Buyer-owned
-  branding and private-label packaging can be developed
-  according to the selected shade and approved artwork.
+  professional packs, jars and export cartons. Bulk supply is
+  available in 20 kg and 25 kg double-layer vacuum packing.
+  Buyer-owned branding and finished private-label packs can be
+  coordinated according to the selected product and approved artwork.
                   </p>
                 </article>
               </StaggerItem>
@@ -1438,7 +1604,7 @@ export default function NaturalHennaHairColorsPage() {
                     </p>
 
                     <p className="mt-3 font-[family-name:var(--font-playfair)] text-3xl font-semibold text-white">
-                      18 Hair Color Products with Custom Packaging Options
+                      17 Hair-Colour Shades Plus 1 Treatment with Custom Packaging Options
                     </p>
                   </div>
                 </div>
@@ -1510,11 +1676,10 @@ export default function NaturalHennaHairColorsPage() {
               </p>
 
               <p className="mx-auto mt-3 max-w-4xl text-sm leading-7 text-[#F5F0E6]/72">
-                The minimum order quantity is 200 kg per item.
-                Importers, distributors, wholesalers, salon brands and
-                cosmetic companies can contact our export team for
-                shade selection, pricing, packaging and private-label
-                project coordination.
+                Bulk orders can start from 100 kg, subject to commercial and
+                product confirmation. Private-label minimums vary by pack size,
+                packaging format, artwork, design, customization and commercial
+                feasibility.
               </p>
 
               <p className="mx-auto mt-2 max-w-4xl text-xs leading-6 text-[#F5F0E6]/48">
@@ -1526,6 +1691,74 @@ export default function NaturalHennaHairColorsPage() {
           
         </RevealOnScroll>
       </section>
+
+      {/* COMMERCIAL DOCUMENTATION AND ORDER PLANNING */}
+      <section className="bg-[#102f23] px-6 py-20 text-[#F5F0E6] sm:px-8 lg:px-12 lg:py-24">
+        <RevealOnScroll>
+          <div className="mx-auto grid max-w-[1320px] gap-12 lg:grid-cols-2 lg:gap-16">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#C9A962]">Commercial Documentation & Export Support</p>
+              <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">Documentation for Natural Hair Color Buyers</h2>
+              <p className="mt-6 text-lg leading-8 text-[#F5F0E6]/68">Documentation and testing are coordinated for the selected product, commercial order and destination requirements.</p>
+              <div className="mt-8 grid gap-3 sm:grid-cols-2">
+                {["Batch-specific COA with every commercial batch or order", "SDS / MSDS available", "Country of Origin Certificate or Statement available", "Phytosanitary certificate arranged when required", "Fumigation certificate arranged when required", "Quality testing according to buyer instructions or requirements", "Applicable commercial and export documentation", "Export and document coordination according to buyer, order and destination requirements"].map((item) => (
+                  <div key={item} className="border border-[#C9A962]/20 bg-[#071b14]/45 p-4 text-sm leading-7 text-[#F5F0E6]/72">{item}</div>
+                ))}
+              </div>
+              <p className="mt-5 text-sm leading-7 text-[#F5F0E6]/62">Company certifications and registrations presently include ISO, GMP, Halal, Kosher, HACCP, MSME and FSSAI. Applicability and scope should be reviewed against the selected product, order and buyer or destination requirements.</p>
+              <p className="mt-7 border border-[#C9A962]/30 bg-[#071b14]/55 p-5 text-sm leading-7 text-[#F5F0E6]/62">Destination-market import, customs, labelling, cosmetic or product regulations and product-specific requirements remain subject to buyer or importer verification and applicable authorities. Documentation support does not guarantee customs clearance or regulatory approval.</p>
+            </div>
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#C9A962]">Samples & Order Planning</p>
+              <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">Plan a Bulk, OEM, ODM or Private-Label Order</h2>
+              <div className="mt-8 space-y-4">
+                {[
+                  ["Free Samples", "Free samples are available for prospective buyers."],
+                  ["Bulk Order Quantity", "Bulk orders can start from 100 kg, subject to commercial and product confirmation."],
+                  ["Private-Label MOQ", "Private-label minimums vary by pack size, packaging format, artwork, design, customization and commercial feasibility."],
+                  ["Typical Lead Time", "Approximately 10–15 days after commercial and order confirmation, subject to quantity, packaging, customization and complete requirements. Transit and delivery times are not guaranteed."],
+                  ["Shipping & Incoterms", "Shipping and Incoterms are coordinated according to buyer requirements and the confirmed quotation."],
+                ].map(([title, text]) => (
+                  <article key={title} className="border border-[#C9A962]/22 bg-[#071b14]/45 p-5">
+                    <h3 className="text-xl font-semibold text-[#E4C878]">{title}</h3>
+                    <p className="mt-3 text-sm leading-7 text-[#F5F0E6]/68">{text}</p>
+                  </article>
+                ))}
+              </div>
+              <div className="mt-7 flex flex-wrap gap-4">
+                <Link href="/contact" className="inline-flex bg-[#C9A962] px-7 py-4 text-[10px] font-bold uppercase tracking-[0.18em] text-[#102f23]">Request Hair Color Quote →</Link>
+                <Link href="/contact" className="inline-flex border border-[#C9A962]/55 px-7 py-4 text-[10px] font-bold uppercase tracking-[0.18em] text-[#F5F0E6]">Request Free Sample →</Link>
+                <a href="/catalogues/Shivesh-International-Product-Catalogue.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex border border-[#C9A962]/55 px-7 py-4 text-[10px] font-bold uppercase tracking-[0.18em] text-[#F5F0E6]">View Product Catalogue →</a>
+                <a href="https://wa.me/919999774950" target="_blank" rel="noopener noreferrer" className="inline-flex border border-[#C9A962]/55 px-7 py-4 text-[10px] font-bold uppercase tracking-[0.18em] text-[#F5F0E6]">WhatsApp Export Team →</a>
+              </div>
+            </div>
+          </div>
+        </RevealOnScroll>
+      </section>
+
+      {/* PROCUREMENT FAQ */}
+      <section className="bg-[#ede5d7] px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+        <RevealOnScroll>
+          <div className="mx-auto max-w-[1100px]">
+            <div className="text-center">
+              <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#9f7f36]">Buyer Questions</p>
+              <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">Natural Henna Hair Colors Procurement FAQs</h2>
+            </div>
+            <div className="mt-12 divide-y divide-[#173b2a]/15 border-y border-[#173b2a]/15">
+              {procurementFaqs.map((faq, index) => (
+                <details key={faq.question} className="group">
+                  <summary className="flex cursor-pointer list-none items-start justify-between gap-6 py-6">
+                    <h3 className="text-xl font-semibold leading-snug"><span className="mr-4 text-[#9f7f36]">{String(index + 1).padStart(2, "0")}</span>{faq.question}</h3>
+                    <span className="text-2xl text-[#9f7f36] transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="max-w-[940px] pb-7 text-[15px] leading-8 text-[#4c5f54]">{faq.answer}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </RevealOnScroll>
+      </section>
+
       {/* FINAL CTA */}
       <section
   id="buyer-enquiry"
@@ -1547,16 +1780,16 @@ export default function NaturalHennaHairColorsPage() {
 
             <p className="mx-auto mt-8 max-w-4xl text-lg leading-9 text-[#F5F0E6]/68">
               Contact Shivesh International for Natural Henna Hair Colors in
-  retail, professional, bulk, wholesale, OEM and private-label
-  formats. We support importers, distributors, salon brands and
-  cosmetic companies with 18 product options, custom packaging and
-  export coordination. Minimum order quantity is 200 kg per item.
+  retail, professional, bulk, wholesale, OEM, ODM and private-label
+  formats. The 18-product portfolio contains 17 hair-colour shades plus
+  1 Natural Henna Hair Treatment. Bulk orders can start from 100 kg;
+  private-label minimums depend on packaging and customization.
             </p>
 
             <div className="mt-12 grid gap-5 sm:grid-cols-3">
   <div className="rounded-[22px] border border-[#C9A962]/25 bg-white/[0.05] p-6 backdrop-blur-sm">
     <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#C9A962]">
-      18 Hair Color Products
+      17 Shades Plus 1 Treatment
     </p>
 
     <p className="mt-4 text-sm leading-7 text-[#F5F0E6]/65">
@@ -1578,7 +1811,7 @@ export default function NaturalHennaHairColorsPage() {
 
   <div className="rounded-[22px] border border-[#C9A962]/25 bg-white/[0.05] p-6 backdrop-blur-sm">
     <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#C9A962]">
-      MOQ: 200 kg per Item
+      Bulk Orders from 100 kg
     </p>
 
     <p className="mt-4 text-sm leading-7 text-[#F5F0E6]/65">
@@ -1593,7 +1826,7 @@ export default function NaturalHennaHairColorsPage() {
                 href="/contact"
                 className="inline-flex items-center gap-4 rounded-full border border-[#C9A962] bg-[#C9A962] px-10 py-5 text-sm font-bold uppercase tracking-[0.22em] text-[#102f23] transition-all duration-500 hover:-translate-y-1 hover:bg-[#E4C878]"
               >
-                Request Bulk & Private Label Quote
+                Request Hair Color Quote
                 <span>→</span>
               </Link>
 
@@ -1605,7 +1838,16 @@ export default function NaturalHennaHairColorsPage() {
               >
                 WhatsApp Export Team
                 <span>→</span>
-                            </a>
+              </a>
+              <a
+                href="/catalogues/Shivesh-International-Product-Catalogue.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-4 rounded-full border border-[#F5F0E6]/30 px-10 py-5 text-sm font-bold uppercase tracking-[0.22em] text-[#F5F0E6] transition-all duration-500 hover:border-[#C9A962] hover:text-[#C9A962]"
+              >
+                View Product Catalogue
+                <span>→</span>
+              </a>
             </div>
 
             <div className="mt-10 flex flex-wrap items-center justify-center gap-x-7 gap-y-4 text-[10px] font-bold uppercase tracking-[0.18em]">
@@ -1651,12 +1893,18 @@ export default function NaturalHennaHairColorsPage() {
               >
                 Explore Henna-Based Hair Colors
               </Link>
+
+              <span className="hidden h-1 w-1 rotate-45 bg-[#C9A962]/55 sm:block" />
+
+              <Link href="/certifications" className="text-[#F5F0E6]/55 transition-colors duration-300 hover:text-[#C9A962]">Certifications</Link>
+
+              <span className="hidden h-1 w-1 rotate-45 bg-[#C9A962]/55 sm:block" />
+
+              <Link href="/resources" className="text-[#F5F0E6]/55 transition-colors duration-300 hover:text-[#C9A962]">Buyer Resources</Link>
             </div>
           </div>
         </RevealOnScroll>
       </section>
-
-      <FooterSection />
 
       <FooterSection />
       <FloatingContactButtons />

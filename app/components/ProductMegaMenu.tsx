@@ -244,7 +244,7 @@ const productCategories: ProductCategory[] = [
     eyebrow: "Premium Botanical Collection",
     countLabel: "18 Shades",
     bannerImage:
-      "/images/products/henna-hair-colors/natural-henna-hair-colors-hero-final-v2.png",
+      "/images/products/henna-hair-colors/natural-henna-hair-colors-hero-final-v1.png",
     description:
       "A coordinated botanical hair-colour collection for professional salons, retail brands and private-label buyers.",
     featuredItems: [
