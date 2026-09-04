@@ -9,6 +9,7 @@ import Navbar from "@/app/components/Navbar";
 import PremiumCursor from "@/app/components/PremiumCursor";
 import RevealOnScroll from "@/app/components/RevealOnScroll";
 import StaggerItem from "@/app/components/StaggerItem";
+import { argentinaLanguageAlternates } from "@/app/lib/i18n";
 import FooterSection from "@/sections/FooterSection";
 
 const canonicalUrl = "https://shiveshinternational.com/export/argentina";
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
   title: { absolute: "Henna & Indigo Exporter to Argentina | Shivesh International" },
   description: "Source natural henna, indigo, botanical hair colours, Ayurvedic herbs and Indian spices for Argentina. Bulk and private-label supply from India. MOQ 200 kg per item.",
   keywords: metadataKeywords,
-  alternates: { canonical: canonicalUrl },
+  alternates: { canonical: canonicalUrl, languages: argentinaLanguageAlternates },
   openGraph: { title: "Henna & Indigo Exporter to Argentina | Shivesh International", description: "Natural henna, indigo, botanical hair colours, Ayurvedic herbs and Indian spices for Argentina, with bulk and private-label supply from India.", url: canonicalUrl, type: "website", locale: "en_AR", siteName: "Shivesh International", images: [{ url: heroImage, alt: "Natural henna, indigo and herbal products supplied from India to Argentina" }] },
   twitter: { card: "summary_large_image", title: "Henna & Indigo Exporter to Argentina", description: "Bulk and private-label Indian natural-product supply for professional buyers in Argentina.", images: [heroImage] },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },

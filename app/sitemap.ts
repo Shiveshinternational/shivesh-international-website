@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 
 import {
+  argentinaLanguageAlternates,
   austriaLanguageAlternates,
   belgiumLanguageAlternates,
   finlandLanguageAlternates,
@@ -254,6 +255,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date("2026-08-22"),
       changeFrequency: "monthly",
       priority: 0.9,
+      alternates: { languages: argentinaLanguageAlternates },
+    },
+    {
+      url: `${baseUrl}/es/export/argentina`,
+      lastModified: new Date("2026-09-04"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+      alternates: { languages: argentinaLanguageAlternates },
     },
     {
       url: `${baseUrl}/resources`,

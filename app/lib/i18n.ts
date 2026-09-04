@@ -41,6 +41,11 @@ export const equivalentRoutes = {
     ar: "/ar/export/uae",
     "x-default": "/export/uae",
   },
+  argentina: {
+    en: "/export/argentina",
+    es: "/es/export/argentina",
+    "x-default": "/export/argentina",
+  },
   germany: {
     en: "/export/germany",
     de: "/de/export/deutschland",
@@ -117,6 +122,12 @@ export const uaeLanguageAlternates = {
   en: `${siteUrl}${equivalentRoutes.uae.en}`,
   ar: `${siteUrl}${equivalentRoutes.uae.ar}`,
   "x-default": `${siteUrl}${equivalentRoutes.uae["x-default"]}`,
+} as const;
+
+export const argentinaLanguageAlternates = {
+  en: `${siteUrl}${equivalentRoutes.argentina.en}`,
+  es: `${siteUrl}${equivalentRoutes.argentina.es}`,
+  "x-default": `${siteUrl}${equivalentRoutes.argentina["x-default"]}`,
 } as const;
 
 export const franceLanguageAlternates = {
