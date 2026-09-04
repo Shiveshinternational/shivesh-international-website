@@ -194,6 +194,8 @@ export default function LanguageSelector() {
                     ? "English and Arabic are available for the UAE page."
                   : pathname === "/export/argentina"
                     ? "English and Spanish are available for the Argentina page."
+                  : pathname === "/export/usa"
+                    ? "English and Spanish are available for the USA page."
                   : pathname === "/export/italy"
                     ? "Italian is available for the Italy page."
                   : pathname === "/export/poland"

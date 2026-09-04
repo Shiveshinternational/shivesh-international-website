@@ -10,6 +10,7 @@ import FloatingContactButtons from "@/app/components/FloatingContactButtons";
 import PremiumCursor from "@/app/components/PremiumCursor";
 import MagneticButtons from "@/app/components/MagneticButtons";
 import FooterSection from "@/sections/FooterSection";
+import { usaLanguageAlternates } from "@/app/lib/i18n";
 
 export const metadata: Metadata = {
   title: "Henna & Natural Products Exporter to USA",
@@ -89,6 +90,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/export/usa",
+    languages: usaLanguageAlternates,
   },
   openGraph: {
     title: "Henna & Natural Products Exporter to USA",
