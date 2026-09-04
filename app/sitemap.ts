@@ -3,6 +3,7 @@ import type { MetadataRoute } from "next";
 import {
   austriaLanguageAlternates,
   belgiumLanguageAlternates,
+  finlandLanguageAlternates,
   franceLanguageAlternates,
   germanyLanguageAlternates,
   italyLanguageAlternates,
@@ -162,6 +163,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date("2026-08-20"),
       changeFrequency: "monthly",
       priority: 0.9,
+      alternates: { languages: finlandLanguageAlternates },
+    },
+    {
+      url: `${baseUrl}/it/export/finlandia`,
+      lastModified: new Date("2026-09-04"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+      alternates: { languages: finlandLanguageAlternates },
     },
     {
       url: `${baseUrl}/export/netherlands`,

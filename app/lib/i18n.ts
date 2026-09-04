@@ -31,6 +31,11 @@ export const equivalentRoutes = {
     it: "/it/export/norvegia",
     "x-default": "/export/norway",
   },
+  finland: {
+    en: "/export/finland",
+    it: "/it/export/finlandia",
+    "x-default": "/export/finland",
+  },
   germany: {
     en: "/export/germany",
     de: "/de/export/deutschland",
@@ -95,6 +100,12 @@ export const norwayLanguageAlternates = {
   en: `${siteUrl}${equivalentRoutes.norway.en}`,
   it: `${siteUrl}${equivalentRoutes.norway.it}`,
   "x-default": `${siteUrl}${equivalentRoutes.norway["x-default"]}`,
+} as const;
+
+export const finlandLanguageAlternates = {
+  en: `${siteUrl}${equivalentRoutes.finland.en}`,
+  it: `${siteUrl}${equivalentRoutes.finland.it}`,
+  "x-default": `${siteUrl}${equivalentRoutes.finland["x-default"]}`,
 } as const;
 
 export const franceLanguageAlternates = {

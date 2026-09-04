@@ -9,6 +9,7 @@ import Navbar from "@/app/components/Navbar";
 import PremiumCursor from "@/app/components/PremiumCursor";
 import RevealOnScroll from "@/app/components/RevealOnScroll";
 import StaggerItem from "@/app/components/StaggerItem";
+import { finlandLanguageAlternates } from "@/app/lib/i18n";
 import FooterSection from "@/sections/FooterSection";
 
 const canonicalUrl = "https://shiveshinternational.com/export/finland";
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
     "100 g henna pouch Finland", "200 g henna pouch Finland", "500 g herbal powder Finland", "1 kg botanical powder Finland", "20 kg bulk henna Finland", "25 kg bulk henna Finland", "Vacuum packed botanical powders Finland", "Bilingual label coordination Finland", "Finnish buyer packaging support", "Barcode packaging support Finland", "Sustainable packaging planning Finland", "200 kg MOQ natural products Finland",
     "India to Finland export coordination", "Natural products shipping India to Finland", "Commercial invoice support Finland", "Packing list support Finland", "Certificate of origin coordination Finland", "COA document support Finland", "Product specification documents Finland", "Sea freight coordination Finland", "Air freight coordination Finland", "Helsinki port natural products", "Turku port natural products", "HaminaKotka port freight", "Helsinki air cargo natural products", "Vantaa logistics natural products", "Finland import documentation support", "EU buyer documentation natural products", "Indian exporter for Finnish buyers",
   ].filter((_, index) => index % 2 === 0),
-  alternates: { canonical: canonicalUrl },
+  alternates: { canonical: canonicalUrl, languages: finlandLanguageAlternates },
   openGraph: {
     title: "Henna, Indigo, Herbs & Spices Exporter to Finland",
     description: "Bulk, wholesale and private-label supply of Indian henna, indigo, botanical hair colors, Ayurvedic herbs and spices for professional buyers in Finland.",
