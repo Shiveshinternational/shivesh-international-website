@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Natural henna powder manufacturer, exporter and supplier in India offering bulk, wholesale and private-label Lawsonia inermis powder for global buyers.",
+    "Natural henna powder manufacturer and exporter in India supplying 100% pure Lawsonia inermis powder in bulk, OEM and private-label packs. Bulk orders from 100 kg.",
 
   alternates: {
     canonical: "/products/natural-henna-powder",
@@ -117,8 +117,28 @@ const naturalHennaPowderStructuredData = {
         },
         {
           "@type": "PropertyValue",
+          name: "Composition",
+          value: "100% pure Lawsonia inermis henna leaves powder with no added dye, chemical or other ingredient",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Mesh Availability",
+          value: "80–120 mesh grades",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Moisture",
+          value: "Maximum 5%",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Lawsone Specification",
+          value: "Fixed-range specification available according to the agreed product grade",
+        },
+        {
+          "@type": "PropertyValue",
           name: "Minimum Order Quantity",
-          value: "200 kg per item",
+          value: "Bulk orders can start from 100 kg; private-label MOQ depends on packaging and customization",
         },
         {
           "@type": "PropertyValue",
@@ -127,6 +147,17 @@ const naturalHennaPowderStructuredData = {
             "Retail, professional, bulk, OEM and private-label packaging",
         },
       ],
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://shiveshinternational.com/products/natural-henna-powder#webpage",
+      url: "https://shiveshinternational.com/products/natural-henna-powder",
+      name: "Natural Henna Powder Manufacturer and Exporter in India",
+      description: "Procurement information for 100% pure Lawsonia inermis henna powder supplied from India in bulk, OEM and private-label formats.",
+      isPartOf: { "@id": "https://shiveshinternational.com/#website" },
+      about: { "@id": "https://shiveshinternational.com/products/natural-henna-powder#product" },
+      breadcrumb: { "@id": "https://shiveshinternational.com/products/natural-henna-powder#breadcrumb" },
+      inLanguage: "en",
     },
     {
       "@type": "BreadcrumbList",
@@ -156,6 +187,22 @@ const naturalHennaPowderStructuredData = {
     },
   ],
 };
+const procurementFaqs = [
+  { question: "What is Natural Henna Powder?", answer: "Natural Henna Powder is a fine botanical powder prepared from Lawsonia inermis henna leaves. Shivesh International supplies 100% pure henna leaves powder with no added dye, chemical or other ingredient." },
+  { question: "What is the minimum order for bulk Natural Henna Powder?", answer: "Bulk Natural Henna Powder orders can start from 100 kg. Final quantity and commercial terms are confirmed according to the agreed product grade, packaging and order requirements." },
+  { question: "What is the private-label minimum order quantity?", answer: "Private-label minimum order quantities are not fixed. They vary according to pack size, packaging format, artwork and design requirements, and customization. Please share your required pack size and quantity for confirmation." },
+  { question: "Which mesh sizes are available?", answer: "Natural Henna Powder grades from 80 to 120 mesh are available. The selected mesh and Lawsone specification or fixed range are confirmed according to the agreed product grade and buyer requirements." },
+  { question: "What is the moisture specification?", answer: "The confirmed moisture specification is a maximum of 5%. Final batch and product information is documented according to the agreed commercial specification." },
+  { question: "Is a Certificate of Analysis supplied?", answer: "Yes. A batch-specific Certificate of Analysis is available with every commercial batch or order." },
+  { question: "Are SDS/MSDS and Country of Origin documents available?", answer: "Yes. SDS/MSDS and a Country of Origin Certificate or Statement are available. Applicable commercial and export documents are coordinated for the confirmed order." },
+  { question: "Can phytosanitary and fumigation certificates be arranged?", answer: "A phytosanitary certificate can be arranged according to buyer and destination-country requirements. A fumigation certificate can also be arranged when required." },
+  { question: "Are free samples available?", answer: "Yes. Free Natural Henna Powder samples are available for prospective buyers. Sample details are confirmed after reviewing the product grade and buyer requirement." },
+  { question: "What packaging sizes are available?", answer: "Retail and private-label packs are available in 100 g, 200 g, 500 g and 1 kg sizes. Bulk supply is available in 20 kg and 25 kg double-layer vacuum packing." },
+  { question: "Is OEM and private-label supply available?", answer: "Yes. OEM supply can be coordinated according to buyer specification, formulation and branding requirements, subject to commercial and technical confirmation. Buyer logos and artwork can be used for finished retail packs subject to packaging and design feasibility and final approval." },
+  { question: "What is the typical order lead time?", answer: "Typical production or order lead time is approximately 10 to 15 days after commercial and order confirmation, subject to the product, quantity, packaging and complete order requirements. Transit or delivery time is not guaranteed." },
+  { question: "How can an importer request a quotation?", answer: "Share the required product grade, quantity, mesh, Lawsone requirement if applicable, pack size, bulk, private-label or OEM requirement, destination country or port, required documents, and company contact details through our contact page, email or WhatsApp." },
+] as const;
+const faqStructuredData = { "@context": "https://schema.org", "@type": "FAQPage", "@id": "https://shiveshinternational.com/products/natural-henna-powder#faq", mainEntity: procurementFaqs.map((faq) => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })) };
 export default function NaturalHennaPowderPage() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-[#f5f0e6] text-[#173b2a]">
@@ -166,6 +213,10 @@ export default function NaturalHennaPowderPage() {
         naturalHennaPowderStructuredData
       ).replace(/</g, "\\u003c"),
     }}
+  />
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData).replace(/</g, "\\u003c") }}
   />
 
   <Navbar />
@@ -334,6 +385,8 @@ export default function NaturalHennaPowderPage() {
     dried and finely ground leaves of the henna plant,
     botanically known as
     <strong> Lawsonia inermis.</strong>
+    {" "}The product is 100% pure henna leaves powder with no
+    added dye, chemical or other ingredient.
   </p>
 
   <p className="text-lg leading-9 text-[#4c5f54]">
@@ -600,12 +653,16 @@ export default function NaturalHennaPowderPage() {
   ["Colour", "Natural Green"],
   ["Odour", "Characteristic Herbal"],
   ["Primary Applications", "Hair Colouring, Hair Care, Salon, Mehndi & Cosmetics"],
-  ["Mesh Size", "As per Agreed Product Grade"],
-  ["Moisture", "As per Agreed Buyer Specification"],
-  ["Minimum Order Quantity", "200 kg per Item"],
+  ["Ingredient / Composition", "100% Pure Lawsonia inermis Henna Leaves Powder; No Added Dye, Chemical or Other Ingredient"],
+  ["Mesh Availability", "80–120 Mesh Grades"],
+  ["Moisture", "Maximum 5%"],
+  ["Lawsone", "Fixed-Range Specification Available; Confirmed for the Agreed Product Grade"],
+  ["Bulk Minimum Order", "Bulk Orders Can Start from 100 kg"],
+  ["Private-Label MOQ", "Varies by Pack Size, Packaging, Artwork, Design and Customization"],
   ["Shelf Life", "24 Months under Recommended Storage"],
   ["Storage", "Store Sealed in a Cool, Dry Place"],
-  ["Packaging", "Retail, Professional, Bulk, OEM & Private Label"],
+  ["Retail / Private-Label Packs", "100 g, 200 g, 500 g and 1 kg"],
+  ["Bulk Packaging", "20 kg and 25 kg Double-Layer Vacuum Packing"],
                 ].map(([parameter, value], index) => (
                   <div
                     key={parameter}
@@ -624,10 +681,11 @@ export default function NaturalHennaPowderPage() {
             </StaggerItem>
 
             <p className="mx-auto mt-7 max-w-4xl text-center text-sm leading-7 text-[#4c5f54]/72">
-  Technical values, mesh size and other parameters may vary
-  according to the agreed henna powder grade, buyer specification
-  and batch-specific Certificate of Analysis. Final commercial
-  specifications are confirmed before order processing.
+  A batch-specific Certificate of Analysis is available with every
+  commercial batch or order. Testing can be performed according to
+  buyer instructions and requirements. Final specifications are
+  confirmed before order processing; no unlisted test limit or
+  destination-market approval is implied.
 </p>
           </div>
         </RevealOnScroll>
@@ -889,6 +947,85 @@ export default function NaturalHennaPowderPage() {
           </div>
         </RevealOnScroll>
       </section>
+
+      {/* WHO WE SUPPLY */}
+      <section className="bg-[#f5f0e6] px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+        <RevealOnScroll>
+          <div className="mx-auto max-w-[1320px]">
+            <div className="mx-auto max-w-4xl text-center">
+              <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#9f7f36]">Who We Supply</p>
+              <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">Natural Henna Powder for Professional Buyers</h2>
+              <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#4c5f54]">Commercial supply for buyers developing bulk, wholesale, salon, cosmetic, herbal, hair-care, OEM and private-label product programmes.</p>
+            </div>
+            <div className="mt-12 grid auto-rows-fr gap-4 sm:grid-cols-2 lg:grid-cols-5">
+              {[
+                ["Importers", "Bulk sourcing and destination-market supply planning."],
+                ["Distributors", "Wholesale and branded product distribution programmes."],
+                ["Wholesalers", "Commercial quantities and bulk export packaging."],
+                ["Cosmetic Brands", "Henna powder for agreed cosmetic product requirements."],
+                ["Hair-Care Brands", "Botanical hair-colour and hair-care product ranges."],
+                ["Salons & Salon Suppliers", "Professional henna products and salon supply channels."],
+                ["Herbal & Natural Brands", "Pure Lawsonia inermis powder for branded ranges."],
+                ["Private-Label Buyers", "Buyer artwork, retail packs and custom presentation."],
+                ["OEM Buyers", "Supply according to agreed specification, formulation and branding."],
+                ["Bulk Buyers", "Bulk orders starting from 100 kg, subject to confirmation."],
+              ].map(([title, text]) => (
+                <article key={title} className="h-full border border-[#C9A962]/28 bg-[#ede5d7] p-5">
+                  <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold">{title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-[#4c5f54]">{text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </RevealOnScroll>
+      </section>
+
+      {/* DOCUMENTS AND ORDER PLANNING */}
+      <section className="bg-[#102f23] px-6 py-20 text-[#F5F0E6] sm:px-8 lg:px-12 lg:py-24">
+        <RevealOnScroll>
+          <div className="mx-auto grid max-w-[1320px] gap-12 lg:grid-cols-2 lg:gap-16">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#C9A962]">Documents & Export Support</p>
+              <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">Commercial Documentation for Henna Powder Buyers</h2>
+              <p className="mt-6 text-lg leading-8 text-[#F5F0E6]/68">Documentation is coordinated for the confirmed product, commercial order and destination requirements.</p>
+              <div className="mt-8 grid gap-3 sm:grid-cols-2">
+                {["Batch-specific COA with every commercial batch or order","SDS / MSDS available","Country of Origin Certificate or Statement available","Phytosanitary certificate arranged according to buyer or country requirements","Fumigation certificate arranged when required","Testing performed according to buyer instructions or requirements","Applicable commercial and export documentation","Incoterm coordination according to buyer requirements"].map((item) => <div key={item} className="border border-[#C9A962]/20 bg-[#071b14]/45 p-4 text-sm leading-7 text-[#F5F0E6]/72">{item}</div>)}
+              </div>
+              <p className="mt-5 text-sm leading-7 text-[#F5F0E6]/62">Company certifications and registrations presently include ISO, GMP, Halal, Kosher, HACCP, MSME and FSSAI. Their applicability and scope should be reviewed against the selected product and buyer requirement; this list does not represent automatic product-specific or destination-market approval.</p>
+              <p className="mt-7 border border-[#C9A962]/30 bg-[#071b14]/55 p-5 text-sm leading-7 text-[#F5F0E6]/62">The importer or buyer remains responsible for confirming applicable product classification, import, customs, registration, labelling and destination-market regulatory requirements. Documentation support does not imply automatic approval or customs clearance.</p>
+            </div>
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#C9A962]">Samples & Order Planning</p>
+              <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">Plan Your Bulk, OEM or Private-Label Order</h2>
+              <div className="mt-8 space-y-4">
+                {[
+                  ["Free Samples", "Free samples are available for prospective buyers. Sample details are confirmed after reviewing the required grade and application."],
+                  ["Bulk Order Quantity", "Bulk Natural Henna Powder orders can start from 100 kg, subject to product, grade, packaging and commercial confirmation."],
+                  ["Private-Label MOQ", "Private-label minimums vary by pack size, packaging format, artwork and design requirements, and customization."],
+                  ["Typical Lead Time", "Approximately 10–15 days after commercial and order confirmation, subject to product, quantity, packaging and complete requirements. Transit and delivery times are not guaranteed."],
+                  ["Payment & Shipping", "Payment terms are provided on quotation. Shipping and Incoterms can be coordinated according to buyer requirements and instructions."],
+                ].map(([title, text]) => <article key={title} className="border border-[#C9A962]/22 bg-[#071b14]/45 p-5"><h3 className="text-xl font-semibold text-[#E4C878]">{title}</h3><p className="mt-3 text-sm leading-7 text-[#F5F0E6]/68">{text}</p></article>)}
+              </div>
+              <div className="mt-7 flex flex-wrap gap-4">
+                <Link href="/contact" className="inline-flex bg-[#C9A962] px-7 py-4 text-[10px] font-bold uppercase tracking-[0.18em] text-[#102f23]">Request Quote or Sample →</Link>
+                <a href="/catalogues/Shivesh-International-Product-Catalogue.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex border border-[#C9A962]/55 px-7 py-4 text-[10px] font-bold uppercase tracking-[0.18em] text-[#F5F0E6]">View / Download Product Catalogue →</a>
+              </div>
+            </div>
+          </div>
+        </RevealOnScroll>
+      </section>
+
+      {/* PROCUREMENT FAQ */}
+      <section className="bg-[#ede5d7] px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+        <RevealOnScroll>
+          <div className="mx-auto max-w-[1100px]">
+            <div className="text-center"><p className="text-xs font-bold uppercase tracking-[0.42em] text-[#9f7f36]">Buyer Questions</p><h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">Natural Henna Powder Procurement FAQs</h2></div>
+            <div className="mt-12 divide-y divide-[#173b2a]/15 border-y border-[#173b2a]/15">
+              {procurementFaqs.map((faq, index) => <details key={faq.question} className="group"><summary className="flex cursor-pointer list-none items-start justify-between gap-6 py-6"><h3 className="text-xl font-semibold leading-snug"><span className="mr-4 text-[#9f7f36]">{String(index + 1).padStart(2, "0")}</span>{faq.question}</h3><span className="text-2xl text-[#9f7f36] transition-transform group-open:rotate-45">+</span></summary><p className="max-w-[940px] pb-7 text-[15px] leading-8 text-[#4c5f54]">{faq.answer}</p></details>)}
+            </div>
+          </div>
+        </RevealOnScroll>
+      </section>
             
             {/* FINAL PRODUCT CTA */}
       <section className="relative overflow-hidden bg-[#071b14] px-6 py-24 text-center text-[#F5F0E6] sm:px-8 lg:px-12">
@@ -906,10 +1043,12 @@ export default function NaturalHennaPowderPage() {
 
             <p className="mx-auto mt-7 max-w-3xl text-lg leading-9 text-[#F5F0E6]/65">
               Contact Shivesh International for bulk, wholesale, OEM and
-  private-label Natural Henna Powder supply from India. Share your
-  required grade, mesh size, quantity, packaging format,
-  destination country and branding needs. Minimum order quantity
-  is 200 kg per item.
+  private-label Natural Henna Powder supply from India. Share the
+  product grade, required quantity, mesh requirement, Lawsone
+  requirement where applicable, pack size, bulk, private-label or
+  OEM scope, destination country or port, required documents and
+  your company contact details. Bulk orders can start from 100 kg;
+  private-label minimums depend on packaging and customization.
             </p>
 
             <div className="mt-10 flex flex-wrap justify-center gap-4">
@@ -928,6 +1067,15 @@ export default function NaturalHennaPowderPage() {
                 className="inline-flex items-center gap-4 border border-[#F5F0E6]/30 px-9 py-4 text-sm font-bold uppercase tracking-[0.2em] text-[#F5F0E6] transition-all duration-500 hover:border-[#C9A962] hover:text-[#C9A962]"
               >
                 WhatsApp Export Team
+                <span>→</span>
+              </a>
+              <a
+                href="/catalogues/Shivesh-International-Product-Catalogue.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-4 border border-[#F5F0E6]/30 px-9 py-4 text-sm font-bold uppercase tracking-[0.2em] text-[#F5F0E6] transition-all duration-500 hover:border-[#C9A962] hover:text-[#C9A962]"
+              >
+                View Product Catalogue
                 <span>→</span>
               </a>
             </div>
@@ -956,6 +1104,22 @@ export default function NaturalHennaPowderPage() {
   >
     Explore Natural Indigo Powder
   </Link>
+
+  <span className="hidden h-1 w-1 rotate-45 bg-[#C9A962]/55 sm:block" />
+
+  <Link href="/products/natural-henna-hair-colors" className="text-[#F5F0E6]/55 transition-colors duration-300 hover:text-[#C9A962]">Natural Henna Hair Colors</Link>
+
+  <span className="hidden h-1 w-1 rotate-45 bg-[#C9A962]/55 sm:block" />
+
+  <Link href="/products/henna-based-hair-colors" className="text-[#F5F0E6]/55 transition-colors duration-300 hover:text-[#C9A962]">Henna-Based Hair Colors</Link>
+
+  <span className="hidden h-1 w-1 rotate-45 bg-[#C9A962]/55 sm:block" />
+
+  <Link href="/certifications" className="text-[#F5F0E6]/55 transition-colors duration-300 hover:text-[#C9A962]">Certifications</Link>
+
+  <span className="hidden h-1 w-1 rotate-45 bg-[#C9A962]/55 sm:block" />
+
+  <Link href="/resources" className="text-[#F5F0E6]/55 transition-colors duration-300 hover:text-[#C9A962]">Buyer Resources</Link>
 </div>
           </div>
         </RevealOnScroll>
