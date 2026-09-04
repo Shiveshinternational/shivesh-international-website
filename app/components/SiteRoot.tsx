@@ -1,11 +1,12 @@
 import Script from "next/script";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Noto_Sans_Arabic } from "next/font/google";
 
 import BrandProtection from "@/app/components/BrandProtection";
 import CookieConsent from "@/app/components/CookieConsent";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
+const notoSansArabic = Noto_Sans_Arabic({ variable: "--font-arabic", subsets: ["arabic"] });
 
 const defaultStructuredData = {
   "@context": "https://schema.org",
@@ -46,10 +47,10 @@ const defaultStructuredData = {
   ],
 };
 
-export default function SiteRoot({ children, lang, structuredData = defaultStructuredData }: Readonly<{ children: React.ReactNode; lang: "en" | "de" | "fr" | "es" | "it"; structuredData?: object }>) {
+export default function SiteRoot({ children, lang, structuredData = defaultStructuredData }: Readonly<{ children: React.ReactNode; lang: "en" | "de" | "fr" | "es" | "it" | "ar"; structuredData?: object }>) {
   return (
-    <html lang={lang} dir="ltr" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
-      <body className="flex min-h-full flex-col">
+    <html lang={lang} dir={lang === "ar" ? "rtl" : "ltr"} className={`${geistSans.variable} ${geistMono.variable} ${notoSansArabic.variable} h-full antialiased`}>
+      <body className={`flex min-h-full flex-col ${lang === "ar" ? "font-[family-name:var(--font-arabic)]" : ""}`}>
         <Script id="google-consent-default" strategy="beforeInteractive">
           {`
             window.dataLayer = window.dataLayer || [];

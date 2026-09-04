@@ -57,6 +57,12 @@ const italianNavigationLinks = [
   { label: "Certificazioni", href: "/certifications", sectionId: "certifications" }, { label: "Export", href: "/export", sectionId: "export" },
   { label: "Contatti", href: "/contact", sectionId: "contact" },
 ];
+const arabicNavigationLinks = [
+  { label: "الرئيسية", href: "/", sectionId: "home" }, { label: "من نحن", href: "/about", sectionId: "about" },
+  { label: "المنتجات", href: "/#products", sectionId: "products" }, { label: "البنية التحتية", href: "/infrastructure", sectionId: "infrastructure" },
+  { label: "الشهادات", href: "/certifications", sectionId: "certifications" }, { label: "التصدير", href: "/export", sectionId: "export" },
+  { label: "اتصل بنا", href: "/contact", sectionId: "contact" },
+];
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -64,10 +70,11 @@ export default function Navbar() {
   const isFrench = pathname.startsWith("/fr/");
   const isSpanish = pathname.startsWith("/es/");
   const isItalian = pathname.startsWith("/it/");
+  const isArabic = pathname.startsWith("/ar/");
   const visibleNavigationLinks = isGerman
     ? germanNavigationLinks
     : isFrench
-      ? frenchNavigationLinks : isSpanish ? spanishNavigationLinks : isItalian ? italianNavigationLinks : navigationLinks;
+      ? frenchNavigationLinks : isSpanish ? spanishNavigationLinks : isItalian ? italianNavigationLinks : isArabic ? arabicNavigationLinks : navigationLinks;
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -163,7 +170,7 @@ export default function Navbar() {
           href="/"
           onClick={closeMenu}
           className="group flex shrink-0 items-center gap-4"
-          aria-label={isGerman ? "Shivesh International Startseite" : isFrench ? "Accueil Shivesh International" : isItalian ? "Home di Shivesh International" : "Shivesh International home"}
+          aria-label={isGerman ? "Shivesh International Startseite" : isFrench ? "Accueil Shivesh International" : isItalian ? "Home di Shivesh International" : isArabic ? "الصفحة الرئيسية لشيفيش إنترناشيونال" : "Shivesh International home"}
         >
           <div className="flex h-12 w-12 items-center justify-center border border-[#C9A962]/45 bg-[#173b2a] font-[family-name:var(--font-playfair)] text-xl font-semibold text-[#f5f0e6] transition duration-300 group-hover:border-[#C9A962] group-hover:text-[#C9A962]">
             SI
@@ -182,7 +189,7 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-5 xl:flex 2xl:gap-7">
           {visibleNavigationLinks.map((link) => {
-            if (!isGerman && !isFrench && !isSpanish && !isItalian && link.label === "Products") {
+            if (!isGerman && !isFrench && !isSpanish && !isItalian && !isArabic && link.label === "Products") {
               return <ProductMegaMenu key={link.href} />;
             }
 
@@ -220,7 +227,7 @@ export default function Navbar() {
             href="/contact"
             className="ml-1 inline-flex items-center justify-center border border-[#C9A962]/70 px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#C9A962] transition duration-300 hover:bg-[#C9A962] hover:text-[#102f23]"
           >
-            {isGerman ? "Kontakt aufnehmen" : isFrench ? "Nous contacter" : isSpanish ? "Contactar" : isItalian ? "Contattaci" : "Get in Touch"}
+            {isGerman ? "Kontakt aufnehmen" : isFrench ? "Nous contacter" : isSpanish ? "Contactar" : isItalian ? "Contattaci" : isArabic ? "تواصل معنا" : "Get in Touch"}
           </Link>
         </div>
 
@@ -232,7 +239,7 @@ export default function Navbar() {
             type="button"
             onClick={() => setIsMenuOpen((current) => !current)}
             className="flex h-10 w-10 items-center justify-center border border-[#C9A962]/40 text-[#f5f0e6] transition hover:border-[#C9A962] hover:text-[#C9A962]"
-            aria-label={isGerman ? "Navigationsmenü umschalten" : isFrench ? "Ouvrir ou fermer le menu de navigation" : isSpanish ? "Abrir o cerrar la navegación" : isItalian ? "Apri o chiudi il menu di navigazione" : "Toggle navigation menu"}
+            aria-label={isGerman ? "Navigationsmenü umschalten" : isFrench ? "Ouvrir ou fermer le menu de navigation" : isSpanish ? "Abrir o cerrar la navegación" : isItalian ? "Apri o chiudi il menu di navigazione" : isArabic ? "فتح أو إغلاق قائمة التنقل" : "Toggle navigation menu"}
             aria-expanded={isMenuOpen}
           >
             <span className="relative block h-5 w-6">
@@ -282,7 +289,7 @@ export default function Navbar() {
                   {link.label}
 
                   {isActive && (
-                    <span className="absolute bottom-3 left-0 h-px w-14 bg-[#C9A962]" />
+                    <span className={`absolute bottom-3 h-px w-14 bg-[#C9A962] ${isArabic ? "right-0" : "left-0"}`} />
                   )}
                 </Link>
               );
@@ -293,7 +300,7 @@ export default function Navbar() {
               onClick={closeMenu}
               className="mt-5 inline-flex items-center justify-center bg-[#C9A962] px-6 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-[#102f23]"
             >
-              {isGerman ? "Kontakt aufnehmen" : isFrench ? "Nous contacter" : isSpanish ? "Contactar" : isItalian ? "Contattaci" : "Get in Touch"}
+              {isGerman ? "Kontakt aufnehmen" : isFrench ? "Nous contacter" : isSpanish ? "Contactar" : isItalian ? "Contattaci" : isArabic ? "تواصل معنا" : "Get in Touch"}
             </Link>
           </div>
         </div>

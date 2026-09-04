@@ -9,6 +9,7 @@ export default function FloatingContactButtons() {
   const isFrench = pathname.startsWith("/fr/");
   const isSpanish = pathname.startsWith("/es/");
   const isItalian = pathname.startsWith("/it/");
+  const isArabic = pathname.startsWith("/ar/");
   const [showTooltip, setShowTooltip] = useState(false);
 
   useEffect(() => {
@@ -27,10 +28,10 @@ export default function FloatingContactButtons() {
   }, []);
 
   return (
-    <div className="fixed bottom-5 right-5 z-[9990] flex flex-col items-end gap-3 sm:bottom-6 sm:right-6">
+    <div className={`fixed bottom-5 z-[9990] flex flex-col gap-3 sm:bottom-6 ${isArabic ? "left-5 items-start sm:left-6" : "right-5 items-end sm:right-6"}`}>
       {/* PREMIUM TOOLTIP */}
       <div
-        className={`pointer-events-none origin-bottom-right transition-all duration-500 ${
+        className={`pointer-events-none transition-all duration-500 ${isArabic ? "origin-bottom-left" : "origin-bottom-right"} ${
           showTooltip
             ? "translate-y-0 scale-100 opacity-100"
             : "translate-y-3 scale-95 opacity-0"
@@ -38,18 +39,18 @@ export default function FloatingContactButtons() {
       >
         <div className="relative w-[235px] rounded-[20px] border border-white/15 bg-[#102f23]/95 p-4 text-[#F5F0E6] shadow-[0_20px_55px_rgba(0,0,0,0.30)] backdrop-blur-xl">
           <p className="text-[9px] font-bold uppercase tracking-[0.24em] text-[#C9A962]">
-            {isGerman ? "Benötigen Sie Unterstützung?" : isFrench ? "Besoin d’aide ?" : isSpanish ? "¿Necesita ayuda?" : isItalian ? "Serve assistenza?" : "Need Assistance?"}
+            {isGerman ? "Benötigen Sie Unterstützung?" : isFrench ? "Besoin d’aide ?" : isSpanish ? "¿Necesita ayuda?" : isItalian ? "Serve assistenza?" : isArabic ? "هل تحتاج إلى مساعدة؟" : "Need Assistance?"}
           </p>
 
           <p className="mt-2 font-[family-name:var(--font-playfair)] text-lg font-semibold leading-tight">
-            {isGerman ? "Sprechen Sie mit unserem Exportteam" : isFrench ? "Échangez avec notre équipe export" : isSpanish ? "Hable con nuestro equipo exportador" : isItalian ? "Parlate con il nostro team export" : "Chat with our Export Team"}
+            {isGerman ? "Sprechen Sie mit unserem Exportteam" : isFrench ? "Échangez avec notre équipe export" : isSpanish ? "Hable con nuestro equipo exportador" : isItalian ? "Parlate con il nostro team export" : isArabic ? "تحدث مع فريق التصدير لدينا" : "Chat with our Export Team"}
           </p>
 
           <p className="mt-2 text-xs leading-5 text-[#F5F0E6]/58">
-            {isGerman ? "Produktanfragen, Angebote, Großbestellungen und Unterstützung für Eigenmarken." : isFrench ? "Demandes produits, devis, commandes en gros et accompagnement Private Label." : isSpanish ? "Consultas, presupuestos, pedidos a granel y apoyo de marca propia." : isItalian ? "Richieste prodotti, preventivi, ordini sfusi e supporto Private Label." : "Product enquiries, quotations, bulk orders and private-label support."}
+            {isGerman ? "Produktanfragen, Angebote, Großbestellungen und Unterstützung für Eigenmarken." : isFrench ? "Demandes produits, devis, commandes en gros et accompagnement Private Label." : isSpanish ? "Consultas, presupuestos, pedidos a granel y apoyo de marca propia." : isItalian ? "Richieste prodotti, preventivi, ordini sfusi e supporto Private Label." : isArabic ? "استفسارات المنتجات وعروض الأسعار والطلبات بالجملة ودعم العلامة الخاصة." : "Product enquiries, quotations, bulk orders and private-label support."}
           </p>
 
-          <span className="absolute -bottom-2 right-7 h-4 w-4 rotate-45 border-b border-r border-white/15 bg-[#102f23]" />
+          <span className={`absolute -bottom-2 h-4 w-4 rotate-45 border-b border-r border-white/15 bg-[#102f23] ${isArabic ? "left-7" : "right-7"}`} />
         </div>
       </div>
 
@@ -58,7 +59,7 @@ export default function FloatingContactButtons() {
         href="https://wa.me/919999774950"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={isGerman ? "Shivesh International über WhatsApp kontaktieren" : isFrench ? "Contacter Shivesh International sur WhatsApp" : isSpanish ? "Contactar con Shivesh International por WhatsApp" : isItalian ? "Contatta Shivesh International su WhatsApp" : "Chat with Shivesh International on WhatsApp"}
+        aria-label={isGerman ? "Shivesh International über WhatsApp kontaktieren" : isFrench ? "Contacter Shivesh International sur WhatsApp" : isSpanish ? "Contactar con Shivesh International por WhatsApp" : isItalian ? "Contatta Shivesh International su WhatsApp" : isArabic ? "تواصل مع شيفيش إنترناشيونال عبر واتساب" : "Chat with Shivesh International on WhatsApp"}
         onMouseEnter={() => setShowTooltip(true)}
         onMouseLeave={() => setShowTooltip(false)}
         className="group relative flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] shadow-[0_18px_45px_rgba(37,211,102,0.36)] transition-all duration-500 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_22px_60px_rgba(37,211,102,0.48)] focus:outline-none focus-visible:ring-4 focus-visible:ring-[#25D366]/35 sm:h-[68px] sm:w-[68px]"
@@ -82,7 +83,7 @@ export default function FloatingContactButtons() {
 
         {/* HOVER LABEL */}
         <span className="pointer-events-none absolute right-[78px] hidden whitespace-nowrap rounded-full border border-[#25D366]/30 bg-[#102f23]/92 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.18em] text-white opacity-0 shadow-[0_12px_30px_rgba(0,0,0,0.22)] backdrop-blur-lg transition-all duration-300 group-hover:-translate-x-1 group-hover:opacity-100 xl:block">
-          {isGerman ? "WhatsApp-Kontakt" : isFrench ? "Nous écrire sur WhatsApp" : isSpanish ? "Escríbanos por WhatsApp" : isItalian ? "Scrivici su WhatsApp" : "WhatsApp Us"}
+          {isGerman ? "WhatsApp-Kontakt" : isFrench ? "Nous écrire sur WhatsApp" : isSpanish ? "Escríbanos por WhatsApp" : isItalian ? "Scrivici su WhatsApp" : isArabic ? "راسلنا عبر واتساب" : "WhatsApp Us"}
         </span>
 
         <style jsx>{`

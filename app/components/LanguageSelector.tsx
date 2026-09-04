@@ -11,7 +11,7 @@ const languages = [
   { code: "FR", label: "Français", flag: "🇫🇷", locale: "fr" as const },
   { code: "DE", label: "Deutsch", flag: "🇩🇪", locale: "de" as const },
   { code: "IT", label: "Italiano", flag: "🇮🇹", locale: "it" as const },
-  { code: "AR", label: "Arabic", flag: "🇦🇪", locale: null },
+  { code: "AR", label: "العربية", flag: "🇦🇪", locale: "ar" as const },
   { code: "JA", label: "Japanese", flag: "🇯🇵", locale: null },
 ];
 
@@ -25,6 +25,7 @@ const frenchLanguageLabels: Record<string, string> = {
 };
 const spanishLanguageLabels: Record<string, string> = { EN: "Inglés", ES: "Español", FR: "Francés", DE: "Alemán", AR: "Árabe", JA: "Japonés" };
 const italianLanguageLabels: Record<string, string> = { EN: "Inglese", ES: "Spagnolo", FR: "Francese", DE: "Tedesco", IT: "Italiano", AR: "Arabo", JA: "Giapponese" };
+const arabicLanguageLabels: Record<string, string> = { EN: "الإنجليزية", ES: "الإسبانية", FR: "الفرنسية", DE: "الألمانية", IT: "الإيطالية", AR: "العربية", JA: "اليابانية" };
 
 export default function LanguageSelector() {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +36,7 @@ export default function LanguageSelector() {
     ? "DE"
     : pathname.startsWith("/fr/")
       ? "FR"
-      : pathname.startsWith("/es/") ? "ES" : pathname.startsWith("/it/") ? "IT" : "EN";
+      : pathname.startsWith("/es/") ? "ES" : pathname.startsWith("/it/") ? "IT" : pathname.startsWith("/ar/") ? "AR" : "EN";
 
   useEffect(() => {
     if (!isOpen) return;
@@ -68,7 +69,7 @@ export default function LanguageSelector() {
     languages.find((language) => language.code === selectedCode) ??
     languages[0];
 
-  const selectLanguage = (locale: "en" | "de" | "fr" | "es" | "it") => {
+  const selectLanguage = (locale: "en" | "de" | "fr" | "es" | "it" | "ar") => {
     const destination = getEquivalentRoute(pathname, locale);
     setIsOpen(false);
     if (destination && destination !== pathname) router.push(destination);
@@ -80,7 +81,7 @@ export default function LanguageSelector() {
         type="button"
         onClick={() => setIsOpen((current) => !current)}
         className="inline-flex h-10 items-center gap-2 rounded-full border border-[#C9A962]/35 bg-[#173b2a]/65 px-3 text-[10px] font-bold uppercase tracking-[0.12em] text-[#F5F0E6] transition-all duration-300 hover:border-[#C9A962] hover:text-[#C9A962]"
-        aria-label={selectedCode === "DE" ? "Sprache auswählen" : selectedCode === "FR" ? "Choisir la langue" : selectedCode === "ES" ? "Seleccionar idioma" : selectedCode === "IT" ? "Seleziona la lingua" : "Select display language"}
+        aria-label={selectedCode === "DE" ? "Sprache auswählen" : selectedCode === "FR" ? "Choisir la langue" : selectedCode === "ES" ? "Seleccionar idioma" : selectedCode === "IT" ? "Seleziona la lingua" : selectedCode === "AR" ? "اختيار لغة العرض" : "Select display language"}
         aria-expanded={isOpen}
       >
         <span className="text-sm">{selectedLanguage.flag}</span>
@@ -95,7 +96,7 @@ export default function LanguageSelector() {
       </button>
 
       <div
-        className={`absolute right-0 top-[calc(100%+14px)] z-[120] w-[210px] origin-top-right transition-all duration-300 ${
+        className={`absolute top-[calc(100%+14px)] z-[120] w-[210px] transition-all duration-300 ${selectedCode === "AR" ? "left-0 origin-top-left" : "right-0 origin-top-right"} ${
           isOpen
             ? "pointer-events-auto translate-y-0 scale-100 opacity-100"
             : "pointer-events-none -translate-y-2 scale-[0.98] opacity-0"
@@ -103,7 +104,7 @@ export default function LanguageSelector() {
       >
         <div className="overflow-hidden rounded-[20px] border border-[#C9A962]/25 bg-[#0b241a]/98 p-2 shadow-[0_24px_70px_rgba(0,0,0,0.40)] backdrop-blur-2xl">
           <p className="px-3 pb-2 pt-2 text-[9px] font-bold uppercase tracking-[0.22em] text-[#C9A962]">
-            {selectedCode === "DE" ? "Sprache" : selectedCode === "FR" ? "Langue" : selectedCode === "ES" ? "Idioma" : selectedCode === "IT" ? "Lingua" : "Display Language"}
+            {selectedCode === "DE" ? "Sprache" : selectedCode === "FR" ? "Langue" : selectedCode === "ES" ? "Idioma" : selectedCode === "IT" ? "Lingua" : selectedCode === "AR" ? "لغة العرض" : "Display Language"}
           </p>
 
           {languages.map((language) => {
@@ -120,7 +121,7 @@ export default function LanguageSelector() {
                 onClick={() => language.locale && selectLanguage(language.locale)}
                 disabled={!isAvailable}
                 aria-disabled={!isAvailable}
-                className={`flex w-full items-center justify-between rounded-[14px] px-3 py-2.5 text-left transition-all duration-300 ${
+                className={`flex w-full items-center justify-between rounded-[14px] px-3 py-2.5 transition-all duration-300 ${selectedCode === "AR" ? "text-right" : "text-left"} ${
                   isSelected
                     ? "bg-[#173b2a] text-[#E4C878]"
                     : isAvailable
@@ -135,6 +136,7 @@ export default function LanguageSelector() {
                       ? frenchLanguageLabels[language.code]
                       : selectedCode === "ES" ? spanishLanguageLabels[language.code]
                       : selectedCode === "IT" ? italianLanguageLabels[language.code]
+                      : selectedCode === "AR" ? arabicLanguageLabels[language.code]
                       : language.label}
                   </span>
                 </span>
@@ -148,7 +150,9 @@ export default function LanguageSelector() {
 
           <div className="mx-2 mt-2 border-t border-[#C9A962]/12 px-2 py-3">
             <p className="text-[10px] leading-5 text-[#F5F0E6]/38">
-              {selectedCode === "DE"
+              {selectedCode === "AR"
+                ? "تتوفر العربية والإنجليزية لهذه الصفحة."
+                : selectedCode === "DE"
                 ? pathname === "/de/export/oesterreich"
                   ? "Deutsch, Englisch und Italienisch sind für diese Seite verfügbar."
                   : "Englisch und Deutsch sind für diese Seite verfügbar."
@@ -184,6 +188,8 @@ export default function LanguageSelector() {
                           : pathname === "/it/export/spagna"
                             ? "Italiano, inglese e spagnolo sono disponibili per questa pagina."
                       : "Italiano e inglese sono disponibili per questa pagina."
+                  : pathname === "/export/uae"
+                    ? "English and Arabic are available for the UAE page."
                   : pathname === "/export/italy"
                     ? "Italian is available for the Italy page."
                   : pathname === "/export/poland"

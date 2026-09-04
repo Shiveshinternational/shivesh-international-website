@@ -11,6 +11,7 @@ import {
   norwayLanguageAlternates,
   polandLanguageAlternates,
   spainLanguageAlternates,
+  uaeLanguageAlternates,
 } from "@/app/lib/i18n";
 
 const baseUrl = "https://shiveshinternational.com";
@@ -273,6 +274,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/export/uae`,
       changeFrequency: "monthly",
       priority: 0.9,
+      alternates: { languages: uaeLanguageAlternates },
+    },
+    {
+      url: `${baseUrl}/ar/export/uae`,
+      lastModified: new Date("2026-09-04"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+      alternates: { languages: uaeLanguageAlternates },
     },
     {
       url: `${baseUrl}/export/germany`,

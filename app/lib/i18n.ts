@@ -36,6 +36,11 @@ export const equivalentRoutes = {
     it: "/it/export/finlandia",
     "x-default": "/export/finland",
   },
+  uae: {
+    en: "/export/uae",
+    ar: "/ar/export/uae",
+    "x-default": "/export/uae",
+  },
   germany: {
     en: "/export/germany",
     de: "/de/export/deutschland",
@@ -53,7 +58,7 @@ export const equivalentRoutes = {
   },
 } as const;
 
-export type AvailableLocale = "en" | "de" | "fr" | "es" | "it";
+export type AvailableLocale = "en" | "de" | "fr" | "es" | "it" | "ar";
 
 export const italyLanguageAlternates = {
   en: `${siteUrl}${equivalentRoutes.italy.en}`,
@@ -108,6 +113,12 @@ export const finlandLanguageAlternates = {
   "x-default": `${siteUrl}${equivalentRoutes.finland["x-default"]}`,
 } as const;
 
+export const uaeLanguageAlternates = {
+  en: `${siteUrl}${equivalentRoutes.uae.en}`,
+  ar: `${siteUrl}${equivalentRoutes.uae.ar}`,
+  "x-default": `${siteUrl}${equivalentRoutes.uae["x-default"]}`,
+} as const;
+
 export const franceLanguageAlternates = {
   en: `${siteUrl}${equivalentRoutes.france.en}`,
   fr: `${siteUrl}${equivalentRoutes.france.fr}`,
@@ -134,5 +145,6 @@ export function getEquivalentRoute(pathname: string, locale: AvailableLocale) {
   if (locale === "de") return "de" in cluster ? cluster.de : undefined;
   if (locale === "fr") return "fr" in cluster ? cluster.fr : undefined;
   if (locale === "es") return "es" in cluster ? cluster.es : undefined;
-  return "it" in cluster ? cluster.it : undefined;
+  if (locale === "it") return "it" in cluster ? cluster.it : undefined;
+  return "ar" in cluster ? cluster.ar : undefined;
 }

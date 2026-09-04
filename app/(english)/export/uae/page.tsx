@@ -9,6 +9,7 @@ import Navbar from "@/app/components/Navbar";
 import PremiumCursor from "@/app/components/PremiumCursor";
 import RevealOnScroll from "@/app/components/RevealOnScroll";
 import StaggerItem from "@/app/components/StaggerItem";
+import { uaeLanguageAlternates } from "@/app/lib/i18n";
 import FooterSection from "@/sections/FooterSection";
 
 const pageUrl = "https://shiveshinternational.com/export/uae";
@@ -101,12 +102,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: pageUrl,
-    languages: {
-      "en-AE": pageUrl,
-      "en-GB": "https://shiveshinternational.com/export/uk",
-      "en-US": "https://shiveshinternational.com/export/usa",
-      "x-default": "https://shiveshinternational.com/export",
-    },
+    languages: uaeLanguageAlternates,
   },
   openGraph: {
     title: "Natural Products Exporter to UAE",
