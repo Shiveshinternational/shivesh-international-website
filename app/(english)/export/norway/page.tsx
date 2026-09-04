@@ -10,6 +10,7 @@ import PremiumCursor from "@/app/components/PremiumCursor";
 import RevealOnScroll from "@/app/components/RevealOnScroll";
 import StaggerItem from "@/app/components/StaggerItem";
 import FooterSection from "@/sections/FooterSection";
+import { norwayLanguageAlternates } from "@/app/lib/i18n";
 
 const canonicalUrl = "https://shiveshinternational.com/export/norway";
 const heroImage = "/images/export/norway/norway-export-hero.png";
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
   title: "Henna, Indigo, Herbs & Spices Exporter to Norway",
   description: "India-based supplier of henna, indigo, botanical hair colors, Ayurvedic herbs and spices for Norwegian importers, wholesalers and private-label brands.",
   keywords: metadataKeywords,
-  alternates: { canonical: canonicalUrl },
+  alternates: { canonical: canonicalUrl, languages: norwayLanguageAlternates },
   openGraph: { title: "Henna, Indigo, Herbs & Spices Exporter to Norway", description: "Bulk, wholesale, OEM and private-label Indian natural-product supply for professional buyers in Norway.", url: canonicalUrl, type: "website", locale: "en_NO", siteName: "Shivesh International", images: [{ url: heroImage, alt: "Norwegian buyers coordinating natural-product supply from India" }] },
   twitter: { card: "summary_large_image", title: "Natural Products Exporter to Norway", description: "Indian henna, indigo, herbs, spices and private-label supply for Norwegian professional buyers.", images: [heroImage] },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },

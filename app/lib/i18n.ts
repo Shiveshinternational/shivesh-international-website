@@ -26,6 +26,11 @@ export const equivalentRoutes = {
     it: "/it/export/polonia",
     "x-default": "/export/poland",
   },
+  norway: {
+    en: "/export/norway",
+    it: "/it/export/norvegia",
+    "x-default": "/export/norway",
+  },
   germany: {
     en: "/export/germany",
     de: "/de/export/deutschland",
@@ -84,6 +89,12 @@ export const polandLanguageAlternates = {
   en: `${siteUrl}${equivalentRoutes.poland.en}`,
   it: `${siteUrl}${equivalentRoutes.poland.it}`,
   "x-default": `${siteUrl}${equivalentRoutes.poland["x-default"]}`,
+} as const;
+
+export const norwayLanguageAlternates = {
+  en: `${siteUrl}${equivalentRoutes.norway.en}`,
+  it: `${siteUrl}${equivalentRoutes.norway.it}`,
+  "x-default": `${siteUrl}${equivalentRoutes.norway["x-default"]}`,
 } as const;
 
 export const franceLanguageAlternates = {
