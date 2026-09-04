@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Natural indigo powder manufacturer, exporter and supplier in India offering triple-sifted Indigofera tinctoria powder for bulk and private-label buyers.",
+    "Natural Indigo Powder manufacturer and exporter in India supplying 100% pure Indigofera tinctoria leaf powder with 38%–45% Indigotin for bulk, OEM, ODM and private-label buyers.",
 
   alternates: {
     canonical: "/products/natural-indigo-powder",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title:
       "Natural Indigo Powder Manufacturer & Exporter from India",
     description:
-      "Triple-sifted natural indigo powder for bulk importers, wholesalers, salons, cosmetic manufacturers and private-label brands worldwide.",
+      "100% pure microfine Indigofera tinctoria leaf powder from Tamil Nadu with 38%–45% Indigotin for bulk, OEM, ODM and private-label buyers.",
     images: [
       {
         url: "/images/products/natural-indigo-powder/natural-indigo-powder-hero-ultrawide-4k-final-v2.png",
@@ -60,12 +60,87 @@ export const metadata: Metadata = {
     title:
       "Natural Indigo Powder Manufacturer & Exporter India",
     description:
-      "Bulk, wholesale and private-label natural indigo powder supplied from India to professional buyers worldwide.",
+      "100% pure microfine Natural Indigo Powder from Tamil Nadu for bulk, OEM, ODM and private-label buyers worldwide.",
     images: [
       "/images/products/natural-indigo-powder/natural-indigo-powder-hero-ultrawide-4k-final-v2.png",
     ],
   },
 };
+
+const procurementFaqs = [
+  {
+    question: "What is Natural Indigo Powder?",
+    answer:
+      "Natural Indigo Powder is a microfine botanical powder prepared from selected Indigofera tinctoria leaves. It is commonly used in botanical hair-colour applications, including after Natural Henna to support darker brown-to-black shades.",
+  },
+  {
+    question: "Is the Indigo Powder 100% pure?",
+    answer:
+      "Yes. It is 100% pure Indigofera tinctoria leaf powder with no added dye, chemical or other ingredient.",
+  },
+  {
+    question: "What is the Indigotin specification?",
+    answer: "The confirmed Indigotin specification is 38%–45%.",
+  },
+  {
+    question: "Which mesh sizes are available?",
+    answer: "Natural Indigo Powder is available in an 80–100 mesh range.",
+  },
+  {
+    question: "What is the moisture specification?",
+    answer: "The confirmed moisture specification is 5%–8%.",
+  },
+  {
+    question: "What is the minimum order for bulk Natural Indigo Powder?",
+    answer:
+      "Bulk Natural Indigo Powder orders can start from 100 kg, subject to product, grade, packaging and commercial confirmation.",
+  },
+  {
+    question: "What is the private-label MOQ?",
+    answer:
+      "Private-label minimums vary by pack size, packaging format, artwork, design, customization and commercial feasibility. The applicable MOQ is confirmed with the quotation.",
+  },
+  {
+    question: "Is a Certificate of Analysis supplied?",
+    answer:
+      "Yes. A batch-specific Certificate of Analysis is available with every commercial batch or order.",
+  },
+  {
+    question: "Are SDS/MSDS and Country of Origin documents available?",
+    answer:
+      "Yes. SDS/MSDS and a Country of Origin Certificate or Statement are available for commercial orders.",
+  },
+  {
+    question: "Can phytosanitary and fumigation certificates be arranged?",
+    answer:
+      "A phytosanitary certificate can be arranged according to buyer or country requirements, and a fumigation certificate can be arranged when required.",
+  },
+  {
+    question: "Are free samples available?",
+    answer: "Yes. Free samples are available for prospective buyers.",
+  },
+  {
+    question: "What packaging sizes are available?",
+    answer:
+      "Retail and private-label packs are available in 100 g, 200 g, 500 g and 1 kg. Bulk packaging is available in 20 kg and 25 kg double-layer vacuum packing.",
+  },
+  {
+    question: "Are OEM, ODM and private-label services available?",
+    answer:
+      "Yes. OEM supply can follow an agreed buyer specification, formulation and branding; ODM support can follow mutually agreed technical and commercial requirements; and private-label supply can include buyer artwork and finished retail packaging, subject to feasibility.",
+  },
+  {
+    question: "What is the typical order lead time?",
+    answer:
+      "Typical lead time is approximately 10–15 days after commercial and order confirmation, subject to product, quantity, packaging and complete requirements. Transit and delivery times are not guaranteed.",
+  },
+  {
+    question: "How can an importer request a quotation?",
+    answer:
+      "Send the required product or grade, Indigotin and mesh requirements, quantity, supply model, pack size, artwork or branding needs, destination country or port, required documents, and company contact details through the contact page or WhatsApp export team.",
+  },
+];
+
 const naturalIndigoPowderStructuredData = {
   "@context": "https://schema.org",
   "@graph": [
@@ -77,15 +152,15 @@ const naturalIndigoPowderStructuredData = {
       alternateName: [
         "Indigofera tinctoria Powder",
         "Natural Indigo Leaf Powder",
-        "Triple-Sifted Indigo Powder",
-        "Export-Grade Indigo Powder",
+        "Microfine Indigo Powder",
+        "Indigo Powder for Hair",
       ],
       url:
         "https://shiveshinternational.com/products/natural-indigo-powder",
       image:
         "https://shiveshinternational.com/images/products/natural-indigo-powder/natural-indigo-powder-hero-ultrawide-4k-final-v2.png",
       description:
-        "Export-grade Natural Indigo Powder manufactured, supplied and exported from India for bulk, wholesale, salon, cosmetic and private-label buyers worldwide.",
+        "100% pure microfine Indigofera tinctoria leaf powder from Tamil Nadu, India, with 38%–45% Indigotin for bulk, OEM, ODM and private-label buyers.",
       category: "Natural Botanical Hair-Colouring Powder",
       material: "Selected Indigofera tinctoria Leaves",
       brand: {
@@ -108,7 +183,7 @@ const naturalIndigoPowderStructuredData = {
         {
           "@type": "PropertyValue",
           name: "Raw Material Origin",
-          value: "Selected Regions of South India",
+          value: "Tamil Nadu, South India, India",
         },
         {
           "@type": "PropertyValue",
@@ -117,21 +192,69 @@ const naturalIndigoPowderStructuredData = {
         },
         {
           "@type": "PropertyValue",
-          name: "Powder Grade",
-          value: "Triple-Sifted Microfine",
+          name: "Composition",
+          value:
+            "100% Pure Indigofera tinctoria Leaf Powder; No Added Dye, Chemical or Other Ingredient",
         },
         {
           "@type": "PropertyValue",
-          name: "Minimum Order Quantity",
-          value: "200 kg per item",
+          name: "Grade/Form",
+          value: "Microfine Natural Indigo Powder",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Indigotin",
+          value: "38%–45%",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Mesh Availability",
+          value: "80–100 Mesh",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Moisture",
+          value: "5%–8%",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Bulk Minimum Order",
+          value: "Bulk Orders Can Start from 100 kg",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Private-Label MOQ",
+          value:
+            "Varies by Pack Size, Packaging, Artwork, Design and Customization",
         },
         {
           "@type": "PropertyValue",
           name: "Packaging",
           value:
-            "Retail, professional, bulk, OEM and private-label packaging",
+            "100 g, 200 g, 500 g and 1 kg retail packs; 20 kg and 25 kg double-layer vacuum bulk packing",
         },
       ],
+    },
+    {
+      "@type": "WebPage",
+      "@id":
+        "https://shiveshinternational.com/products/natural-indigo-powder#webpage",
+      url: "https://shiveshinternational.com/products/natural-indigo-powder",
+      name: "Natural Indigo Powder Manufacturer & Exporter India",
+      description:
+        "Procurement information for 100% pure microfine Natural Indigo Powder supplied from Tamil Nadu, India.",
+      isPartOf: {
+        "@id": "https://shiveshinternational.com/#website",
+      },
+      about: {
+        "@id":
+          "https://shiveshinternational.com/products/natural-indigo-powder#product",
+      },
+      breadcrumb: {
+        "@id":
+          "https://shiveshinternational.com/products/natural-indigo-powder#breadcrumb",
+      },
+      inLanguage: "en",
     },
     {
       "@type": "BreadcrumbList",
@@ -158,6 +281,19 @@ const naturalIndigoPowderStructuredData = {
             "https://shiveshinternational.com/products/natural-indigo-powder",
         },
       ],
+    },
+    {
+      "@type": "FAQPage",
+      "@id":
+        "https://shiveshinternational.com/products/natural-indigo-powder#faq",
+      mainEntity: procurementFaqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
     },
   ],
 };
@@ -219,10 +355,10 @@ export default function NaturalIndigoPowderPage() {
 
             <StaggerItem delay={320}>
               <p className="mt-5 max-w-[600px] text-[16px] leading-8 text-[#F5F0E6]/78">
-                Shivesh International is a Natural Indigo Powder manufacturer,
-  exporter and supplier from India, offering triple-sifted
-  Indigofera tinctoria powder for bulk importers, wholesalers,
-  salons, cosmetic brands and private-label buyers worldwide.
+                Shivesh International manufactures, exports and supplies 100%
+                pure microfine Indigofera tinctoria leaf powder from Tamil Nadu,
+                South India, for importers, distributors, wholesalers, salons,
+                hair-care and cosmetic brands, and OEM, ODM and private-label buyers.
               </p>
             </StaggerItem>
 
@@ -248,10 +384,10 @@ export default function NaturalIndigoPowderPage() {
             <StaggerItem delay={480}>
               <div className="mt-7 grid max-w-[680px] grid-cols-2 gap-3 sm:grid-cols-4">
                 {[
-                   ["100%", "Natural Indigo"],
-  ["3X", "Triple Sifted"],
-  ["Bulk", "Export Supply"],
-  ["OEM", "Private Label"],
+                  ["100%", "Pure Leaf Powder"],
+                  ["38–45%", "Indigotin"],
+                  ["80–100", "Mesh Range"],
+                  ["B2B", "OEM · ODM · Private Label"],
                 ].map(([value, label]) => (
                   <div
                     key={label}
@@ -317,12 +453,12 @@ export default function NaturalIndigoPowderPage() {
                 <div className="mt-8 grid grid-cols-2 gap-3 xl:grid-cols-3">
                   {[
                     { symbol: "BT", title: "Indigofera tinctoria" },
-   { symbol: "BT", title: "Indigofera tinctoria Leaves" },
-  { symbol: "IN", title: "Selected South India Origin" },
-  { symbol: "3X", title: "Triple-Sifted Indigo Powder" },
-  { symbol: "FP", title: "Microfine Botanical Powder" },
-  { symbol: "EX", title: "Export-Grade Bulk Supply" },
-  { symbol: "PL", title: "OEM Private Label Ready" },
+                    { symbol: "LF", title: "100% Pure Leaf Powder" },
+                    { symbol: "IN", title: "Tamil Nadu, South India" },
+                    { symbol: "MF", title: "Microfine Indigo Powder" },
+                    { symbol: "38", title: "38%–45% Indigotin" },
+                    { symbol: "EX", title: "Bulk Export Supply" },
+                    { symbol: "PL", title: "OEM, ODM & Private Label" },
                   ].map((item) => (
                     <div
                       key={item.title}
@@ -350,10 +486,9 @@ export default function NaturalIndigoPowderPage() {
               <StaggerItem delay={520}>
                 <div className="mt-8 space-y-6">
   <p className="text-lg leading-9 text-[#4c5f54]">
-    Natural Indigo Powder is prepared from carefully selected,
-    dried and finely processed leaves of the indigo plant,
-    botanically known as
-    <strong> Indigofera tinctoria.</strong>
+    Natural Indigo Powder is prepared from selected leaves of
+    <strong> Indigofera tinctoria</strong> sourced from Tamil Nadu,
+    South India. It is supplied as a microfine botanical powder.
   </p>
 
   <p className="text-lg leading-9 text-[#4c5f54]">
@@ -364,11 +499,10 @@ export default function NaturalIndigoPowderPage() {
   </p>
 
   <p className="text-lg leading-9 text-[#4c5f54]">
-    As a Natural Indigo Powder manufacturer, exporter and bulk
-    supplier from India, Shivesh International supports
-    distributors, wholesalers, cosmetic manufacturers, salon
-    brands and OEM private-label buyers with triple-sifted product
-    grades and export packaging options.
+    The composition is 100% pure Indigofera tinctoria leaf powder,
+    with no added dye, chemical or other ingredient. Commercial
+    supply supports importers, distributors, wholesalers, salons,
+    hair-care brands, cosmetic brands and OEM, ODM and private-label buyers.
   </p>
 </div>
               </StaggerItem>
@@ -397,41 +531,37 @@ export default function NaturalIndigoPowderPage() {
 
               <StaggerItem delay={120}>
                 <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">
-  Natural Indigo Powder from
+  Natural Indigo Powder from Tamil Nadu,
   <span className="text-[#9f7f36]">
-    {" "}Selected Regions of South India
+    {" "}South India, India
   </span>
 </h2>
               </StaggerItem>
 
               <StaggerItem delay={240}>
                 <p className="mt-7 text-xl font-medium leading-9 text-[#8B6A1E]">
-                  Selected Indigofera tinctoria leaves sourced from established
-  indigo-growing areas of southern India for botanical powder
-  processing and export supply.
+                  Natural Indigo Powder sourced from selected Indigofera tinctoria
+                  leaves from Tamil Nadu, South India, for botanical powder processing
+                  and commercial export supply.
                 </p>
               </StaggerItem>
 
               <StaggerItem delay={360}>
                 <div className="mt-7 space-y-5">
   <p className="text-lg leading-9 text-[#4c5f54]">
-    The warm climate and agricultural conditions of South India
-    support the cultivation and commercial sourcing of
-    Indigofera tinctoria leaves for botanical hair-colour
-    applications.
+    Tamil Nadu is the confirmed raw-material origin for the selected
+    Indigofera tinctoria leaves used in this product.
   </p>
 
   <p className="text-lg leading-9 text-[#4c5f54]">
-    Selected natural indigo leaves are processed into fine,
-    triple-sifted microfine Indigo Powder for professional salons,
-    retail brands, wholesale buyers and bulk export requirements.
+    Selected natural indigo leaves are processed into microfine
+    Natural Indigo Powder for professional salons, retail brands,
+    wholesale buyers and bulk export requirements.
   </p>
 
   <p className="text-lg leading-9 text-[#4c5f54]">
-    Regional sourcing helps international buyers understand the
-    raw-material journey behind South India Indigo Powder before
-    final quality inspection, packing and private-label export
-    supply.
+    Product specifications, packaging, documentation and testing
+    requirements are reviewed with the buyer before commercial supply.
   </p>
 </div>
               </StaggerItem>
@@ -439,12 +569,12 @@ export default function NaturalIndigoPowderPage() {
               <StaggerItem delay={480}>
                 <div className="mt-8 grid gap-3 sm:grid-cols-2">
                   {[
-                    "Selected South India Origin",
-  "Natural Indigofera tinctoria Leaves",
-  "Botanical Raw-Material Sourcing",
-  "Triple-Sifted Microfine Powder",
-  "Quality-Controlled Processing",
-  "Bulk and Private-Label Export Supply",
+                    "Tamil Nadu, South India Origin",
+                    "Natural Indigofera tinctoria Leaves",
+                    "100% Pure Leaf Powder",
+                    "Microfine Natural Indigo Powder",
+                    "Buyer-Required Quality Testing",
+                    "Bulk, OEM, ODM and Private-Label Supply",
                   ].map((point) => (
                     <div
                       key={point}
@@ -502,7 +632,7 @@ export default function NaturalIndigoPowderPage() {
                     Export-Quality Indigo Powder
                   </p>
                   <p className="mt-2 font-[family-name:var(--font-playfair)] text-2xl font-semibold text-white">
-                    Triple-Sifted Indigo Powder for Professional Buyers
+                    Microfine Indigo Powder for Professional Buyers
                   </p>
                 </div>
               </div>
@@ -596,26 +726,20 @@ export default function NaturalIndigoPowderPage() {
                 </div>
 
                 {[
-                  ["Product Name", "Export-Grade Natural Indigo Powder"],
-  ["Common Name", "Indigo Powder / Indigo Leaf Powder"],
-  ["Botanical Name", "Indigofera tinctoria"],
-  ["Product Category", "Botanical Hair-Colouring Powder"],
-  ["Country of Origin", "India"],
-  ["Raw Material Origin", "Selected Regions of South India"],
-  ["Plant Part Used", "Selected Indigo Leaves"],
-  ["Form", "Triple-Sifted Microfine Botanical Powder"],
-  ["Appearance", "Fine Green Botanical Powder"],
-  ["Colour", "Natural Green"],
-  ["Odour", "Characteristic Herbal"],
-  ["Primary Applications", "Hair Colouring, Salon, Hair Care & Cosmetics"],
-  ["Suggested Method", "Traditionally Used after Natural Henna"],
-  ["Powder Grade", "Triple Sifted Microfine"],
-  ["Mesh Size", "As per Agreed Product Grade"],
-  ["Moisture", "As per Agreed Buyer Specification"],
-  ["Minimum Order Quantity", "200 kg per Item"],
-  ["Shelf Life", "24 Months under Recommended Storage"],
-  ["Storage", "Store Sealed in a Cool, Dry Place"],
-  ["Packaging", "Retail, Professional, Bulk, OEM & Private Label"],
+                  ["Product Name", "Natural Indigo Powder"],
+                  ["Botanical Name", "Indigofera tinctoria"],
+                  ["Plant Part", "Selected Indigo Leaves"],
+                  ["Composition", "100% Pure Indigofera tinctoria Leaf Powder; No Added Dye, Chemical or Other Ingredient"],
+                  ["Raw Material Origin", "Tamil Nadu, South India, India"],
+                  ["Grade/Form", "Microfine Natural Indigo Powder"],
+                  ["Indigotin", "38%–45%"],
+                  ["Mesh Availability", "80–100 Mesh"],
+                  ["Moisture", "5%–8%"],
+                  ["Bulk Minimum Order", "Bulk Orders Can Start from 100 kg"],
+                  ["Private-Label MOQ", "Varies by Pack Size, Packaging, Artwork, Design and Customization"],
+                  ["Shelf Life", "24 Months under Recommended Storage"],
+                  ["Retail / Private-Label Packs", "100 g, 200 g, 500 g and 1 kg"],
+                  ["Bulk Packaging", "20 kg and 25 kg Double-Layer Vacuum Packing"],
                 ].map(([parameter, value], index) => (
                   <div
                     key={parameter}
@@ -634,11 +758,9 @@ export default function NaturalIndigoPowderPage() {
             </StaggerItem>
 
             <p className="mx-auto mt-7 max-w-4xl text-center text-sm leading-7 text-[#4c5f54]/72">
-              Technical values, mesh size and other parameters may vary
-  according to the agreed Indigo Powder grade, buyer
-  specification and batch-specific Certificate of Analysis.
-  Final commercial specifications are confirmed before order
-  processing.
+              Indigotin, mesh and moisture specifications are confirmed against
+              the selected product and batch-specific Certificate of Analysis.
+              Testing can be coordinated according to buyer instructions or requirements.
             </p>
           </div>
         </RevealOnScroll>
@@ -856,52 +978,62 @@ and the selected Henna–Indigo method.
             <div className="mt-10">
               <div className="text-center">
   <p className="text-xs font-bold uppercase tracking-[0.4em] text-[#9f7f36]">
-    OEM & Private Label Indigo Powder Services
+    OEM, ODM & Private Label Indigo Powder Services
   </p>
 
   <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-[#4c5f54]">
-    Private-label Natural Indigo Powder solutions for importers,
-    distributors, salon brands and cosmetic businesses requiring
-    custom branding, retail packaging, bulk packing and
-    buyer-specific botanical hair-colour presentation.
+    Commercial supply options for importers, distributors, salon
+    brands and cosmetic businesses requiring buyer-specific product,
+    branding and finished-packaging support.
   </p>
 </div>
               <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {[
-                  {
+  {
     code: "OEM",
     title: "OEM Indigo Powder Manufacturing",
+    description: "Supply according to agreed buyer specification, formulation and branding.",
   },
   {
     code: "ODM",
     title: "ODM Indigo Product Support",
+    description: "Product-development support according to mutually agreed technical and commercial requirements.",
   },
   {
     code: "BR",
-    title: "Custom Indigo Brand Packaging",
+    title: "Private Label Indigo Powder",
+    description: "Buyer logo, artwork and finished retail packaging, subject to feasibility.",
   },
   {
     code: "BX",
     title: "Private Label Indigo Boxes",
+    description: "Printed box programmes coordinated to approved artwork and order requirements.",
   },
   {
     code: "MP",
     title: "Printed Metallic Indigo Pouches",
+    description: "Retail pouch formats coordinated to pack size, design and printing feasibility.",
   },
   {
     code: "CT",
     title: "Bulk Indigo Export Cartons",
+    description: "Commercial packing for 20 kg and 25 kg double-layer vacuum packs.",
   },
                 ].map((service, index) => (
                   <StaggerItem key={service.title} delay={(index % 3) * 80}>
-                    <article className="flex items-center gap-4 rounded-[20px] border border-[#C9A962]/28 bg-[#f5f0e6] p-5 transition-all duration-500 hover:-translate-y-2 hover:border-[#C9A962] hover:shadow-[0_16px_45px_rgba(0,0,0,0.09)]">
+                    <article className="flex h-full items-start gap-4 rounded-[20px] border border-[#C9A962]/28 bg-[#f5f0e6] p-5 transition-all duration-500 hover:-translate-y-2 hover:border-[#C9A962] hover:shadow-[0_16px_45px_rgba(0,0,0,0.09)]">
                       <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#C9A962]/45 bg-[#102f23] text-[10px] font-bold tracking-[0.08em] text-[#E4C878]">
                         {service.code}
                       </div>
 
-                      <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold">
-                        {service.title}
-                      </h3>
+                      <div>
+                        <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold">
+                          {service.title}
+                        </h3>
+                        <p className="mt-2 text-sm leading-6 text-[#4c5f54]">
+                          {service.description}
+                        </p>
+                      </div>
                     </article>
                   </StaggerItem>
                 ))}
@@ -910,8 +1042,114 @@ and the selected Henna–Indigo method.
           </div>
         </RevealOnScroll>
       </section>
-            
-            {/* FINAL PRODUCT CTA */}
+
+      {/* WHO WE SUPPLY */}
+      <section className="bg-[#f5f0e6] px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+        <RevealOnScroll>
+          <div className="mx-auto max-w-[1320px]">
+            <div className="mx-auto max-w-4xl text-center">
+              <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#9f7f36]">
+                Who We Supply
+              </p>
+              <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">
+                Natural Indigo Powder for Professional Buyers
+              </h2>
+              <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#4c5f54]">
+                Procurement-focused supply for businesses developing bulk,
+                professional, branded and finished retail Indigo Powder programmes.
+              </p>
+            </div>
+            <div className="mt-12 grid auto-rows-fr gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                ["Importers", "Product, packaging and destination-document planning."],
+                ["Distributors", "Wholesale and branded distribution programmes."],
+                ["Wholesalers", "Commercial quantities and bulk export packing."],
+                ["Cosmetic Brands", "Indigo powder for agreed cosmetic product requirements."],
+                ["Hair-Care Brands", "Botanical hair-colour and hair-care product ranges."],
+                ["Salons & Salon Suppliers", "Professional product and salon supply channels."],
+                ["Herbal & Natural Brands", "Pure Indigofera tinctoria powder for branded ranges."],
+                ["Private-Label Buyers", "Buyer artwork, retail packs and custom presentation."],
+                ["OEM Buyers", "Supply to agreed specification, formulation and branding."],
+                ["ODM Buyers", "Mutually agreed product-development and commercial support."],
+                ["Bulk Buyers", "Bulk orders starting from 100 kg, subject to confirmation."],
+                ["Sourcing Companies", "Consolidated product and commercial requirement support."],
+              ].map(([title, text]) => (
+                <article key={title} className="h-full border border-[#C9A962]/28 bg-[#ede5d7] p-5">
+                  <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold">{title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-[#4c5f54]">{text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </RevealOnScroll>
+      </section>
+
+      {/* DOCUMENTS AND ORDER PLANNING */}
+      <section className="bg-[#102f23] px-6 py-20 text-[#F5F0E6] sm:px-8 lg:px-12 lg:py-24">
+        <RevealOnScroll>
+          <div className="mx-auto grid max-w-[1320px] gap-12 lg:grid-cols-2 lg:gap-16">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#C9A962]">Documents & Export Support</p>
+              <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">Commercial Documentation for Indigo Powder Buyers</h2>
+              <p className="mt-6 text-lg leading-8 text-[#F5F0E6]/68">Documentation is coordinated for the confirmed product, commercial order and destination requirements.</p>
+              <div className="mt-8 grid gap-3 sm:grid-cols-2">
+                {["Batch-specific COA with every commercial batch or order", "SDS / MSDS available", "Country of Origin Certificate or Statement available", "Phytosanitary certificate arranged according to buyer or country requirements", "Fumigation certificate arranged when required", "Testing according to buyer instructions or requirements", "Applicable commercial and export documentation", "Incoterm coordination according to buyer requirements and the agreed quotation"].map((item) => (
+                  <div key={item} className="border border-[#C9A962]/20 bg-[#071b14]/45 p-4 text-sm leading-7 text-[#F5F0E6]/72">{item}</div>
+                ))}
+              </div>
+              <p className="mt-5 text-sm leading-7 text-[#F5F0E6]/62">Company certifications and registrations presently include ISO, GMP, Halal, Kosher, HACCP, MSME and FSSAI. Applicability and scope should be reviewed against the selected product, order and buyer or destination requirement; this list does not represent automatic product-specific or destination-market approval.</p>
+              <p className="mt-7 border border-[#C9A962]/30 bg-[#071b14]/55 p-5 text-sm leading-7 text-[#F5F0E6]/62">Destination-market import, customs, labelling, regulatory and product-specific requirements remain subject to buyer or importer verification and applicable authorities. Documentation support does not guarantee customs clearance or regulatory approval.</p>
+            </div>
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#C9A962]">Samples & Order Planning</p>
+              <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">Plan Your Bulk, OEM, ODM or Private-Label Order</h2>
+              <div className="mt-8 space-y-4">
+                {[
+                  ["Free Samples", "Free samples are available for prospective buyers."],
+                  ["Bulk Order Quantity", "Bulk Natural Indigo Powder orders can start from 100 kg, subject to product, grade, packaging and commercial confirmation."],
+                  ["Private-Label MOQ", "Private-label minimums vary by pack size, packaging format, artwork, design, customization and commercial feasibility."],
+                  ["Typical Lead Time", "Approximately 10–15 days after commercial and order confirmation, subject to product, quantity, packaging and complete requirements. Transit and delivery times are not guaranteed."],
+                  ["Payment & Shipping", "Payment terms are confirmed in the quotation. Shipping and Incoterms are coordinated according to buyer requirements and the agreed quotation."],
+                ].map(([title, text]) => (
+                  <article key={title} className="border border-[#C9A962]/22 bg-[#071b14]/45 p-5">
+                    <h3 className="text-xl font-semibold text-[#E4C878]">{title}</h3>
+                    <p className="mt-3 text-sm leading-7 text-[#F5F0E6]/68">{text}</p>
+                  </article>
+                ))}
+              </div>
+              <div className="mt-7 flex flex-wrap gap-4">
+                <Link href="/contact" className="inline-flex bg-[#C9A962] px-7 py-4 text-[10px] font-bold uppercase tracking-[0.18em] text-[#102f23]">Request Quote or Sample →</Link>
+                <a href="/catalogues/Shivesh-International-Product-Catalogue.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex border border-[#C9A962]/55 px-7 py-4 text-[10px] font-bold uppercase tracking-[0.18em] text-[#F5F0E6]">View Product Catalogue →</a>
+              </div>
+            </div>
+          </div>
+        </RevealOnScroll>
+      </section>
+
+      {/* PROCUREMENT FAQ */}
+      <section className="bg-[#ede5d7] px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+        <RevealOnScroll>
+          <div className="mx-auto max-w-[1100px]">
+            <div className="text-center">
+              <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#9f7f36]">Buyer Questions</p>
+              <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">Natural Indigo Powder Procurement FAQs</h2>
+            </div>
+            <div className="mt-12 divide-y divide-[#173b2a]/15 border-y border-[#173b2a]/15">
+              {procurementFaqs.map((faq, index) => (
+                <details key={faq.question} className="group">
+                  <summary className="flex cursor-pointer list-none items-start justify-between gap-6 py-6">
+                    <h3 className="text-xl font-semibold leading-snug"><span className="mr-4 text-[#9f7f36]">{String(index + 1).padStart(2, "0")}</span>{faq.question}</h3>
+                    <span className="text-2xl text-[#9f7f36] transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="max-w-[940px] pb-7 text-[15px] leading-8 text-[#4c5f54]">{faq.answer}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </RevealOnScroll>
+      </section>
+
+      {/* FINAL PRODUCT CTA */}
       <section className="relative overflow-hidden bg-[#071b14] px-6 py-24 text-center text-[#F5F0E6] sm:px-8 lg:px-12">
         <div className="absolute left-1/2 top-1/2 h-[560px] w-[560px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#C9A962]/10 blur-[150px]" />
 
@@ -926,11 +1164,12 @@ and the selected Henna–Indigo method.
             </h2>
 
             <p className="mx-auto mt-7 max-w-3xl text-lg leading-9 text-[#F5F0E6]/65">
-              Contact Shivesh International for bulk, wholesale, OEM and
-  private-label Natural Indigo Powder supply from India. Share
-  your required grade, mesh size, quantity, packaging format,
-  destination country and branding needs. Minimum order quantity
-  is 200 kg per item.
+              Contact Shivesh International for bulk, OEM, ODM and private-label
+              Natural Indigo Powder supply. Share the product or grade, Indigotin
+              and mesh requirements, quantity, supply model, pack size, artwork or
+              branding needs, destination country or port, required documents and
+              company contact details. Bulk orders can start from 100 kg; private-label
+              minimums depend on packaging, design and customization.
             </p>
 
             <div className="mt-10 flex flex-wrap justify-center gap-4">
@@ -949,6 +1188,16 @@ and the selected Henna–Indigo method.
                 className="inline-flex items-center gap-4 border border-[#F5F0E6]/30 px-9 py-4 text-sm font-bold uppercase tracking-[0.2em] text-[#F5F0E6] transition-all duration-500 hover:border-[#C9A962] hover:text-[#C9A962]"
               >
                 WhatsApp Export Team
+                <span>→</span>
+              </a>
+              <a
+                href="/catalogues/Shivesh-International-Product-Catalogue.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-4 border border-[#F5F0E6]/30 px-9 py-4 text-sm font-bold uppercase tracking-[0.2em] text-[#F5F0E6] transition-all duration-500 hover:border-[#C9A962] hover:text-[#C9A962]"
+              >
+                View Product Catalogue
+                <span>→</span>
               </a>
             </div>
             <div className="mt-9 flex flex-wrap items-center justify-center gap-x-7 gap-y-4 text-[10px] font-bold uppercase tracking-[0.18em]">
@@ -976,6 +1225,22 @@ and the selected Henna–Indigo method.
   >
     Explore Natural Henna Powder
   </Link>
+
+  <span className="hidden h-1 w-1 rotate-45 bg-[#C9A962]/55 sm:block" />
+
+  <Link href="/products/natural-henna-hair-colors" className="text-[#F5F0E6]/55 transition-colors duration-300 hover:text-[#C9A962]">Natural Henna Hair Colors</Link>
+
+  <span className="hidden h-1 w-1 rotate-45 bg-[#C9A962]/55 sm:block" />
+
+  <Link href="/products/henna-based-hair-colors" className="text-[#F5F0E6]/55 transition-colors duration-300 hover:text-[#C9A962]">Henna-Based Hair Colors</Link>
+
+  <span className="hidden h-1 w-1 rotate-45 bg-[#C9A962]/55 sm:block" />
+
+  <Link href="/certifications" className="text-[#F5F0E6]/55 transition-colors duration-300 hover:text-[#C9A962]">Certifications</Link>
+
+  <span className="hidden h-1 w-1 rotate-45 bg-[#C9A962]/55 sm:block" />
+
+  <Link href="/resources" className="text-[#F5F0E6]/55 transition-colors duration-300 hover:text-[#C9A962]">Buyer Resources</Link>
 </div>
           </div>
         </RevealOnScroll>
