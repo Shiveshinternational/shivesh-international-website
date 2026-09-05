@@ -15,27 +15,38 @@ import FooterSection from "@/sections/FooterSection";
 export const metadata: Metadata = {
   title: {
     absolute:
-      "Ayurvedic Herbs Manufacturer & Exporter India | Shivesh International",
+      "Ayurvedic Indian Herbs Manufacturer, Exporter & Supplier | Shivesh International",
   },
   description:
-    "Ayurvedic Indian Herbs manufacturer, exporter and supplier in India offering herbal powders, bulk supply, wholesale and private-label solutions worldwide.",
+    "Ayurvedic Indian Herbs manufacturer, exporter and supplier in India offering 72 herbal products for bulk, wholesale, OEM, ODM and private-label buyers.",
   alternates: {
     canonical: "/products/ayurvedic-indian-herbs",
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
   openGraph: {
     type: "website",
-    url: "/products/ayurvedic-indian-herbs",
+    locale: "en_IN",
+    url: "https://shiveshinternational.com/products/ayurvedic-indian-herbs",
+    siteName: "Shivesh International",
     title:
-      "Ayurvedic Herbs Manufacturer & Exporter India | Shivesh International",
+      "Ayurvedic Indian Herbs Manufacturer, Exporter & Supplier India",
     description:
-      "Bulk Ayurvedic Indian Herbs and herbal powders supplied to importers, wholesalers, wellness brands and private-label buyers worldwide.",
+      "Explore 72 Ayurvedic herbs, botanical powders and product-specific forms for importers, distributors, brands, OEM, ODM and private-label buyers.",
     images: [
       {
         url: "/images/products/ayurvedic-herbs/ayurvedic-indian-herbs-hero-final-v1.png",
+        width: 1200,
+        height: 630,
         alt: "Ayurvedic Indian Herbs manufacturer exporter and supplier from India",
       },
     ],
@@ -43,14 +54,107 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Ayurvedic Herbs Manufacturer & Exporter India | Shivesh International",
+      "Ayurvedic Indian Herbs Manufacturer, Exporter & Supplier India",
     description:
-      "Bulk Ayurvedic herbs, herbal powders and private-label supply from India.",
+      "72 Ayurvedic herbal products for bulk, wholesale, OEM, ODM and private-label buyers worldwide.",
     images: [
       "/images/products/ayurvedic-herbs/ayurvedic-indian-herbs-hero-final-v1.png",
     ],
   },
 };
+
+const procurementFaqs = [
+  {
+    question: "How many Ayurvedic herbal products are available?",
+    answer:
+      "The current portfolio contains exactly 72 Ayurvedic Indian Herbs and related herbal products. Availability, form, grade and specifications are confirmed for the selected product and buyer requirement.",
+  },
+  {
+    question: "Which product forms are available?",
+    answer:
+      "Depending on the herb or product and buyer requirement, availability may include Whole, Raw, Cut, Dried, Coarse, Powder and Extract forms. Not every product is available in every form, so the required form must be confirmed for the selected item.",
+  },
+  {
+    question: "How are product grades and specifications confirmed?",
+    answer:
+      "Product-specific grades and specifications are available according to the selected herb, intended application, buyer requirements and destination-market requirements, subject to confirmation.",
+  },
+  {
+    question: "Where are the products manufactured and sourced?",
+    answer:
+      "The products are manufactured and supplied from India, and the raw materials are sourced in India.",
+  },
+  {
+    question: "What is the bulk minimum order quantity?",
+    answer:
+      "Bulk orders can start from 100 kg per herb or item, subject to commercial and product confirmation.",
+  },
+  {
+    question: "What is the private-label MOQ?",
+    answer:
+      "Private-label minimums vary by pack size, packaging, artwork, design, customization and commercial feasibility.",
+  },
+  {
+    question: "Which retail and bulk packaging sizes are available?",
+    answer:
+      "Retail and private-label packs are available in 100 g, 200 g, 500 g and 1 kg. Bulk packaging is available in 20 kg and 25 kg double-layer vacuum packing.",
+  },
+  {
+    question: "Are OEM, ODM and private-label services available?",
+    answer:
+      "Yes. OEM, ODM and private-label services are available, including buyer logo, artwork and custom branding, subject to product, packaging, technical and commercial feasibility.",
+  },
+  {
+    question: "How are the herbs and herbal products quality tested?",
+    answer:
+      "Quality testing is coordinated according to buyer instructions or requirements and the requirements of the selected product. Specifications and testing parameters are product-specific and can be supplied according to confirmed buyer requirements.",
+  },
+  {
+    question: "Are COA and SDS/MSDS documents available?",
+    answer:
+      "Yes. A COA is available with the commercial batch or order, and SDS/MSDS documentation is available.",
+  },
+  {
+    question: "Is Country of Origin documentation available?",
+    answer:
+      "Yes. A Country of Origin Certificate or Statement is available for commercial orders.",
+  },
+  {
+    question: "Can phytosanitary and fumigation certificates be arranged?",
+    answer:
+      "A Phytosanitary Certificate and Fumigation Certificate are available on requirement for the confirmed order or destination.",
+  },
+  {
+    question: "Are free samples available?",
+    answer:
+      "Yes. Free samples are available for prospective buyers, subject to product and requirement review.",
+  },
+  {
+    question: "What is the shelf life?",
+    answer:
+      "Shelf life varies by herb or product. The applicable shelf life and storage information are confirmed for the selected item and agreed specification.",
+  },
+  {
+    question: "What is the typical lead time?",
+    answer:
+      "Typical lead time is approximately 10–15 days after commercial and order confirmation, subject to complete order requirements. Transit and delivery times are not guaranteed.",
+  },
+  {
+    question: "How are Incoterms coordinated?",
+    answer:
+      "Incoterms are coordinated according to buyer requirement and the quotation.",
+  },
+  {
+    question: "How can a buyer request product-specific specifications?",
+    answer:
+      "Share the selected herb or product, required form, grade or intended application and required testing or documentation. Specifications and testing parameters are product-specific and can be supplied according to confirmed buyer requirements.",
+  },
+  {
+    question: "What should an importer include in an RFQ?",
+    answer:
+      "Include the selected herb or products, required form, required grade or intended application, quantity, pack size, destination country or port, private-label, OEM or ODM requirements, artwork or logo needs, required documents, Incoterm requirement and company contact details.",
+  },
+];
 
 const herbs = [
   { name: 'Adusa Powder', image: 'Adusa Powder.png' },
@@ -145,7 +249,7 @@ const ayurvedicHerbsStructuredData = {
       image:
         "https://shiveshinternational.com/images/products/ayurvedic-herbs/ayurvedic-indian-herbs-hero-final-v1.png",
       description:
-        "Ayurvedic Indian Herbs and herbal powders manufactured, supplied and exported from India for bulk, wholesale, OEM and private-label buyers.",
+        "A portfolio of 72 Ayurvedic Indian Herbs and related herbal products manufactured, supplied and exported from India for importers, distributors, wholesalers, brands, OEM, ODM and private-label buyers.",
       category: "Ayurvedic Indian Herbs and Herbal Powders",
       brand: {
         "@type": "Brand",
@@ -161,25 +265,87 @@ const ayurvedicHerbsStructuredData = {
       audience: {
         "@type": "BusinessAudience",
         audienceType:
-          "Importers, distributors, wholesalers, cosmetic companies, wellness brands and private-label buyers",
+          "Importers, distributors, wholesalers, retailers, herbal brands, Ayurvedic brands, cosmetic brands, hair-care brands, wellness brands, sourcing companies, bulk buyers, OEM, ODM and private-label buyers",
       },
       additionalProperty: [
         {
           "@type": "PropertyValue",
-          name: "Available Forms",
-          value: "Raw, whole, cut, dried and powder",
+          name: "Portfolio Size",
+          value: "72 Ayurvedic Herbs and Related Herbal Products",
         },
         {
           "@type": "PropertyValue",
-          name: "Minimum Order Quantity",
-          value: "200 kg per item",
+          name: "Available Forms",
+          value:
+            "Product-Specific Whole, Raw, Cut, Dried, Coarse, Powder and Extract Forms, Subject to Confirmation",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Available Grades",
+          value:
+            "Product-Specific Grades and Specifications Are Available according to the Selected Herb, Intended Application, Buyer Requirements and Destination-Market Requirements, Subject to Confirmation",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Raw-Material Origin",
+          value: "India",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Bulk Minimum Order",
+          value:
+            "Orders Can Start from 100 kg per Herb or Item, Subject to Commercial and Product Confirmation",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Private-Label MOQ",
+          value:
+            "Varies by Pack Size, Packaging, Artwork, Design, Customization and Commercial Feasibility",
         },
         {
           "@type": "PropertyValue",
           name: "Packaging",
-          value: "Retail, professional, bulk, OEM and private label",
+          value:
+            "100 g, 200 g, 500 g and 1 kg retail or private-label packs; 20 kg and 25 kg double-layer vacuum bulk packing",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Supply Services",
+          value: "OEM, ODM, Buyer Logo, Artwork and Custom Branding Available",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Quality Testing",
+          value:
+            "According to Buyer Instructions or Requirements and Selected Product Requirements",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Shelf Life",
+          value: "Varies by Herb or Product",
         },
       ],
+    },
+    {
+      "@type": "WebPage",
+      "@id":
+        "https://shiveshinternational.com/products/ayurvedic-indian-herbs#webpage",
+      url: "https://shiveshinternational.com/products/ayurvedic-indian-herbs",
+      name: "Ayurvedic Indian Herbs Manufacturer, Exporter and Supplier India",
+      description:
+        "Commercial product and procurement information for 72 Ayurvedic Indian Herbs and related herbal products manufactured, supplied and exported from India.",
+      isPartOf: {
+        "@id": "https://shiveshinternational.com/#website",
+      },
+      about: {
+        "@id":
+          "https://shiveshinternational.com/products/ayurvedic-indian-herbs#product",
+      },
+      breadcrumb: {
+        "@id":
+          "https://shiveshinternational.com/products/ayurvedic-indian-herbs#breadcrumb",
+      },
+      inLanguage: "en",
     },
     {
       "@type": "BreadcrumbList",
@@ -207,6 +373,19 @@ const ayurvedicHerbsStructuredData = {
         },
       ],
     },
+    {
+      "@type": "FAQPage",
+      "@id":
+        "https://shiveshinternational.com/products/ayurvedic-indian-herbs#faq",
+      mainEntity: procurementFaqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
+    },
   ],
 };
 export default function AyurvedicIndianHerbsPage() {
@@ -227,8 +406,8 @@ export default function AyurvedicIndianHerbsPage() {
        compact
         eyebrow="Manufacturer · Exporter · Supplier"
 title="Ayurvedic Indian Herbs"
-subtitle="Premium Herbal Powders for Global Buyers"
-description="Shivesh International is an Ayurvedic Indian Herbs manufacturer, exporter and supplier from India, offering bulk herbal powders, dried herbs and private-label solutions for importers, wholesalers, wellness brands and cosmetic companies worldwide."
+subtitle="72 Herbal Products for Global B2B Buyers"
+description="Shivesh International is an Ayurvedic Indian Herbs manufacturer, exporter and supplier from India, offering bulk herbs, botanical powders and product-specific forms for importers, distributors, brands, sourcing companies, OEM, ODM and private-label buyers worldwide."
 heroImage="/images/products/ayurvedic-herbs/ayurvedic-indian-herbs-hero-final-v1.png"
 heroImageAlt="Ayurvedic Indian Herbs manufacturer exporter and bulk herbal powder supplier from India"
 primaryButtonLabel="Explore Herbal Products"
@@ -236,10 +415,10 @@ primaryButtonHref="#herbs-collection"
 secondaryButtonLabel="Request Bulk Quote"
 secondaryButtonHref="/contact"
         highlights={[
-          { value: "Wide", label: "Herb Range" },
+          { value: "72", label: "Herbal Products" },
           { value: "Multiple", label: "Product Grades" },
-          { value: "Raw", label: "& Powder" },
-          { value: "OEM", label: "Private Label" },
+          { value: "Multiple", label: "Product Forms" },
+          { value: "OEM · ODM", label: "Private Label" },
         ]}
       />
 
@@ -308,21 +487,23 @@ secondaryButtonHref="/contact"
 </p>
 
 <p className="text-lg leading-8 text-[#4c5f54]">
-  Our herbal product range includes Amla, Shikakai, Reetha, Brahmi,
+  Our herbal product range includes Amla, Shikakai, Soapnut, Brahmi,
   Bhringraj, Neem, Ashwagandha, Hibiscus, Tulsi, Moringa, Shatavari,
   Triphala, Multani Mitti and many other traditional Indian herbs.
 </p>
 
 <p className="text-lg leading-8 text-[#4c5f54]">
-  Depending on the selected herb, products are available in raw, whole,
-  cut, dried and powder forms for bulk orders, wholesale supply and
-  buyer-specific commercial requirements.
+  Raw materials are sourced in India. Depending on the selected herb or
+  product and buyer requirement, availability may include Whole, Raw,
+  Cut, Dried, Coarse, Powder and Extract forms. Not every product is
+  available in every form, and availability is subject to confirmation.
 </p>
 
 <p className="text-lg leading-8 text-[#4c5f54]">
   We support importers, distributors, herbal-product companies,
-  cosmetic manufacturers, wellness brands and OEM private-label buyers
-  with export packaging and international supply coordination.
+  retailers, herbal and Ayurvedic brands, cosmetic and hair-care brands,
+  wellness brands, sourcing companies and OEM, ODM or private-label
+  buyers with export packaging and international supply coordination.
 </p>
                 </div>
               </StaggerItem>
@@ -340,7 +521,7 @@ secondaryButtonHref="/contact"
 
       <section id="herbs-collection" className="relative overflow-hidden bg-[#102f23] px-5 py-20 text-[#F5F0E6] sm:px-8 lg:px-12 lg:py-24">
         <div aria-hidden="true" className="absolute -right-40 top-20 h-[450px] w-[450px] rounded-full bg-[#C9A962]/10 blur-[145px]" />
-        <RevealOnScroll>
+        <div>
           <div className="relative mx-auto max-w-[1500px]">
             <div className="mx-auto max-w-4xl text-center">
               <p className="text-xs font-bold uppercase tracking-[0.45em] text-[#C9A962]">
@@ -352,9 +533,9 @@ secondaryButtonHref="/contact"
 </h2>
 
 <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#F5F0E6]/65">
-  Explore Ayurvedic herbs and herbal powders manufactured, exported and
-  supplied from India for importers, distributors, wholesalers, cosmetic
-  companies, wellness brands and private-label buyers worldwide.
+  Explore exactly 72 Ayurvedic herbs and related herbal products
+  manufactured, exported and supplied from India for importers,
+  distributors, wholesalers, brands and private-label buyers worldwide.
 </p>
             </div>
 
@@ -372,9 +553,9 @@ description={`${herb.name} available for bulk supply, wholesale export and selec
                         <Image
                           src={`/images/products/ayurvedic-herbs/${herb.image}`}
                           alt={`${herb.name} bulk wholesale and private-label herbal powder`}
-                          width={240}
-                          height={240}
-                          className="max-h-[125px] w-auto rounded-[14px] bg-white/90 p-2 object-contain shadow-[0_8px_24px_rgba(0,0,0,0.08)] transition-transform duration-700 group-hover:scale-105"
+                          width={1024}
+                          height={1536}
+                          className="h-[125px] w-[88.667px] rounded-[14px] bg-white/90 p-2 object-contain shadow-[0_8px_24px_rgba(0,0,0,0.08)] transition-transform duration-700 group-hover:scale-105"
                         />
 
                         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#173b2a]/8 via-transparent to-white/20" />
@@ -418,7 +599,7 @@ description={`${herb.name} available for bulk supply, wholesale export and selec
               <p className="text-sm leading-7 text-[#F5F0E6]/65">Product form, grade, processing, packaging and availability may vary according to the selected herb, order quantity, intended market and agreed buyer specification.</p>
             </div>
           </div>
-        </RevealOnScroll>
+        </div>
       </section>
             {/* WHY CHOOSE OUR AYURVEDIC INDIAN HERBS */}
       <section
@@ -487,11 +668,11 @@ private-label brands requiring reliable bulk export supply from India.
                     },
                     {
                       title: "Multiple Product Forms",
-                      text: "Selected herbs may be supplied in raw, whole, cut, dried or powder form according to product suitability.",
+                      text: "Selected products may be available in Whole, Raw, Cut, Dried, Coarse, Powder or Extract form. Form availability is product-specific and subject to confirmation.",
                     },
                     {
                       title: "Buyer-Specific Grades",
-                      text: "Food-grade, health-grade, cosmetic-grade and other agreed product grades may be discussed.",
+                      text: "Product-specific grades and specifications are available according to the selected herb, intended application, buyer requirements and destination-market requirements, subject to confirmation.",
                     },
                     {
                       title: "Quality-Focused Processing",
@@ -503,7 +684,7 @@ private-label brands requiring reliable bulk export supply from India.
                     },
                     {
                       title: "Private-Label Support",
-                      text: "OEM, custom branding, printed packaging and buyer-oriented product presentation are available.",
+                      text: "OEM, ODM, buyer logo, artwork, custom branding and private-label packaging are available subject to feasibility.",
                     },
                   ].map((feature) => (
                     <div
@@ -533,7 +714,73 @@ private-label brands requiring reliable bulk export supply from India.
           </div>
         </RevealOnScroll>
       </section>
-            {/* PRODUCT SPECIFICATIONS */}
+      {/* PROFESSIONAL BUYERS */}
+      <section
+        id="professional-buyers"
+        className="bg-[#102f23] px-6 py-20 text-[#F5F0E6] sm:px-8 lg:px-12 lg:py-24"
+      >
+        <RevealOnScroll>
+          <div className="mx-auto max-w-[1400px]">
+            <div className="mx-auto max-w-4xl text-center">
+              <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#C9A962]">
+                International B2B Supply
+              </p>
+              <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">
+                Ayurvedic Herbs and Herbal Powders for Professional Buyers
+              </h2>
+              <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#F5F0E6]/68">
+                Commercial supply from India for businesses sourcing Ayurvedic
+                herbs, Indian botanical powders, raw herbs and selected herbal
+                extracts in product-specific forms and grades.
+              </p>
+            </div>
+
+            <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                ["Importers", "Product, documentation and destination-based export coordination."],
+                ["Distributors & Wholesalers", "A broad 72-product portfolio for regional wholesale and distribution channels."],
+                ["Retailers", "Retail and private-label pack planning for approved products and markets."],
+                ["Herbal & Ayurvedic Brands", "Product-specific forms and grades for established or developing herbal ranges."],
+                ["Cosmetic & Hair-Care Brands", "Selected herbs and powders for commercially suitable cosmetic and hair-care applications."],
+                ["Wellness Brands", "Product and grade selection according to the intended application and market."],
+                ["OEM, ODM & Private Label", "Buyer logo, artwork, custom branding and finished-pack support subject to feasibility."],
+                ["Sourcing Companies & Bulk Buyers", "Multi-product enquiry, specification and export-order coordination."],
+              ].map(([title, text], index) => (
+                <StaggerItem key={title} delay={(index % 4) * 60}>
+                  <article className="h-full border border-[#C9A962]/22 bg-white/[0.04] p-6 transition-all duration-500 hover:-translate-y-1 hover:border-[#C9A962] hover:bg-white/[0.07]">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-[#C9A962]">
+                      B2B {String(index + 1).padStart(2, "0")}
+                    </p>
+                    <h3 className="mt-4 font-[family-name:var(--font-playfair)] text-2xl font-semibold">
+                      {title}
+                    </h3>
+                    <p className="mt-4 text-sm leading-7 text-[#F5F0E6]/65">
+                      {text}
+                    </p>
+                  </article>
+                </StaggerItem>
+              ))}
+            </div>
+
+            <div className="mt-10 flex flex-wrap justify-center gap-4">
+              <Link
+                href="/contact"
+                className="inline-flex bg-[#C9A962] px-7 py-4 text-[10px] font-bold uppercase tracking-[0.18em] text-[#102f23]"
+              >
+                Discuss Your Herb Requirement →
+              </Link>
+              <Link
+                href="/export"
+                className="inline-flex border border-[#C9A962]/55 px-7 py-4 text-[10px] font-bold uppercase tracking-[0.18em] text-[#F5F0E6]"
+              >
+                Review Export Support →
+              </Link>
+            </div>
+          </div>
+        </RevealOnScroll>
+      </section>
+
+      {/* PRODUCT SPECIFICATIONS */}
       <section
   id="ayurvedic-herbs-product-specifications"
   className="bg-[#ede5d7] px-6 py-20 sm:px-8 lg:px-12 lg:py-24"
@@ -558,7 +805,7 @@ selected herb, product form, grade and buyer requirements.
 
             <StaggerItem delay={120}>
               <div className="mt-12 overflow-hidden rounded-[26px] border border-[#C9A962]/35 bg-[#f5f0e6] shadow-[0_24px_65px_rgba(0,0,0,0.11)]">
-                <div className="grid grid-cols-[0.9fr_1.1fr] bg-[#102f23] px-5 py-4 text-[#F5F0E6] sm:px-7">
+                <div className="hidden grid-cols-[0.9fr_1.1fr] bg-[#102f23] px-5 py-4 text-[#F5F0E6] sm:grid sm:px-7">
                   <p className="text-[10px] font-bold uppercase tracking-[0.32em] text-[#C9A962]">
                     Parameter
                   </p>
@@ -569,68 +816,42 @@ selected herb, product form, grade and buyer requirements.
                 </div>
 
                 {[
-                  ["Minimum Order Quantity", "200 kg per Herb / Item"],
+                  ["Product Category", "Ayurvedic Indian Herbs and Related Herbal Products"],
+                  ["Portfolio Size", "Exactly 72 Products"],
+                  ["Manufacturing Origin", "India"],
+                  ["Raw-Material Origin", "India"],
                   [
                     "Available Forms",
-                    "Raw, Whole, Cut, Dried and Powder Forms",
+                    "Product-Specific Whole, Raw, Cut, Dried, Coarse, Powder and Extract Forms, Subject to Confirmation",
                   ],
                   [
                     "Available Grades",
-                    "Food Grade, Health Grade, Cosmetic Grade and Buyer-Specific Grades",
+                    "Product-Specific Grades and Specifications Are Available according to the Selected Herb, Intended Application, Buyer Requirements and Destination-Market Requirements, Subject to Confirmation",
                   ],
-                  [
-                    "Product Appearance",
-                    "Characteristic to the Selected Herb",
-                  ],
-                  [
-                    "Colour",
-                    "Natural and Characteristic to the Selected Product",
-                  ],
-                  [
-                    "Odour",
-                    "Characteristic Herbal Odour",
-                  ],
-                  [
-                    "Texture",
-                    "Whole, Cut, Coarse or Fine Powder according to Product Form",
-                  ],
-                  [
-                    "Mesh Size",
-                    "Available according to Product and Buyer Requirement",
-                  ],
-                  ["Country of Origin", "India"],
-                  [
-                    "Moisture",
-                    "As per Selected Product and Agreed Specification",
-                  ],
-                  [
-                    "Purity",
-                    "Commercial or Buyer-Specified Grade",
-                  ],
+                  ["Quality Testing", "According to Buyer Instructions or Requirements and Selected Product Requirements"],
+                  ["Bulk Minimum Order", "Orders Can Start from 100 kg per Herb or Item, Subject to Commercial and Product Confirmation"],
+                  ["Private-Label MOQ", "Varies by Pack Size, Packaging, Artwork, Design, Customization and Commercial Feasibility"],
+                  ["Retail / Private-Label Packs", "100 g, 200 g, 500 g and 1 kg"],
+                  ["Bulk Packaging", "20 kg and 25 kg Double-Layer Vacuum Packing"],
+                  ["OEM", "Available"],
+                  ["ODM", "Available"],
+                  ["Private Label", "Buyer Logo, Artwork and Custom Branding Available"],
                   [
                     "Shelf Life",
-                    "Product-Specific under Recommended Storage Conditions",
+                    "Varies by Herb or Product and Is Confirmed for the Selected Item",
                   ],
                   [
                     "Storage",
                     "Store in a Cool, Dry Place Away from Direct Sunlight and Moisture",
                   ],
                   [
-                    "Packaging",
-                    "Retail, Professional, Bulk and Private-Label Formats",
-                  ],
-                  [
-                    "Private Label",
-                    "OEM, Custom Branding and Printed Packaging Available",
-                  ],
-                  [
                     "Technical Documents",
-                    "COA, MSDS and Product-Specific Technical Data Support",
+                    "COA with Commercial Batch or Order; SDS/MSDS and Country of Origin Certificate or Statement Available",
                   ],
                 ].map(([parameter, value], index) => (
                   <div
                     key={parameter}
-                    className={`grid grid-cols-[0.9fr_1.1fr] border-t border-[#173b2a]/10 px-5 py-4 transition-colors duration-300 hover:bg-[#C9A962]/8 sm:px-7 ${
+                    className={`grid gap-2 border-t border-[#173b2a]/10 px-5 py-4 transition-colors duration-300 hover:bg-[#C9A962]/8 sm:grid-cols-[0.9fr_1.1fr] sm:gap-0 sm:px-7 ${
                       index % 2 === 0 ? "bg-[#f5f0e6]" : "bg-[#eee6d8]"
                     }`}
                   >
@@ -638,7 +859,7 @@ selected herb, product form, grade and buyer requirements.
                       {parameter}
                     </p>
 
-                    <p className="pl-4 leading-7 text-[#173b2a]">
+                    <p className="leading-7 text-[#173b2a] sm:pl-4">
                       {value}
                     </p>
                   </div>
@@ -648,10 +869,10 @@ selected herb, product form, grade and buyer requirements.
 
             <div className="mx-auto mt-7 max-w-4xl rounded-[20px] border border-[#C9A962]/25 bg-[#102f23] px-6 py-5 text-center text-[#F5F0E6]">
               <p className="text-sm leading-7 text-[#F5F0E6]/68">
-                Product specifications are not identical across the complete
-                herbal range. Final parameters should always be confirmed for
-                the selected herb, form, grade, batch and destination-market
-                requirement.
+                Specifications and testing parameters are product-specific and
+                can be supplied according to confirmed buyer requirements.
+                Final parameters must be confirmed for the selected herb,
+                form, grade, batch and destination-market requirement.
               </p>
             </div>
           </div>
@@ -683,9 +904,9 @@ Ayurvedic Herbs Bulk Packaging & Private Label
 
 <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#F5F0E6]/65">
 
-Our Ayurvedic Indian Herbs and herbal powders are available in
-retail, professional and bulk export packaging for importers,
-wholesalers, manufacturers, wellness brands and OEM private-label buyers.
+Our Ayurvedic Indian Herbs and herbal products are available in clearly
+defined retail, private-label and bulk export formats for importers,
+wholesalers, brands and OEM or ODM buyers.
 
 </p>
 
@@ -703,27 +924,13 @@ Available Pack Sizes
 
 <h3 className="mt-4 font-[family-name:var(--font-playfair)] text-2xl font-semibold">
 
-Retail & Bulk Supply
+Retail & Private-Label Packs
 
 </h3>
 
 <p className="mt-5 leading-8 text-[#F5F0E6]/70">
 
-100 g
-
-250 g
-
-500 g
-
-1 kg
-
-5 kg
-
-20 kg
-
-25 kg
-
-Custom Packing
+100 g · 200 g · 500 g · 1 kg
 
 </p>
 
@@ -739,27 +946,13 @@ Packaging Formats
 
 <h3 className="mt-4 font-[family-name:var(--font-playfair)] text-2xl font-semibold">
 
-Commercial Packing Solutions
+Bulk Export Packaging
 
 </h3>
 
 <p className="mt-5 leading-8">
 
-Food Grade Bags
-
-Health Grade Bags
-
-Cosmetic Grade Bags
-
-Metallic Pouches
-
-Printed Pouches
-
-Designer Boxes
-
-Bulk Export Cartons
-
-Private Label Packaging
+20 kg and 25 kg double-layer vacuum packing for confirmed bulk orders.
 
 </p>
 
@@ -771,11 +964,11 @@ Private Label Packaging
 
 {[
 "OEM Ayurvedic Herbs Manufacturing",
+"ODM Herbal Product Support",
 "Private Label Herbal Products",
-"Custom Herbal Brand Packaging",
-"Printed Herbal Powder Pouches",
-"Designer Retail Boxes",
-"Bulk Herbal Export Cartons",
+"Buyer Logo & Artwork",
+"Custom Branding",
+"Retail & Bulk Packaging",
 ].map((item)=>(
 
 <div
@@ -794,6 +987,168 @@ className="rounded-[20px] border border-[#C9A962]/25 bg-white/[0.05] p-5 text-ce
 
 </RevealOnScroll>
 
+</section>
+{/* COMMERCIAL DOCUMENTATION AND ORDER PLANNING */}
+<section
+  id="commercial-documentation"
+  className="bg-[#ede5d7] px-6 py-20 sm:px-8 lg:px-12 lg:py-24"
+>
+  <RevealOnScroll>
+    <div className="mx-auto grid max-w-[1380px] gap-8 lg:grid-cols-2">
+      <article className="border border-[#C9A962]/30 bg-[#102f23] p-7 text-[#F5F0E6] sm:p-9">
+        <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#C9A962]">
+          Commercial Documentation
+        </p>
+        <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">
+          Herb-Specific Specifications and Export Documentation
+        </h2>
+        <p className="mt-6 text-lg leading-8 text-[#F5F0E6]/68">
+          Specifications, testing parameters and documentation are coordinated
+          for the selected herb or product, confirmed commercial order and
+          buyer or destination requirements.
+        </p>
+        <div className="mt-8 grid gap-3 sm:grid-cols-2">
+          {[
+            "COA Available with Commercial Batch or Order",
+            "SDS / MSDS Available",
+            "Country of Origin Certificate or Statement Available",
+            "Phytosanitary Certificate Available on Requirement",
+            "Fumigation Certificate Available on Requirement",
+            "Quality Testing according to Buyer and Selected Product Requirements",
+            "Incoterms according to Buyer Requirement and Quotation",
+            "Export and Shipping Coordination for Confirmed Orders",
+          ].map((item) => (
+            <div
+              key={item}
+              className="border border-[#C9A962]/20 bg-[#071b14]/45 p-4 text-sm leading-7 text-[#F5F0E6]/72"
+            >
+              {item}
+            </div>
+          ))}
+        </div>
+        <p className="mt-7 border border-[#C9A962]/30 bg-[#071b14]/55 p-5 text-sm leading-7 text-[#F5F0E6]/62">
+          The buyer or importer remains responsible for confirming applicable
+          product classification, intended use, registration, labelling,
+          customs and destination-market requirements. Documentation support
+          does not guarantee regulatory approval or customs clearance.
+        </p>
+        <p className="mt-6 text-sm leading-7 text-[#F5F0E6]/62">
+          Company certifications and registrations that may be referenced
+          include ISO, GMP, Halal, Kosher, HACCP, MSME and FSSAI. These should
+          not be interpreted as independently certifying every individual herb.
+        </p>
+        <div className="mt-7 flex flex-wrap gap-4">
+          <Link
+            href="/certifications"
+            className="inline-flex border border-[#C9A962]/55 px-6 py-3 text-[10px] font-bold uppercase tracking-[0.18em] text-[#F5F0E6]"
+          >
+            Review Company Certifications →
+          </Link>
+          <Link
+            href="/resources"
+            className="inline-flex border border-[#C9A962]/55 px-6 py-3 text-[10px] font-bold uppercase tracking-[0.18em] text-[#F5F0E6]"
+          >
+            Buyer Resources →
+          </Link>
+        </div>
+      </article>
+
+      <article className="border border-[#C9A962]/30 bg-[#f5f0e6] p-7 text-[#173b2a] sm:p-9">
+        <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#9f7f36]">
+          Samples & Order Planning
+        </p>
+        <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">
+          Plan a Bulk, OEM, ODM or Private-Label Herb Order
+        </h2>
+        <div className="mt-8 space-y-3">
+          {[
+            ["Free Samples", "Available for prospective buyers, subject to product and requirement review."],
+            ["Bulk Minimum Order", "Orders can start from 100 kg per herb or item, subject to commercial and product confirmation."],
+            ["Private-Label MOQ", "Varies by pack size, packaging, artwork, design, customization and commercial feasibility."],
+            ["Typical Lead Time", "Approximately 10–15 days after commercial and order confirmation, subject to complete order requirements."],
+            ["Incoterms", "Coordinated according to buyer requirement and the quotation."],
+            ["Shelf Life", "Varies by herb or product and is confirmed for the selected item."],
+          ].map(([label, value]) => (
+            <div
+              key={label}
+              className="grid gap-2 border-b border-[#173b2a]/12 pb-4 sm:grid-cols-[145px_1fr]"
+            >
+              <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#9f7f36]">
+                {label}
+              </p>
+              <p className="text-sm leading-7 text-[#4c5f54]">{value}</p>
+            </div>
+          ))}
+        </div>
+        <div className="mt-8 border border-[#C9A962]/35 bg-[#ede5d7] p-5">
+          <h3 className="font-[family-name:var(--font-playfair)] text-2xl font-semibold">
+            What to Include in Your RFQ
+          </h3>
+          <p className="mt-4 text-sm leading-7 text-[#4c5f54]">
+            Share the selected herb or products, required form, required grade
+            or intended application, quantity, pack size, destination country
+            or port, private-label, OEM or ODM scope, artwork or logo needs,
+            required documentation, Incoterm requirement and company details.
+          </p>
+        </div>
+        <div className="mt-8 flex flex-wrap gap-4">
+          <Link
+            href="/contact"
+            className="inline-flex bg-[#102f23] px-7 py-4 text-[10px] font-bold uppercase tracking-[0.18em] text-[#F5F0E6]"
+          >
+            Request Quote or Free Sample →
+          </Link>
+          <a
+            href="/catalogues/Shivesh-International-Product-Catalogue.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex border border-[#173b2a]/30 px-7 py-4 text-[10px] font-bold uppercase tracking-[0.18em] text-[#173b2a]"
+          >
+            View / Download Product Catalogue →
+          </a>
+        </div>
+      </article>
+    </div>
+  </RevealOnScroll>
+</section>
+
+{/* PROCUREMENT FAQ */}
+<section
+  id="procurement-faq"
+  className="bg-[#f5f0e6] px-6 py-20 sm:px-8 lg:px-12 lg:py-24"
+>
+  <RevealOnScroll>
+    <div className="mx-auto max-w-[1100px]">
+      <div className="text-center">
+        <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#9f7f36]">
+          Buyer Questions
+        </p>
+        <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">
+          Ayurvedic Indian Herbs Procurement FAQs
+        </h2>
+      </div>
+      <div className="mt-12 divide-y divide-[#173b2a]/15 border-y border-[#173b2a]/15">
+        {procurementFaqs.map((faq, index) => (
+          <details key={faq.question} className="group">
+            <summary className="flex cursor-pointer list-none items-start justify-between gap-6 py-6">
+              <h3 className="text-xl font-semibold leading-snug">
+                <span className="mr-4 text-[#9f7f36]">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                {faq.question}
+              </h3>
+              <span className="text-2xl text-[#9f7f36] transition-transform group-open:rotate-45">
+                +
+              </span>
+            </summary>
+            <p className="max-w-[940px] pb-7 text-[15px] leading-8 text-[#4c5f54]">
+              {faq.answer}
+            </p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </RevealOnScroll>
 </section>
 {/* FINAL CTA */}
 
@@ -827,8 +1182,9 @@ and Supplier from India?
 <p className="mx-auto mt-8 max-w-4xl text-lg leading-9 text-[#F5F0E6]/68">
 
 Contact Shivesh International for bulk Ayurvedic Indian Herbs,
-herbal powders, wholesale export supply, OEM manufacturing and
-private-label packaging. Minimum order quantity is 200 kg per item.
+herbal powders, wholesale export supply, OEM, ODM and private-label
+packaging. Orders can start from 100 kg per herb or item, subject to
+commercial and product confirmation.
 
 </p>
 
@@ -879,6 +1235,27 @@ WhatsApp Export Team →
     className="text-[#F5F0E6]/55 transition-colors hover:text-[#C9A962]"
   >
     Explore Indian Spices
+  </Link>
+
+  <Link
+    href="/products/natural-henna-powder"
+    className="text-[#F5F0E6]/55 transition-colors hover:text-[#C9A962]"
+  >
+    Natural Henna Powder
+  </Link>
+
+  <Link
+    href="/products/natural-indigo-powder"
+    className="text-[#F5F0E6]/55 transition-colors hover:text-[#C9A962]"
+  >
+    Natural Indigo Powder
+  </Link>
+
+  <Link
+    href="/products/natural-henna-hair-colors"
+    className="text-[#F5F0E6]/55 transition-colors hover:text-[#C9A962]"
+  >
+    Natural Henna Hair Colors
   </Link>
 </div>
 </div>

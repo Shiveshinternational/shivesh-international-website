@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 
 type SearchItem = {
@@ -183,6 +183,8 @@ function localizeSearchItem(item: SearchItem, isFrench: boolean): SearchItem {
 }
 
 export default function SiteSearch() {
+  const generatedId = useId();
+  const inputId = `site-search-${generatedId}`;
   const pathname = usePathname();
   const isGerman = pathname.startsWith("/de/");
   const isFrench = pathname.startsWith("/fr/");
@@ -288,6 +290,8 @@ export default function SiteSearch() {
               </svg>
 
               <input
+                id={inputId}
+                name="site-search"
                 ref={inputRef}
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
