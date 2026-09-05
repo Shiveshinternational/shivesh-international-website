@@ -242,8 +242,7 @@ const hennaBasedHairColorsStructuredData = {
         "@id": "https://shiveshinternational.com/#website",
       },
       about: {
-        "@id":
-          "https://shiveshinternational.com/products/henna-based-hair-colors#product",
+        "@id": "https://shiveshinternational.com/#organization",
       },
       breadcrumb: {
         "@id":
@@ -298,7 +297,10 @@ export default function HennaBasedHairColorsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(hennaBasedHairColorsStructuredData).replace(
+          __html: JSON.stringify({
+            ...hennaBasedHairColorsStructuredData,
+            "@graph": hennaBasedHairColorsStructuredData["@graph"].slice(1),
+          }).replace(
             /</g,
             "\\u003c"
           ),

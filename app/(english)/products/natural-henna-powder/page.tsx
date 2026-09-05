@@ -155,7 +155,7 @@ const naturalHennaPowderStructuredData = {
       name: "Natural Henna Powder Manufacturer and Exporter in India",
       description: "Procurement information for 100% pure Lawsonia inermis henna powder supplied from India in bulk, OEM and private-label formats.",
       isPartOf: { "@id": "https://shiveshinternational.com/#website" },
-      about: { "@id": "https://shiveshinternational.com/products/natural-henna-powder#product" },
+      about: { "@id": "https://shiveshinternational.com/#organization" },
       breadcrumb: { "@id": "https://shiveshinternational.com/products/natural-henna-powder#breadcrumb" },
       inLanguage: "en",
     },
@@ -210,7 +210,10 @@ export default function NaturalHennaPowderPage() {
     type="application/ld+json"
     dangerouslySetInnerHTML={{
       __html: JSON.stringify(
-        naturalHennaPowderStructuredData
+        {
+          ...naturalHennaPowderStructuredData,
+          "@graph": naturalHennaPowderStructuredData["@graph"].slice(1),
+        }
       ).replace(/</g, "\\u003c"),
     }}
   />

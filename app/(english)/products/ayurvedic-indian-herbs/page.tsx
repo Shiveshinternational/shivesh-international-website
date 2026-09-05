@@ -338,8 +338,7 @@ const ayurvedicHerbsStructuredData = {
         "@id": "https://shiveshinternational.com/#website",
       },
       about: {
-        "@id":
-          "https://shiveshinternational.com/products/ayurvedic-indian-herbs#product",
+        "@id": "https://shiveshinternational.com/#organization",
       },
       breadcrumb: {
         "@id":
@@ -394,7 +393,10 @@ export default function AyurvedicIndianHerbsPage() {
   <script
     type="application/ld+json"
     dangerouslySetInnerHTML={{
-      __html: JSON.stringify(ayurvedicHerbsStructuredData).replace(
+      __html: JSON.stringify({
+        ...ayurvedicHerbsStructuredData,
+        "@graph": ayurvedicHerbsStructuredData["@graph"].slice(1),
+      }).replace(
         /</g,
         "\\u003c"
       ),

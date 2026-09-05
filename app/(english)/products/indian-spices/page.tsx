@@ -283,7 +283,7 @@ const indianSpicesStructuredData = {
         "@id": "https://shiveshinternational.com/#website",
       },
       about: {
-        "@id": "https://shiveshinternational.com/products/indian-spices#product",
+        "@id": "https://shiveshinternational.com/#organization",
       },
       breadcrumb: {
         "@id": "https://shiveshinternational.com/products/indian-spices#breadcrumb",
@@ -407,7 +407,10 @@ export default function IndianSpicesPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(indianSpicesStructuredData).replace(
+          __html: JSON.stringify({
+            ...indianSpicesStructuredData,
+            "@graph": indianSpicesStructuredData["@graph"].slice(1),
+          }).replace(
             /</g,
             "\\u003c"
           ),

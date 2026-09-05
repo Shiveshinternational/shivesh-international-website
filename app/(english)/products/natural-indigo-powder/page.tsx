@@ -247,8 +247,7 @@ const naturalIndigoPowderStructuredData = {
         "@id": "https://shiveshinternational.com/#website",
       },
       about: {
-        "@id":
-          "https://shiveshinternational.com/products/natural-indigo-powder#product",
+        "@id": "https://shiveshinternational.com/#organization",
       },
       breadcrumb: {
         "@id":
@@ -304,7 +303,10 @@ export default function NaturalIndigoPowderPage() {
     type="application/ld+json"
     dangerouslySetInnerHTML={{
       __html: JSON.stringify(
-        naturalIndigoPowderStructuredData
+        {
+          ...naturalIndigoPowderStructuredData,
+          "@graph": naturalIndigoPowderStructuredData["@graph"].slice(1),
+        }
       ).replace(/</g, "\\u003c"),
     }}
   />
