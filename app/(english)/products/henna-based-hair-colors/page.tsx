@@ -15,10 +15,10 @@ import FooterSection from "@/sections/FooterSection";
 export const metadata: Metadata = {
   title: {
     absolute:
-      "Henna-Based Hair Colors Manufacturer & Exporter India | Shivesh International",
+      "Henna-Based Hair Colors Manufacturer, Exporter & Supplier India | Shivesh International",
   },
   description:
-    "Henna-Based Hair Colors manufacturer, exporter and supplier in India offering 16 professional powder shades for salons, bulk buyers, OEM and private label.",
+    "Henna-Based Hair Colors manufacturer, exporter and supplier in India offering 16 powder shades for bulk, wholesale, salon, OEM, ODM and private-label buyers.",
   alternates: {
     canonical: "/products/henna-based-hair-colors",
   },
@@ -38,9 +38,9 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: "https://shiveshinternational.com/products/henna-based-hair-colors",
     siteName: "Shivesh International",
-    title: "Henna-Based Hair Colors Manufacturer & Exporter India",
+    title: "Henna-Based Hair Colors Manufacturer, Exporter & Supplier India",
     description:
-      "Explore 16 professional Henna-Based Hair Color powder shades for salons, distributors, bulk importers and private-label brands.",
+      "Explore 16 Henna-Based Hair Color powder shades for importers, distributors, salons, cosmetic brands, OEM, ODM and private-label buyers.",
     images: [
       {
         url: "/images/products/henna-based-hair-colors/henna-based-hair-colors-hero-final-v2.png",
@@ -50,14 +50,92 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Henna-Based Hair Colors Manufacturer & Exporter India",
+    title: "Henna-Based Hair Colors Manufacturer, Exporter & Supplier India",
     description:
-      "16 professional Henna-Based Hair Color shades for bulk, salon, OEM and private-label buyers.",
+      "16 Henna-Based Hair Color shades manufactured in India for bulk, salon, wholesale, OEM, ODM and private-label buyers.",
     images: [
       "/images/products/henna-based-hair-colors/henna-based-hair-colors-hero-final-v2.png",
     ],
   },
 };
+
+const procurementFaqs = [
+  {
+    question: "How many Henna-Based Hair Color shades are available?",
+    answer:
+      "The portfolio contains 16 Henna-Based Hair Color shades. Each shade has a different formulation, and final product details are confirmed for the selected shade.",
+  },
+  {
+    question: "What is the chemical content after dilution?",
+    answer:
+      "Made with less than 3% chemicals after dilution. Exact chemical names and individual percentages are communicated directly to buyers when required and are not published on the website.",
+  },
+  {
+    question: "Are all 16 shades PPD-free, ammonia-free and peroxide-free?",
+    answer:
+      "Yes. All 16 Henna-Based Hair Color shades are PPD-Free, Ammonia-Free and Peroxide-Free.",
+  },
+  {
+    question: "Do the shades contain metallic salts or synthetic dye?",
+    answer:
+      "No. All 16 shades contain No Metallic Salts and No Synthetic Dye.",
+  },
+  {
+    question: "Do all 16 shades provide grey coverage?",
+    answer:
+      "Yes. All 16 Henna-Based Hair Color shades provide 100% grey coverage when prepared and applied according to the recommended directions.",
+  },
+  {
+    question: "What is the product form and processing time?",
+    answer:
+      "The product is a triple-sifted finest powder. The approximate mixing ratio is one part powder to three parts water, with an approximate processing time of 30 minutes.",
+  },
+  {
+    question: "What is the bulk minimum order quantity?",
+    answer:
+      "Bulk orders can start from 100 kg, subject to commercial and product confirmation.",
+  },
+  {
+    question: "What is the private-label MOQ?",
+    answer:
+      "Private-label minimums vary by pack size, packaging, artwork, design, customization and commercial feasibility.",
+  },
+  {
+    question: "Which retail and bulk packaging sizes are available?",
+    answer:
+      "Retail and private-label packs are available in 100 g, 200 g, 500 g and 1 kg. Bulk packaging is available in 20 kg and 25 kg double-layer vacuum packing.",
+  },
+  {
+    question: "Are OEM, ODM and private-label services available?",
+    answer:
+      "Yes. OEM, ODM and private-label services are available, including buyer logo and artwork on finished packs, subject to technical and commercial confirmation.",
+  },
+  {
+    question: "Which commercial documents are available?",
+    answer:
+      "A COA is supplied with every commercial batch or order. SDS/MSDS and a Country of Origin Certificate or Statement are available. A Phytosanitary Certificate and Fumigation Certificate are available on requirement.",
+  },
+  {
+    question: "Are free samples available?",
+    answer:
+      "Yes. Free samples are available for prospective buyers after the required shade and application are reviewed.",
+  },
+  {
+    question: "What is the shelf life?",
+    answer:
+      "The shelf life is 12 months when stored away from direct sunlight in a cool, dry place.",
+  },
+  {
+    question: "What is the typical lead time?",
+    answer:
+      "Typical lead time is approximately 10–15 days after commercial and order confirmation, subject to product, quantity, packaging, customization and complete order requirements. Transit and delivery times are not guaranteed.",
+  },
+  {
+    question: "How should an importer request a quotation?",
+    answer:
+      "Share the selected shade, required quantity, bulk, OEM, ODM or private-label scope, pack size, artwork or branding requirements, destination country or port, required documents, Incoterm requirement and company contact details through the contact page or WhatsApp export team.",
+  },
+];
 
 const hennaBasedHairColorsStructuredData = {
   "@context": "https://schema.org",
@@ -78,7 +156,7 @@ const hennaBasedHairColorsStructuredData = {
         "https://shiveshinternational.com/images/products/henna-based-hair-colors/henna-based-hair-colors-hero-final-v2.png",
       ],
       description:
-        "Professional Henna-Based Hair Colors manufactured, supplied and exported from India in 16 powder shades for salons, retailers, distributors, bulk importers and private-label buyers.",
+        "Henna-Based Hair Colors manufactured, supplied and exported from India in 16 triple-sifted powder shades for importers, distributors, wholesalers, salons, cosmetic and hair-care brands, OEM, ODM and private-label buyers.",
       category: "Henna-Based Powder Hair Colors",
       brand: {
         "@type": "Brand",
@@ -105,24 +183,73 @@ const hennaBasedHairColorsStructuredData = {
         {
           "@type": "PropertyValue",
           name: "Product Form",
-          value: "Fine Powder",
+          value: "Triple-Sifted Finest Powder",
         },
         {
           "@type": "PropertyValue",
           name: "Primary Application",
-          value: "Grey Coverage and Professional Hair Colouring",
+          value: "100% Grey Coverage and Professional Hair Colouring",
         },
         {
           "@type": "PropertyValue",
-          name: "Minimum Order Quantity",
-          value: "200 kg per item",
+          name: "Bulk Minimum Order",
+          value: "Orders Can Start from 100 kg, Subject to Commercial and Product Confirmation",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Private-Label MOQ",
+          value:
+            "Varies by Pack Size, Packaging, Artwork, Design, Customization and Commercial Feasibility",
         },
         {
           "@type": "PropertyValue",
           name: "Packaging",
-          value: "Retail, professional, bulk, OEM and private-label packaging",
+          value:
+            "100 g, 200 g, 500 g and 1 kg retail packs; 20 kg and 25 kg double-layer vacuum bulk packing",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Product Qualifications",
+          value:
+            "PPD-Free, Ammonia-Free, Peroxide-Free, No Metallic Salts and No Synthetic Dye",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Chemical Content after Dilution",
+          value: "Made with less than 3% chemicals after dilution.",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Shelf Life",
+          value: "12 Months under Recommended Storage Conditions",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Quality Testing",
+          value: "According to Buyer Instructions or Requirements",
         },
       ],
+    },
+    {
+      "@type": "WebPage",
+      "@id":
+        "https://shiveshinternational.com/products/henna-based-hair-colors#webpage",
+      url: "https://shiveshinternational.com/products/henna-based-hair-colors",
+      name: "Henna-Based Hair Colors Manufacturer, Exporter and Supplier India",
+      description:
+        "Commercial product and procurement information for 16 Henna-Based Hair Color shades manufactured, supplied and exported from India.",
+      isPartOf: {
+        "@id": "https://shiveshinternational.com/#website",
+      },
+      about: {
+        "@id":
+          "https://shiveshinternational.com/products/henna-based-hair-colors#product",
+      },
+      breadcrumb: {
+        "@id":
+          "https://shiveshinternational.com/products/henna-based-hair-colors#breadcrumb",
+      },
+      inLanguage: "en",
     },
     {
       "@type": "BreadcrumbList",
@@ -148,6 +275,19 @@ const hennaBasedHairColorsStructuredData = {
           item: "https://shiveshinternational.com/products/henna-based-hair-colors",
         },
       ],
+    },
+    {
+      "@type": "FAQPage",
+      "@id":
+        "https://shiveshinternational.com/products/henna-based-hair-colors#faq",
+      mainEntity: procurementFaqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
     },
   ],
 };
@@ -209,7 +349,7 @@ export default function HennaBasedHairColorsPage() {
 
             <StaggerItem delay={240}>
               <p className="mt-5 font-[family-name:var(--font-playfair)] text-xl italic text-[#E4C878] sm:text-2xl">
-                16 Professional Shades for Reliable Grey Coverage.
+                16 Professional Shades with 100% Grey Coverage.
               </p>
             </StaggerItem>
 
@@ -338,9 +478,11 @@ export default function HennaBasedHairColorsPage() {
                 <div className="mt-7 space-y-5">
                   <p className="text-lg leading-8 text-[#4c5f54]">
                     Henna-Based Hair Colors are formulated as a performance-led
-                    alternative for buyers seeking a convenient powder format,
+                    range for buyers seeking a triple-sifted finest powder,
                     broad shade selection and reliable colour development for
-                    professional and retail use.
+                    professional and retail use. All 16 shades are PPD-Free,
+                    Ammonia-Free, Peroxide-Free, contain No Metallic Salts and
+                    No Synthetic Dye.
                   </p>
 
                   <p className="text-lg leading-8 text-[#4c5f54]">
@@ -355,6 +497,16 @@ export default function HennaBasedHairColorsPage() {
                     The collection includes 16 commercial shades, including
                     Black Henna, Dark Brown Henna, Burgundy Henna, Wine Red
                     Henna, Auburn Henna, Blonde Henna and Ginger Blonde Henna.
+                  </p>
+
+                  <p className="border-l-2 border-[#C9A962] pl-5 text-lg font-semibold leading-8 text-[#173b2a]">
+                    Made with less than 3% chemicals after dilution.
+                  </p>
+
+                  <p className="text-sm leading-7 text-[#4c5f54]">
+                    Each shade has a different formulation. Exact chemical names
+                    and individual percentages are communicated directly to
+                    buyers when required and are not published on the website.
                   </p>
 
                   <p className="text-lg leading-8 text-[#4c5f54]">
@@ -742,13 +894,15 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
     category="Professional Hair Shade Reference"
     description="A professional visual reference for this Henna-Based Hair Color shade. Final results may vary according to the original hair colour and application conditions."
   >
-    <Image
-      src={shade.image}
-      alt={`${shade.name} hair shade close-up`}
-      fill
-      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-      className="object-cover transition-transform duration-700 group-hover:scale-110"
-    />
+    <div className="relative h-full w-full">
+      <Image
+        src={shade.image}
+        alt={`${shade.name} hair shade close-up`}
+        fill
+        sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+        className="object-cover transition-transform duration-700 group-hover:scale-110"
+      />
+    </div>
   </ProductCardModal>
 ) : (
   <div
@@ -861,7 +1015,7 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
                   {[
                     {
                       title: "Enhanced Grey Coverage",
-                      text: "Formulated to support visible coverage on grey and white hair across selected shades.",
+                      text: "All 16 shades provide 100% grey coverage when prepared and applied according to the recommended directions.",
                     },
                     {
                       title: "Shorter Processing Time",
@@ -911,6 +1065,71 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
           </div>
         </RevealOnScroll>
       </section>
+      {/* PROFESSIONAL BUYERS */}
+      <section
+        id="professional-buyers"
+        className="bg-[#f5f0e6] px-6 py-20 sm:px-8 lg:px-12 lg:py-24"
+      >
+        <RevealOnScroll>
+          <div className="mx-auto max-w-[1380px]">
+            <div className="mx-auto max-w-4xl text-center">
+              <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#9f7f36]">
+                International B2B Supply
+              </p>
+              <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">
+                Henna-Based Hair Color Supply for Professional Buyers
+              </h2>
+              <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#4c5f54]">
+                Shivesh International manufactures, exports and supplies
+                Henna-Based Hair Colors from India for wholesale, salon, retail,
+                cosmetic and hair-care programmes in international markets.
+              </p>
+            </div>
+
+            <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                ["Importers", "Commercial supply planning, export documents and destination-based order coordination."],
+                ["Distributors & Wholesalers", "A 16-shade portfolio for regional distribution, wholesale and retail channels."],
+                ["Salons & Salon Suppliers", "Professional powder hair colours with approximately 30-minute processing."],
+                ["Cosmetic Brands", "Finished-product supply for cosmetic portfolios and buyer-brand programmes."],
+                ["Hair-Care Brands", "Shade selection and packaging support for commercial hair-colour ranges."],
+                ["Private-Label Buyers", "Buyer logo, artwork and finished retail packaging, subject to feasibility."],
+                ["OEM & ODM Buyers", "Manufacturing and product support under agreed technical and commercial requirements."],
+                ["Sourcing Companies", "Centralized product, documentation and export coordination for qualified bulk enquiries."],
+              ].map(([title, text], index) => (
+                <StaggerItem key={title} delay={(index % 4) * 60}>
+                  <article className="h-full rounded-[22px] border border-[#C9A962]/28 bg-[#ede5d7] p-6 transition-all duration-500 hover:-translate-y-1 hover:border-[#C9A962] hover:shadow-[0_18px_45px_rgba(0,0,0,0.10)]">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-[#9f7f36]">
+                      B2B {String(index + 1).padStart(2, "0")}
+                    </p>
+                    <h3 className="mt-4 font-[family-name:var(--font-playfair)] text-2xl font-semibold">
+                      {title}
+                    </h3>
+                    <p className="mt-4 text-sm leading-7 text-[#4c5f54]">
+                      {text}
+                    </p>
+                  </article>
+                </StaggerItem>
+              ))}
+            </div>
+
+            <div className="mt-10 flex flex-wrap justify-center gap-4">
+              <Link
+                href="/contact"
+                className="inline-flex bg-[#102f23] px-7 py-4 text-[10px] font-bold uppercase tracking-[0.18em] text-[#F5F0E6]"
+              >
+                Discuss Your Buyer Requirement →
+              </Link>
+              <Link
+                href="/export"
+                className="inline-flex border border-[#173b2a]/25 px-7 py-4 text-[10px] font-bold uppercase tracking-[0.18em] text-[#173b2a]"
+              >
+                Review Export Support →
+              </Link>
+            </div>
+          </div>
+        </RevealOnScroll>
+      </section>
       {/* PRODUCT SPECIFICATIONS */}
       <section
         id="product-specifications"
@@ -949,10 +1168,13 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
                 {[
                   ["Product Category", "Henna-Based Hair Colors"],
                   ["Available Shades", "16 Professional Shades"],
-                  ["Product Form", "Fine Powder"],
-                  ["Texture", "Triple-Sifted Fine Powder"],
+                  ["Product Form", "Triple-Sifted Finest Powder"],
+                  ["Formulation", "Each Shade Has a Different Formulation"],
+                  ["Raw-Material Origin", "India"],
                   ["Product Type", "Performance-Focused Henna Hair Dye"],
-                  ["Primary Application", "Grey Coverage and Hair Colouring"],
+                  ["Grey Coverage", "100% Grey Coverage across All 16 Shades"],
+                  ["Product Qualifications", "PPD-Free · Ammonia-Free · Peroxide-Free · No Metallic Salts · No Synthetic Dye"],
+                  ["Chemical Content after Dilution", "Made with less than 3% chemicals after dilution."],
                   [
                     "Preparation Ratio",
                     "Approx. 1 Part Powder to 3 Parts Water",
@@ -965,14 +1187,18 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
                   ["Appearance", "Shade-Specific Fine Powder"],
                   ["Odour", "Characteristic"],
                   ["Country of Origin", "India"],
-                  ["Minimum Order Quantity", "200 kg per item"],
-                  ["Shelf Life", "24 Months under Recommended Storage"],
+                  ["Bulk Minimum Order", "Orders Can Start from 100 kg, Subject to Commercial and Product Confirmation"],
+                  ["Private-Label MOQ", "Varies by Pack Size, Packaging, Artwork, Design, Customization and Commercial Feasibility"],
+                  ["Shelf Life", "12 Months under Recommended Storage"],
                   [
                     "Storage",
                     "Store Away from Direct Sunlight in a Cool, Dry Place",
                   ],
-                  ["Packaging", "Retail, Professional, Bulk and Private Label"],
+                  ["Retail / Private-Label Packs", "100 g, 200 g, 500 g and 1 kg"],
+                  ["Bulk Packaging", "20 kg and 25 kg Double-Layer Vacuum Packing"],
                   ["Private Label", "OEM, ODM and Custom Branding Available"],
+                  ["Buyer Branding", "Buyer Logo and Artwork Available on Finished Packs"],
+                  ["Quality Testing", "According to Buyer Instructions or Requirements"],
                   [
                     "Technical Documents",
                     "COA, MSDS and Technical Data Support",
@@ -1198,8 +1424,8 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
                 </h3>
 
                 <p className="mt-5 leading-8 text-[#4c5f54]">
-                  100 g 200 g 500 g 1 kg Premium Metallic Pouches Designer
-                  Printed Boxes Professional Salon Packs Bulk Export Packing
+                   100 g · 200 g · 500 g · 1 kg · Premium Metallic Pouches ·
+                   Designer Printed Boxes · Professional Salon Packs
                 </p>
               </article>
 
@@ -1213,8 +1439,9 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
                 </h3>
 
                 <p className="mt-5 leading-8 text-[#F5F0E6]/70">
-                  Metallic Pouches Printed Pouches Designer Boxes Glass Jars
-                  Retail Cartons Bulk Cartons Private Label Packaging
+                   20 kg and 25 kg Double-Layer Vacuum Packing · Metallic
+                   Pouches · Printed Pouches · Designer Boxes · Glass Jars ·
+                   Retail Cartons · Bulk Cartons · Private-Label Packaging
                 </p>
               </article>
             </div>
@@ -1234,6 +1461,167 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
                 >
                   {item}
                 </div>
+              ))}
+            </div>
+          </div>
+        </RevealOnScroll>
+      </section>
+      {/* COMMERCIAL DOCUMENTATION AND ORDER PLANNING */}
+      <section
+        id="commercial-documentation"
+        className="bg-[#102f23] px-6 py-20 text-[#F5F0E6] sm:px-8 lg:px-12 lg:py-24"
+      >
+        <RevealOnScroll>
+          <div className="mx-auto grid max-w-[1380px] gap-8 lg:grid-cols-2">
+            <article className="border border-[#C9A962]/24 bg-[#071b14]/45 p-7 sm:p-9">
+              <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#C9A962]">
+                Commercial Documentation
+              </p>
+              <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">
+                Documentation for Hair-Color Importers and Distributors
+              </h2>
+              <p className="mt-6 text-lg leading-8 text-[#F5F0E6]/68">
+                Documentation and quality testing are coordinated for the
+                confirmed shade, commercial order and buyer or destination
+                requirements.
+              </p>
+              <div className="mt-8 grid gap-3 sm:grid-cols-2">
+                {[
+                  "COA with Every Commercial Batch or Order",
+                  "SDS / MSDS Available",
+                  "Country of Origin Certificate or Statement Available",
+                  "Phytosanitary Certificate Available on Requirement",
+                  "Fumigation Certificate Available on Requirement",
+                  "Quality Testing according to Buyer Instructions or Requirements",
+                  "Incoterms according to Buyer Requirement and Quotation",
+                  "Export and Shipping Coordination for Confirmed Orders",
+                ].map((item) => (
+                  <div
+                    key={item}
+                    className="border border-[#C9A962]/20 bg-[#102f23]/45 p-4 text-sm leading-7 text-[#F5F0E6]/72"
+                  >
+                    {item}
+                  </div>
+                ))}
+              </div>
+              <p className="mt-7 border border-[#C9A962]/30 bg-[#071b14]/55 p-5 text-sm leading-7 text-[#F5F0E6]/62">
+                Buyers and importers remain responsible for confirming product
+                classification, registration, labelling, customs and other
+                destination-market requirements. Documentation support does not
+                guarantee regulatory approval or customs clearance.
+              </p>
+              <p className="mt-6 text-sm leading-7 text-[#F5F0E6]/62">
+                Company certifications and registrations that may be referenced
+                include ISO, GMP, Halal, Kosher, HACCP, MSME and FSSAI. Review
+                the certifications page for the available company documents.
+              </p>
+              <div className="mt-7 flex flex-wrap gap-4">
+                <Link
+                  href="/certifications"
+                  className="inline-flex border border-[#C9A962]/55 px-6 py-3 text-[10px] font-bold uppercase tracking-[0.18em] text-[#F5F0E6]"
+                >
+                  ISO · GMP · Halal · Kosher · HACCP · MSME · FSSAI →
+                </Link>
+                <Link
+                  href="/resources"
+                  className="inline-flex border border-[#C9A962]/55 px-6 py-3 text-[10px] font-bold uppercase tracking-[0.18em] text-[#F5F0E6]"
+                >
+                  Buyer Resources →
+                </Link>
+              </div>
+            </article>
+
+            <article className="border border-[#C9A962]/24 bg-[#071b14]/45 p-7 sm:p-9">
+              <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#C9A962]">
+                Samples & Order Planning
+              </p>
+              <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">
+                Plan a Bulk, OEM, ODM or Private-Label Order
+              </h2>
+              <div className="mt-8 space-y-3">
+                {[
+                  ["Free Samples", "Available for prospective buyers after the shade and application requirement are reviewed."],
+                  ["Bulk Minimum Order", "Orders can start from 100 kg, subject to commercial and product confirmation."],
+                  ["Private-Label MOQ", "Varies by pack size, packaging, artwork, design, customization and commercial feasibility."],
+                  ["Typical Lead Time", "Approximately 10–15 days after commercial and order confirmation, subject to the complete order requirements."],
+                  ["Incoterms", "Coordinated according to buyer requirement and the quotation."],
+                ].map(([label, value]) => (
+                  <div
+                    key={label}
+                    className="grid gap-2 border-b border-[#C9A962]/18 pb-4 sm:grid-cols-[145px_1fr]"
+                  >
+                    <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#C9A962]">
+                      {label}
+                    </p>
+                    <p className="text-sm leading-7 text-[#F5F0E6]/70">{value}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-8 border border-[#C9A962]/25 p-5">
+                <h3 className="font-[family-name:var(--font-playfair)] text-2xl font-semibold">
+                  What to Include in Your RFQ
+                </h3>
+                <p className="mt-4 text-sm leading-7 text-[#F5F0E6]/68">
+                  Share the selected shade, quantity, bulk or buyer-brand supply
+                  model, required pack size, artwork or logo needs, destination
+                  country or port, required documentation, Incoterm requirement
+                  and company contact details.
+                </p>
+              </div>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex bg-[#C9A962] px-7 py-4 text-[10px] font-bold uppercase tracking-[0.18em] text-[#102f23]"
+                >
+                  Request Quote or Free Sample →
+                </Link>
+                <a
+                  href="/catalogues/Shivesh-International-Product-Catalogue.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex border border-[#C9A962]/55 px-7 py-4 text-[10px] font-bold uppercase tracking-[0.18em] text-[#F5F0E6]"
+                >
+                  View / Download Product Catalogue →
+                </a>
+              </div>
+            </article>
+          </div>
+        </RevealOnScroll>
+      </section>
+
+      {/* PROCUREMENT FAQ */}
+      <section
+        id="procurement-faq"
+        className="bg-[#f5f0e6] px-6 py-20 sm:px-8 lg:px-12 lg:py-24"
+      >
+        <RevealOnScroll>
+          <div className="mx-auto max-w-[1100px]">
+            <div className="text-center">
+              <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#9f7f36]">
+                Buyer Questions
+              </p>
+              <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">
+                Henna-Based Hair Colors Procurement FAQs
+              </h2>
+            </div>
+            <div className="mt-12 divide-y divide-[#173b2a]/15 border-y border-[#173b2a]/15">
+              {procurementFaqs.map((faq, index) => (
+                <details key={faq.question} className="group">
+                  <summary className="flex cursor-pointer list-none items-start justify-between gap-6 py-6">
+                    <h3 className="text-xl font-semibold leading-snug">
+                      <span className="mr-4 text-[#9f7f36]">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                      {faq.question}
+                    </h3>
+                    <span className="text-2xl text-[#9f7f36] transition-transform group-open:rotate-45">
+                      +
+                    </span>
+                  </summary>
+                  <p className="max-w-[940px] pb-7 text-[15px] leading-8 text-[#4c5f54]">
+                    {faq.answer}
+                  </p>
+                </details>
               ))}
             </div>
           </div>
@@ -1260,7 +1648,8 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
             <p className="mx-auto mt-8 max-w-4xl text-lg leading-9 text-[#F5F0E6]/68">
               Contact Shivesh International for bulk Henna-Based Hair Colors,
               export pricing, 16-shade selection, OEM manufacturing and
-              private-label packaging. Minimum order quantity is 200 kg per item.
+              private-label packaging. Bulk orders can start from 100 kg,
+              subject to commercial and product confirmation.
             </p>
 
             <div className="mt-12 flex flex-wrap justify-center gap-5">
@@ -1305,6 +1694,24 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
                 className="text-[#F5F0E6]/55 transition-colors duration-300 hover:text-[#C9A962]"
               >
                 Explore Natural Henna Hair Colors
+              </Link>
+
+              <span className="hidden h-1 w-1 rotate-45 bg-[#C9A962]/55 sm:block" />
+
+              <Link
+                href="/products/natural-henna-powder"
+                className="text-[#F5F0E6]/55 transition-colors duration-300 hover:text-[#C9A962]"
+              >
+                Natural Henna Powder
+              </Link>
+
+              <span className="hidden h-1 w-1 rotate-45 bg-[#C9A962]/55 sm:block" />
+
+              <Link
+                href="/products/natural-indigo-powder"
+                className="text-[#F5F0E6]/55 transition-colors duration-300 hover:text-[#C9A962]"
+              >
+                Natural Indigo Powder
               </Link>
             </div>
           </div>
