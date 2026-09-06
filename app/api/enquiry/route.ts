@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { checkEnquiryRateLimit } from "@/app/lib/enquiryRateLimit";
 
 type EnquiryPayload = {
   name?: unknown;
@@ -13,6 +14,7 @@ type EnquiryPayload = {
   quantity?: unknown;
   enquiryType?: unknown;
   message?: unknown;
+  companyWebsite?: unknown;
 };
 
 const getText = (value: unknown, maximumLength: number) => {
@@ -27,21 +29,68 @@ const isValidEmail = (email: string) => {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 };
 
+const isAllowedOrigin = (request: Request) => {
+  const origin = request.headers.get("origin");
+
+  if (process.env.NODE_ENV !== "production") {
+    if (!origin) {
+      return true;
+    }
+
+    try {
+      const url = new URL(origin);
+
+      return (
+        (url.hostname === "localhost" || url.hostname === "127.0.0.1") &&
+        (url.protocol === "http:" || url.protocol === "https:")
+      );
+    } catch {
+      return false;
+    }
+  }
+
+  if (!origin) {
+    return false;
+  }
+
+  const allowedOrigins = new Set([
+    "https://shiveshinternational.com",
+    "https://www.shiveshinternational.com",
+  ]);
+  const deploymentHostname = process.env.VERCEL_URL;
+
+  if (deploymentHostname) {
+    allowedOrigins.add(`https://${deploymentHostname}`);
+  }
+
+  return allowedOrigins.has(origin);
+};
+
+const rateLimitResponse = (retryAfter: number) =>
+  NextResponse.json(
+    { error: "Too many enquiries. Please try again later." },
+    {
+      status: 429,
+      headers: {
+        "Retry-After": String(retryAfter),
+      },
+    },
+  );
+
 export async function POST(request: Request) {
   try {
-    const apiKey = process.env.RESEND_API_KEY;
-    const fromEmail = process.env.ENQUIRY_FROM_EMAIL;
-
-    if (!apiKey || !fromEmail) {
-      console.error("Enquiry email environment variables are missing.");
-
+    if (!isAllowedOrigin(request)) {
       return NextResponse.json(
-        { error: "Email service is not configured." },
-        { status: 500 },
+        { error: "Unable to process enquiry." },
+        { status: 403 },
       );
     }
 
     const body = (await request.json()) as EnquiryPayload;
+
+    if (getText(body.companyWebsite, 200)) {
+      return NextResponse.json({ success: true }, { status: 200 });
+    }
 
     const enquiry = {
       name: getText(body.name, 100),
@@ -75,6 +124,35 @@ export async function POST(request: Request) {
       return NextResponse.json(
         { error: "Please enter a valid email address." },
         { status: 400 },
+      );
+    }
+
+    let rateLimit;
+
+    try {
+      rateLimit = await checkEnquiryRateLimit(request.headers);
+    } catch {
+      console.error("Enquiry rate-limit service is unavailable.");
+
+      return NextResponse.json(
+        { error: "Unable to process enquiry." },
+        { status: 503 },
+      );
+    }
+
+    if (!rateLimit.allowed) {
+      return rateLimitResponse(rateLimit.retryAfter);
+    }
+
+    const apiKey = process.env.RESEND_API_KEY;
+    const fromEmail = process.env.ENQUIRY_FROM_EMAIL;
+
+    if (!apiKey || !fromEmail) {
+      console.error("Enquiry email environment variables are missing.");
+
+      return NextResponse.json(
+        { error: "Email service is not configured." },
+        { status: 500 },
       );
     }
 

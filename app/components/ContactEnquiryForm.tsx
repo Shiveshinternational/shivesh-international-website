@@ -14,6 +14,7 @@ type EnquiryFormData = {
   quantity: string;
   enquiryType: string;
   message: string;
+  companyWebsite: string;
 };
 
 const initialFormData: EnquiryFormData = {
@@ -28,6 +29,7 @@ const initialFormData: EnquiryFormData = {
   quantity: "",
   enquiryType: "",
   message: "",
+  companyWebsite: "",
 };
 
 const inputClassName =
@@ -117,6 +119,22 @@ if (typeof analyticsWindow.gtag === "function") {
       onSubmit={handleSubmit}
       className="rounded-[30px] border border-[#C9A962]/35 bg-[#f5f0e6] p-6 shadow-[0_30px_85px_rgba(0,0,0,0.13)] sm:p-9 lg:p-11"
     >
+      <div
+        aria-hidden="true"
+        className="absolute left-[-10000px] top-auto h-px w-px overflow-hidden"
+      >
+        <label htmlFor="companyWebsite">Company website</label>
+        <input
+          id="companyWebsite"
+          name="companyWebsite"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          value={formData.companyWebsite}
+          onChange={handleChange}
+        />
+      </div>
+
       <div className="mb-9">
         <p className="text-[10px] font-bold uppercase tracking-[0.36em] text-[#9f7f36]">
           Business Enquiry Form
