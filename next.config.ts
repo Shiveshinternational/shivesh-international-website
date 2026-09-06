@@ -43,7 +43,7 @@ const nextConfig: NextConfig = {
             value: "DENY",
           },
           {
-            key: "Content-Security-Policy-Report-Only",
+            key: "Content-Security-Policy",
             value: contentSecurityPolicyReportOnly,
           },
         ],
