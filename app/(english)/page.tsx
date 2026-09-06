@@ -61,6 +61,7 @@ const heroSlides = [
 
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [loadedSlides, setLoadedSlides] = useState<number[]>([0, 1]);
   const [isCarouselFocused, setIsCarouselFocused] = useState(false);
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
@@ -92,6 +93,20 @@ export default function HomePage() {
 
     return () => window.clearInterval(timer);
   }, [isCarouselFocused, prefersReducedMotion]);
+
+  useEffect(() => {
+    const frame = window.requestAnimationFrame(() => {
+      const followingSlide = (currentSlide + 1) % heroSlides.length;
+
+      setLoadedSlides((slides) =>
+        slides.includes(followingSlide)
+          ? slides
+          : [...slides, followingSlide],
+      );
+    });
+
+    return () => window.cancelAnimationFrame(frame);
+  }, [currentSlide]);
 
   return (
     <main
@@ -130,14 +145,16 @@ export default function HomePage() {
         : "pointer-events-none opacity-0"
     }`}
   >
-    <Image
-      src={slide.src}
-      alt={slide.alt}
-      fill
-      priority={index === 0}
-      sizes="100vw"
-      className="object-cover object-top"
-    />
+    {loadedSlides.includes(index) && (
+      <Image
+        src={slide.src}
+        alt={slide.alt}
+        fill
+        priority={index === 0}
+        sizes="100vw"
+        className="object-cover object-top"
+      />
+    )}
   </div>
 ))}
       </div>
