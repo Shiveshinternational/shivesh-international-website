@@ -13,6 +13,10 @@ export default function FloatingContactButtons() {
   const [showTooltip, setShowTooltip] = useState(false);
 
   useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
+
     const timer = window.setTimeout(() => {
       setShowTooltip(true);
     }, 1800);
@@ -31,7 +35,7 @@ export default function FloatingContactButtons() {
     <div className={`fixed bottom-5 z-[9990] flex flex-col gap-3 sm:bottom-6 ${isArabic ? "left-5 items-start sm:left-6" : "right-5 items-end sm:right-6"}`}>
       {/* PREMIUM TOOLTIP */}
       <div
-        className={`pointer-events-none transition-all duration-500 ${isArabic ? "origin-bottom-left" : "origin-bottom-right"} ${
+        className={`pointer-events-none transition-all duration-500 motion-reduce:transition-none ${isArabic ? "origin-bottom-left" : "origin-bottom-right"} ${
           showTooltip
             ? "translate-y-0 scale-100 opacity-100"
             : "translate-y-3 scale-95 opacity-0"
@@ -62,7 +66,7 @@ export default function FloatingContactButtons() {
         aria-label={isGerman ? "Shivesh International über WhatsApp kontaktieren" : isFrench ? "Contacter Shivesh International sur WhatsApp" : isSpanish ? "Contactar con Shivesh International por WhatsApp" : isItalian ? "Contatta Shivesh International su WhatsApp" : isArabic ? "تواصل مع شيفيش إنترناشيونال عبر واتساب" : "Chat with Shivesh International on WhatsApp"}
         onMouseEnter={() => setShowTooltip(true)}
         onMouseLeave={() => setShowTooltip(false)}
-        className="group relative flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] shadow-[0_18px_45px_rgba(37,211,102,0.36)] transition-all duration-500 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_22px_60px_rgba(37,211,102,0.48)] focus:outline-none focus-visible:ring-4 focus-visible:ring-[#25D366]/35 sm:h-[68px] sm:w-[68px]"
+        className="group relative flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] shadow-[0_18px_45px_rgba(37,211,102,0.36)] transition-all duration-500 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_22px_60px_rgba(37,211,102,0.48)] focus:outline-none focus-visible:ring-4 focus-visible:ring-[#25D366]/35 motion-reduce:transform-none motion-reduce:transition-none sm:h-[68px] sm:w-[68px]"
       >
         {/* PULSE RINGS */}
         <span className="absolute inset-0 rounded-full border border-[#25D366]/55 animate-[whatsAppPulse_3.6s_ease-out_infinite]" />

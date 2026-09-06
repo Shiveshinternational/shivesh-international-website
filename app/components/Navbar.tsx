@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -80,6 +80,8 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [scrollProgress, setScrollProgress] = useState(0);
+  const mobileMenuButtonRef = useRef<HTMLButtonElement>(null);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -131,6 +133,72 @@ export default function Navbar() {
       window.clearTimeout(closeMenuTimer);
     };
   }, [pathname]);
+
+  useEffect(() => {
+    if (!isMenuOpen) return;
+
+    const menu = mobileMenuRef.current;
+
+    if (!menu) return;
+
+    const getItems = () =>
+      Array.from(
+        menu.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
+        ),
+      );
+
+    const focusFrame = window.requestAnimationFrame(() => {
+      getItems()[0]?.focus();
+    });
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        setIsMenuOpen(false);
+        mobileMenuButtonRef.current?.focus();
+        return;
+      }
+
+      if (event.key !== "Tab") return;
+
+      const items = getItems();
+
+      if (items.length === 0) {
+        event.preventDefault();
+        return;
+      }
+
+      const firstItem = items[0];
+      const lastItem = items[items.length - 1];
+
+      if (event.shiftKey && document.activeElement === firstItem) {
+        event.preventDefault();
+        lastItem.focus();
+      } else if (!event.shiftKey && document.activeElement === lastItem) {
+        event.preventDefault();
+        firstItem.focus();
+      }
+    };
+
+    const handleFocusIn = (event: FocusEvent) => {
+      if (
+        !menu.contains(event.target as Node) &&
+        event.target !== mobileMenuButtonRef.current
+      ) {
+        getItems()[0]?.focus();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener("focusin", handleFocusIn);
+
+    return () => {
+      window.cancelAnimationFrame(focusFrame);
+      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener("focusin", handleFocusIn);
+    };
+  }, [isMenuOpen]);
 
   const closeMenu = () => {
     setIsMenuOpen(false);
@@ -236,11 +304,13 @@ export default function Navbar() {
           <LanguageSelector />
 
           <button
+            ref={mobileMenuButtonRef}
             type="button"
             onClick={() => setIsMenuOpen((current) => !current)}
             className="flex h-10 w-10 items-center justify-center border border-[#C9A962]/40 text-[#f5f0e6] transition hover:border-[#C9A962] hover:text-[#C9A962]"
             aria-label={isGerman ? "Navigationsmenü umschalten" : isFrench ? "Ouvrir ou fermer le menu de navigation" : isSpanish ? "Abrir o cerrar la navegación" : isItalian ? "Apri o chiudi il menu di navigazione" : isArabic ? "فتح أو إغلاق قائمة التنقل" : "Toggle navigation menu"}
             aria-expanded={isMenuOpen}
+            aria-controls="mobile-navigation-menu"
           >
             <span className="relative block h-5 w-6">
               <span
@@ -266,6 +336,10 @@ export default function Navbar() {
       </nav>
 
       <div
+        id="mobile-navigation-menu"
+        ref={mobileMenuRef}
+        aria-hidden={!isMenuOpen}
+        inert={!isMenuOpen}
         className={`overflow-hidden border-t border-[#C9A962]/15 bg-[#102f23]/98 backdrop-blur-xl transition-all duration-500 xl:hidden ${
           isMenuOpen ? "max-h-[650px] opacity-100" : "max-h-0 opacity-0"
         }`}

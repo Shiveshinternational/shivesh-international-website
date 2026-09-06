@@ -98,7 +98,9 @@ if (typeof analyticsWindow.gtag === "function") {
     product_category: formData.product || "not_selected",
     enquiry_type: formData.enquiryType || "not_selected",
     destination_market: formData.country || "not_provided",
-    debug_mode: true,
+    ...(process.env.NODE_ENV !== "production"
+      ? { debug_mode: true }
+      : {}),
   });
 
 } else {

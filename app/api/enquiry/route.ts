@@ -66,8 +66,14 @@ const isAllowedOrigin = (request: Request) => {
   return allowedOrigins.has(origin);
 };
 
+const jsonResponse = (body: object, init?: ResponseInit) => {
+  const response = NextResponse.json(body, init);
+  response.headers.set("Cache-Control", "no-store");
+  return response;
+};
+
 const rateLimitResponse = (retryAfter: number) =>
-  NextResponse.json(
+  jsonResponse(
     { error: "Too many enquiries. Please try again later." },
     {
       status: 429,
@@ -80,7 +86,7 @@ const rateLimitResponse = (retryAfter: number) =>
 export async function POST(request: Request) {
   try {
     if (!isAllowedOrigin(request)) {
-      return NextResponse.json(
+      return jsonResponse(
         { error: "Unable to process enquiry." },
         { status: 403 },
       );
@@ -89,7 +95,7 @@ export async function POST(request: Request) {
     const body = (await request.json()) as EnquiryPayload;
 
     if (getText(body.companyWebsite, 200)) {
-      return NextResponse.json({ success: true }, { status: 200 });
+      return jsonResponse({ success: true }, { status: 200 });
     }
 
     const enquiry = {
@@ -114,14 +120,14 @@ export async function POST(request: Request) {
       !enquiry.product ||
       !enquiry.message
     ) {
-      return NextResponse.json(
+      return jsonResponse(
         { error: "Please complete all required fields." },
         { status: 400 },
       );
     }
 
     if (!isValidEmail(enquiry.email)) {
-      return NextResponse.json(
+      return jsonResponse(
         { error: "Please enter a valid email address." },
         { status: 400 },
       );
@@ -134,7 +140,7 @@ export async function POST(request: Request) {
     } catch {
       console.error("Enquiry rate-limit service is unavailable.");
 
-      return NextResponse.json(
+      return jsonResponse(
         { error: "Unable to process enquiry." },
         { status: 503 },
       );
@@ -150,7 +156,7 @@ export async function POST(request: Request) {
     if (!apiKey || !fromEmail) {
       console.error("Enquiry email environment variables are missing.");
 
-      return NextResponse.json(
+      return jsonResponse(
         { error: "Email service is not configured." },
         { status: 500 },
       );
@@ -189,20 +195,20 @@ export async function POST(request: Request) {
     if (error) {
       console.error("Resend enquiry error:", error);
 
-      return NextResponse.json(
+      return jsonResponse(
         { error: "Unable to send enquiry." },
         { status: 502 },
       );
     }
 
-    return NextResponse.json(
+    return jsonResponse(
       { success: true },
       { status: 200 },
     );
   } catch (error) {
     console.error("Enquiry submission error:", error);
 
-    return NextResponse.json(
+    return jsonResponse(
       { error: "Unable to process enquiry." },
       { status: 500 },
     );

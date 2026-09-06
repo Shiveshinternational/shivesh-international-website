@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
 type ProductCardModalProps = {
@@ -21,15 +21,63 @@ export default function ProductCardModal({
   children,
 }: ProductCardModalProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const previouslyFocusedRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     if (!isOpen) return;
 
     const previousOverflow = document.body.style.overflow;
+    const dialog = dialogRef.current;
+    const backgroundElements = Array.from(document.body.children).filter(
+      (element) => !dialog || !element.contains(dialog),
+    ) as HTMLElement[];
+    const backgroundStates = backgroundElements.map((element) => ({
+      element,
+      inert: element.inert,
+      ariaHidden: element.getAttribute("aria-hidden"),
+    }));
+
+    backgroundElements.forEach((element) => {
+      element.inert = true;
+      element.setAttribute("aria-hidden", "true");
+    });
+
+    const focusFrame = window.requestAnimationFrame(() => {
+      closeButtonRef.current?.focus();
+    });
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
+        event.preventDefault();
         setIsOpen(false);
+        return;
+      }
+
+      if (event.key === "Tab" && dialog) {
+        const focusableElements = Array.from(
+          dialog.querySelectorAll<HTMLElement>(
+            'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
+          ),
+        );
+
+        if (focusableElements.length === 0) {
+          event.preventDefault();
+          return;
+        }
+
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+
+        if (event.shiftKey && document.activeElement === firstElement) {
+          event.preventDefault();
+          lastElement.focus();
+        } else if (!event.shiftKey && document.activeElement === lastElement) {
+          event.preventDefault();
+          firstElement.focus();
+        }
       }
     };
 
@@ -38,7 +86,20 @@ export default function ProductCardModal({
 
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
+      window.cancelAnimationFrame(focusFrame);
       document.body.style.overflow = previousOverflow;
+
+      backgroundStates.forEach(({ element, inert, ariaHidden }) => {
+        element.inert = inert;
+
+        if (ariaHidden === null) {
+          element.removeAttribute("aria-hidden");
+        } else {
+          element.setAttribute("aria-hidden", ariaHidden);
+        }
+      });
+
+      previouslyFocusedRef.current?.focus();
     };
   }, [isOpen]);
 
@@ -46,6 +107,7 @@ export default function ProductCardModal({
     isOpen && typeof document !== "undefined"
       ? createPortal(
           <div
+            ref={dialogRef}
             className="fixed inset-0 z-[99999] flex items-center justify-center bg-black/80 p-4 backdrop-blur-xl sm:p-6 lg:p-8"
             role="dialog"
             aria-modal="true"
@@ -53,6 +115,7 @@ export default function ProductCardModal({
             onClick={() => setIsOpen(false)}
           >
             <button
+              ref={closeButtonRef}
               type="button"
               onClick={() => setIsOpen(false)}
               className="absolute right-5 top-5 z-30 flex h-12 w-12 items-center justify-center rounded-full border border-white/35 bg-black/70 text-3xl text-white transition-all duration-300 hover:rotate-90 hover:border-[#C9A962] hover:text-[#E4C878]"
@@ -125,8 +188,15 @@ export default function ProductCardModal({
   return (
     <>
       <button
+        ref={triggerRef}
         type="button"
-        onClick={() => setIsOpen(true)}
+        onClick={() => {
+          previouslyFocusedRef.current =
+            document.activeElement instanceof HTMLElement
+              ? document.activeElement
+              : triggerRef.current;
+          setIsOpen(true);
+        }}
         className="block h-full w-full cursor-zoom-in text-left"
         aria-label={`Open full product card for ${alt}`}
       >

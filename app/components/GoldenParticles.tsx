@@ -62,13 +62,13 @@ export default function GoldenParticles() {
           />
         ))}
 
-        <div className="absolute left-[12%] top-[20%] h-1.5 w-1.5 animate-pulse rounded-full bg-[#F1D98F]/65 shadow-[0_0_18px_rgba(241,217,143,0.9)]" />
+        <div className="decorative-pulse absolute left-[12%] top-[20%] h-1.5 w-1.5 animate-pulse rounded-full bg-[#F1D98F]/65 shadow-[0_0_18px_rgba(241,217,143,0.9)]" />
 
-        <div className="absolute right-[18%] top-[31%] h-1 w-1 animate-pulse rounded-full bg-[#C9A962]/70 shadow-[0_0_16px_rgba(201,169,98,0.9)] [animation-delay:700ms]" />
+        <div className="decorative-pulse absolute right-[18%] top-[31%] h-1 w-1 animate-pulse rounded-full bg-[#C9A962]/70 shadow-[0_0_16px_rgba(201,169,98,0.9)] [animation-delay:700ms]" />
 
-        <div className="absolute bottom-[29%] left-[34%] h-1 w-1 animate-pulse rounded-full bg-[#E4C878]/60 shadow-[0_0_14px_rgba(228,200,120,0.8)] [animation-delay:1200ms]" />
+        <div className="decorative-pulse absolute bottom-[29%] left-[34%] h-1 w-1 animate-pulse rounded-full bg-[#E4C878]/60 shadow-[0_0_14px_rgba(228,200,120,0.8)] [animation-delay:1200ms]" />
 
-        <div className="absolute bottom-[18%] right-[28%] h-1.5 w-1.5 animate-pulse rounded-full bg-[#F1D98F]/50 shadow-[0_0_20px_rgba(241,217,143,0.75)] [animation-delay:1800ms]" />
+        <div className="decorative-pulse absolute bottom-[18%] right-[28%] h-1.5 w-1.5 animate-pulse rounded-full bg-[#F1D98F]/50 shadow-[0_0_20px_rgba(241,217,143,0.75)] [animation-delay:1800ms]" />
       </div>
 
       <style jsx>{`
@@ -112,7 +112,8 @@ export default function GoldenParticles() {
         }
 
         @media (prefers-reduced-motion: reduce) {
-          .golden-particle {
+          .golden-particle,
+          .decorative-pulse {
             animation: none;
           }
         }

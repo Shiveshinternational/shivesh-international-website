@@ -22,8 +22,9 @@ export default function PremiumCursor() {
 
   useEffect(() => {
     const finePointer = window.matchMedia("(pointer: fine)");
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-    if (!finePointer.matches) {
+    if (!finePointer.matches || reducedMotion.matches) {
       return;
     }
 

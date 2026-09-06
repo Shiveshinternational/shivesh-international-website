@@ -5,8 +5,9 @@ import { useEffect } from "react";
 export default function MagneticButtons() {
   useEffect(() => {
     const finePointer = window.matchMedia("(pointer: fine)");
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-    if (!finePointer.matches) {
+    if (!finePointer.matches || reducedMotion.matches) {
       return;
     }
 

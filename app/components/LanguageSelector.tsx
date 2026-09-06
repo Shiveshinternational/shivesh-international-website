@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -31,6 +31,10 @@ const arabicLanguageLabels: Record<string, string> = { EN: "الإنجليزية
 export default function LanguageSelector() {
   const [isOpen, setIsOpen] = useState(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const pendingFocusRef = useRef<"first" | "last" | null>(null);
+  const menuId = useId();
   const pathname = usePathname();
   const selectedCode = pathname.startsWith("/de/")
     ? "DE"
@@ -40,6 +44,24 @@ export default function LanguageSelector() {
 
   useEffect(() => {
     if (!isOpen) return;
+
+    const getItems = () =>
+      Array.from(
+        menuRef.current?.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled])',
+        ) ?? [],
+      );
+
+    const focusFrame = window.requestAnimationFrame(() => {
+      const items = getItems();
+      const target =
+        pendingFocusRef.current === "last"
+          ? items[items.length - 1]
+          : items[0];
+
+      target?.focus();
+      pendingFocusRef.current = null;
+    });
 
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -52,7 +74,33 @@ export default function LanguageSelector() {
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
+        event.preventDefault();
         setIsOpen(false);
+        triggerRef.current?.focus();
+        return;
+      }
+
+      if (
+        event.key === "ArrowDown" ||
+        event.key === "ArrowUp" ||
+        event.key === "Home" ||
+        event.key === "End"
+      ) {
+        const items = getItems();
+        const currentIndex = items.indexOf(document.activeElement as HTMLElement);
+
+        if (currentIndex === -1 || items.length === 0) return;
+
+        event.preventDefault();
+
+        if (event.key === "Home") {
+          items[0].focus();
+        } else if (event.key === "End") {
+          items[items.length - 1].focus();
+        } else {
+          const direction = event.key === "ArrowDown" ? 1 : -1;
+          items[(currentIndex + direction + items.length) % items.length].focus();
+        }
       }
     };
 
@@ -62,6 +110,7 @@ export default function LanguageSelector() {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
       document.removeEventListener("keydown", handleKeyDown);
+      window.cancelAnimationFrame(focusFrame);
     };
   }, [isOpen]);
 
@@ -72,11 +121,22 @@ export default function LanguageSelector() {
   return (
     <div ref={wrapperRef} className="relative">
       <button
+        ref={triggerRef}
         type="button"
         onClick={() => setIsOpen((current) => !current)}
+        onKeyDown={(event) => {
+          if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+            event.preventDefault();
+            pendingFocusRef.current =
+              event.key === "ArrowUp" ? "last" : "first";
+            setIsOpen(true);
+          }
+        }}
         className="inline-flex h-10 items-center gap-2 rounded-full border border-[#C9A962]/35 bg-[#173b2a]/65 px-3 text-[10px] font-bold uppercase tracking-[0.12em] text-[#F5F0E6] transition-all duration-300 hover:border-[#C9A962] hover:text-[#C9A962]"
         aria-label={selectedCode === "DE" ? "Sprache auswählen" : selectedCode === "FR" ? "Choisir la langue" : selectedCode === "ES" ? "Seleccionar idioma" : selectedCode === "IT" ? "Seleziona la lingua" : selectedCode === "AR" ? "اختيار لغة العرض" : "Select display language"}
         aria-expanded={isOpen}
+        aria-controls={menuId}
+        aria-haspopup="menu"
       >
         <span className="text-sm">{selectedLanguage.flag}</span>
         <span>{selectedLanguage.code}</span>
@@ -90,6 +150,11 @@ export default function LanguageSelector() {
       </button>
 
       <div
+        id={menuId}
+        ref={menuRef}
+        role="menu"
+        aria-hidden={!isOpen}
+        inert={!isOpen}
         className={`absolute top-[calc(100%+14px)] z-[120] w-[210px] transition-all duration-300 ${selectedCode === "AR" ? "left-0 origin-top-left" : "right-0 origin-top-right"} ${
           isOpen
             ? "pointer-events-auto translate-y-0 scale-100 opacity-100"
@@ -134,11 +199,11 @@ export default function LanguageSelector() {
               </>;
 
             return isAvailable && destination ? (
-              <Link key={language.code} href={destination} onClick={() => setIsOpen(false)} className={className}>
+              <Link key={language.code} href={destination} role="menuitem" onClick={() => setIsOpen(false)} className={className}>
                 {content}
               </Link>
             ) : (
-              <button key={language.code} type="button" disabled aria-disabled="true" className={className}>
+              <button key={language.code} type="button" role="menuitem" disabled aria-disabled="true" className={className}>
                 {content}
               </button>
             );

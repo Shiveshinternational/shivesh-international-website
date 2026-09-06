@@ -61,8 +61,28 @@ const heroSlides = [
 
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isCarouselFocused, setIsCarouselFocused] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
   useEffect(() => {
+    const motionPreference = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    );
+    const updateMotionPreference = () => {
+      setPrefersReducedMotion(motionPreference.matches);
+    };
+
+    updateMotionPreference();
+    motionPreference.addEventListener("change", updateMotionPreference);
+
+    return () => {
+      motionPreference.removeEventListener("change", updateMotionPreference);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (prefersReducedMotion || isCarouselFocused) return;
+
     const timer = window.setInterval(() => {
       setCurrentSlide(
         (previousSlide) =>
@@ -71,7 +91,7 @@ export default function HomePage() {
     }, 6000);
 
     return () => window.clearInterval(timer);
-  }, []);
+  }, [isCarouselFocused, prefersReducedMotion]);
 
   return (
     <main
@@ -87,6 +107,12 @@ export default function HomePage() {
       ===================================================== */}
       <section
   id="home"
+  onFocusCapture={() => setIsCarouselFocused(true)}
+  onBlurCapture={(event) => {
+    if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+      setIsCarouselFocused(false);
+    }
+  }}
   className="relative isolate h-screen overflow-hidden bg-[#07140f]"
 >
   {/* ===================================================
