@@ -192,87 +192,6 @@ const indianSpicesStructuredData = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Product",
-      "@id":
-        "https://shiveshinternational.com/products/indian-spices#product",
-      name: "Indian Spices",
-      alternateName: [
-        "Whole Indian Spices",
-        "Indian Spice Powders",
-        "Bulk Indian Spices",
-        "Private Label Spices",
-      ],
-      url: "https://shiveshinternational.com/products/indian-spices",
-      image:
-        "https://shiveshinternational.com/images/products/indian-spices/indian-spices-hero-final-v1.png",
-      description:
-        "A portfolio of 24 whole and powder Indian spices manufactured, supplied and exported from India for importers, distributors, food-service companies, OEM, ODM and private-label buyers.",
-      category: "Whole Spices and Spice Powders",
-      brand: {
-        "@type": "Brand",
-        name: "Shivesh International",
-      },
-      manufacturer: {
-        "@id": "https://shiveshinternational.com/#organization",
-      },
-      countryOfOrigin: {
-        "@type": "Country",
-        name: "India",
-      },
-      audience: {
-        "@type": "BusinessAudience",
-        audienceType:
-          "Importers, distributors, wholesalers, retailers, hotels, caterers, food-service companies, packaged-food manufacturers, sauce and seasoning manufacturers, sourcing companies, OEM, ODM, private-label and bulk buyers",
-      },
-      additionalProperty: [
-        {
-          "@type": "PropertyValue",
-          name: "Portfolio Size",
-          value: "24 Products: 12 Powder Spices and 12 Whole Spices",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Available Forms",
-          value: "Whole and Powder Spices; Blended Spices according to Buyer Instructions or Requirements",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Manufacturing and Raw-Material Origin",
-          value: "India",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Bulk Minimum Order",
-          value: "Orders Can Start from 100 kg per Spice or Item, Subject to Commercial and Product Confirmation",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Private-Label MOQ",
-          value: "Varies by Pack Size, Packaging, Artwork, Design, Customization and Commercial Feasibility",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Packaging",
-          value: "100 g, 200 g, 500 g and 1 kg Retail or Private-Label Packs; 20 kg and 25 kg Double-Layer Vacuum Bulk Packing",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Supply Services",
-          value: "OEM, ODM, Buyer Logo, Artwork, Custom Branding and Printed Packaging Available",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Quality Testing",
-          value: "According to Buyer and Product Requirements, Subject to Confirmation",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Shelf Life",
-          value: "Varies by Spice or Product",
-        },
-      ],
-    },
-    {
       "@type": "WebPage",
       "@id": "https://shiveshinternational.com/products/indian-spices#webpage",
       url: "https://shiveshinternational.com/products/indian-spices",
@@ -407,10 +326,7 @@ export default function IndianSpicesPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            ...indianSpicesStructuredData,
-            "@graph": indianSpicesStructuredData["@graph"].slice(1),
-          }).replace(
+          __html: JSON.stringify(indianSpicesStructuredData).replace(
             /</g,
             "\\u003c"
           ),

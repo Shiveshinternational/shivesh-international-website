@@ -284,7 +284,7 @@ export default function FooterSection({ locale = "en" }: { locale?: "en" | "de" 
                   </a>
 
                   <a
-                    href="https://www.shiveshinternational.com"
+                    href="https://shiveshinternational.com/"
                     target="_blank"
                     rel="noreferrer"
                     className="group inline-flex items-center gap-2 border border-[#C9A962]/22 px-4 py-3 text-[9px] font-bold uppercase tracking-[0.16em] text-[#F5F0E6]/60 transition-all duration-300 hover:-translate-y-1 hover:border-[#C9A962] hover:text-[#E4C878]"

@@ -16,7 +16,7 @@ const heroImage =
   "https://shiveshinternational.com/images/export/japan/japan-botanical-product-development-tokyo-hero-premium-v1.png";
 
 export const metadata: Metadata = {
-  title: "Natural Products Exporter to Japan | Shivesh International",
+  title: { absolute: "Natural Products Exporter to Japan | India" },
   description:
     "India-to-Japan B2B supply of henna, indigo, botanical hair colours, Ayurvedic herbs and selected spices. Bulk, OEM and private label; MOQ 200 kg per item.",
   keywords: [

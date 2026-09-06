@@ -16,7 +16,7 @@ const heroImage =
   "https://shiveshinternational.com/images/export/australia/australia-botanical-sourcing-sydney-hero-premium-v1.png";
 
 export const metadata: Metadata = {
-  title: "Natural Products Exporter to Australia | Shivesh International",
+  title: { absolute: "Natural Products Exporter to Australia | India" },
   description:
     "Indian henna, indigo, botanical hair colours, Ayurvedic herbs and spices for Australian importers, wholesalers, OEM and private-label buyers. MOQ 200 kg per item.",
   keywords: [

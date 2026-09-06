@@ -153,114 +153,6 @@ const naturalHennaHairColorsStructuredData = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Product",
-      "@id":
-        "https://shiveshinternational.com/products/natural-henna-hair-colors#product",
-      name: "Natural Henna Hair Colors",
-      alternateName: [
-        "Botanical Henna Hair Colors",
-        "Natural Henna Powder Hair Colors",
-        "17 Shade Henna Hair Color Collection",
-        "Private Label Henna Hair Colors",
-      ],
-      url:
-        "https://shiveshinternational.com/products/natural-henna-hair-colors",
-      image: [
-        "https://shiveshinternational.com/images/products/henna-hair-colors/natural-henna-hair-colors-hero-final-v2.png",
-        "https://shiveshinternational.com/images/products/henna-hair-colors/natural-henna-hair-colors-about-final-v1.png",
-        "https://shiveshinternational.com/images/products/henna-hair-colors/natural-henna-hair-colors-packaging-private-label-final-v1.png",
-      ],
-      description:
-        "A collection manufactured and exported from India comprising 17 botanical hair-colour shades plus 1 Natural Henna Hair Treatment for bulk, salon, OEM and private-label buyers.",
-      category: "Natural Botanical Powder Hair Colors",
-      material: "Henna and selected botanical ingredients",
-      brand: {
-        "@type": "Brand",
-        name: "Shivesh International",
-      },
-      manufacturer: {
-        "@id": "https://shiveshinternational.com/#organization",
-      },
-      countryOfOrigin: {
-        "@type": "Country",
-        name: "India",
-      },
-      audience: {
-        "@type": "BusinessAudience",
-        audienceType:
-          "Importers, distributors, wholesalers, salon chains, cosmetic companies, OEM partners and private-label buyers",
-      },
-      additionalProperty: [
-        {
-          "@type": "PropertyValue",
-          name: "Product Form",
-          value: "Triple-sifted microfine botanical powder",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Product Portfolio",
-          value:
-            "17 Natural Henna Hair Color shades and 1 Natural Henna Hair Treatment",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Shade Range",
-          value:
-            "Natural Black, Dark Brown, Medium Brown, Brown, Light Brown, Golden Brown, Copper Brown, Chestnut, Mahogany, Burgundy, Wine Red, Red, Auburn, Orange, Blonde, Ginger Blonde and Strawberry Blonde",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Bulk Minimum Order",
-          value: "Bulk Orders Can Start from 100 kg",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Private-Label MOQ",
-          value:
-            "Varies by Pack Size, Packaging, Artwork, Design, Customization and Commercial Feasibility",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Supply Options",
-          value:
-            "Retail, professional, bulk, wholesale, OEM, ODM and private label",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Packaging",
-          value:
-            "100 g, 200 g, 500 g and 1 kg retail packs; 20 kg and 25 kg double-layer vacuum bulk packing",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Private Label Services",
-          value:
-            "Custom branding, printed boxes, metallic pouches and buyer-owned packaging support",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Country of Origin",
-          value: "India",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Hair-Colour Shade Qualifications",
-          value:
-            "All 17 Hair-Colour Shades Are 100% Natural, PPD-Free, Ammonia-Free, Peroxide-Free, Free from Metallic Salts, Free from Synthetic Dye and Chemical-Free",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Shelf Life",
-          value: "24 Months under Recommended Storage Conditions",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Quality Testing",
-          value: "According to Buyer Instructions or Requirements",
-        },
-      ],
-    },
-    {
       "@type": "WebPage",
       "@id":
         "https://shiveshinternational.com/products/natural-henna-hair-colors#webpage",
@@ -328,12 +220,7 @@ export default function NaturalHennaHairColorsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
-            {
-              ...naturalHennaHairColorsStructuredData,
-              "@graph": naturalHennaHairColorsStructuredData["@graph"].slice(1),
-            }
-          ).replace(/</g, "\\u003c"),
+          __html: JSON.stringify(naturalHennaHairColorsStructuredData).replace(/</g, "\\u003c"),
         }}
       />
 

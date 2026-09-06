@@ -12,9 +12,9 @@ import MagneticButtons from "@/app/components/MagneticButtons";
 import FooterSection from "@/sections/FooterSection";
 
 export const metadata: Metadata = {
-  title: "Natural Products Exporter India | Henna, Indigo, Herbs & Spices",
+  title: { absolute: "Natural Products Exporter India | Henna, Indigo & Herbs" },
   description:
-    "Indian exporter and supplier of natural henna, indigo powder, botanical hair colors, Ayurvedic herbs and spices for bulk, wholesale, OEM and private-label buyers.",
+    "Indian exporter of henna, indigo, botanical hair colors, Ayurvedic herbs and spices for bulk, wholesale, OEM and private-label buyers worldwide.",
   keywords: [
     "natural products exporter India",
     "natural products manufacturer India",

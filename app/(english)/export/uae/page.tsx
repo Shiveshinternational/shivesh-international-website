@@ -17,7 +17,7 @@ const heroImage =
   "https://shiveshinternational.com/images/export/export-hero-global-network-final-v3.png";
 
 export const metadata: Metadata = {
-  title: "Natural Products Exporter to UAE | Shivesh International",
+  title: "Natural Products Exporter to UAE",
   description:
     "Indian exporter of henna, indigo, botanical hair colors, Ayurvedic herbs and spices for UAE bulk, wholesale and private-label buyers. MOQ 200 kg per item.",
   keywords: [

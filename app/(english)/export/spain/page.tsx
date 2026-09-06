@@ -17,9 +17,9 @@ const canonicalUrl = "https://shiveshinternational.com/export/spain";
 const heroImage = "/images/export/spain/spain-export-hero.png";
 
 export const metadata: Metadata = {
-  title: "Henna, Indigo, Herbs & Spices Exporter to Spain",
+  title: { absolute: "Natural Products Exporter to Spain | B2B Supply" },
   description:
-    "Shivesh International exports natural henna powder, indigo powder, botanical hair colors, Ayurvedic herbs and Indian spices to Spanish importers, distributors and private-label buyers. MOQ 200 kg per product.",
+    "Indian exporter of henna, indigo, botanical hair colors, Ayurvedic herbs and spices for Spanish bulk, wholesale and private-label buyers. MOQ 200 kg per product.",
   keywords: [
     "Natural products exporter to Spain", "Indian natural products supplier Spain", "Exporter from India to Spain", "Indian supplier for Spanish importers", "Natural product manufacturer India for Spain", "Bulk natural products supplier Spain", "Private label products manufacturer for Spain", "Wholesale botanical products Spain", "Indian exporter for Spanish distributors", "Natural cosmetic ingredients supplier Spain", "Herbal products exporter to Spain", "Plant-based products supplier Spain", "Botanical ingredients exporter Spain", "Indian manufacturer for Spanish wholesalers", "B2B natural products supplier Spain",
     "Henna powder exporter to Spain", "Natural henna powder supplier Spain", "Henna powder manufacturer India for Spain", "Bulk henna powder supplier Spain", "Organic henna powder exporter Spain", "Private label henna powder Spain", "Wholesale henna powder Spain", "Cosmetic-grade henna powder supplier Spain", "Pure henna powder exporter to Spain", "Lawsonia inermis powder supplier Spain", "Indian henna exporter for Spanish importers", "Henna powder for cosmetic brands Spain", "Henna powder for salon suppliers Spain", "Henna powder wholesale supplier Spain", "Private label henna manufacturer India for Spain", "Natural henna supplier Madrid", "Henna powder supplier Barcelona", "Henna exporter for Spanish beauty brands",

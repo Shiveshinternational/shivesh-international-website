@@ -16,9 +16,9 @@ const canonicalUrl = "https://shiveshinternational.com/export/europe";
 const heroImage = "/images/export/europe/europe-export-hero.png";
 
 export const metadata: Metadata = {
-  title: "Henna, Indigo, Herbs & Spices Exporter to Europe",
+  title: { absolute: "Natural Products Exporter to Europe | B2B Supply" },
   description:
-    "Shivesh International exports natural henna powder, indigo powder, botanical hair colors, Ayurvedic herbs and Indian spices to European importers, distributors and private-label buyers. MOQ 200 kg per product.",
+    "Indian exporter of henna, indigo, botanical hair colors, Ayurvedic herbs and spices for European bulk, wholesale and private-label buyers. MOQ 200 kg per product.",
   keywords: [
     "Natural products exporter to Europe",
     "Indian natural products supplier Europe",

@@ -12,9 +12,9 @@ import MagneticButtons from "@/app/components/MagneticButtons";
 import FooterSection from "@/sections/FooterSection";
 
 export const metadata: Metadata = {
-  title: "Natural Products Manufacturing Infrastructure India",
+  title: { absolute: "Natural Products Manufacturing Infrastructure India" },
   description:
-    "Explore Shivesh International's manufacturing infrastructure in India for henna, indigo, botanical hair colors, Ayurvedic herbs and Indian spices, with processing, quality control, private-label packing and export dispatch support.",
+    "Explore India's processing, quality-control, private-label packing, warehousing and export-dispatch infrastructure for henna, indigo, herbs, spices and hair colors.",
   keywords: [
     "natural products manufacturing infrastructure India",
     "henna manufacturing facility India",

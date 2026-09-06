@@ -17,9 +17,9 @@ const canonicalUrl = "https://shiveshinternational.com/export/italy";
 const heroImage = "/images/export/italy/italy-export-hero.png";
 
 export const metadata: Metadata = {
-  title: "Henna, Indigo, Herbs & Spices Exporter to Italy",
+  title: { absolute: "Natural Products Exporter to Italy | B2B Supply" },
   description:
-    "Shivesh International exports natural henna powder, indigo powder, botanical hair colors, Ayurvedic herbs and Indian spices to Italian importers, distributors and private-label buyers. MOQ 200 kg per product.",
+    "Indian exporter of henna, indigo, botanical hair colors, Ayurvedic herbs and spices for Italian bulk, wholesale and private-label buyers. MOQ 200 kg per product.",
   keywords: [
     "Natural products exporter to Italy", "Indian natural products supplier Italy", "Exporter from India to Italy", "Indian supplier for Italian importers", "Natural product manufacturer India for Italy", "Bulk natural products supplier Italy", "Private label products manufacturer for Italy", "Wholesale botanical products Italy", "Indian exporter for Italian distributors", "Natural cosmetic ingredients supplier Italy", "Herbal products exporter to Italy", "Plant-based products supplier Italy", "Botanical ingredients exporter Italy", "Indian manufacturer for Italian wholesalers", "B2B natural products supplier Italy",
     "Henna powder exporter to Italy", "Natural henna powder supplier Italy", "Henna powder manufacturer India for Italy", "Bulk henna powder supplier Italy", "Organic henna powder exporter Italy", "Private label henna powder Italy", "Wholesale henna powder Italy", "Cosmetic-grade henna powder supplier Italy", "Pure henna powder exporter to Italy", "Lawsonia inermis powder supplier Italy", "Indian henna exporter for Italian importers", "Henna powder for cosmetic brands Italy", "Henna powder for salon suppliers Italy", "Henna powder wholesale supplier Italy", "Private label henna manufacturer India for Italy", "Natural henna supplier Milan", "Henna powder supplier Rome", "Henna exporter for Italian beauty brands",

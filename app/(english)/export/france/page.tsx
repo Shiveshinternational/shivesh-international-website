@@ -17,7 +17,7 @@ const heroImage =
   "https://shiveshinternational.com/images/export/france/france-botanical-beauty-atelier-hero-premium-v1.png";
 
 export const metadata: Metadata = {
-  title: "France Natural Products Exporter | Shivesh International",
+  title: "Natural Products Exporter to France",
   description:
     "Henna, indigo, botanical hair colours, Ayurvedic herbs and Indian spices for French importers, wholesalers, OEM and private-label buyers. MOQ 200 kg per item.",
   keywords: [

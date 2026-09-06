@@ -235,98 +235,6 @@ const ayurvedicHerbsStructuredData = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Product",
-      "@id":
-        "https://shiveshinternational.com/products/ayurvedic-indian-herbs#product",
-      name: "Ayurvedic Indian Herbs",
-      alternateName: [
-        "Ayurvedic Herbal Powders",
-        "Bulk Indian Herbs",
-        "Private Label Herbal Products",
-      ],
-      url:
-        "https://shiveshinternational.com/products/ayurvedic-indian-herbs",
-      image:
-        "https://shiveshinternational.com/images/products/ayurvedic-herbs/ayurvedic-indian-herbs-hero-final-v1.png",
-      description:
-        "A portfolio of 72 Ayurvedic Indian Herbs and related herbal products manufactured, supplied and exported from India for importers, distributors, wholesalers, brands, OEM, ODM and private-label buyers.",
-      category: "Ayurvedic Indian Herbs and Herbal Powders",
-      brand: {
-        "@type": "Brand",
-        name: "Shivesh International",
-      },
-      manufacturer: {
-        "@id": "https://shiveshinternational.com/#organization",
-      },
-      countryOfOrigin: {
-        "@type": "Country",
-        name: "India",
-      },
-      audience: {
-        "@type": "BusinessAudience",
-        audienceType:
-          "Importers, distributors, wholesalers, retailers, herbal brands, Ayurvedic brands, cosmetic brands, hair-care brands, wellness brands, sourcing companies, bulk buyers, OEM, ODM and private-label buyers",
-      },
-      additionalProperty: [
-        {
-          "@type": "PropertyValue",
-          name: "Portfolio Size",
-          value: "72 Ayurvedic Herbs and Related Herbal Products",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Available Forms",
-          value:
-            "Product-Specific Whole, Raw, Cut, Dried, Coarse, Powder and Extract Forms, Subject to Confirmation",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Available Grades",
-          value:
-            "Product-Specific Grades and Specifications Are Available according to the Selected Herb, Intended Application, Buyer Requirements and Destination-Market Requirements, Subject to Confirmation",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Raw-Material Origin",
-          value: "India",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Bulk Minimum Order",
-          value:
-            "Orders Can Start from 100 kg per Herb or Item, Subject to Commercial and Product Confirmation",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Private-Label MOQ",
-          value:
-            "Varies by Pack Size, Packaging, Artwork, Design, Customization and Commercial Feasibility",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Packaging",
-          value:
-            "100 g, 200 g, 500 g and 1 kg retail or private-label packs; 20 kg and 25 kg double-layer vacuum bulk packing",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Supply Services",
-          value: "OEM, ODM, Buyer Logo, Artwork and Custom Branding Available",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Quality Testing",
-          value:
-            "According to Buyer Instructions or Requirements and Selected Product Requirements",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Shelf Life",
-          value: "Varies by Herb or Product",
-        },
-      ],
-    },
-    {
       "@type": "WebPage",
       "@id":
         "https://shiveshinternational.com/products/ayurvedic-indian-herbs#webpage",
@@ -393,10 +301,7 @@ export default function AyurvedicIndianHerbsPage() {
   <script
     type="application/ld+json"
     dangerouslySetInnerHTML={{
-      __html: JSON.stringify({
-        ...ayurvedicHerbsStructuredData,
-        "@graph": ayurvedicHerbsStructuredData["@graph"].slice(1),
-      }).replace(
+      __html: JSON.stringify(ayurvedicHerbsStructuredData).replace(
         /</g,
         "\\u003c"
       ),

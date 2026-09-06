@@ -117,40 +117,6 @@ const contactPageStructuredData = {
       mainEntity: { "@id": "https://shiveshinternational.com/#organization" },
     },
     {
-      "@type": "Organization",
-      "@id": "https://shiveshinternational.com/#organization",
-      name: "Shivesh International",
-      url: "https://shiveshinternational.com/",
-      email: "export@shiveshinternational.com",
-      telephone: "+91-9999774950",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "361-C, BG-6, Paschim Vihar",
-        addressLocality: "New Delhi",
-        addressRegion: "Delhi",
-        postalCode: "110063",
-        addressCountry: "IN",
-      },
-      contactPoint: [
-        {
-          "@type": "ContactPoint",
-          contactType: "export sales",
-          telephone: "+91-9999774950",
-          email: "export@shiveshinternational.com",
-          areaServed: "Worldwide",
-          availableLanguage: ["English", "Hindi"],
-        },
-        {
-          "@type": "ContactPoint",
-          contactType: "sales enquiries",
-          telephone: "+91-9873077187",
-          email: "sales@shiveshinternational.com",
-          areaServed: "Worldwide",
-          availableLanguage: ["English", "Hindi"],
-        },
-      ],
-    },
-    {
       "@type": "BreadcrumbList",
       "@id": "https://shiveshinternational.com/contact#breadcrumb",
       itemListElement: [

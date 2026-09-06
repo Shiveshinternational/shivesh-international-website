@@ -70,85 +70,6 @@ const naturalHennaPowderStructuredData = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Product",
-      "@id":
-        "https://shiveshinternational.com/products/natural-henna-powder#product",
-      name: "Natural Henna Powder",
-      alternateName: [
-        "Sojat Henna Powder",
-        "Lawsonia inermis Powder",
-        "Natural Mehndi Powder",
-        "Export-Grade Henna Powder",
-      ],
-      url:
-        "https://shiveshinternational.com/products/natural-henna-powder",
-      image:
-        "https://shiveshinternational.com/images/products/henna-powder/natural-henna-powder-hero-final-v2.png",
-      description:
-        "Export-grade Natural Henna Powder manufactured, supplied and exported from India for bulk, wholesale, salon, cosmetic and private-label buyers worldwide.",
-      category: "Natural Botanical Hair Colouring Powder",
-      material: "Selected Lawsonia inermis Leaves",
-      brand: {
-        "@type": "Brand",
-        name: "Shivesh International",
-      },
-      manufacturer: {
-        "@id": "https://shiveshinternational.com/#organization",
-      },
-      countryOfOrigin: {
-        "@type": "Country",
-        name: "India",
-      },
-      audience: {
-        "@type": "BusinessAudience",
-        audienceType:
-          "Importers, distributors, wholesalers, salons, cosmetic manufacturers and private-label buyers",
-      },
-      additionalProperty: [
-        {
-          "@type": "PropertyValue",
-          name: "Raw Material Origin",
-          value: "Sojat, Rajasthan, India",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Botanical Name",
-          value: "Lawsonia inermis",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Composition",
-          value: "100% pure Lawsonia inermis henna leaves powder with no added dye, chemical or other ingredient",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Mesh Availability",
-          value: "80–120 mesh grades",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Moisture",
-          value: "Maximum 5%",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Lawsone Specification",
-          value: "Fixed-range specification available according to the agreed product grade",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Minimum Order Quantity",
-          value: "Bulk orders can start from 100 kg; private-label MOQ depends on packaging and customization",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Packaging",
-          value:
-            "Retail, professional, bulk, OEM and private-label packaging",
-        },
-      ],
-    },
-    {
       "@type": "WebPage",
       "@id": "https://shiveshinternational.com/products/natural-henna-powder#webpage",
       url: "https://shiveshinternational.com/products/natural-henna-powder",
@@ -209,12 +130,7 @@ export default function NaturalHennaPowderPage() {
   <script
     type="application/ld+json"
     dangerouslySetInnerHTML={{
-      __html: JSON.stringify(
-        {
-          ...naturalHennaPowderStructuredData,
-          "@graph": naturalHennaPowderStructuredData["@graph"].slice(1),
-        }
-      ).replace(/</g, "\\u003c"),
+      __html: JSON.stringify(naturalHennaPowderStructuredData).replace(/</g, "\\u003c"),
     }}
   />
   <script

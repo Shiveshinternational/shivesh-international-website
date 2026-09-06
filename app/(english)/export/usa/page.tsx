@@ -13,9 +13,9 @@ import FooterSection from "@/sections/FooterSection";
 import { usaLanguageAlternates } from "@/app/lib/i18n";
 
 export const metadata: Metadata = {
-  title: "Henna & Natural Products Exporter to USA",
+  title: { absolute: "Henna & Natural Products Exporter to USA" },
   description:
-    "Indian manufacturer, exporter and supplier of natural henna powder, indigo powder, botanical hair colors, Ayurvedic herbs and Indian spices for USA importers, distributors, wholesalers and private-label buyers. MOQ 200 kg per item.",
+    "Indian exporter of henna, indigo, botanical hair colors, Ayurvedic herbs and spices for US bulk, wholesale, OEM and private-label buyers. MOQ 200 kg per item.",
   keywords: [
     "natural products exporter to USA",
     "natural products supplier USA",

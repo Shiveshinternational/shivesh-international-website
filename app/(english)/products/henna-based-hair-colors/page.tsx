@@ -14,8 +14,7 @@ import FooterSection from "@/sections/FooterSection";
 
 export const metadata: Metadata = {
   title: {
-    absolute:
-      "Henna-Based Hair Colors Manufacturer, Exporter & Supplier India | Shivesh International",
+    absolute: "Henna-Based Hair Colors Manufacturer & Exporter India",
   },
   description:
     "Henna-Based Hair Colors manufacturer, exporter and supplier in India offering 16 powder shades for bulk, wholesale, salon, OEM, ODM and private-label buyers.",
@@ -141,96 +140,6 @@ const hennaBasedHairColorsStructuredData = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Product",
-      "@id":
-        "https://shiveshinternational.com/products/henna-based-hair-colors#product",
-      name: "Henna-Based Hair Colors",
-      alternateName: [
-        "Professional Henna Hair Dye Powder",
-        "Henna-Based Powder Hair Colors",
-        "Private Label Henna Hair Colors",
-        "Bulk Henna-Based Hair Dye",
-      ],
-      url: "https://shiveshinternational.com/products/henna-based-hair-colors",
-      image: [
-        "https://shiveshinternational.com/images/products/henna-based-hair-colors/henna-based-hair-colors-hero-final-v2.png",
-      ],
-      description:
-        "Henna-Based Hair Colors manufactured, supplied and exported from India in 16 triple-sifted powder shades for importers, distributors, wholesalers, salons, cosmetic and hair-care brands, OEM, ODM and private-label buyers.",
-      category: "Henna-Based Powder Hair Colors",
-      brand: {
-        "@type": "Brand",
-        name: "Shivesh International",
-      },
-      manufacturer: {
-        "@id": "https://shiveshinternational.com/#organization",
-      },
-      countryOfOrigin: {
-        "@type": "Country",
-        name: "India",
-      },
-      audience: {
-        "@type": "BusinessAudience",
-        audienceType:
-          "Importers, distributors, wholesalers, salon brands, cosmetic businesses and private-label buyers",
-      },
-      additionalProperty: [
-        {
-          "@type": "PropertyValue",
-          name: "Available Shades",
-          value: "16 Professional Shades",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Product Form",
-          value: "Triple-Sifted Finest Powder",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Primary Application",
-          value: "100% Grey Coverage and Professional Hair Colouring",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Bulk Minimum Order",
-          value: "Orders Can Start from 100 kg, Subject to Commercial and Product Confirmation",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Private-Label MOQ",
-          value:
-            "Varies by Pack Size, Packaging, Artwork, Design, Customization and Commercial Feasibility",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Packaging",
-          value:
-            "100 g, 200 g, 500 g and 1 kg retail packs; 20 kg and 25 kg double-layer vacuum bulk packing",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Product Qualifications",
-          value:
-            "PPD-Free, Ammonia-Free, Peroxide-Free, No Metallic Salts and No Synthetic Dye",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Chemical Content after Dilution",
-          value: "Made with less than 3% chemicals after dilution.",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Shelf Life",
-          value: "12 Months under Recommended Storage Conditions",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Quality Testing",
-          value: "According to Buyer Instructions or Requirements",
-        },
-      ],
-    },
-    {
       "@type": "WebPage",
       "@id":
         "https://shiveshinternational.com/products/henna-based-hair-colors#webpage",
@@ -297,10 +206,7 @@ export default function HennaBasedHairColorsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            ...hennaBasedHairColorsStructuredData,
-            "@graph": hennaBasedHairColorsStructuredData["@graph"].slice(1),
-          }).replace(
+          __html: JSON.stringify(hennaBasedHairColorsStructuredData).replace(
             /</g,
             "\\u003c"
           ),

@@ -17,7 +17,7 @@ const heroImage =
   "https://shiveshinternational.com/images/export/germany/germany-natural-products-export-hero-premium-v1.png";
 
 export const metadata: Metadata = {
-  title: "Natural Products Exporter to Germany | Shivesh International",
+  title: "Natural Products Exporter to Germany",
   description:
     "Indian exporter of henna, indigo, botanical hair colours, Ayurvedic herbs and spices for German bulk, wholesale and private-label buyers. MOQ 200 kg per item.",
   keywords: [

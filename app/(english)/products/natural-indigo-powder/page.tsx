@@ -145,97 +145,6 @@ const naturalIndigoPowderStructuredData = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Product",
-      "@id":
-        "https://shiveshinternational.com/products/natural-indigo-powder#product",
-      name: "Natural Indigo Powder",
-      alternateName: [
-        "Indigofera tinctoria Powder",
-        "Natural Indigo Leaf Powder",
-        "Microfine Indigo Powder",
-        "Indigo Powder for Hair",
-      ],
-      url:
-        "https://shiveshinternational.com/products/natural-indigo-powder",
-      image:
-        "https://shiveshinternational.com/images/products/natural-indigo-powder/natural-indigo-powder-hero-ultrawide-4k-final-v2.png",
-      description:
-        "100% pure microfine Indigofera tinctoria leaf powder from Tamil Nadu, India, with 38%–45% Indigotin for bulk, OEM, ODM and private-label buyers.",
-      category: "Natural Botanical Hair-Colouring Powder",
-      material: "Selected Indigofera tinctoria Leaves",
-      brand: {
-        "@type": "Brand",
-        name: "Shivesh International",
-      },
-      manufacturer: {
-        "@id": "https://shiveshinternational.com/#organization",
-      },
-      countryOfOrigin: {
-        "@type": "Country",
-        name: "India",
-      },
-      audience: {
-        "@type": "BusinessAudience",
-        audienceType:
-          "Importers, distributors, wholesalers, salons, cosmetic manufacturers and private-label buyers",
-      },
-      additionalProperty: [
-        {
-          "@type": "PropertyValue",
-          name: "Raw Material Origin",
-          value: "Tamil Nadu, South India, India",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Botanical Name",
-          value: "Indigofera tinctoria",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Composition",
-          value:
-            "100% Pure Indigofera tinctoria Leaf Powder; No Added Dye, Chemical or Other Ingredient",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Grade/Form",
-          value: "Microfine Natural Indigo Powder",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Indigotin",
-          value: "38%–45%",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Mesh Availability",
-          value: "80–100 Mesh",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Moisture",
-          value: "5%–8%",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Bulk Minimum Order",
-          value: "Bulk Orders Can Start from 100 kg",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Private-Label MOQ",
-          value:
-            "Varies by Pack Size, Packaging, Artwork, Design and Customization",
-        },
-        {
-          "@type": "PropertyValue",
-          name: "Packaging",
-          value:
-            "100 g, 200 g, 500 g and 1 kg retail packs; 20 kg and 25 kg double-layer vacuum bulk packing",
-        },
-      ],
-    },
-    {
       "@type": "WebPage",
       "@id":
         "https://shiveshinternational.com/products/natural-indigo-powder#webpage",
@@ -302,12 +211,7 @@ export default function NaturalIndigoPowderPage() {
   <script
     type="application/ld+json"
     dangerouslySetInnerHTML={{
-      __html: JSON.stringify(
-        {
-          ...naturalIndigoPowderStructuredData,
-          "@graph": naturalIndigoPowderStructuredData["@graph"].slice(1),
-        }
-      ).replace(/</g, "\\u003c"),
+      __html: JSON.stringify(naturalIndigoPowderStructuredData).replace(/</g, "\\u003c"),
     }}
   />
       <Navbar />

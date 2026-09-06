@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import InnerPageTemplate from "@/app/components/InnerPageTemplate";
 
 export const metadata: Metadata = {
-  title: "About Indian Natural Products Manufacturer & Exporter Since 1999",
+  title: { absolute: "About Shivesh International | Natural Products Exporter" },
   description:
     "Learn about Shivesh International, an Indian manufacturer, exporter and supplier of henna, indigo, hair colors, Ayurvedic herbs and spices since 1999.",
   keywords: [
@@ -105,36 +105,6 @@ const aboutPageStructuredData = {
       isPartOf: { "@id": "https://shiveshinternational.com/#website" },
       about: { "@id": "https://shiveshinternational.com/#organization" },
       mainEntity: { "@id": "https://shiveshinternational.com/#organization" },
-    },
-    {
-      "@type": "Organization",
-      "@id": "https://shiveshinternational.com/#organization",
-      name: "Shivesh International",
-      url: "https://shiveshinternational.com/",
-      foundingDate: "1999",
-      description:
-        "Indian manufacturer, exporter and supplier of natural henna powder, natural indigo powder, botanical hair colors, Ayurvedic herbs and Indian spices for global buyers.",
-      email: "export@shiveshinternational.com",
-      telephone: "+91-9999774950",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "361-C, BG-6, Paschim Vihar",
-        addressLocality: "New Delhi",
-        addressRegion: "Delhi",
-        postalCode: "110063",
-        addressCountry: "IN",
-      },
-      areaServed: "Worldwide",
-      knowsAbout: [
-        "Natural Henna Powder",
-        "Natural Indigo Powder",
-        "Natural Henna Hair Colors",
-        "Henna-Based Hair Colors",
-        "Ayurvedic Indian Herbs",
-        "Indian Spices",
-        "Bulk Export Supply",
-        "OEM and Private Label Manufacturing",
-      ],
     },
     {
       "@type": "BreadcrumbList",

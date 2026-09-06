@@ -26,8 +26,8 @@ const metadataKeywords = [
   "India to Russia natural products export", "India to Russia henna export", "India to Russia indigo export", "India to Russia herbs export", "India to Russia spices export", "natural products shipping India Russia", "export documentation support Russia", "bulk botanical products Russia", "Shivesh International Russia exporter",
 ];
 export const metadata: Metadata = {
-  title: { absolute: "Natural Products Exporter to Russia | Henna, Indigo, Herbs & Spices" },
-  description: "Natural henna, indigo, botanical hair colors, Ayurvedic herbs and Indian spices for Russian importers, distributors, wholesalers and private-label buyers, subject to case-specific trade review. MOQ 200 kg per item.",
+  title: { absolute: "Natural Products Exporter to Russia | B2B Supply" },
+  description: "Indian henna, indigo, botanical hair colors, Ayurvedic herbs and spices for Russian B2B buyers, subject to case-specific trade review. MOQ 200 kg per item.",
   keywords: metadataKeywords,
   alternates: { canonical: canonicalUrl },
   openGraph: { title: "Henna & Indigo Exporter to Russia | Shivesh International", description: "India-origin botanical products for professional Russian buyers, subject to product, compliance, banking, carrier and route feasibility.", url: canonicalUrl, type: "website", locale: "en_US", siteName: "Shivesh International", images: [{ url: heroImage, alt: "Indian natural-product export planning for professional buyers in Russia" }] },

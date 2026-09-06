@@ -292,6 +292,7 @@ export default function SiteSearch() {
               <input
                 id={inputId}
                 name="site-search"
+                aria-label={isGerman ? "Website durchsuchen" : isFrench ? "Rechercher sur le site" : isSpanish ? "Buscar en el sitio" : isItalian ? "Cerca nel sito" : "Search website"}
                 ref={inputRef}
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
