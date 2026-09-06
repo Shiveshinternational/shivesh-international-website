@@ -11,6 +11,7 @@ import PremiumCursor from "@/app/components/PremiumCursor";
 import RevealOnScroll from "@/app/components/RevealOnScroll";
 import StaggerItem from "@/app/components/StaggerItem";
 import FooterSection from "@/sections/FooterSection";
+import { italyLanguageAlternates } from "@/app/lib/i18n";
 
 const canonicalUrl = "https://shiveshinternational.com/export/italy";
 const heroImage = "/images/export/italy/italy-export-hero.png";
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
   ].filter((_, index) => index % 2 === 0).concat([
     "natural products retailer supplier Italy", "natural hair color salon supply Italy", "botanical hair color supplier for Italian cosmetic brands", "natural product commercial buyer Italy", "Indian herbs wholesale supplier Italy", "Indian spices B2B supplier Italy", "buyer-brand botanical packaging Italy", "Shivesh International exporter Italy",
   ]),
-  alternates: { canonical: "/export/italy" },
+  alternates: { canonical: "/export/italy", languages: italyLanguageAlternates },
   openGraph: {
     title: "Henna, Indigo, Herbs & Spices Exporter to Italy",
     description: "Bulk, wholesale and private-label supply of Indian henna, indigo, botanical hair colors, Ayurvedic herbs and spices for professional buyers in Italy.",

@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import { getEquivalentRoute } from "@/app/lib/i18n";
 
@@ -31,7 +32,6 @@ export default function LanguageSelector() {
   const [isOpen, setIsOpen] = useState(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
-  const router = useRouter();
   const selectedCode = pathname.startsWith("/de/")
     ? "DE"
     : pathname.startsWith("/fr/")
@@ -68,12 +68,6 @@ export default function LanguageSelector() {
   const selectedLanguage =
     languages.find((language) => language.code === selectedCode) ??
     languages[0];
-
-  const selectLanguage = (locale: "en" | "de" | "fr" | "es" | "it" | "ar") => {
-    const destination = getEquivalentRoute(pathname, locale);
-    setIsOpen(false);
-    if (destination && destination !== pathname) router.push(destination);
-  };
 
   return (
     <div ref={wrapperRef} className="relative">
@@ -114,21 +108,14 @@ export default function LanguageSelector() {
               : undefined;
             const isAvailable = Boolean(destination);
 
-            return (
-              <button
-                key={language.code}
-                type="button"
-                onClick={() => language.locale && selectLanguage(language.locale)}
-                disabled={!isAvailable}
-                aria-disabled={!isAvailable}
-                className={`flex w-full items-center justify-between rounded-[14px] px-3 py-2.5 transition-all duration-300 ${selectedCode === "AR" ? "text-right" : "text-left"} ${
-                  isSelected
-                    ? "bg-[#173b2a] text-[#E4C878]"
-                    : isAvailable
-                      ? "text-[#F5F0E6]/70 hover:bg-white/[0.04] hover:text-[#F5F0E6]"
-                      : "cursor-not-allowed text-[#F5F0E6]/25"
-                }`}
-              >
+            const className = `flex w-full items-center justify-between rounded-[14px] px-3 py-2.5 transition-all duration-300 ${selectedCode === "AR" ? "text-right" : "text-left"} ${
+              isSelected
+                ? "bg-[#173b2a] text-[#E4C878]"
+                : isAvailable
+                  ? "text-[#F5F0E6]/70 hover:bg-white/[0.04] hover:text-[#F5F0E6]"
+                  : "cursor-not-allowed text-[#F5F0E6]/25"
+            }`;
+            const content = <>
                 <span className="flex items-center gap-3">
                   <span>{language.flag}</span>
                   <span className="text-sm">
@@ -144,6 +131,15 @@ export default function LanguageSelector() {
                 <span className="text-[9px] font-bold uppercase tracking-[0.16em]">
                   {language.code}
                 </span>
+              </>;
+
+            return isAvailable && destination ? (
+              <Link key={language.code} href={destination} onClick={() => setIsOpen(false)} className={className}>
+                {content}
+              </Link>
+            ) : (
+              <button key={language.code} type="button" disabled aria-disabled="true" className={className}>
+                {content}
               </button>
             );
           })}

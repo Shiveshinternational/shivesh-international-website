@@ -101,11 +101,6 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: pageUrl,
-    languages: {
-      "en-GB": pageUrl,
-      "en-US": "https://shiveshinternational.com/export/usa",
-      "x-default": "https://shiveshinternational.com/export",
-    },
   },
   openGraph: {
     title: "Henna & Natural Products Exporter to the UK",
