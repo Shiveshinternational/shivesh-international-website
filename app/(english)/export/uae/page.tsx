@@ -19,7 +19,7 @@ const heroImage =
 export const metadata: Metadata = {
   title: "Natural Products Exporter to UAE",
   description:
-    "Indian exporter of henna, indigo, botanical hair colors, Ayurvedic herbs and spices for UAE bulk, wholesale and private-label buyers. MOQ 200 kg per item.",
+    "Indian exporter of henna, indigo, botanical hair colors, Ayurvedic herbs and spices for UAE bulk, wholesale and private-label buyers. Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements.",
   keywords: [
     "natural products exporter to UAE",
     "natural products supplier UAE",
@@ -201,7 +201,7 @@ const buyerTypes = [
 const supplyServices = [
   {
     title: "Bulk & Wholesale Supply",
-    text: "Commercial quantities can be prepared in suitable bulk, professional or selected retail formats. The minimum order quantity is 200 kg per item.",
+    text: "Commercial quantities can be prepared in suitable bulk, professional or selected retail formats. Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements.",
   },
   {
     title: "OEM & Private Label",
@@ -259,7 +259,7 @@ const faqs = [
   {
     question: "What is the minimum order quantity for UAE buyers?",
     answer:
-      "The minimum order quantity is 200 kg per item. Packaging, product selection and private-label requirements may affect the practical commercial quantity.",
+      "Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements. Packaging, product selection and private-label requirements may affect the practical commercial quantity.",
   },
   {
     question: "Can you supply UAE importers, wholesalers and salon suppliers?",
@@ -335,7 +335,7 @@ const structuredData = {
       },
       category: products.map((product) => product.title),
       termsOfService:
-        "Minimum order quantity is 200 kg per item. Product, packaging, documentation and commercial terms are confirmed for each buyer requirement.",
+        "Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements. Product, packaging, documentation and commercial terms are confirmed for each buyer requirement.",
     },
     {
       "@type": "BreadcrumbList",
@@ -461,7 +461,7 @@ export default function UAEExportPage() {
             <StaggerItem delay={400}>
               <div className="mt-10 grid max-w-[740px] gap-3 sm:grid-cols-2 lg:grid-cols-4">
                 {[
-                  ["200 kg", "MOQ Per Item"],
+                  ["From 100 kg", "Bulk MOQ"],
                   ["Bulk", "Wholesale Supply"],
                   ["OEM", "Private Label"],
                   ["UAE", "Buyer Enquiries"],

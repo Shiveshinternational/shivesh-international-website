@@ -19,7 +19,7 @@ const heroImage =
 export const metadata: Metadata = {
   title: "Natural Products Exporter to France",
   description:
-    "Henna, indigo, botanical hair colours, Ayurvedic herbs and Indian spices for French importers, wholesalers, OEM and private-label buyers. MOQ 200 kg per item.",
+    "Henna, indigo, botanical hair colours, Ayurvedic herbs and Indian spices for French importers, wholesalers, OEM and private-label buyers. Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements.",
   keywords: [
     "natural products exporter to France",
     "natural products supplier France",
@@ -158,14 +158,14 @@ const buyerTypes = [
 ];
 
 const supplyServices = [
-  { title: "Bulk & Wholesale Supply", text: "Commercial quantities for French importers, distributors and wholesalers can be planned in bulk, professional or selected retail formats. MOQ is 200 kg per item." },
+  { title: "Bulk & Wholesale Supply", text: "Commercial quantities for French importers, distributors and wholesalers can be planned in bulk, professional or selected retail formats. Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements." },
   { title: "OEM & Private Label", text: "Natural-cosmetic, botanical hair-care and wellness brands can discuss selected OEM or private-label programmes, subject to product and production feasibility." },
   { title: "Custom Packaging", text: "Pouches, cartons, jars and buyer-brand presentation can be coordinated for feasible orders. Buyer-supplied artwork remains subject to material, technical and printing review." },
   { title: "Specifications & Documents", text: "Available product specifications and relevant commercial documentation are reviewed for the selected item, intended use and confirmed transaction." },
 ];
 
 const process = [
-  { step: "01", title: "Product & Quantity Review", text: "The France enquiry begins with the product, intended channel, grade, quantity and 200 kg-per-item minimum order requirement." },
+  { step: "01", title: "Product & Quantity Review", text: "The France enquiry begins with the product, intended channel, grade, quantity and bulk MOQ starting from 100 kg per item, subject to product and commercial confirmation." },
   { step: "02", title: "Specification & Sample Discussion", text: "Available specifications, intended use, pack options and commercially feasible samples are discussed with the buyer." },
   { step: "03", title: "Quotation & Commercial Terms", text: "The quotation records the confirmed scope, pricing, payment terms, packaging and applicable commercial shipment terms." },
   { step: "04", title: "Packaging & Artwork Coordination", text: "Retail, professional, bulk or private-label presentation is reviewed with buyer artwork against technical, material and print feasibility." },
@@ -175,7 +175,7 @@ const process = [
 
 const faqs = [
   { question: "Which product categories can French buyers source?", answer: "The range covers natural henna powder, natural indigo powder, natural henna hair colours, henna-based hair colours, Ayurvedic Indian herbs and selected Indian spices. Availability and suitability are reviewed for every enquiry." },
-  { question: "What is the MOQ for France export orders?", answer: "The minimum order quantity is 200 kg per item. Final quantities and packing configurations depend on the selected product, format and confirmed commercial scope." },
+  { question: "What is the MOQ for France export orders?", answer: "Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements. Final quantities and packing configurations depend on the selected product, format and confirmed commercial scope." },
   { question: "Which French buyer types can enquire?", answer: "We welcome relevant enquiries from importers, distributors, wholesalers, natural-cosmetic and botanical hair-care brands, salon suppliers, Ayurvedic and wellness businesses, retail chains, OEM buyers and private-label brands." },
   { question: "Is bulk and wholesale supply available for France?", answer: "Yes. Feasible products can be prepared for bulk and wholesale supply in agreed bulk packs, professional formats or selected retail presentations." },
   { question: "Can French brands request OEM or private-label packaging?", answer: "OEM and private-label support can be discussed for selected products. Pack formats, buyer-brand presentation and quantities are confirmed only after technical and commercial review." },
@@ -226,7 +226,7 @@ const structuredData = {
       },
       category: products.map((product) => product.title),
       termsOfService:
-        "Minimum order quantity is 200 kg per item. Product, packaging, documentation and commercial terms are confirmed for each buyer requirement.",
+        "Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements. Product, packaging, documentation and commercial terms are confirmed for each buyer requirement.",
     },
     {
       "@type": "BreadcrumbList",
@@ -349,7 +349,7 @@ export default function FranceExportPage() {
             <StaggerItem delay={400}>
               <div className="mt-10 grid max-w-[740px] gap-3 sm:grid-cols-2 lg:grid-cols-4">
                 {[
-                  ["200 kg", "MOQ Per Item"],
+                  ["From 100 kg", "Bulk MOQ"],
                   ["Bulk", "Wholesale Supply"],
                   ["OEM", "Private Label"],
                   ["France", "Buyer Enquiries"],

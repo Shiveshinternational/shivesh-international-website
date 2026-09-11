@@ -18,7 +18,7 @@ const heroImage = "/images/export/europe/europe-export-hero.png";
 export const metadata: Metadata = {
   title: { absolute: "Natural Products Exporter to Europe | B2B Supply" },
   description:
-    "Indian exporter of henna, indigo, botanical hair colors, Ayurvedic herbs and spices for European bulk, wholesale and private-label buyers. MOQ 200 kg per product.",
+    "Indian exporter of henna, indigo, botanical hair colors, Ayurvedic herbs and spices for European bulk, wholesale and private-label buyers. Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements.",
   keywords: [
     "Natural products exporter to Europe",
     "Indian natural products supplier Europe",
@@ -266,7 +266,7 @@ const europeFaqs = [
   },
   {
     question: "What is the minimum order quantity for European buyers?",
-    answer: "The minimum order quantity is 200 kg per product. Final quantities are confirmed according to the selected product, pack format and private-label requirements.",
+    answer: "Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements. Final quantities are confirmed according to the selected product, pack format and private-label requirements.",
   },
   {
     question: "Is private-label packaging available for Europe?",
@@ -296,7 +296,7 @@ const europeFaqs = [
 
 const trustItems = [
   ["India-Based Export Supplier", "Direct coordination for export supply from our India-based team."],
-  ["MOQ from 200 kg per Product", "Commercial orders begin at 200 kg for each selected product."],
+  ["Bulk MOQ from 100 kg per Item", "Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements."],
   ["Retail, Bulk & Private Label", "Formats can be reviewed for retail, professional, wholesale and buyer-brand needs."],
   ["Multiple Botanical Product Categories", "Source henna, indigo, botanical colors, Ayurvedic herbs and spices."],
   ["Packaging Customization Support", "Artwork, labels, packs and buyer-specific details are coordinated subject to feasibility."],
@@ -422,7 +422,7 @@ export default function EuropeExportPage() {
             <StaggerItem delay={400}>
               <div className="mt-10 grid max-w-[740px] grid-cols-2 gap-3 lg:grid-cols-4">
                 {[
-                  ["200 kg", "MOQ Per Product"],
+                  ["From 100 kg", "Bulk MOQ"],
                   ["Bulk", "Wholesale Supply"],
                   ["OEM", "Private Label"],
                   ["Europe", "Buyer Enquiries"],
@@ -447,7 +447,7 @@ export default function EuropeExportPage() {
               <p className="mt-7 text-[16px] font-light leading-8 text-[#4C5F54]">
                 European importers sourcing from India can coordinate several commercial categories with one export team. As an Indian exporter for European importers and distributors, Shivesh International supplies botanical ingredients for cosmetic and hair-care brands, salon channels, herbal-product companies, food businesses and wholesale buyers. This consolidated approach helps buyers align product specifications, order planning and export coordination across henna, indigo, plant-based hair colors, Ayurvedic herbs and spices.
               </p>
-              <p className="mt-5 text-[15px] font-light leading-8 text-[#4C5F54]">Our role as a bulk natural products supplier for Europe includes consistent order review, private-label support and documentation assistance. Product suitability, available quality information, packaging and commercial feasibility are confirmed for each buyer, with an MOQ of 200 kg per product.</p>
+              <p className="mt-5 text-[15px] font-light leading-8 text-[#4C5F54]">Our role as a bulk natural products supplier for Europe includes consistent order review, private-label support and documentation assistance. Product suitability, available quality information, packaging and commercial feasibility are confirmed for each buyer, with bulk orders starting from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements.</p>
               <div className="mt-8 flex flex-wrap gap-2">{buyerTypes.map((buyer) => <span key={buyer} className="border border-[#173B2A]/15 bg-white/55 px-4 py-3 text-[9px] font-bold uppercase tracking-[0.16em]">{buyer}</span>)}</div>
             </div>
           </div>
@@ -590,7 +590,7 @@ export default function EuropeExportPage() {
                 <div className="mt-5 grid gap-5 sm:grid-cols-2">
                 <article className="border border-[#C9A962]/35 bg-[#FBF8F1] p-7"><h3 className="font-[family-name:var(--font-playfair)] text-2xl font-semibold">Retail Packaging</h3><p className="mt-5 text-sm leading-7 text-[#4C5F54]">100 g · 200 g · 500 g · 1 kg pouches</p></article>
                 <article className="border border-[#C9A962]/35 bg-[#FBF8F1] p-7"><h3 className="font-[family-name:var(--font-playfair)] text-2xl font-semibold">Bulk Packaging</h3><p className="mt-5 text-sm leading-7 text-[#4C5F54]">20 kg and 25 kg double-layer vacuum bags</p></article>
-                <article className="border border-[#C9A962] bg-[#173B2A] p-7 text-[#F5F0E6] sm:col-span-2"><p className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#E4C878]">Minimum Order Quantity</p><p className="mt-4 font-[family-name:var(--font-playfair)] text-4xl font-semibold">200 kg per product</p></article>
+                <article className="border border-[#C9A962] bg-[#173B2A] p-7 text-[#F5F0E6] sm:col-span-2"><p className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#E4C878]">Minimum Order Quantity</p><p className="mt-4 font-[family-name:var(--font-playfair)] text-4xl font-semibold">From 100 kg per product</p></article>
                 </div>
               </div>
             </div>

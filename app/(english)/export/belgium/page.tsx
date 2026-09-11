@@ -17,7 +17,7 @@ const heroImage = "https://shiveshinternational.com/images/export/belgium/belgiu
 
 export const metadata: Metadata = {
   title: "Natural Products Exporter to Belgium | Bulk & Private Label",
-  description: "Source Indian henna, indigo, botanical hair colours, Ayurvedic herbs and spices for Belgium. Bulk, wholesale, OEM and private label; MOQ 200 kg per item.",
+  description: "Source Indian henna, indigo, botanical hair colours, Ayurvedic herbs and spices for Belgium. Bulk, wholesale, OEM and private label. Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements.",
   keywords: [
     "natural products exporter Belgium", "natural products supplier Belgium", "natural products manufacturer India Belgium", "Indian botanical products exporter Belgium", "botanical products supplier Belgium", "bulk natural products Belgium", "natural products wholesaler Belgium", "natural products distributor Belgium", "natural products retailer supply Belgium", "Belgium natural product buyers",
     "henna powder manufacturer Belgium", "henna powder exporter Belgium", "henna powder supplier Belgium", "henna powder wholesaler Belgium", "bulk henna powder Belgium", "henna retailer supply Belgium", "henna salon supply Belgium", "henna cosmetic brand supplier Belgium", "private label henna Belgium", "natural henna importer Belgium", "Indian henna B2B Belgium",
@@ -88,7 +88,7 @@ const locations = [
 
 const faqs = [
   { question: "Which products can Belgian buyers source?", answer: "The range covers natural henna powder, natural indigo powder, natural henna hair colours, henna-based hair colours, Ayurvedic Indian herbs and selected Indian spices. Suitability and availability are reviewed for each enquiry." },
-  { question: "What is the minimum order quantity for Belgium?", answer: "The MOQ is 200 kg per item. Final quantities and packing configurations depend on the selected product, format and confirmed commercial scope." },
+  { question: "What is the minimum order quantity for Belgium?", answer: "Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements. Final quantities and packing configurations depend on the selected product, format and confirmed commercial scope." },
   { question: "Is bulk and wholesale supply available?", answer: "Yes. Feasible products can be prepared in agreed 20 kg or 25 kg bulk packs, professional formats or selected retail presentations, depending on product and quantity." },
   { question: "Can Belgian brands request Private Label or OEM supply?", answer: "Selected OEM and Private Label programmes can be reviewed for commercially feasible orders. Product, pack, artwork, printing and production details are confirmed before an order proceeds." },
   { question: "Which retail packaging formats may be considered?", answer: "Depending on the product and quantity, options may include 100 g, 200 g, 500 g and 1 kg packs, silver or gold metallized pouches, kraft formats, cartons and buyer-brand presentation." },
@@ -116,7 +116,7 @@ export default function BelgiumExportPage() {
         <h1 className="mt-6 font-[family-name:var(--font-playfair)] text-[clamp(2.5rem,5.2vw,5.2rem)] font-medium leading-[1.03] tracking-[-0.04em] text-[#F5F0E6]">Natural Products Exporter<span className="mt-2 block text-[#E4C878]">from India to Belgium</span></h1>
         <p className="mt-7 max-w-[720px] text-[16px] font-light leading-8 text-white/78 sm:text-[18px]">Commercial supply of natural henna, indigo, botanical hair colours, Ayurvedic herbs and Indian spices for Belgian importers, wholesalers, salons and brands—across bulk, wholesale, OEM and Private Label programmes.</p>
         <div className="mt-9 flex flex-wrap gap-4"><a href="#products" className="border border-[#C9A962] bg-[#C9A962] px-7 py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-[#102F23]">Explore products ↓</a><Link href="/contact" className="border border-white/30 bg-black/20 px-7 py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-white">Request a Belgium quote</Link></div>
-        <div className="mt-10 grid max-w-[760px] gap-3 sm:grid-cols-2 lg:grid-cols-4">{[["200 kg", "MOQ per item"], ["Six", "Product families"], ["OEM", "Private Label"], ["Belgium", "Professional buyers"]].map(([value,label]) => <div key={label} className="border border-white/15 bg-black/25 px-4 py-4"><p className="font-[family-name:var(--font-playfair)] text-xl text-[#E4C878]">{value}</p><p className="mt-2 text-[9px] font-bold uppercase tracking-[0.16em] text-white/55">{label}</p></div>)}</div>
+        <div className="mt-10 grid max-w-[760px] gap-3 sm:grid-cols-2 lg:grid-cols-4">{[["From 100 kg", "Bulk MOQ"], ["Six", "Product families"], ["OEM", "Private Label"], ["Belgium", "Professional buyers"]].map(([value,label]) => <div key={label} className="border border-white/15 bg-black/25 px-4 py-4"><p className="font-[family-name:var(--font-playfair)] text-xl text-[#E4C878]">{value}</p><p className="mt-2 text-[9px] font-bold uppercase tracking-[0.16em] text-white/55">{label}</p></div>)}</div>
       </div></div>
     </section>
 

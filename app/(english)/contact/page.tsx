@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     "natural products exporter Europe",
     "henna exporter New Delhi",
     "natural products manufacturing Faridabad",
-    "bulk order minimum 200 kg natural products",
+    "bulk orders from 100 kg natural products",
     "request natural products quotation",
     "WhatsApp natural products exporter",
     "Shivesh International contact",
@@ -286,8 +286,7 @@ export default function ContactPage() {
               <p className="text-lg leading-9 text-[#4c5f54]">
                 To receive a relevant quotation, share the exact product name,
                 expected quantity, pack size, destination country and whether
-                you require bulk, wholesale, OEM or private-label supply. Our
-                general minimum order quantity is 200 kg per item.
+                you require bulk, wholesale, OEM or private-label supply. Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements.
               </p>
 
               <p className="text-lg leading-9 text-[#4c5f54]">
@@ -366,7 +365,7 @@ export default function ContactPage() {
                         </h4>
 
                         <address className="mt-3 not-italic leading-7 text-[#4c5f54]">
-                          361-C, BG-6, Paschim Vihar,
+                          361/C, BG-6, Paschim Vihar,
                           <br />
                           New Delhi – 110063, India
                         </address>

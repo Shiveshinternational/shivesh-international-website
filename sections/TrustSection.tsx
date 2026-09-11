@@ -3,7 +3,7 @@ import StaggerItem from "@/app/components/StaggerItem";
 
 const trustItems = [
   {
-    value: "30+",
+    value: "25+",
     eyebrow: "Legacy",
     title: "Years of Experience",
     text: "Long-standing expertise in henna powder manufacturing, botanical sourcing and international exports.",

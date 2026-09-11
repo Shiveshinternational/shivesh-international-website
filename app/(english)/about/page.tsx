@@ -5,13 +5,13 @@ import InnerPageTemplate from "@/app/components/InnerPageTemplate";
 export const metadata: Metadata = {
   title: { absolute: "About Shivesh International | Natural Products Exporter" },
   description:
-    "Learn about Shivesh International, an Indian manufacturer, exporter and supplier of henna, indigo, hair colors, Ayurvedic herbs and spices since 1999.",
+    "Learn about Shivesh International, an Indian manufacturer, exporter and supplier of henna, indigo, hair colors, Ayurvedic herbs and spices since 2000.",
   keywords: [
     "Indian natural products exporter",
     "Indian natural products manufacturer",
     "Indian natural products supplier",
     "natural products company India",
-    "natural products exporter since 1999",
+    "natural products exporter since 2000",
     "natural products manufacturer New Delhi",
     "natural products manufacturing Faridabad",
     "henna powder exporter India",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     "natural products exporter Europe",
     "natural products supplier Australia",
     "Indian botanical products exporter",
-    "bulk order natural products 200 kg MOQ",
+    "bulk order natural products MOQ from 100 kg",
     "Shivesh International",
   ],
   alternates: {
@@ -141,19 +141,19 @@ export default function AboutPage() {
       />
     <InnerPageTemplate
       eyebrow="Indian Manufacturer · Exporter · Supplier"
-      title="Indian Natural Products Manufacturer & Exporter Since 1999"
+      title="Indian Natural Products Manufacturer & Exporter Since 2000"
       subtitle="Shivesh International supplies Natural Henna Powder, Indigo Powder, botanical hair colors, Ayurvedic Indian Herbs and Indian Spices to importers, distributors, wholesalers, salons, wellness brands and private-label buyers worldwide."
       heroImage="/images/about/about-hero-global-buyers-meeting-final-v4.png"
       heroImageAlt="Shivesh International Indian natural products manufacturer exporter and global buyer team"
       introductionTitle="Natural Products Manufacturing, Export and Private-Label Support"
       introduction={[
-        "Shivesh International is an Indian natural products manufacturer, exporter and supplier established in 1999. From our head office in New Delhi and manufacturing operations in Faridabad, Haryana, we support global buyers seeking dependable sourcing, processing, packing and export coordination.",
+        "Shivesh International is an Indian natural products manufacturer, exporter and supplier established in 2000. From our head office in New Delhi and manufacturing operations in Faridabad, Haryana, we support global buyers seeking dependable sourcing, processing, packing and export coordination.",
         "Our portfolio includes Natural Henna Powder, Natural Indigo Powder, Natural Henna Hair Colors, Henna-Based Hair Colors, Ayurvedic Indian Herbs and Indian Spices for bulk, wholesale, retail-ready, OEM and private-label requirements.",
-        "We work with importers, distributors, salons, cosmetic companies, wellness brands and buyer-owned labels worldwide. Our general minimum order quantity is 200 kg per item, subject to product and packaging requirements.",
+        "We work with importers, distributors, salons, cosmetic companies, wellness brands and buyer-owned labels worldwide. Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements.",
       ]}
       highlights={[
         {
-          value: "1999",
+          value: "2000",
           title: "Our Beginning",
           description:
             "An export business journey built through natural product knowledge, manufacturing experience and long-term buyer relationships.",
@@ -180,9 +180,9 @@ export default function AboutPage() {
       sections={[
         {
           eyebrow: "Our Story",
-          title: "A Journey That Started in 1999",
+          title: "A Journey That Started in 2000",
           description: [
-            "The journey of Shivesh International began in 1999 with a simple but meaningful purpose: to connect the richness of Indian natural products with businesses looking for authenticity and dependable support.",
+            "The journey of Shivesh International began in 2000 with a simple but meaningful purpose: to connect the richness of Indian natural products with businesses looking for authenticity and dependable support.",
             "During the early years, our focus was on developing product knowledge, understanding customer expectations and building trusted business relationships.",
             "As the company evolved, our product portfolio expanded to include natural henna, indigo, botanical hair colors, Ayurvedic herbs and Indian spices for bulk export and private-label supply. Through this growth, one principle remained unchanged — sustainable business is built through trust, patience and consistent service.",
             "Today, Shivesh International continues to move forward with the same values while adapting to modern international business expectations.",
@@ -192,7 +192,7 @@ export default function AboutPage() {
             "Shivesh International company journey and business development",
           imagePosition: "left",
           points: [
-            "Established in 1999",
+            "Established in 2000",
             "Built through experience",
             "Expanded natural product portfolio",
             "Long-term buyer commitment",

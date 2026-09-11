@@ -6,7 +6,7 @@ import StaggerItem from "@/app/components/StaggerItem";
 
 const exportHighlights = [
   "Serving Professional Buyers Across 50+ Countries",
-  "Minimum Order Quantity: 200 kg Per Item",
+  "Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements.",
   "Bulk, Wholesale & Private-Label Export Supply",
   "Documentation & Global Logistics Coordination",
 ];
@@ -174,7 +174,7 @@ export default function ExportSection() {
                 <span className="h-px w-12 bg-[#C9A962]/30" />
 
                 <span className="text-[9px] font-semibold uppercase tracking-[0.28em] text-[#F5F0E6]/38">
-                  Bulk Export · MOQ 200 kg · OEM Private Label · Worldwide Logistics
+                  Bulk Export · Bulk MOQ from 100 kg/item · OEM Private Label · Worldwide Logistics
                 </span>
               </div>
             </StaggerItem>

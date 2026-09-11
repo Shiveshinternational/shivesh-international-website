@@ -235,7 +235,7 @@ export default function CookiePolicyPage() {
                   </p>
 
                   <p>
-                    361-C, BG-6, Paschim Vihar,
+                    361/C, BG-6, Paschim Vihar,
                     <br />
                     New Delhi – 110063, India
                   </p>

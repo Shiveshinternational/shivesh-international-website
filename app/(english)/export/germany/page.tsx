@@ -19,7 +19,7 @@ const heroImage =
 export const metadata: Metadata = {
   title: "Natural Products Exporter to Germany",
   description:
-    "Indian exporter of henna, indigo, botanical hair colours, Ayurvedic herbs and spices for German bulk, wholesale and private-label buyers. MOQ 200 kg per item.",
+    "Indian exporter of henna, indigo, botanical hair colours, Ayurvedic herbs and spices for German bulk, wholesale and private-label buyers. Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements.",
   keywords: [
     "natural products exporter to Germany",
     "natural products supplier Germany",
@@ -202,7 +202,7 @@ const buyerTypes = [
 const supplyServices = [
   {
     title: "Bulk & Wholesale Supply",
-    text: "Commercial quantities for German importers and wholesalers can be prepared in suitable bulk, professional or selected retail formats. MOQ is 200 kg per item.",
+    text: "Commercial quantities for German importers and wholesalers can be prepared in suitable bulk, professional or selected retail formats. Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements.",
   },
   {
     title: "OEM & Private Label",
@@ -260,7 +260,7 @@ const faqs = [
   {
     question: "What MOQ applies to wholesale orders for Germany?",
     answer:
-      "The minimum order quantity is 200 kg per item. The practical quantity and packing configuration may also depend on the selected product and private-label brief.",
+      "Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements. The practical quantity and packing configuration may also depend on the selected product and private-label brief.",
   },
   {
     question: "Which types of German businesses can request supply?",
@@ -336,7 +336,7 @@ const structuredData = {
       },
       category: products.map((product) => product.title),
       termsOfService:
-        "Minimum order quantity is 200 kg per item. Product, packaging, documentation and commercial terms are confirmed for each buyer requirement.",
+        "Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements. Product, packaging, documentation and commercial terms are confirmed for each buyer requirement.",
     },
     {
       "@type": "BreadcrumbList",
@@ -462,7 +462,7 @@ export default function GermanyExportPage() {
             <StaggerItem delay={400}>
               <div className="mt-10 grid max-w-[740px] gap-3 sm:grid-cols-2 lg:grid-cols-4">
                 {[
-                  ["200 kg", "MOQ Per Item"],
+                  ["From 100 kg", "Bulk MOQ"],
                   ["Bulk", "Wholesale Supply"],
                   ["OEM", "Private Label"],
                   ["Germany", "Buyer Enquiries"],

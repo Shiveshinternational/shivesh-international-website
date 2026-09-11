@@ -18,7 +18,7 @@ const heroImage =
 export const metadata: Metadata = {
   title: "Henna & Natural Products Exporter to the UK",
   description:
-    "Bulk henna, indigo, botanical hair colours, Ayurvedic herbs and Indian spices supplied from India to UK importers, wholesalers and private-label buyers. MOQ 200 kg per item.",
+    "Bulk henna, indigo, botanical hair colours, Ayurvedic herbs and Indian spices supplied from India to UK importers, wholesalers and private-label buyers. Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements.",
   keywords: [
     "natural products exporter to UK",
     "natural products supplier UK",
@@ -197,7 +197,7 @@ const buyerTypes = [
 const supplyServices = [
   {
     title: "Bulk & Wholesale Supply",
-    text: "Commercial quantities can be prepared in suitable bulk, professional or selected retail formats. The minimum order quantity is 200 kg per item.",
+    text: "Commercial quantities can be prepared in suitable bulk, professional or selected retail formats. Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements.",
   },
   {
     title: "OEM & Private Label",
@@ -250,7 +250,7 @@ const faqs = [
   {
     question: "What is the minimum order quantity for UK buyers?",
     answer:
-      "The minimum order quantity is 200 kg per item. Packaging, product selection and private-label requirements may affect the practical commercial quantity.",
+      "Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements. Packaging, product selection and private-label requirements may affect the practical commercial quantity.",
   },
   {
     question: "Can you supply UK wholesalers and salon suppliers?",
@@ -316,7 +316,7 @@ const structuredData = {
       },
       category: products.map((product) => product.title),
       termsOfService:
-        "Minimum order quantity is 200 kg per item. Product, packaging, documentation and commercial terms are confirmed for each buyer requirement.",
+        "Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements. Product, packaging, documentation and commercial terms are confirmed for each buyer requirement.",
     },
     {
       "@type": "BreadcrumbList",
@@ -442,7 +442,7 @@ export default function UKExportPage() {
             <StaggerItem delay={400}>
               <div className="mt-10 grid max-w-[740px] gap-3 sm:grid-cols-2 lg:grid-cols-4">
                 {[
-                  ["200 kg", "MOQ Per Item"],
+                  ["From 100 kg", "Bulk MOQ"],
                   ["Bulk", "Wholesale Supply"],
                   ["OEM", "Private Label"],
                   ["UK", "Buyer Enquiries"],

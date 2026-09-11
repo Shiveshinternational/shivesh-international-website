@@ -18,11 +18,11 @@ const defaultStructuredData = {
       url: "https://shiveshinternational.com/",
       email: "export@shiveshinternational.com",
       telephone: "+91-9999774950",
-      foundingDate: "1999",
+      foundingDate: "2000",
       description: "Indian exporter and supplier of natural henna powder, indigo powder, botanical hair colors, Ayurvedic herbs and Indian spices for international buyers.",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "361-C, BG-6, Paschim Vihar",
+        streetAddress: "361/C, BG-6, Paschim Vihar",
         addressLocality: "New Delhi",
         addressRegion: "Delhi",
         postalCode: "110063",

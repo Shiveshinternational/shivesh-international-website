@@ -363,9 +363,9 @@ export default function FooterSection({ locale = "en" }: { locale?: "en" | "de" 
                       </p>
 
                       <p className="mt-2">
-                        361-C, BG-6, Paschim Vihar,
+                        361/C, BG-6, Paschim Vihar,
                         <br />
-                        {localize("New Delhi – 110063, India", "Neu-Delhi – 110063, Indien", "New Delhi – 110063, Inde")}
+                        New Delhi – 110063, India
                       </p>
                     </div>
 

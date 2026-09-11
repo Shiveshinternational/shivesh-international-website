@@ -18,7 +18,7 @@ const heroImage =
 export const metadata: Metadata = {
   title: { absolute: "Natural Products Exporter to Australia | India" },
   description:
-    "Indian henna, indigo, botanical hair colours, Ayurvedic herbs and spices for Australian importers, wholesalers, OEM and private-label buyers. MOQ 200 kg per item.",
+    "Indian henna, indigo, botanical hair colours, Ayurvedic herbs and spices for Australian importers, wholesalers, OEM and private-label buyers. Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements.",
   keywords: [
     "natural products exporter to Australia",
     "Indian natural products exporter Australia",
@@ -160,14 +160,14 @@ const buyerTypes = [
 ];
 
 const supplyServices = [
-  { title: "Bulk & Wholesale Supply", text: "Australian importers, distributors and wholesalers can discuss bulk, professional and selected retail formats. The minimum order quantity is 200 kg per item." },
+  { title: "Bulk & Wholesale Supply", text: "Australian importers, distributors and wholesalers can discuss bulk, professional and selected retail formats. Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements." },
   { title: "OEM & Private Label", text: "Australian natural-cosmetic, botanical hair-care and wellness brands can review selected OEM or private-label programmes subject to product and production feasibility." },
   { title: "Custom Packaging", text: "Commercially feasible pouches, cartons, jars and buyer-brand presentation can be reviewed. Artwork, materials, colours and printing require technical and commercial confirmation." },
   { title: "Specifications & Documents", text: "Available product specifications and relevant commercial or export documents are discussed for the selected item, intended application and confirmed transaction." },
 ];
 
 const process = [
-  { step: "01", title: "Product & Quantity Review", text: "We review the selected product, intended Australian channel, application, quantity and the 200 kg-per-item minimum order requirement." },
+  { step: "01", title: "Product & Quantity Review", text: "We review the selected product, intended Australian channel, application, quantity and the bulk MOQ starting from 100 kg per item, subject to product and commercial confirmation." },
   { step: "02", title: "Specification & Sample Discussion", text: "Available specifications, intended use, packing options and commercially feasible samples are discussed before order confirmation." },
   { step: "03", title: "Quotation & Commercial Terms", text: "The quotation sets out confirmed scope, pricing, payment terms, packaging and applicable shipment terms for buyer review." },
   { step: "04", title: "Packaging & Artwork Coordination", text: "Bulk, professional, retail or private-label presentation and supplied artwork are reviewed against material, print and production feasibility." },
@@ -177,7 +177,7 @@ const process = [
 
 const faqs = [
   { question: "Which Indian natural products are available for Australian buyers?", answer: "The commercial range covers natural henna powder, natural indigo powder, natural henna hair colours, henna-based hair colours, Ayurvedic Indian herbs and selected Indian spices. Suitability and availability are reviewed for each intended application." },
-  { question: "What MOQ applies to Australian wholesale orders?", answer: "The minimum order quantity is 200 kg per item. Final quantities and packing configurations depend on the selected product, supply format and confirmed commercial requirement." },
+  { question: "What MOQ applies to Australian wholesale orders?", answer: "Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements. Final quantities and packing configurations depend on the selected product, supply format and confirmed commercial requirement." },
   { question: "Which Australian businesses can request supply?", answer: "Relevant enquiries are welcome from importers, distributors, wholesalers, natural-cosmetic and botanical hair-care brands, salon suppliers, wellness businesses, retail chains, OEM buyers, private-label buyers and bulk buyers." },
   { question: "Can Australian brands discuss OEM and private-label packaging?", answer: "Yes, for selected products and commercially suitable orders. Buyer-brand presentation, pack sizes and formats are confirmed only after technical, production and commercial review." },
   { question: "Can different pouch colours, materials and finishes be reviewed?", answer: "Retail pouches, kraft options, gold or silver metallised pouches and multiple commercially feasible colours or finishes may be discussed. No colour, material, finish or size is guaranteed until feasibility is confirmed." },
@@ -228,7 +228,7 @@ const structuredData = {
       },
       category: products.map((product) => product.title),
       termsOfService:
-        "Minimum order quantity is 200 kg per item. Product, packaging, documentation and commercial terms are confirmed for each buyer requirement.",
+        "Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements. Product, packaging, documentation and commercial terms are confirmed for each buyer requirement.",
     },
     {
       "@type": "BreadcrumbList",
@@ -351,7 +351,7 @@ export default function AustraliaExportPage() {
             <StaggerItem delay={400}>
               <div className="mt-10 grid max-w-[740px] gap-3 sm:grid-cols-2 lg:grid-cols-4">
                 {[
-                  ["200 kg", "MOQ Per Item"],
+                  ["From 100 kg", "Bulk MOQ"],
                   ["Bulk", "Wholesale Supply"],
                   ["OEM", "Private Label"],
                   ["Australia", "Buyer Enquiries"],

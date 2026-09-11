@@ -15,7 +15,7 @@ import { usaLanguageAlternates } from "@/app/lib/i18n";
 export const metadata: Metadata = {
   title: { absolute: "Henna & Natural Products Exporter to USA" },
   description:
-    "Indian exporter of henna, indigo, botanical hair colors, Ayurvedic herbs and spices for US bulk, wholesale, OEM and private-label buyers. MOQ 200 kg per item.",
+    "Indian exporter of henna, indigo, botanical hair colors, Ayurvedic herbs and spices for US bulk, wholesale, OEM and private-label buyers. Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements.",
   keywords: [
     "natural products exporter to USA",
     "natural products supplier USA",
@@ -187,7 +187,7 @@ const usaExportStructuredData = {
         "Indian Spices",
       ],
       termsOfService:
-        "Minimum order quantity is 200 kg per item. Product availability, packaging and commercial terms are confirmed according to buyer requirements.",
+        "Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements. Product availability, packaging and commercial terms are confirmed according to buyer requirements.",
     },
 
     {
@@ -270,7 +270,7 @@ const usaExportFaqs = [
   {
     question: "What is the minimum order quantity for USA buyers?",
     answer:
-      "The minimum order quantity is 200 kg per item. Final commercial quantity may also depend on the selected product, packaging format and private-label requirements.",
+      "Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements. Final commercial quantity may also depend on the selected product, packaging format and private-label requirements.",
   },
   {
     question: "Do you provide private-label and OEM products for USA brands?",
@@ -412,7 +412,7 @@ export default function USAExportPage() {
             <StaggerItem delay={400}>
               <div className="mt-10 grid max-w-[720px] gap-3 sm:grid-cols-2 lg:grid-cols-4">
                 {[
-                  ["200 kg", "MOQ Per Item"],
+                  ["From 100 kg", "Bulk MOQ"],
                   ["Bulk", "Wholesale Supply"],
                   ["OEM", "Private Label"],
                   ["USA", "Buyer Support"],
@@ -564,7 +564,7 @@ export default function USAExportPage() {
                 </p>
 
                 <p className="mt-3 text-[14px] font-light leading-7 text-[#F5F0E6]/72">
-                  The minimum order quantity is 200 kg per item. Product
+                  Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements. Product
                   selection, packaging, labelling and shipment terms are
                   confirmed according to the buyer&apos;s commercial
                   requirements.
@@ -847,7 +847,7 @@ export default function USAExportPage() {
                     </p>
 
                     <p className="mt-3 text-[14px] font-light leading-7 text-[#4C5F54]">
-                      Minimum order quantity is 200 kg per item. Retail pack
+                      Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements. Retail pack
                       sizes, professional packs, bulk bags, printing, labels,
                       cartons and buyer-brand requirements are reviewed before
                       commercial confirmation.
@@ -1438,7 +1438,7 @@ export default function USAExportPage() {
 
             <StaggerItem delay={520}>
               <p className="mx-auto mt-8 max-w-[850px] text-[11px] font-light leading-6 text-[#F5F0E6]/35">
-                Minimum order quantity: 200 kg per item. Product availability,
+                Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements. Product availability,
                 final pricing, packaging, production schedule, export
                 documentation and shipment terms are confirmed after reviewing
                 the buyer&apos;s complete commercial requirement.

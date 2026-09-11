@@ -1346,7 +1346,7 @@ export default function ExportPage() {
             <p className="mx-auto mt-7 max-w-3xl text-lg leading-9 text-[#F5F0E6]/65">
               Share your required products, destination country, pack sizes,
               branding requirements, expected quantity and document needs.
-              Minimum order quantity is generally 200 kg per item. Our export
+              Bulk orders can start from 100 kg per item, subject to product and commercial confirmation. Private-label MOQ depends on pack size, packaging design, customization and order requirements. Our export
               team will review your enquiry and advise the next practical steps.
             </p>
 

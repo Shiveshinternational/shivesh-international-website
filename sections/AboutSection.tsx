@@ -4,7 +4,7 @@ import StaggerItem from "@/app/components/StaggerItem";
 
 const aboutPoints = [
   "Certified Manufacturing Unit",
-  "30+ Years of Industry Experience",
+  "25+ Years of Industry Experience",
   "Empowered by 800+ Farmers",
   "OEM & Private Label Manufacturing",
 ];
