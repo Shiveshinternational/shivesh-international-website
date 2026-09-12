@@ -1,12 +1,15 @@
 import type { NextConfig } from "next";
 
-const contentSecurityPolicyReportOnly = [
+const isDevelopment = process.env.NODE_ENV === "development";
+
+const contentSecurityPolicy = [
   "default-src 'self';",
   "base-uri 'self';",
   "object-src 'none';",
   "frame-ancestors 'none';",
   "form-action 'self';",
-  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com;",
+  // React's development debugging uses eval; production must not allow it.
+  `script-src 'self' 'unsafe-inline'${isDevelopment ? " 'unsafe-eval'" : ""} https://www.googletagmanager.com;`,
   "style-src 'self' 'unsafe-inline';",
   "img-src 'self' data: https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com;",
   "font-src 'self';",
@@ -44,7 +47,7 @@ const nextConfig: NextConfig = {
           },
           {
             key: "Content-Security-Policy",
-            value: contentSecurityPolicyReportOnly,
+            value: contentSecurityPolicy,
           },
         ],
       },

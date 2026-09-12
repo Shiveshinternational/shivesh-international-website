@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { ReactNode } from "react";
 
 import Navbar from "@/app/components/Navbar";
 import FooterSection from "@/sections/FooterSection";
@@ -36,6 +37,7 @@ type InnerPageTemplateProps = {
   introduction: string[];
   highlights?: Highlight[];
   sections?: ContentSection[];
+  beforeCta?: ReactNode;
   ctaTitle?: string;
   ctaDescription?: string;
   ctaButtonLabel?: string;
@@ -52,6 +54,7 @@ export default function InnerPageTemplate({
   introduction,
   highlights = [],
   sections = [],
+  beforeCta,
   ctaTitle = "Let’s Build a Long-Term Business Partnership",
   ctaDescription =
     "Connect with Shivesh International for bulk supply, private-label manufacturing and export enquiries.",
@@ -326,6 +329,8 @@ export default function InnerPageTemplate({
           </section>
         );
       })}
+
+      {beforeCta}
 
       {/* =====================================================
           CTA

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import InnerPageTemplate from "@/app/components/InnerPageTemplate";
+import GlobalDigitalPresence from "./GlobalDigitalPresence";
 
 export const metadata: Metadata = {
   title: { absolute: "About Shivesh International | Natural Products Exporter" },
@@ -312,6 +313,7 @@ export default function AboutPage() {
         },
       ]}
       ctaTitle="Discuss Your Bulk, OEM or Private-Label Requirement"
+      beforeCta={<GlobalDigitalPresence />}
       ctaDescription="Share the required product, quantity, packaging, branding and destination market with our export team. We support serious global buyer enquiries for bulk supply and long-term private-label partnerships."
       ctaButtonLabel="Contact Our Export Team"
       ctaButtonHref="/contact"
