@@ -37,6 +37,9 @@ const markets = [
   { name: "Thailand", flag: "🇹🇭", href: "/export/thailand", text: "Explore natural hair-care powders, herbal products and Indian spices for importers, wholesalers and private-label brands in Thailand." },
   { name: "Vietnam", flag: "🇻🇳", href: "/export/vietnam", text: "Explore bulk botanical powders, herbs, spices and private-label natural products for buyers across Vietnam." },
   { name: "Singapore", flag: "🇸🇬", href: "/export/singapore", text: "Explore premium natural product supply for importers, distributors, brand owners and regional buyers in Singapore." },
+  { name: "Australia", flag: "🇦🇺", href: "/export/australia", text: "Explore natural products and private-label supply information for buyers in Australia." },
+  { name: "Japan", flag: "🇯🇵", href: "/export/japan", text: "Explore natural products and private-label supply information for buyers in Japan." },
+  { name: "New Zealand", flag: "🇳🇿", href: "/export/new-zealand", text: "Explore natural products and private-label supply information for buyers in New Zealand." },
 ];
 const products = [
   ["Natural Henna Powder", "Bulk and retail-ready henna powder for cosmetic, natural hair-care, wholesale and private-label programmes.", "/products/natural-henna-powder"],

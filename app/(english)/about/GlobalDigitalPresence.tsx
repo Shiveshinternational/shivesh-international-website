@@ -91,10 +91,15 @@ export default function GlobalDigitalPresence() {
         <div className="mt-10 grid gap-10 lg:grid-cols-[1fr_2fr] lg:gap-12">
           <section aria-labelledby="digital-directory-title" className="min-w-0 border-t border-[#173b2a]/20 pt-7">
             <h3 id="digital-directory-title" className="text-xs font-bold uppercase leading-6 tracking-[0.24em]">Business Directory</h3>
-            {/* Awaiting the verified public Justdial profile URL. Do not use a search or placeholder URL. */}
-            <div className="mt-5 flex min-h-[70px] items-center rounded-xl border border-[#173b2a]/15 bg-[#ede5d7]/50 px-5 py-3">
+            <a
+              href="https://www.justdial.com/Delhi/Shivesh-International-Indane-Gas-Godown-Paschim-Vihar-Bg-5-Block/011PXX11-XX11-140530135616-T5K6_BZDET"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Justdial — Shivesh International (opens in a new tab)"
+              className={`mt-5 flex min-h-[70px] items-center rounded-xl border border-[#173b2a]/15 bg-[#ede5d7]/50 px-5 py-3 ${focusStyles}`}
+            >
               <p className="text-lg font-semibold">Justdial <span className="font-normal">— Shivesh International</span></p>
-            </div>
+            </a>
           </section>
 
           <section aria-labelledby="digital-social-title" className="min-w-0 border-t border-[#173b2a]/20 pt-7">

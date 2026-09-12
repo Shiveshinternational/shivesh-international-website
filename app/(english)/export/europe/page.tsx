@@ -205,6 +205,8 @@ const markets = [
   { name: "Netherlands", flag: "🇳🇱", href: "/export/netherlands", text: "Henna and indigo supplier for Netherlands importers, distributors and private-label businesses." },
   { name: "Poland", flag: "🇵🇱", href: "/export/poland", text: "Indian herbs exporter for Poland supporting natural hair-care, wellness and spice buyers." },
   { name: "Norway", flag: "🇳🇴", href: "/export/norway", text: "Natural hair color supplier for Norway with coordinated Indian botanical product supply." },
+  { name: "Belgium", flag: "🇧🇪", href: "/export/belgium", text: "Explore natural products and private-label supply information for buyers in Belgium." },
+  { name: "Finland", flag: "🇫🇮", href: "/export/finland", text: "Explore natural products and private-label supply information for buyers in Finland." },
 ];
 
 const buyerTypes = [
