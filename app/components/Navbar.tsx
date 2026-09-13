@@ -233,23 +233,23 @@ export default function Navbar() {
         )}
       </div>
 
-      <nav className="mx-auto flex max-w-[1580px] items-center justify-between gap-5 px-5 py-4 xl:px-7">
+      <nav className="mx-auto flex max-w-[1580px] items-center justify-between gap-1 px-2 py-4 sm:gap-5 sm:px-5 xl:px-7">
         <Link
           href="/"
           onClick={closeMenu}
-          className="group flex shrink-0 items-center gap-4"
+          className="group flex shrink-0 items-center gap-1.5 sm:gap-4"
           aria-label={isGerman ? "Shivesh International Startseite" : isFrench ? "Accueil Shivesh International" : isItalian ? "Home di Shivesh International" : isArabic ? "الصفحة الرئيسية لشيفيش إنترناشيونال" : "Shivesh International home"}
         >
-          <div className="flex h-12 w-12 items-center justify-center border border-[#C9A962]/45 bg-[#173b2a] font-[family-name:var(--font-playfair)] text-xl font-semibold text-[#f5f0e6] transition duration-300 group-hover:border-[#C9A962] group-hover:text-[#C9A962]">
+          <div className="flex h-8 w-8 items-center justify-center border border-[#C9A962]/45 bg-[#173b2a] font-[family-name:var(--font-playfair)] text-xl font-semibold text-[#f5f0e6] transition duration-300 group-hover:border-[#C9A962] group-hover:text-[#C9A962] sm:h-12 sm:w-12">
             SI
           </div>
 
           <div className="leading-none">
-            <p className="font-[family-name:var(--font-playfair)] text-lg font-semibold uppercase tracking-[0.18em] text-[#f5f0e6]">
+            <p className="font-[family-name:var(--font-playfair)] text-sm font-semibold uppercase tracking-[0.08em] text-[#f5f0e6] sm:text-lg sm:tracking-[0.18em]">
               Shivesh
             </p>
 
-            <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.36em] text-[#C9A962]">
+            <p className="mt-1 text-[8px] font-semibold uppercase tracking-[0.08em] text-[#C9A962] sm:text-[10px] sm:tracking-[0.36em]">
               International
             </p>
           </div>
@@ -299,7 +299,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <div className="flex items-center gap-2 xl:hidden">
+        <div className="flex shrink-0 items-center gap-1 sm:gap-2 xl:hidden">
           <SiteSearch />
           <LanguageSelector />
 

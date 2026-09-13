@@ -268,7 +268,7 @@ export default function SiteSearch() {
       </button>
 
       <div
-        className={`absolute right-0 top-[calc(100%+14px)] z-[120] w-[min(420px,calc(100vw-32px))] origin-top-right transition-all duration-300 ${
+        className={`absolute right-0 top-[calc(100%+14px)] z-[120] w-[min(420px,calc(100vw-32px))] max-sm:fixed max-sm:inset-x-4 max-sm:top-[78px] max-sm:w-auto origin-top-right transition-all duration-300 ${
           isOpen
             ? "pointer-events-auto translate-y-0 scale-100 opacity-100"
             : "pointer-events-none -translate-y-2 scale-[0.98] opacity-0"

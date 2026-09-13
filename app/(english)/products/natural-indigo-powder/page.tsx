@@ -14,11 +14,11 @@ import FooterSection from "@/sections/FooterSection";
 export const metadata: Metadata = {
   title: {
     absolute:
-      "Natural Indigo Powder Manufacturer & Exporter India | Shivesh International",
+      "Natural Indigo Powder Manufacturer & Exporter from India",
   },
 
   description:
-    "Natural Indigo Powder manufacturer and exporter in India supplying 100% pure Indigofera tinctoria leaf powder with 38%–45% Indigotin for bulk, OEM, ODM and private-label buyers.",
+    "Natural Indigo Powder manufacturer and exporter from India for international bulk and private-label buyers. Request packaging options and a quotation.",
 
   alternates: {
     canonical: "/products/natural-indigo-powder",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title:
       "Natural Indigo Powder Manufacturer & Exporter from India",
     description:
-      "100% pure microfine Indigofera tinctoria leaf powder from Tamil Nadu with 38%–45% Indigotin for bulk, OEM, ODM and private-label buyers.",
+      "100% pure microfine Indigofera tinctoria leaf powder from Tamil Nadu for international bulk, OEM, ODM and private-label buyers.",
     images: [
       {
         url: "/images/products/natural-indigo-powder/natural-indigo-powder-hero-ultrawide-4k-final-v2.png",
@@ -93,7 +93,7 @@ const procurementFaqs = [
   {
     question: "What is the minimum order for bulk Natural Indigo Powder?",
     answer:
-      "Bulk Natural Indigo Powder orders can start from 100 kg, subject to product, grade, packaging and commercial confirmation.",
+      "Bulk Natural Indigo Powder orders can start from 100 kg per item, subject to product, grade, packaging and commercial confirmation.",
   },
   {
     question: "What is the private-label MOQ?",
@@ -641,7 +641,7 @@ export default function NaturalIndigoPowderPage() {
                   ["Indigotin", "38%–45%"],
                   ["Mesh Availability", "80–100 Mesh"],
                   ["Moisture", "5%–8%"],
-                  ["Bulk Minimum Order", "Bulk Orders Can Start from 100 kg"],
+                  ["Bulk Minimum Order", "Bulk Orders Can Start from 100 kg per item"],
                   ["Private-Label MOQ", "Varies by Pack Size, Packaging, Artwork, Design and Customization"],
                   ["Shelf Life", "24 Months under Recommended Storage"],
                   ["Retail / Private-Label Packs", "100 g, 200 g, 500 g and 1 kg"],
@@ -977,7 +977,7 @@ and the selected Henna–Indigo method.
                 ["Private-Label Buyers", "Buyer artwork, retail packs and custom presentation."],
                 ["OEM Buyers", "Supply to agreed specification, formulation and branding."],
                 ["ODM Buyers", "Mutually agreed product-development and commercial support."],
-                ["Bulk Buyers", "Bulk orders starting from 100 kg, subject to confirmation."],
+                ["Bulk Buyers", "Bulk orders starting from 100 kg per item, subject to confirmation."],
                 ["Sourcing Companies", "Consolidated product and commercial requirement support."],
               ].map(([title, text]) => (
                 <article key={title} className="h-full border border-[#C9A962]/28 bg-[#ede5d7] p-5">
@@ -1012,7 +1012,7 @@ and the selected Henna–Indigo method.
               <div className="mt-8 space-y-4">
                 {[
                   ["Free Samples", "Free samples are available for prospective buyers."],
-                  ["Bulk Order Quantity", "Bulk Natural Indigo Powder orders can start from 100 kg, subject to product, grade, packaging and commercial confirmation."],
+                  ["Bulk Order Quantity", "Bulk Natural Indigo Powder orders can start from 100 kg per item, subject to product, grade, packaging and commercial confirmation."],
                   ["Private-Label MOQ", "Private-label minimums vary by pack size, packaging format, artwork, design, customization and commercial feasibility."],
                   ["Typical Lead Time", "Approximately 10–15 days after commercial and order confirmation, subject to product, quantity, packaging and complete requirements. Transit and delivery times are not guaranteed."],
                   ["Payment & Shipping", "Payment terms are confirmed in the quotation. Shipping and Incoterms are coordinated according to buyer requirements and the agreed quotation."],
@@ -1055,6 +1055,35 @@ and the selected Henna–Indigo method.
         </RevealOnScroll>
       </section>
 
+      {/* INTERNATIONAL BUYER NAVIGATION */}
+      <section aria-labelledby="indigo-markets-heading" className="border-y border-[#C9A962]/25 bg-[#f5f0e6] px-6 py-14 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-[1320px]">
+          <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#9f7f36]">Explore Export Markets</p>
+          <h2 id="indigo-markets-heading" className="mt-4 font-[family-name:var(--font-playfair)] text-3xl font-semibold leading-tight text-[#173b2a] sm:text-4xl">Natural Indigo Powder for International Markets</h2>
+          <p className="mt-4 max-w-3xl text-base leading-8 text-[#4c5f54]">Explore regional and country-specific export information alongside your Natural Indigo Powder enquiry.</p>
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            {[
+              { label: "Regional Guides", links: [["Europe", "/export/europe"], ["Asia-Pacific", "/export/asia-pacific"]] },
+              { label: "Priority Markets", links: [["USA", "/export/usa"], ["UK", "/export/uk"], ["UAE", "/export/uae"]] },
+              { label: "Selected Markets", links: [["Germany", "/export/germany"], ["Australia", "/export/australia"]] },
+            ].map((group) => (
+              <div key={group.label}>
+                <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.2em] text-[#8B6A1E]">{group.label}</p>
+                <ul className="flex flex-wrap gap-3">
+                  {group.links.map(([label, href]) => (
+                    <li key={href}>
+                      <Link href={href} className="inline-flex items-center gap-3 rounded-xl border border-[#C9A962]/40 bg-[#102f23] px-5 py-3 text-sm font-medium text-[#F5F0E6] transition-colors hover:border-[#C9A962] hover:bg-[#173b2a] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#9f7f36]">
+                        {label}<span aria-hidden="true" className="text-[#E4C878]">→</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FINAL PRODUCT CTA */}
       <section className="relative overflow-hidden bg-[#071b14] px-6 py-24 text-center text-[#F5F0E6] sm:px-8 lg:px-12">
         <div className="absolute left-1/2 top-1/2 h-[560px] w-[560px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#C9A962]/10 blur-[150px]" />
@@ -1074,7 +1103,7 @@ and the selected Henna–Indigo method.
               Natural Indigo Powder supply. Share the product or grade, Indigotin
               and mesh requirements, quantity, supply model, pack size, artwork or
               branding needs, destination country or port, required documents and
-              company contact details. Bulk orders can start from 100 kg; private-label
+              company contact details. Bulk orders can start from 100 kg per item; private-label
               minimums depend on packaging, design and customization.
             </p>
 
