@@ -101,12 +101,12 @@ const procurementFaqs = [
   {
     question: "What is the bulk MOQ?",
     answer:
-      "Bulk orders can start from 100 kg, subject to commercial and product confirmation.",
+      "Bulk orders can start from 100 kg per item, subject to commercial and product confirmation.",
   },
   {
     question: "What is the private-label MOQ?",
     answer:
-      "Private-label minimums vary by pack size, packaging format, artwork, design, customization and commercial feasibility.",
+      "Private-label minimums vary by pack size, packaging format, artwork, design, customization, formulation/shade, order/product requirements and commercial feasibility.",
   },
   {
     question: "Which retail pack sizes are available?",
@@ -984,7 +984,7 @@ export default function NaturalHennaHairColorsPage() {
                 },
               ].map((ingredient, index) => (
                 <StaggerItem key={ingredient.name} delay={(index % 6) * 45}>
-                  <article className="group flex min-h-[116px] items-center gap-3 rounded-[20px] border border-[#C9A962]/28 bg-[#ede5d7] p-3 transition-all duration-500 hover:-translate-y-2 hover:border-[#C9A962] hover:bg-[#faf6ee] hover:shadow-[0_16px_42px_rgba(0,0,0,0.10)]">
+                  <article className="group flex min-h-[116px] flex-col items-center gap-3 rounded-[20px] border border-[#C9A962]/28 bg-[#ede5d7] p-3 text-center min-[430px]:flex-row min-[430px]:text-left transition-all duration-500 hover:-translate-y-2 hover:border-[#C9A962] hover:bg-[#faf6ee] hover:shadow-[0_16px_42px_rgba(0,0,0,0.10)]">
                     <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full border border-[#C9A962]/35 bg-[#e3dacb]">
                       <Image
   src={ingredient.image}
@@ -1207,7 +1207,7 @@ export default function NaturalHennaHairColorsPage() {
                 ["OEM Buyers", "Manufacturing support for agreed product and branding needs."],
                 ["ODM Buyers", "Product support under mutually agreed requirements."],
                 ["Sourcing Companies", "Product and commercial requirement coordination."],
-                ["Bulk Buyers", "Orders starting from 100 kg, subject to confirmation."],
+                ["Bulk Buyers", "Orders starting from 100 kg per item, subject to confirmation."],
               ].map(([title, text]) => (
                 <article key={title} className="h-full border border-[#C9A962]/28 bg-[#ede5d7] p-5">
                   <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold">{title}</h3>
@@ -1263,8 +1263,8 @@ export default function NaturalHennaHairColorsPage() {
                   ["Product Portfolio", "17 Natural Henna Hair Color Shades Plus 1 Natural Henna Hair Treatment"],
                   ["Manufacturing Origin", "India"],
                   ["Product Form", "Triple-Sifted Microfine Botanical Powder"],
-                  ["Bulk Minimum Order", "Orders Can Start from 100 kg, Subject to Commercial and Product Confirmation"],
-                  ["Private-Label MOQ", "Variable by Pack Size, Packaging, Artwork, Design, Customization and Commercial Feasibility"],
+                  ["Bulk Minimum Order", "Orders Can Start from 100 kg per item, Subject to Commercial and Product Confirmation"],
+                  ["Private-Label MOQ", "Variable by Pack Size, Packaging Format, Artwork, Design, Customization, Formulation/Shade, Order/Product Requirements and Commercial Feasibility"],
                   ["Retail / Private-Label Packs", "100 g, 200 g, 500 g and 1 kg"],
                   ["Bulk Packaging", "20 kg and 25 kg Double-Layer Vacuum Packing"],
                   ["Shelf Life", "24 Months under Recommended Storage Conditions"],
@@ -1475,7 +1475,8 @@ export default function NaturalHennaHairColorsPage() {
 
             {/* PACKAGING IMAGE STRIP */}
             <StaggerItem delay={180}>
-              <div className="relative mt-8 aspect-[3/2] w-full overflow-hidden rounded-[28px] border border-[#C9A962]/30 bg-[#173b2a] shadow-[0_18px_50px_rgba(0,0,0,0.14)]">
+              <div className="relative mt-8 w-full overflow-hidden rounded-[28px] border border-[#C9A962]/30 bg-[#173b2a] shadow-[0_18px_50px_rgba(0,0,0,0.14)] min-[430px]:aspect-[3/2]">
+                <div className="relative aspect-[3/2] min-[430px]:absolute min-[430px]:inset-0 min-[430px]:aspect-auto">
   <Image
     src="/images/products/henna-hair-colors/natural-henna-hair-colors-packaging-private-label-final-v1.png"
     alt="Natural Henna Hair Colors retail packaging bulk supply OEM and private-label export options"
@@ -1485,8 +1486,9 @@ export default function NaturalHennaHairColorsPage() {
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-r from-[#061711]/80 via-[#102f23]/40 to-transparent" />
+                </div>
 
-                <div className="absolute inset-y-0 left-0 flex max-w-xl items-center p-7">
+                <div className="relative flex max-w-xl items-center p-7 min-[430px]:absolute min-[430px]:inset-y-0 min-[430px]:left-0">
                   <div>
                     <p className="text-[10px] font-bold uppercase tracking-[0.34em] text-[#E4C878]">
                       Retail · Professional · Bulk · OEM
@@ -1565,10 +1567,10 @@ export default function NaturalHennaHairColorsPage() {
               </p>
 
               <p className="mx-auto mt-3 max-w-4xl text-sm leading-7 text-[#F5F0E6]/72">
-                Bulk orders can start from 100 kg, subject to commercial and
+                Bulk orders can start from 100 kg per item, subject to commercial and
                 product confirmation. Private-label minimums vary by pack size,
-                packaging format, artwork, design, customization and commercial
-                feasibility.
+                packaging format, artwork, design, customization, formulation/shade,
+                order/product requirements and commercial feasibility.
               </p>
 
               <p className="mx-auto mt-2 max-w-4xl text-xs leading-6 text-[#F5F0E6]/48">
@@ -1603,8 +1605,8 @@ export default function NaturalHennaHairColorsPage() {
               <div className="mt-8 space-y-4">
                 {[
                   ["Free Samples", "Free samples are available for prospective buyers."],
-                  ["Bulk Order Quantity", "Bulk orders can start from 100 kg, subject to commercial and product confirmation."],
-                  ["Private-Label MOQ", "Private-label minimums vary by pack size, packaging format, artwork, design, customization and commercial feasibility."],
+                  ["Bulk Order Quantity", "Bulk orders can start from 100 kg per item, subject to commercial and product confirmation."],
+                  ["Private-Label MOQ", "Private-label minimums vary by pack size, packaging format, artwork, design, customization, formulation/shade, order/product requirements and commercial feasibility."],
                   ["Typical Lead Time", "Approximately 10–15 days after commercial and order confirmation, subject to quantity, packaging, customization and complete requirements. Transit and delivery times are not guaranteed."],
                   ["Shipping & Incoterms", "Shipping and Incoterms are coordinated according to buyer requirements and the confirmed quotation."],
                 ].map(([title, text]) => (
@@ -1648,6 +1650,34 @@ export default function NaturalHennaHairColorsPage() {
         </RevealOnScroll>
       </section>
 
+      {/* INTERNATIONAL BUYER NAVIGATION */}
+      <section aria-labelledby="henna-hair-colors-markets-heading" className="border-y border-[#C9A962]/25 bg-[#f5f0e6] px-6 py-14 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-[1320px]">
+          <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#9f7f36]">Explore Export Markets</p>
+          <h2 id="henna-hair-colors-markets-heading" className="mt-4 font-[family-name:var(--font-playfair)] text-3xl font-semibold leading-tight text-[#173b2a] sm:text-4xl">Natural Henna Hair Colors for International Markets</h2>
+          <p className="mt-4 max-w-3xl text-base leading-8 text-[#4c5f54]">Explore country-specific export information for professional, wholesale, salon-supply and private-label Natural Henna Hair Colors enquiries.</p>
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            {[
+              { label: "Priority Markets", links: [["USA", "/export/usa"], ["UK", "/export/uk"], ["UAE", "/export/uae"]] },
+              { label: "Selected European Markets", links: [["Germany", "/export/germany"], ["France", "/export/france"]] },
+            ].map((group) => (
+              <div key={group.label}>
+                <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.2em] text-[#8B6A1E]">{group.label}</p>
+                <ul className="flex flex-wrap gap-3">
+                  {group.links.map(([label, href]) => (
+                    <li key={href}>
+                      <Link href={href} className="inline-flex items-center gap-3 rounded-xl border border-[#C9A962]/40 bg-[#102f23] px-5 py-3 text-sm font-medium text-[#F5F0E6] transition-colors hover:border-[#C9A962] hover:bg-[#173b2a] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#9f7f36]">
+                        {label}<span aria-hidden="true" className="text-[#E4C878]">→</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FINAL CTA */}
       <section
   id="buyer-enquiry"
@@ -1671,8 +1701,9 @@ export default function NaturalHennaHairColorsPage() {
               Contact Shivesh International for Natural Henna Hair Colors in
   retail, professional, bulk, wholesale, OEM, ODM and private-label
   formats. The 18-product portfolio contains 17 hair-colour shades plus
-  1 Natural Henna Hair Treatment. Bulk orders can start from 100 kg;
-  private-label minimums depend on packaging and customization.
+  1 Natural Henna Hair Treatment. Bulk orders can start from 100 kg per item;
+  private-label minimums vary by pack size, packaging format, artwork, design,
+  customization, formulation/shade, order/product requirements and commercial feasibility.
             </p>
 
             <div className="mt-12 grid gap-5 sm:grid-cols-3">
@@ -1700,7 +1731,7 @@ export default function NaturalHennaHairColorsPage() {
 
   <div className="rounded-[22px] border border-[#C9A962]/25 bg-white/[0.05] p-6 backdrop-blur-sm">
     <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#C9A962]">
-      Bulk Orders from 100 kg
+      Bulk Orders from 100 kg per item
     </p>
 
     <p className="mt-4 text-sm leading-7 text-[#F5F0E6]/65">
