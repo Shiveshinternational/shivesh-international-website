@@ -45,8 +45,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/images/products/ayurvedic-herbs/ayurvedic-indian-herbs-hero-final-v1.png",
-        width: 1200,
-        height: 630,
+        width: 1942,
+        height: 809,
         alt: "Ayurvedic Indian Herbs manufacturer exporter and supplier from India",
       },
     ],
@@ -92,7 +92,7 @@ const procurementFaqs = [
   {
     question: "What is the private-label MOQ?",
     answer:
-      "Private-label minimums vary by pack size, packaging, artwork, design, customization and commercial feasibility.",
+      "Private-label minimums vary by pack size, packaging format, artwork/design, customization, product/formulation, order requirements and commercial feasibility.",
   },
   {
     question: "Which retail and bulk packaging sizes are available?",
@@ -231,6 +231,14 @@ const herbs = [
   { name: 'Katha Powder', image: 'katha powder.png' },
   
 ];
+const herbIdentityNotes: Record<string, string> = {
+  "Fenugreek Seed Powder": "Also listed as Methi Seeds Powder; the same underlying ingredient.",
+  "Methi Seeds Powder": "Methi (Fenugreek): the same ingredient as Fenugreek Seed Powder.",
+  "Neem Giloy Powder": "Neem + Giloy blend.",
+};
+
+const herbAnchor = (name: string) => `herb-${name.toLowerCase().replace(/\s+/g, "-")}`;
+
 const ayurvedicHerbsStructuredData = {
   "@context": "https://schema.org",
   "@graph": [
@@ -341,7 +349,8 @@ secondaryButtonHref="/contact"
         <RevealOnScroll>
           <div className="relative mx-auto grid max-w-[1400px] items-center gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:gap-16">
             <StaggerItem delay={0}>
-              <div className="group relative aspect-[3/2] overflow-hidden rounded-[30px] border border-[#C9A962]/30 bg-[#e8dfcf] shadow-[0_30px_85px_rgba(0,0,0,0.15)]">
+              <div className="group relative overflow-hidden rounded-[30px] border border-[#C9A962]/30 bg-[#e8dfcf] shadow-[0_30px_85px_rgba(0,0,0,0.15)]">
+                <div className="relative aspect-[3/2] overflow-hidden">
                 <Image
                   src="/images/products/ayurvedic-herbs/ayurvedic-indian-herbs-about-final-v1.png"
                   alt="Bulk Ayurvedic Indian Herbs and herbal powders manufacturer supplier from India"
@@ -351,7 +360,8 @@ secondaryButtonHref="/contact"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#071b14]/75 via-transparent to-black/10" />
                 <div className="pointer-events-none absolute -left-[110%] top-0 h-full w-[52%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/35 to-transparent transition-all duration-[1300ms] group-hover:left-[150%]" />
-                <div className="absolute bottom-7 left-7 right-7">
+                </div>
+                <div className="bg-[#102f23] p-6 sm:absolute sm:bottom-7 sm:left-7 sm:right-7 sm:bg-transparent sm:p-0">
                   <p className="text-[10px] font-bold uppercase tracking-[0.35em] text-[#E4C878]">
                     Traditional Herbal Product Portfolio
                   </p>
@@ -366,7 +376,7 @@ secondaryButtonHref="/contact"
               <StaggerItem delay={120}>
                 <div className="mb-6 flex items-center gap-5">
                   <span className="h-[3px] w-14 bg-[#C9A962]" />
-                  <span className="text-xs font-bold uppercase tracking-[0.4em] text-[#9f7f36]">
+                  <span className="text-xs font-bold uppercase tracking-[0.4em] text-[#806323]">
                     About Ayurvedic Indian Herbs
                   </span>
                 </div>
@@ -380,7 +390,7 @@ secondaryButtonHref="/contact"
               </StaggerItem>
 
               <StaggerItem delay={340}>
-                <p className="mt-8 text-xl font-medium leading-9 text-[#8B6A1E]">
+                <p className="mt-8 text-xl font-medium leading-9 text-[#806323]">
                   Bulk Ayurvedic Indian Herbs and herbal powders manufactured and supplied for international wholesale, cosmetic, wellness and private-label markets.
                 </p>
               </StaggerItem>
@@ -446,22 +456,40 @@ secondaryButtonHref="/contact"
 </p>
             </div>
 
+            <details className="mt-8 rounded-[20px] border border-[#C9A962]/35 bg-[#071b14]/40">
+              <summary className="cursor-pointer px-5 py-4 text-sm font-semibold text-[#E4C878]">
+                Jump to a herb — browse all 72 names
+              </summary>
+              <nav aria-label="Jump to a herb" className="max-h-72 overflow-y-auto border-t border-[#C9A962]/25 p-3">
+                <ul className="grid gap-1 sm:grid-cols-2 lg:grid-cols-3">
+                  {herbs.map((herb) => (
+                    <li key={herb.name}>
+                      <a href={`#${herbAnchor(herb.name)}`} className="flex min-h-11 items-center rounded-lg px-3 py-2 text-sm hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-[#E4C878]">
+                        {herb.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </details>
+
             <div className="mt-14 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
               {herbs.map((herb, index) => (
                 <StaggerItem key={herb.name} delay={(index % 6) * 35}>
                   <ProductCardModal
                     src={`/images/products/ayurvedic-herbs/${herb.image}`}
-                    alt={`${herb.name} manufacturer exporter supplier from India`}
+                    alt={herb.name}
                     category="Ayurvedic Herb Manufacturer & Exporter"
-description={`${herb.name} available for bulk supply, wholesale export and selected OEM private-label requirements from India.`}
+                    description={`${herbIdentityNotes[herb.name] ? `${herbIdentityNotes[herb.name]} ` : ""}${herb.name} available for bulk supply, wholesale export and selected OEM private-label requirements from India.`}
                   >
-                    <article className="group relative h-full overflow-hidden rounded-[20px] border border-[#C9A962]/22 bg-[#F5F0E6] text-[#173b2a] shadow-[0_12px_34px_rgba(0,0,0,0.15)] transition-all duration-500 hover:-translate-y-2 hover:border-[#C9A962] hover:shadow-[0_22px_52px_rgba(0,0,0,0.25)]">
+                    <article id={herbAnchor(herb.name)} className="group relative h-full scroll-mt-28 overflow-hidden rounded-[20px] border border-[#C9A962]/22 bg-[#F5F0E6] text-[#173b2a] shadow-[0_12px_34px_rgba(0,0,0,0.15)] transition-all duration-500 hover:-translate-y-2 hover:border-[#C9A962] hover:shadow-[0_22px_52px_rgba(0,0,0,0.25)]">
                       <div className="relative flex h-[155px] items-center justify-center overflow-hidden bg-[#f3ecdf] p-4">
                         <Image
                           src={`/images/products/ayurvedic-herbs/${herb.image}`}
-                          alt={`${herb.name} bulk wholesale and private-label herbal powder`}
+                          alt={`${herb.name} product artwork`}
                           width={1024}
                           height={1536}
+                          sizes="89px"
                           className="h-[125px] w-[88.667px] rounded-[14px] bg-white/90 p-2 object-contain shadow-[0_8px_24px_rgba(0,0,0,0.08)] transition-transform duration-700 group-hover:scale-105"
                         />
 
@@ -477,21 +505,21 @@ description={`${herb.name} available for bulk supply, wholesale export and selec
                       </div>
 
                       <div className="p-4">
-                        <p className="text-[8px] font-bold uppercase tracking-[0.18em] text-[#9f7f36]">
+                        <p className="text-[8px] font-bold uppercase tracking-[0.18em] text-[#806323]">
                           Bulk Herbal Powder
                         </p>
 
-                        <h3 className="mt-2 min-h-[48px] font-[family-name:var(--font-playfair)] text-[16px] font-semibold leading-[1.35] text-[#173b2a]">
+                        <h3 className="mt-2 min-h-[48px] [overflow-wrap:anywhere] font-[family-name:var(--font-playfair)] text-[16px] font-semibold leading-[1.35] text-[#173b2a]">
                           {herb.name}
                         </h3>
 
                         <div className="mt-3 h-px w-9 bg-[#C9A962]" />
 
                         <p className="mt-3 text-[11px] leading-5 text-[#4c5f54]">
-                          Available for bulk export, wholesale supply and private-label requirements.
+                          {herbIdentityNotes[herb.name] ?? "Available for bulk export, wholesale supply and private-label requirements."}
                         </p>
 
-                        <span className="mt-4 inline-flex items-center gap-2 text-[9px] font-bold uppercase tracking-[0.14em] text-[#8B6A1E] transition-all duration-300 group-hover:gap-3 group-hover:text-[#173b2a]">
+                        <span className="mt-4 inline-flex items-center gap-2 text-[9px] font-bold uppercase tracking-[0.14em] text-[#806323] transition-all duration-300 group-hover:gap-3 group-hover:text-[#173b2a]">
                           View Herb Details
                           <span>→</span>
                         </span>
@@ -517,7 +545,8 @@ description={`${herb.name} available for bulk supply, wholesale export and selec
           <div className="mx-auto grid max-w-[1350px] items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
             {/* IMAGE */}
             <StaggerItem delay={0}>
-              <div className="group relative aspect-[3/2] overflow-hidden rounded-[28px] border border-[#C9A962]/30 bg-[#e8dfcf] shadow-[0_28px_75px_rgba(0,0,0,0.15)]">
+              <div className="group relative overflow-hidden rounded-[28px] border border-[#C9A962]/30 bg-[#e8dfcf] shadow-[0_28px_75px_rgba(0,0,0,0.15)]">
+                <div className="relative aspect-[3/2] overflow-hidden">
                 <Image
                   src="/images/products/ayurvedic-herbs/ayurvedic-herbs-quality-inspection-final-v1.png"
                   alt="Quality inspection of Ayurvedic Indian Herbs for bulk export supply"
@@ -528,7 +557,8 @@ description={`${herb.name} available for bulk supply, wholesale export and selec
 
                 <div className="absolute inset-0 bg-gradient-to-t from-[#061711]/80 via-transparent to-black/10" />
 
-                <div className="absolute bottom-7 left-7 right-7">
+                </div>
+                <div className="bg-[#102f23] p-6 sm:absolute sm:bottom-7 sm:left-7 sm:right-7 sm:bg-transparent sm:p-0">
                   <p className="text-[10px] font-bold uppercase tracking-[0.34em] text-[#E4C878]">
                     Premium Herbal Product Range
                   </p>
@@ -546,7 +576,7 @@ description={`${herb.name} available for bulk supply, wholesale export and selec
                 <div className="mb-6 flex items-center gap-5">
                   <span className="h-[3px] w-14 bg-[#C9A962]" />
 
-                  <span className="text-xs font-bold uppercase tracking-[0.4em] text-[#9f7f36]">
+                  <span className="text-xs font-bold uppercase tracking-[0.4em] text-[#806323]">
                     Why Choose Our Herbs
                   </span>
                 </div>
@@ -695,7 +725,7 @@ private-label brands requiring reliable bulk export supply from India.
         <RevealOnScroll>
           <div className="mx-auto max-w-[1180px]">
             <div className="mx-auto max-w-4xl text-center">
-              <p className="text-xs font-bold uppercase tracking-[0.45em] text-[#9f7f36]">
+              <p className="text-xs font-bold uppercase tracking-[0.45em] text-[#806323]">
                 Product Specification
               </p>
 
@@ -712,7 +742,7 @@ selected herb, product form, grade and buyer requirements.
 
             <StaggerItem delay={120}>
               <div className="mt-12 overflow-hidden rounded-[26px] border border-[#C9A962]/35 bg-[#f5f0e6] shadow-[0_24px_65px_rgba(0,0,0,0.11)]">
-                <div className="hidden grid-cols-[0.9fr_1.1fr] bg-[#102f23] px-5 py-4 text-[#F5F0E6] sm:grid sm:px-7">
+                <div aria-hidden="true" className="hidden grid-cols-[0.9fr_1.1fr] bg-[#102f23] px-5 py-4 text-[#F5F0E6] sm:grid sm:px-7">
                   <p className="text-[10px] font-bold uppercase tracking-[0.32em] text-[#C9A962]">
                     Parameter
                   </p>
@@ -722,6 +752,7 @@ selected herb, product form, grade and buyer requirements.
                   </p>
                 </div>
 
+                <dl>
                 {[
                   ["Product Category", "Ayurvedic Indian Herbs and Related Herbal Products"],
                   ["Portfolio Size", "Exactly 72 Products"],
@@ -762,15 +793,16 @@ selected herb, product form, grade and buyer requirements.
                       index % 2 === 0 ? "bg-[#f5f0e6]" : "bg-[#eee6d8]"
                     }`}
                   >
-                    <p className="pr-4 text-sm font-bold uppercase tracking-[0.12em] text-[#8B6A1E] sm:text-[15px]">
+                    <dt className="min-w-0 pr-4 text-sm font-bold uppercase tracking-[0.12em] text-[#806323] sm:text-[15px]">
                       {parameter}
-                    </p>
+                    </dt>
 
-                    <p className="leading-7 text-[#173b2a] sm:pl-4">
+                    <dd className="min-w-0 leading-7 text-[#173b2a] sm:pl-4">
                       {value}
-                    </p>
+                    </dd>
                   </div>
                 ))}
+                </dl>
               </div>
             </StaggerItem>
 
@@ -845,7 +877,7 @@ Retail & Private-Label Packs
 
 <article className="rounded-[24px] border border-[#C9A962]/30 bg-[#f5f0e6] p-7 text-[#173b2a]">
 
-<p className="text-[10px] font-bold uppercase tracking-[0.30em] text-[#9f7f36]">
+<p className="text-[10px] font-bold uppercase tracking-[0.30em] text-[#806323]">
 
 Packaging Formats
 
@@ -901,12 +933,12 @@ className="rounded-[20px] border border-[#C9A962]/25 bg-white/[0.05] p-5 text-ce
   className="bg-[#ede5d7] px-6 py-20 sm:px-8 lg:px-12 lg:py-24"
 >
   <RevealOnScroll>
-    <div className="mx-auto grid max-w-[1380px] gap-8 lg:grid-cols-2">
-      <article className="border border-[#C9A962]/30 bg-[#102f23] p-7 text-[#F5F0E6] sm:p-9">
+    <div className="mx-auto grid min-w-0 max-w-[1380px] grid-cols-1 gap-8 lg:grid-cols-2">
+      <article className="min-w-0 [overflow-wrap:anywhere] border border-[#C9A962]/30 bg-[#102f23] p-5 text-[#F5F0E6] sm:p-9">
         <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#C9A962]">
           Commercial Documentation
         </p>
-        <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">
+        <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-[28px] font-semibold leading-tight sm:text-5xl">
           Herb-Specific Specifications and Export Documentation
         </h2>
         <p className="mt-6 text-lg leading-8 text-[#F5F0E6]/68">
@@ -960,14 +992,14 @@ className="rounded-[20px] border border-[#C9A962]/25 bg-white/[0.05] p-5 text-ce
         </div>
       </article>
 
-      <article className="border border-[#C9A962]/30 bg-[#f5f0e6] p-7 text-[#173b2a] sm:p-9">
-        <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#9f7f36]">
+      <article className="min-w-0 [overflow-wrap:anywhere] border border-[#C9A962]/30 bg-[#f5f0e6] p-5 text-[#173b2a] sm:p-9">
+        <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#806323]">
           Samples & Order Planning
         </p>
-        <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">
+        <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-[28px] font-semibold leading-tight sm:text-5xl">
           Plan a Bulk, OEM, ODM or Private-Label Herb Order
         </h2>
-        <div className="mt-8 space-y-3">
+        <dl className="mt-8 space-y-3">
           {[
             ["Free Samples", "Available for prospective buyers, subject to product and requirement review."],
             ["Bulk Minimum Order", "Orders can start from 100 kg per herb or item, subject to commercial and product confirmation."],
@@ -978,15 +1010,15 @@ className="rounded-[20px] border border-[#C9A962]/25 bg-white/[0.05] p-5 text-ce
           ].map(([label, value]) => (
             <div
               key={label}
-              className="grid gap-2 border-b border-[#173b2a]/12 pb-4 sm:grid-cols-[145px_1fr]"
+              className="grid gap-2 border-b border-[#173b2a]/12 pb-4 sm:grid-cols-[145px_minmax(0,1fr)]"
             >
-              <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#9f7f36]">
+              <dt className="min-w-0 text-[10px] font-bold uppercase tracking-[0.18em] text-[#806323]">
                 {label}
-              </p>
-              <p className="text-sm leading-7 text-[#4c5f54]">{value}</p>
+              </dt>
+              <dd className="min-w-0 text-sm leading-7 text-[#4c5f54]">{value}</dd>
             </div>
           ))}
-        </div>
+        </dl>
         <div className="mt-8 border border-[#C9A962]/35 bg-[#ede5d7] p-5">
           <h3 className="font-[family-name:var(--font-playfair)] text-2xl font-semibold">
             What to Include in Your RFQ
@@ -1027,7 +1059,7 @@ className="rounded-[20px] border border-[#C9A962]/25 bg-white/[0.05] p-5 text-ce
   <RevealOnScroll>
     <div className="mx-auto max-w-[1100px]">
       <div className="text-center">
-        <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#9f7f36]">
+        <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#806323]">
           Buyer Questions
         </p>
         <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">
@@ -1039,7 +1071,7 @@ className="rounded-[20px] border border-[#C9A962]/25 bg-white/[0.05] p-5 text-ce
           <details key={faq.question} className="group">
             <summary className="flex cursor-pointer list-none items-start justify-between gap-6 py-6">
               <h3 className="text-xl font-semibold leading-snug">
-                <span className="mr-4 text-[#9f7f36]">
+                <span className="mr-4 text-[#806323]">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 {faq.question}
@@ -1057,6 +1089,34 @@ className="rounded-[20px] border border-[#C9A962]/25 bg-white/[0.05] p-5 text-ce
     </div>
   </RevealOnScroll>
 </section>
+{/* PRODUCT-TO-MARKET NAVIGATION */}
+<section id="herbs-export-markets" aria-labelledby="herbs-export-markets-heading" className="bg-[#ede5d7] px-6 py-12 sm:px-8 lg:px-12">
+  <div className="mx-auto max-w-[1100px]">
+    <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#806323]">Explore Export Markets</p>
+    <h2 id="herbs-export-markets-heading" className="mt-4 font-[family-name:var(--font-playfair)] text-3xl font-semibold leading-tight sm:text-4xl">
+      Ayurvedic Indian Herbs for International Buyers
+    </h2>
+    <p className="mt-4 max-w-3xl text-base leading-7 text-[#4c5f54]">
+      Explore country-specific export information for bulk herbal ingredients,
+      private-label and sourcing enquiries. Product form, specification and
+      destination-market requirements are reviewed for each order.
+    </p>
+    <nav aria-label="Herbal ingredient export markets" className="mt-6 flex flex-wrap gap-3">
+      {[
+        ["USA", "/export/usa"],
+        ["UK", "/export/uk"],
+        ["UAE", "/export/uae"],
+        ["Germany", "/export/germany"],
+        ["France", "/export/france"],
+      ].map(([country, href]) => (
+        <Link key={href} href={href} className="inline-flex min-h-12 items-center gap-3 rounded-full border border-[#173b2a]/30 bg-[#f5f0e6] px-5 py-3 text-sm font-semibold text-[#173b2a] transition-colors hover:bg-[#102f23] hover:text-[#f5f0e6] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#173b2a]">
+          {country} <span aria-hidden="true">→</span>
+        </Link>
+      ))}
+    </nav>
+  </div>
+</section>
+
 {/* FINAL CTA */}
 
 <section
