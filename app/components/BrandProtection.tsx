@@ -95,10 +95,10 @@ export default function BrandProtection() {
 
         <div className="mt-6 rounded-[20px] border border-[#C9A962]/20 bg-white/[0.04] p-5">
           <a
-            href="mailto:shiveshinternational@gmail.com"
+            href="mailto:export@shiveshinternational.com"
             className="block break-all text-sm text-[#E4C878] transition hover:text-white"
           >
-            shiveshinternational@gmail.com
+            export@shiveshinternational.com
           </a>
           <a
             href="tel:+919999774950"
@@ -107,12 +107,12 @@ export default function BrandProtection() {
             +91-9999774950
           </a>
           <a
-            href="https://www.henna-manufacturer.com"
+            href="https://shiveshinternational.com"
             target="_blank"
             rel="noreferrer"
             className="mt-2 block break-all text-sm text-[#F5F0E6]/70 transition hover:text-[#E4C878]"
           >
-            www.henna-manufacturer.com
+            shiveshinternational.com
           </a>
         </div>
 

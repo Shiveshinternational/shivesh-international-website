@@ -65,11 +65,6 @@ const procurementFaqs = [
       "The portfolio contains 16 Henna-Based Hair Color shades. Each shade has a different formulation, and final product details are confirmed for the selected shade.",
   },
   {
-    question: "What is the chemical content after dilution?",
-    answer:
-      "Made with less than 3% chemicals after dilution. Exact chemical names and individual percentages are communicated directly to buyers when required and are not published on the website.",
-  },
-  {
     question: "Are all 16 shades PPD-free, ammonia-free and peroxide-free?",
     answer:
       "Yes. All 16 Henna-Based Hair Color shades are PPD-Free, Ammonia-Free and Peroxide-Free.",
@@ -92,12 +87,12 @@ const procurementFaqs = [
   {
     question: "What is the bulk minimum order quantity?",
     answer:
-      "Bulk orders can start from 100 kg, subject to commercial and product confirmation.",
+      "Bulk orders can start from 100 kg per item, subject to commercial and product confirmation.",
   },
   {
     question: "What is the private-label MOQ?",
     answer:
-      "Private-label minimums vary by pack size, packaging, artwork, design, customization and commercial feasibility.",
+      "Private-label minimums vary by pack size, packaging format, artwork/design, customization, formulation/shade, order/product requirements and commercial feasibility.",
   },
   {
     question: "Which retail and bulk packaging sizes are available?",
@@ -329,25 +324,27 @@ export default function HennaBasedHairColorsPage() {
           <div className="relative mx-auto grid max-w-[1400px] items-center gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:gap-16">
             {/* IMAGE */}
             <StaggerItem delay={0}>
-              <div className="group relative min-h-[760px] overflow-hidden rounded-[30px] border border-[#C9A962]/30 bg-[#e8dfcf] shadow-[0_30px_85px_rgba(0,0,0,0.15)]">
+              <div className="group relative overflow-hidden rounded-[30px] border border-[#C9A962]/30 bg-[#e8dfcf] shadow-[0_30px_85px_rgba(0,0,0,0.15)]">
+                <div className="relative aspect-[1122/1215] lg:aspect-auto lg:min-h-[760px]">
                 <Image
                   src="/images/products/henna-based-hair-colors/henna-based-hair-colors-about-final-v2.png"
                   alt="Professional Henna-Based Hair Colors collection"
                   fill
                   sizes="(min-width: 1024px) 46vw, 100vw"
-                  className="-translate-y-[1%] scale-[1.04] object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.15]"
+                  className="object-contain transition-transform duration-[1400ms] ease-out lg:-translate-y-[1%] lg:scale-[1.04] lg:object-cover lg:group-hover:scale-[1.15]"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-[#071b14]/78 via-transparent to-black/10" />
+                <div className="absolute inset-0 hidden bg-gradient-to-t from-[#071b14]/78 via-transparent to-black/10 lg:block" />
 
                 <div className="pointer-events-none absolute -left-[110%] top-0 h-full w-[52%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/35 to-transparent transition-all duration-[1300ms] group-hover:left-[150%]" />
+                </div>
 
-                <div className="absolute bottom-7 left-7 right-7">
+                <div className="relative bg-[#071b14] p-5 lg:absolute lg:bottom-7 lg:left-7 lg:right-7 lg:bg-transparent lg:p-0">
                   <p className="text-[10px] font-bold uppercase tracking-[0.35em] text-[#E4C878]">
                     Professional Colour Portfolio
                   </p>
 
-                  <p className="mt-3 font-[family-name:var(--font-playfair)] text-3xl font-semibold text-white">
+                  <p className="mt-3 font-[family-name:var(--font-playfair)] text-xl font-semibold text-white sm:text-2xl lg:text-3xl">
                     16 Henna-Based Hair Color Shades
                   </p>
                 </div>
@@ -360,7 +357,7 @@ export default function HennaBasedHairColorsPage() {
                 <div className="mb-6 flex items-center gap-5">
                   <span className="h-[3px] w-14 bg-[#C9A962]" />
 
-                  <span className="text-xs font-bold uppercase tracking-[0.4em] text-[#9f7f36]">
+                  <span className="text-xs font-bold uppercase tracking-[0.4em] text-[#806323]">
                     About Henna-Based Hair Colors
                   </span>
                 </div>
@@ -407,14 +404,9 @@ export default function HennaBasedHairColorsPage() {
                     Henna, Auburn Henna, Blonde Henna and Ginger Blonde Henna.
                   </p>
 
-                  <p className="border-l-2 border-[#C9A962] pl-5 text-lg font-semibold leading-8 text-[#173b2a]">
-                    Made with less than 3% chemicals after dilution.
-                  </p>
-
                   <p className="text-sm leading-7 text-[#4c5f54]">
-                    Each shade has a different formulation. Exact chemical names
-                    and individual percentages are communicated directly to
-                    buyers when required and are not published on the website.
+                    Each shade has a different formulation. Shade-specific
+                    formulation details are available to buyers on request.
                   </p>
 
                   <p className="text-lg leading-8 text-[#4c5f54]">
@@ -602,7 +594,7 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
                     </div>
 
                     <div className="p-5">
-                      <p className="text-[9px] font-bold uppercase tracking-[0.18em] text-[#9f7f36]">
+                      <p className="text-[9px] font-bold uppercase tracking-[0.18em] text-[#806323]">
                         Professional Henna Hair Dye
                       </p>
 
@@ -646,7 +638,7 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
         <RevealOnScroll>
           <div className="relative mx-auto max-w-[1450px]">
             <div className="mx-auto max-w-4xl text-center">
-              <p className="text-xs font-bold uppercase tracking-[0.45em] text-[#9f7f36]">
+              <p className="text-xs font-bold uppercase tracking-[0.45em] text-[#806323]">
                 Professional Shade Guide
               </p>
 
@@ -828,7 +820,7 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
                       
 
                     <div className="p-4">
-                      <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#9f7f36]">
+                      <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#806323]">
                         {shade.name.replace(/ Henna$/, "")}
                       </p>
 
@@ -981,7 +973,7 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
         <RevealOnScroll>
           <div className="mx-auto max-w-[1380px]">
             <div className="mx-auto max-w-4xl text-center">
-              <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#9f7f36]">
+              <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#806323]">
                 International B2B Supply
               </p>
               <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">
@@ -1007,7 +999,7 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
               ].map(([title, text], index) => (
                 <StaggerItem key={title} delay={(index % 4) * 60}>
                   <article className="h-full rounded-[22px] border border-[#C9A962]/28 bg-[#ede5d7] p-6 transition-all duration-500 hover:-translate-y-1 hover:border-[#C9A962] hover:shadow-[0_18px_45px_rgba(0,0,0,0.10)]">
-                    <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-[#9f7f36]">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-[#806323]">
                       B2B {String(index + 1).padStart(2, "0")}
                     </p>
                     <h3 className="mt-4 font-[family-name:var(--font-playfair)] text-2xl font-semibold">
@@ -1046,7 +1038,7 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
         <RevealOnScroll>
           <div className="mx-auto max-w-[1180px]">
             <div className="mx-auto max-w-4xl text-center">
-              <p className="text-xs font-bold uppercase tracking-[0.45em] text-[#9f7f36]">
+              <p className="text-xs font-bold uppercase tracking-[0.45em] text-[#806323]">
                 Product Specification
               </p>
 
@@ -1062,8 +1054,8 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
             </div>
 
             <StaggerItem delay={120}>
-              <div className="mt-12 overflow-hidden rounded-[26px] border border-[#C9A962]/35 bg-[#f5f0e6] shadow-[0_24px_65px_rgba(0,0,0,0.11)]">
-                <div className="grid grid-cols-[0.9fr_1.1fr] bg-[#102f23] px-5 py-4 text-[#F5F0E6] sm:px-7">
+              <div className="mt-12 min-w-0 rounded-[26px] border border-[#C9A962]/35 bg-[#f5f0e6] shadow-[0_24px_65px_rgba(0,0,0,0.11)]">
+                <div aria-hidden="true" className="hidden rounded-t-[26px] bg-[#102f23] px-7 py-4 text-[#F5F0E6] sm:grid sm:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
                   <p className="text-[10px] font-bold uppercase tracking-[0.32em] text-[#C9A962]">
                     Parameter
                   </p>
@@ -1073,6 +1065,7 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
                   </p>
                 </div>
 
+                <dl className="[overflow-wrap:anywhere]">
                 {[
                   ["Product Category", "Henna-Based Hair Colors"],
                   ["Available Shades", "16 Professional Shades"],
@@ -1082,7 +1075,6 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
                   ["Product Type", "Performance-Focused Henna Hair Dye"],
                   ["Grey Coverage", "100% Grey Coverage across All 16 Shades"],
                   ["Product Qualifications", "PPD-Free · Ammonia-Free · Peroxide-Free · No Metallic Salts · No Synthetic Dye"],
-                  ["Chemical Content after Dilution", "Made with less than 3% chemicals after dilution."],
                   [
                     "Preparation Ratio",
                     "Approx. 1 Part Powder to 3 Parts Water",
@@ -1095,7 +1087,7 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
                   ["Appearance", "Shade-Specific Fine Powder"],
                   ["Odour", "Characteristic"],
                   ["Country of Origin", "India"],
-                  ["Bulk Minimum Order", "Orders Can Start from 100 kg, Subject to Commercial and Product Confirmation"],
+                  ["Bulk Minimum Order", "Orders Can Start from 100 kg per item, Subject to Commercial and Product Confirmation"],
                   ["Private-Label MOQ", "Varies by Pack Size, Packaging, Artwork, Design, Customization and Commercial Feasibility"],
                   ["Shelf Life", "12 Months under Recommended Storage"],
                   [
@@ -1114,17 +1106,18 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
                 ].map(([parameter, value], index) => (
                   <div
                     key={parameter}
-                    className={`grid grid-cols-[0.9fr_1.1fr] border-t border-[#173b2a]/10 px-5 py-4 transition-colors duration-300 hover:bg-[#C9A962]/8 sm:px-7 ${
+                    className={`grid min-w-0 gap-2 border-t border-[#173b2a]/10 px-5 py-4 first:rounded-t-[26px] first:border-t-0 last:rounded-b-[26px] transition-colors duration-300 hover:bg-[#C9A962]/8 sm:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] sm:gap-0 sm:px-7 sm:first:rounded-t-none sm:first:border-t ${
                       index % 2 === 0 ? "bg-[#f5f0e6]" : "bg-[#eee6d8]"
                     }`}
                   >
-                    <p className="pr-4 text-sm font-bold uppercase tracking-[0.12em] text-[#8B6A1E] sm:text-[15px]">
+                    <dt className="min-w-0 text-sm font-bold uppercase tracking-[0.12em] text-[#806323] sm:pr-4 sm:text-[15px]">
                       {parameter}
-                    </p>
+                    </dt>
 
-                    <p className="pl-4 leading-7 text-[#173b2a]">{value}</p>
+                    <dd className="min-w-0 leading-7 text-[#173b2a] sm:pl-4">{value}</dd>
                   </div>
                 ))}
+                </dl>
               </div>
             </StaggerItem>
 
@@ -1225,7 +1218,7 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
         <RevealOnScroll>
           <div className="mx-auto max-w-[1450px]">
             <div className="mx-auto max-w-4xl text-center">
-              <p className="text-xs font-bold uppercase tracking-[0.45em] text-[#9f7f36]">
+              <p className="text-xs font-bold uppercase tracking-[0.45em] text-[#806323]">
                 How To Use
               </p>
 
@@ -1278,7 +1271,7 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
                       {item.icon}
                     </div>
 
-                    <p className="mt-5 text-[10px] font-bold uppercase tracking-[0.22em] text-[#C9A962]">
+                    <p className="mt-5 text-[10px] font-bold uppercase tracking-[0.22em] text-[#806323]">
                       Step {item.step}
                     </p>
 
@@ -1306,7 +1299,7 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
         <RevealOnScroll>
           <div className="mx-auto max-w-[1320px]">
             <div className="mx-auto max-w-4xl text-center">
-              <p className="text-xs font-bold uppercase tracking-[0.45em] text-[#9f7f36]">
+              <p className="text-xs font-bold uppercase tracking-[0.45em] text-[#806323]">
                 Packaging & Private Label
               </p>
 
@@ -1323,7 +1316,7 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
 
             <div className="mt-12 grid gap-5 lg:grid-cols-2">
               <article className="rounded-[24px] border border-[#C9A962]/30 bg-[#f5f0e6] p-7">
-                <p className="text-[10px] font-bold uppercase tracking-[0.30em] text-[#9f7f36]">
+                <p className="text-[10px] font-bold uppercase tracking-[0.30em] text-[#806323]">
                   Available Pack Sizes
                 </p>
 
@@ -1380,12 +1373,12 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
         className="bg-[#102f23] px-6 py-20 text-[#F5F0E6] sm:px-8 lg:px-12 lg:py-24"
       >
         <RevealOnScroll>
-          <div className="mx-auto grid max-w-[1380px] gap-8 lg:grid-cols-2">
-            <article className="border border-[#C9A962]/24 bg-[#071b14]/45 p-7 sm:p-9">
+          <div className="mx-auto grid min-w-0 max-w-[1380px] grid-cols-1 gap-8 lg:grid-cols-2">
+            <article className="min-w-0 border border-[#C9A962]/24 bg-[#071b14]/45 p-5 [overflow-wrap:anywhere] sm:p-9">
               <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#C9A962]">
                 Commercial Documentation
               </p>
-              <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">
+              <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-2xl font-semibold leading-tight min-[360px]:text-3xl sm:text-5xl">
                 Documentation for Hair-Color Importers and Distributors
               </h2>
               <p className="mt-6 text-lg leading-8 text-[#F5F0E6]/68">
@@ -1439,24 +1432,24 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
               </div>
             </article>
 
-            <article className="border border-[#C9A962]/24 bg-[#071b14]/45 p-7 sm:p-9">
+            <article className="min-w-0 border border-[#C9A962]/24 bg-[#071b14]/45 p-5 [overflow-wrap:anywhere] sm:p-9">
               <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#C9A962]">
                 Samples & Order Planning
               </p>
-              <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">
+              <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-2xl font-semibold leading-tight min-[360px]:text-3xl sm:text-5xl">
                 Plan a Bulk, OEM, ODM or Private-Label Order
               </h2>
               <div className="mt-8 space-y-3">
                 {[
                   ["Free Samples", "Available for prospective buyers after the shade and application requirement are reviewed."],
-                  ["Bulk Minimum Order", "Orders can start from 100 kg, subject to commercial and product confirmation."],
+                  ["Bulk Minimum Order", "Orders can start from 100 kg per item, subject to commercial and product confirmation."],
                   ["Private-Label MOQ", "Varies by pack size, packaging, artwork, design, customization and commercial feasibility."],
                   ["Typical Lead Time", "Approximately 10–15 days after commercial and order confirmation, subject to the complete order requirements."],
                   ["Incoterms", "Coordinated according to buyer requirement and the quotation."],
                 ].map(([label, value]) => (
                   <div
                     key={label}
-                    className="grid gap-2 border-b border-[#C9A962]/18 pb-4 sm:grid-cols-[145px_1fr]"
+                    className="grid min-w-0 grid-cols-1 gap-2 border-b border-[#C9A962]/18 pb-4 sm:grid-cols-[145px_minmax(0,1fr)]"
                   >
                     <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#C9A962]">
                       {label}
@@ -1505,7 +1498,7 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
         <RevealOnScroll>
           <div className="mx-auto max-w-[1100px]">
             <div className="text-center">
-              <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#9f7f36]">
+              <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#806323]">
                 Buyer Questions
               </p>
               <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">
@@ -1517,7 +1510,7 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
                 <details key={faq.question} className="group">
                   <summary className="flex cursor-pointer list-none items-start justify-between gap-6 py-6">
                     <h3 className="text-xl font-semibold leading-snug">
-                      <span className="mr-4 text-[#9f7f36]">
+                      <span className="mr-4 text-[#806323]">
                         {String(index + 1).padStart(2, "0")}
                       </span>
                       {faq.question}
@@ -1534,6 +1527,29 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
             </div>
           </div>
         </RevealOnScroll>
+      </section>
+      {/* INTERNATIONAL BUYER NAVIGATION */}
+      <section aria-labelledby="henna-based-markets-heading" className="border-y border-[#C9A962]/25 bg-[#f5f0e6] px-6 py-14 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-[1320px]">
+          <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#806323]">Explore Export Markets</p>
+          <h2 id="henna-based-markets-heading" className="mt-4 font-[family-name:var(--font-playfair)] text-3xl font-semibold leading-tight sm:text-4xl">Henna-Based Hair Colors for International Buyers</h2>
+          <p className="mt-4 max-w-3xl text-base leading-8 text-[#4c5f54]">Explore country-specific export information for bulk, salon-supply and private-label enquiries. Shade selection and destination-market requirements are reviewed for each order.</p>
+          <ul className="mt-7 flex flex-wrap gap-3">
+            {[
+              ["USA", "/export/usa"],
+              ["UK", "/export/uk"],
+              ["UAE", "/export/uae"],
+              ["Germany", "/export/germany"],
+              ["France", "/export/france"],
+            ].map(([label, href]) => (
+              <li key={href}>
+                <Link href={href} className="inline-flex items-center gap-3 rounded-xl border border-[#C9A962]/40 bg-[#102f23] px-5 py-3 text-sm font-medium text-[#F5F0E6] transition-colors hover:border-[#C9A962] hover:bg-[#173b2a] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#806323]">
+                  {label}<span aria-hidden="true" className="text-[#E4C878]">→</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
       {/* FINAL CTA */}
 
@@ -1556,7 +1572,7 @@ className="h-full w-full scale-[1.10] object-cover transition-transform duration
             <p className="mx-auto mt-8 max-w-4xl text-lg leading-9 text-[#F5F0E6]/68">
               Contact Shivesh International for bulk Henna-Based Hair Colors,
               export pricing, 16-shade selection, OEM manufacturing and
-              private-label packaging. Bulk orders can start from 100 kg,
+              private-label packaging. Bulk orders can start from 100 kg per item,
               subject to commercial and product confirmation.
             </p>
 
