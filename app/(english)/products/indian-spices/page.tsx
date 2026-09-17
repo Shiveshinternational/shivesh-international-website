@@ -45,8 +45,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/images/products/indian-spices/indian-spices-hero-final-v1.png",
-        width: 1200,
-        height: 630,
+        width: 1942,
+        height: 809,
         alt: "Indian Spices manufacturer exporter and bulk supplier from India",
       },
     ],
@@ -82,12 +82,12 @@ const procurementFaqs = [
   {
     question: "What is the private-label MOQ?",
     answer:
-      "Private-label minimums vary according to pack size, packaging, artwork, design, customization and commercial feasibility.",
+      "Private-label minimums vary according to pack size, packaging format, artwork/design, customization, formulation or blend, product and order requirements, and commercial feasibility.",
   },
   {
     question: "Which retail and bulk packaging sizes are available?",
     answer:
-      "Retail and private-label packs are available in 100 g, 200 g, 500 g and 1 kg. Bulk packaging is available in 20 kg and 25 kg double-layer vacuum packing.",
+      "Retail and private-label packs are available in 100 g, 200 g, 500 g and 1 kg. Bulk packaging is generally available for whole and powder spices in 20 kg and 25 kg double-layer vacuum packing, subject to product and order confirmation.",
   },
   {
     question: "Are OEM, ODM and private-label services available?",
@@ -272,7 +272,7 @@ function SpiceCard({ name, image, botanical, application, index, category }: Spi
     <StaggerItem delay={(index % 6) * 40}>
       <ProductCardModal
         src={imagePath}
-        alt={`${name} manufacturer exporter and bulk supplier from India`}
+        alt={name}
         category={category}
         description={`${name} (${botanical}) for ${application.toLowerCase()}. Available for bulk export, food-service, OEM, ODM and private-label requirements from India.`}
       >
@@ -280,9 +280,10 @@ function SpiceCard({ name, image, botanical, application, index, category }: Spi
           <div className="relative flex h-[155px] items-center justify-center overflow-hidden bg-[#f3ecdf] p-4">
             <Image
               src={imagePath}
-              alt={`${name} bulk wholesale and private-label Indian spice product`}
+              alt={`${name} product card`}
               width={imageDimensions.width}
               height={imageDimensions.height}
+              sizes={`${Math.ceil(renderedImageWidth)}px`}
               style={{ height: renderedImageHeight, width: renderedImageWidth }}
               className="rounded-[14px] bg-white/90 p-2 object-contain shadow-[0_8px_24px_rgba(0,0,0,0.08)] transition-transform duration-700 group-hover:scale-105"
             />
@@ -295,7 +296,7 @@ function SpiceCard({ name, image, botanical, application, index, category }: Spi
           </div>
 
           <div className="p-4">
-            <p className="text-[8px] font-bold uppercase tracking-[0.18em] text-[#9f7f36]">
+            <p className="text-[8px] font-bold uppercase tracking-[0.18em] text-[#806323]">
               {category}
             </p>
 
@@ -309,7 +310,7 @@ function SpiceCard({ name, image, botanical, application, index, category }: Spi
               Available for bulk export, wholesale supply and private-label requirements.
             </p>
 
-            <span className="mt-4 inline-flex items-center gap-2 text-[9px] font-bold uppercase tracking-[0.14em] text-[#8B6A1E] transition-all duration-300 group-hover:gap-3 group-hover:text-[#173b2a]">
+            <span className="mt-4 inline-flex items-center gap-2 text-[9px] font-bold uppercase tracking-[0.14em] text-[#806323] transition-all duration-300 group-hover:gap-3 group-hover:text-[#173b2a]">
               View Spice Details
               <span>→</span>
             </span>
@@ -398,7 +399,7 @@ export default function IndianSpicesPage() {
               <StaggerItem delay={120}>
                 <div className="mb-6 flex items-center gap-5">
                   <span className="h-[3px] w-14 bg-[#C9A962]" />
-                  <span className="text-xs font-bold uppercase tracking-[0.4em] text-[#9f7f36]">
+                  <span className="text-xs font-bold uppercase tracking-[0.4em] text-[#806323]">
                     About Indian Spices
                   </span>
                 </div>
@@ -414,7 +415,7 @@ export default function IndianSpicesPage() {
               </StaggerItem>
 
               <StaggerItem delay={340}>
-                <p className="mt-8 text-xl font-medium leading-9 text-[#8B6A1E]">
+                <p className="mt-8 text-xl font-medium leading-9 text-[#806323]">
                   Authentic whole Indian spices and spice powders prepared for
                   commercial, wholesale, food-service and export markets.
                 </p>
@@ -504,12 +505,17 @@ export default function IndianSpicesPage() {
               </p>
             </div>
 
-            <div className="mt-14">
+            <nav aria-label="Spice categories" className="mt-8 flex flex-wrap justify-center gap-3">
+              <Link href="#powder-spices" className="inline-flex min-h-12 items-center rounded-full border border-[#C9A962]/55 px-5 py-3 text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#C9A962]">Powder Spices ↓</Link>
+              <Link href="#whole-spices" className="inline-flex min-h-12 items-center rounded-full border border-[#C9A962]/55 px-5 py-3 text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#C9A962]">Whole Spices ↓</Link>
+            </nav>
+
+            <div id="powder-spices" className="mt-14 scroll-mt-28">
               <div className="flex items-center justify-center gap-5">
                 <span className="h-[2px] w-16 bg-[#C9A962]" />
-                <p className="text-xs font-bold uppercase tracking-[0.4em] text-[#C9A962]">
+                <h3 className="text-xs font-bold uppercase tracking-[0.4em] text-[#C9A962]">
                   Powder Spices
-                </p>
+                </h3>
                 <span className="h-[2px] w-16 bg-[#C9A962]" />
               </div>
 
@@ -519,18 +525,18 @@ export default function IndianSpicesPage() {
                     key={spice.name}
                     {...spice}
                     index={index}
-                    category="Indian Spice Powder Manufacturer & Exporter"
+                    category="Powder Spices"
                   />
                 ))}
               </div>
             </div>
 
-            <div className="mt-16">
+            <div id="whole-spices" className="mt-16 scroll-mt-28">
               <div className="flex items-center justify-center gap-5">
                 <span className="h-[2px] w-16 bg-[#C9A962]" />
-                <p className="text-xs font-bold uppercase tracking-[0.4em] text-[#C9A962]">
+                <h3 className="text-xs font-bold uppercase tracking-[0.4em] text-[#C9A962]">
                   Whole Spices
-                </p>
+                </h3>
                 <span className="h-[2px] w-16 bg-[#C9A962]" />
               </div>
 
@@ -540,10 +546,11 @@ export default function IndianSpicesPage() {
                     key={spice.name}
                     {...spice}
                     index={index}
-                    category="Whole Indian Spice Manufacturer & Exporter"
+                    category="Whole Spices"
                   />
                 ))}
               </div>
+              <Link href="#powder-spices" className="mt-6 inline-flex min-h-12 items-center px-3 py-3 text-sm font-semibold text-[#E4C878] underline underline-offset-4">Back to Powder Spices ↑</Link>
             </div>
 
             <div className="mx-auto mt-10 max-w-5xl rounded-[22px] border border-[#C9A962]/25 bg-white/[0.04] px-6 py-5 text-center">
@@ -592,7 +599,7 @@ export default function IndianSpicesPage() {
               <StaggerItem delay={120}>
                 <div className="mb-6 flex items-center gap-5">
                   <span className="h-[3px] w-14 bg-[#C9A962]" />
-                  <span className="text-xs font-bold uppercase tracking-[0.4em] text-[#9f7f36]">
+                  <span className="text-xs font-bold uppercase tracking-[0.4em] text-[#806323]">
                     Why Choose Our Spices
                   </span>
                 </div>
@@ -732,7 +739,7 @@ export default function IndianSpicesPage() {
         <RevealOnScroll>
           <div className="mx-auto max-w-[1180px]">
             <div className="mx-auto max-w-4xl text-center">
-              <p className="text-xs font-bold uppercase tracking-[0.45em] text-[#9f7f36]">
+              <p className="text-xs font-bold uppercase tracking-[0.45em] text-[#806323]">
                 Product Specification
               </p>
 
@@ -758,19 +765,20 @@ export default function IndianSpicesPage() {
                   </p>
                 </div>
 
+                <dl>
                 {[
                   ["Product Category", "Indian Spices"],
                   ["Portfolio Size", "Exactly 24 Products: 12 Powder Spices and 12 Whole Spices"],
                   ["Manufacturing Origin", "India"],
                   ["Raw-Material Origin", "India"],
                   ["Country of Origin", "India for All 24 Listed Products"],
-                  ["Available Forms", "Whole and Powder Spices; Blended Spices according to Buyer Instructions or Requirements"],
+                  ["Available Forms", "Whole and Powder Spices; Blended Spices according to Buyer Instructions or Requirements, Subject to Confirmation"],
                   ["Commercial Positioning", "Food-Grade Indian Spices for Professional Food and B2B Requirements"],
                   ["Quality Testing", "According to Buyer and Product Requirements, Subject to Confirmation"],
                   ["Bulk Minimum Order", "Orders Can Start from 100 kg per Spice or Item, Subject to Commercial and Product Confirmation"],
                   ["Private-Label MOQ", "Varies by Pack Size, Packaging, Artwork, Design, Customization and Commercial Feasibility"],
                   ["Retail / Private-Label Packs", "100 g, 200 g, 500 g and 1 kg"],
-                  ["Bulk Packaging", "20 kg and 25 kg Double-Layer Vacuum Packing"],
+                  ["Bulk Packaging", "20 kg and 25 kg Double-Layer Vacuum Packing for Whole and Powder Spices, Subject to Product and Order Confirmation"],
                   ["OEM / ODM", "Available"],
                   ["Private Label", "Buyer Logo, Artwork, Custom Branding and Printed Packaging Available, Subject to Feasibility"],
                   ["Shelf Life", "Varies by Spice or Product and Is Confirmed for the Selected Item"],
@@ -783,12 +791,13 @@ export default function IndianSpicesPage() {
                       index % 2 === 0 ? "bg-[#f5f0e6]" : "bg-[#eee6d8]"
                     }`}
                   >
-                    <p className="pr-4 text-sm font-bold uppercase tracking-[0.12em] text-[#8B6A1E] sm:text-[15px]">
+                    <dt className="min-w-0 pr-4 text-sm font-bold uppercase tracking-[0.12em] text-[#806323] sm:text-[15px]">
                       {parameter}
-                    </p>
-                    <p className="leading-7 text-[#173b2a] sm:pl-4">{value}</p>
+                    </dt>
+                    <dd className="min-w-0 leading-7 text-[#173b2a] sm:pl-4">{value}</dd>
                   </div>
                 ))}
+                </dl>
               </div>
             </StaggerItem>
 
@@ -844,7 +853,7 @@ export default function IndianSpicesPage() {
               </article>
 
               <article className="rounded-[24px] border border-[#C9A962]/30 bg-[#f5f0e6] p-7 text-[#173b2a]">
-                <p className="text-[10px] font-bold uppercase tracking-[0.30em] text-[#9f7f36]">
+                <p className="text-[10px] font-bold uppercase tracking-[0.30em] text-[#806323]">
                   Packaging Formats
                 </p>
 
@@ -853,8 +862,9 @@ export default function IndianSpicesPage() {
                 </h3>
 
                 <p className="mt-5 leading-8">
-                  20 kg and 25 kg double-layer vacuum packing for confirmed
-                  bulk orders.
+                  20 kg and 25 kg double-layer vacuum packing is generally
+                  available for whole and powder spices, subject to product
+                  and order confirmation.
                 </p>
               </article>
             </div>
@@ -886,12 +896,12 @@ export default function IndianSpicesPage() {
         className="bg-[#ede5d7] px-6 py-20 sm:px-8 lg:px-12 lg:py-24"
       >
         <RevealOnScroll>
-          <div className="mx-auto grid max-w-[1380px] gap-8 lg:grid-cols-2">
-            <article className="border border-[#C9A962]/30 bg-[#102f23] p-7 text-[#F5F0E6] sm:p-9">
+          <div className="mx-auto grid min-w-0 max-w-[1380px] grid-cols-1 gap-8 lg:grid-cols-2">
+            <article className="min-w-0 break-words border border-[#C9A962]/30 bg-[#102f23] p-5 text-[#F5F0E6] sm:p-9">
               <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#C9A962]">
                 Commercial Documentation
               </p>
-              <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">
+              <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-[28px] font-semibold leading-tight sm:text-5xl">
                 Spice Testing and Export Documentation
               </h2>
               <p className="mt-6 text-lg leading-8 text-[#F5F0E6]/68">
@@ -932,14 +942,14 @@ export default function IndianSpicesPage() {
               </div>
             </article>
 
-            <article className="border border-[#C9A962]/30 bg-[#f5f0e6] p-7 text-[#173b2a] sm:p-9">
-              <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#9f7f36]">
+            <article className="min-w-0 break-words border border-[#C9A962]/30 bg-[#f5f0e6] p-5 text-[#173b2a] sm:p-9">
+              <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#806323]">
                 Samples & Order Planning
               </p>
-              <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">
+              <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-[28px] font-semibold leading-tight sm:text-5xl">
                 Plan a Bulk, OEM, ODM or Private-Label Spice Order
               </h2>
-              <div className="mt-8 space-y-3">
+              <dl className="mt-8 space-y-3">
                 {[
                   ["Free Samples", "Available for prospective buyers, subject to product and requirement review."],
                   ["Bulk Minimum Order", "Orders can start from 100 kg per spice or item, subject to commercial and product confirmation."],
@@ -949,15 +959,15 @@ export default function IndianSpicesPage() {
                   ["Shelf Life", "Varies by spice or product and is confirmed for the selected item."],
                 ].map(([label, value]) => (
                   <div key={label} className="grid gap-2 border-b border-[#173b2a]/12 pb-4 sm:grid-cols-[145px_1fr]">
-                    <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#9f7f36]">{label}</p>
-                    <p className="text-sm leading-7 text-[#4c5f54]">{value}</p>
+                    <dt className="min-w-0 text-[10px] font-bold uppercase tracking-[0.18em] text-[#806323]">{label}</dt>
+                    <dd className="min-w-0 text-sm leading-7 text-[#4c5f54]">{value}</dd>
                   </div>
                 ))}
-              </div>
+              </dl>
               <div className="mt-8 border border-[#C9A962]/35 bg-[#ede5d7] p-5">
                 <h3 className="font-[family-name:var(--font-playfair)] text-2xl font-semibold">What to Include in Your RFQ</h3>
                 <p className="mt-4 text-sm leading-7 text-[#4c5f54]">
-                  Share the selected spice products, whole, powder or buyer-instructed blend requirement, quantity, pack size, destination country or port, OEM, ODM or private-label scope, artwork or logo needs, required testing and documents, Incoterm requirement and company details.
+                  Share the selected spice products, whole, powder or buyer-instructed blend requirement, quantity, pack size, destination country or port, OEM, ODM or private-label scope, artwork or logo needs, required testing and documents, Incoterm requirement and company details. Specify applicable ingredient/blend and allergen declaration requirements, cross-contact information, treatment/processing requirements (including sterilization or irradiation status), SKU-specific packaging suitability and destination-market requirements for review and confirmation.
                 </p>
               </div>
               <div className="mt-8 flex flex-wrap gap-4">
@@ -978,7 +988,7 @@ export default function IndianSpicesPage() {
         <RevealOnScroll>
           <div className="mx-auto max-w-[1100px]">
             <div className="text-center">
-              <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#9f7f36]">Buyer Questions</p>
+              <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#806323]">Buyer Questions</p>
               <h2 className="mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl">
                 Indian Spices Procurement FAQs
               </h2>
@@ -988,7 +998,7 @@ export default function IndianSpicesPage() {
                 <details key={faq.question} className="group">
                   <summary className="flex cursor-pointer list-none items-start justify-between gap-6 py-6">
                     <h3 className="text-xl font-semibold leading-snug">
-                      <span className="mr-4 text-[#9f7f36]">{String(index + 1).padStart(2, "0")}</span>
+                      <span className="mr-4 text-[#806323]">{String(index + 1).padStart(2, "0")}</span>
                       {faq.question}
                     </h3>
                     <span className="text-2xl text-[#9f7f36] transition-transform group-open:rotate-45">+</span>
@@ -999,6 +1009,35 @@ export default function IndianSpicesPage() {
             </div>
           </div>
         </RevealOnScroll>
+      </section>
+
+      {/* PRODUCT-TO-MARKET NAVIGATION */}
+      <section id="spices-export-markets" aria-labelledby="spices-export-markets-heading" className="bg-[#ede5d7] px-6 py-12 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-[1100px]">
+          <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#806323]">Explore Export Markets</p>
+          <h2 id="spices-export-markets-heading" className="mt-4 font-[family-name:var(--font-playfair)] text-3xl font-semibold leading-tight sm:text-4xl">
+            Indian Spices for International Buyers
+          </h2>
+          <p className="mt-4 max-w-3xl text-base leading-7 text-[#4c5f54]">
+            Explore country-specific export and sourcing information for bulk,
+            wholesale, food-service, private-label and procurement enquiries.
+            Product specifications and destination-market requirements are
+            reviewed for each order.
+          </p>
+          <nav aria-label="Indian spice export markets" className="mt-6 flex flex-wrap gap-3">
+            {[
+              ["USA", "/export/usa"],
+              ["UK", "/export/uk"],
+              ["UAE", "/export/uae"],
+              ["Germany", "/export/germany"],
+              ["France", "/export/france"],
+            ].map(([country, href]) => (
+              <Link key={href} href={href} className="inline-flex min-h-12 items-center gap-3 rounded-full border border-[#173b2a]/30 bg-[#f5f0e6] px-5 py-3 text-sm font-semibold text-[#173b2a] transition-colors hover:bg-[#102f23] hover:text-[#f5f0e6] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#173b2a]">
+                {country} <span aria-hidden="true">→</span>
+              </Link>
+            ))}
+          </nav>
+        </div>
       </section>
 
       {/* FINAL CTA */}
