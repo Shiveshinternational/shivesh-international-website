@@ -271,6 +271,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/resources/how-to-choose-henna-powder-supplier-india`,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/export/usa`,
       changeFrequency: "monthly",
       priority: 0.9,

@@ -606,6 +606,16 @@ export default function NaturalHennaPowderPage() {
   confirmed before order processing; no unlisted test limit or
   destination-market approval is implied.
 </p>
+            <p className="mx-auto mt-5 max-w-4xl text-center text-sm leading-7 text-[#4c5f54]">
+              Comparing suppliers? Read our{" "}
+              <Link
+                href="/resources/how-to-choose-henna-powder-supplier-india"
+                className="font-semibold text-[#8B6A1E] underline decoration-[#C9A962] underline-offset-4 hover:text-[#173b2a] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#8B6A1E]"
+              >
+                henna powder supplier buyer guide
+              </Link>
+              .
+            </p>
           </div>
         </RevealOnScroll>
       </section>

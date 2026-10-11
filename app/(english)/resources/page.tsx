@@ -581,6 +581,50 @@ export default function ResourcesPage() {
         </StaggerItem>
       </div>
 
+      <section
+        aria-labelledby="buyer-guides-heading"
+        className="mt-16 border-y border-[#C9A962]/30 bg-[#102F23] px-6 py-12 text-[#F5F0E6] sm:px-8 sm:py-14 lg:px-10"
+      >
+        <div className="mx-auto grid max-w-[1180px] items-center gap-8 md:grid-cols-[0.85fr_1.15fr] md:gap-12">
+          <div>
+            <p className="text-[10px] font-bold uppercase tracking-[0.38em] text-[#E4C878]">
+              Buyer Guides
+            </p>
+            <h3
+              id="buyer-guides-heading"
+              className="mt-4 font-[family-name:var(--font-playfair)] text-3xl font-semibold leading-tight sm:text-4xl"
+            >
+              Make sourcing decisions with confidence
+            </h3>
+            <p className="mt-4 text-sm leading-7 text-[#F5F0E6]/68 sm:text-base">
+              Practical guidance for international buyers evaluating natural
+              henna powder suppliers, specifications, documentation and export
+              readiness.
+            </p>
+          </div>
+
+          <article className="border border-[#C9A962]/35 bg-[#071B14]/55 p-6 sm:p-8">
+            <p className="text-[9px] font-bold uppercase tracking-[0.3em] text-[#E4C878]">
+              First Buyer Guide
+            </p>
+            <h4 className="mt-4 font-[family-name:var(--font-playfair)] text-2xl font-semibold leading-tight sm:text-3xl">
+              How to Choose a Reliable Henna Powder Supplier in India
+            </h4>
+            <p className="mt-4 text-sm leading-7 text-[#F5F0E6]/68">
+              Use a practical checklist to assess supplier credibility, agree
+              product requirements, review batch documentation and plan
+              packaging and export details.
+            </p>
+            <Link
+              href="/resources/how-to-choose-henna-powder-supplier-india"
+              className="mt-6 inline-flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.2em] text-[#E4C878] underline decoration-[#C9A962]/55 underline-offset-4 transition-colors hover:text-[#F5F0E6] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E4C878]"
+            >
+              Read the buyer guide <span aria-hidden="true">→</span>
+            </Link>
+          </article>
+        </div>
+      </section>
+
       {/* RESOURCE CARDS */}
       <div className="mt-14 grid auto-rows-fr gap-6 md:grid-cols-2 xl:grid-cols-3">
         {buyerResources.map((resource, index) => (
