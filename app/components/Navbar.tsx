@@ -23,6 +23,7 @@ const navigationLinks = [
     sectionId: "certifications",
   },
   { label: "Export", href: "/export", sectionId: "export" },
+  { label: "Buyer Resources", href: "/resources", sectionId: "resources" },
   { label: "Contact", href: "/contact", sectionId: "contact" },
 ];
 
@@ -33,6 +34,7 @@ const germanNavigationLinks = [
   { label: "Infrastruktur", href: "/infrastructure", sectionId: "infrastructure" },
   { label: "Zertifizierungen", href: "/certifications", sectionId: "certifications" },
   { label: "Export", href: "/export", sectionId: "export" },
+  { label: "Buyer Resources", href: "/resources", sectionId: "resources" },
   { label: "Kontakt", href: "/contact", sectionId: "contact" },
 ];
 
@@ -43,24 +45,28 @@ const frenchNavigationLinks = [
   { label: "Infrastructure", href: "/infrastructure", sectionId: "infrastructure" },
   { label: "Certifications", href: "/certifications", sectionId: "certifications" },
   { label: "Export", href: "/export", sectionId: "export" },
+  { label: "Buyer Resources", href: "/resources", sectionId: "resources" },
   { label: "Contact", href: "/contact", sectionId: "contact" },
 ];
 const spanishNavigationLinks = [
   { label: "Inicio", href: "/", sectionId: "home" }, { label: "Quiénes somos", href: "/about", sectionId: "about" },
   { label: "Productos", href: "/#products", sectionId: "products" }, { label: "Infraestructura", href: "/infrastructure", sectionId: "infrastructure" },
   { label: "Certificaciones", href: "/certifications", sectionId: "certifications" }, { label: "Exportación", href: "/export", sectionId: "export" },
+  { label: "Buyer Resources", href: "/resources", sectionId: "resources" },
   { label: "Contacto", href: "/contact", sectionId: "contact" },
 ];
 const italianNavigationLinks = [
   { label: "Home", href: "/", sectionId: "home" }, { label: "Chi siamo", href: "/about", sectionId: "about" },
   { label: "Prodotti", href: "/#products", sectionId: "products" }, { label: "Infrastruttura", href: "/infrastructure", sectionId: "infrastructure" },
   { label: "Certificazioni", href: "/certifications", sectionId: "certifications" }, { label: "Export", href: "/export", sectionId: "export" },
+  { label: "Buyer Resources", href: "/resources", sectionId: "resources" },
   { label: "Contatti", href: "/contact", sectionId: "contact" },
 ];
 const arabicNavigationLinks = [
   { label: "الرئيسية", href: "/", sectionId: "home" }, { label: "من نحن", href: "/about", sectionId: "about" },
   { label: "المنتجات", href: "/#products", sectionId: "products" }, { label: "البنية التحتية", href: "/infrastructure", sectionId: "infrastructure" },
   { label: "الشهادات", href: "/certifications", sectionId: "certifications" }, { label: "التصدير", href: "/export", sectionId: "export" },
+  { label: "Buyer Resources", href: "/resources", sectionId: "resources" },
   { label: "اتصل بنا", href: "/contact", sectionId: "contact" },
 ];
 
