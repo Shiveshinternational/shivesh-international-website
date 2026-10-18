@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Natural henna powder manufacturer and exporter in India supplying 100% pure Lawsonia inermis powder in bulk, OEM and private-label packs. Bulk orders from 100 kg per item.",
+    "Natural henna powder manufacturer and exporter in India. 100% pure Lawsonia inermis for importers and wholesalers. Bulk orders from 100 kg per item.",
 
   alternates: {
     canonical: "/products/natural-henna-powder",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Natural Henna Powder Manufacturer & Exporter India",
+      "Natural Henna Powder Manufacturer & Exporter from India",
     description:
       "Bulk, wholesale and private-label natural henna powder supplied from India to professional buyers worldwide.",
     images: [
@@ -73,7 +73,7 @@ const naturalHennaPowderStructuredData = {
       "@type": "WebPage",
       "@id": "https://shiveshinternational.com/products/natural-henna-powder#webpage",
       url: "https://shiveshinternational.com/products/natural-henna-powder",
-      name: "Natural Henna Powder Manufacturer and Exporter in India",
+      name: "Natural Henna Powder Manufacturer & Exporter from India",
       description: "Procurement information for 100% pure Lawsonia inermis henna powder supplied from India in bulk, OEM and private-label formats.",
       isPartOf: { "@id": "https://shiveshinternational.com/#website" },
       about: { "@id": "https://shiveshinternational.com/#organization" },
@@ -173,7 +173,7 @@ export default function NaturalHennaPowderPage() {
                 Natural Henna
                 <br />
                 <span className="bg-gradient-to-r from-[#F5F0E6] via-[#E4C878] to-[#C9A962] bg-clip-text text-transparent">
-                  Powder
+                  Powder Manufacturer &amp; Exporter in India
                 </span>
               </h1>
             </StaggerItem>
@@ -998,7 +998,7 @@ export default function NaturalHennaPowderPage() {
             </p>
 
             <h2 className="mt-6 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
-              Looking for a Natural Henna Powder Manufacturer in India?
+              Looking for a Natural Henna Powder Manufacturer &amp; Exporter in India?
             </h2>
 
             <p className="mx-auto mt-7 max-w-3xl text-lg leading-9 text-[#F5F0E6]/65">
